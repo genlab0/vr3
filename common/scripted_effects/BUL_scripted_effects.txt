@@ -1563,14 +1563,6 @@ BUL_add_hidden_targeted_ns = {
 	}
 	else_if = {
 		limit = {
-			original_tag = SWI
-		}
-		ROOT = {
-			add_ideas = BUL_anti_capitalism_swi
-		}
-	}
-	else_if = {
-		limit = {
 			original_tag = AUS
 		}
 		ROOT = {

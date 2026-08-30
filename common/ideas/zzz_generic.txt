@@ -1372,7 +1372,7 @@ ideas = {
 
 				NOT = {
 					AND = {
-						OR = { tag = SPRtag = SPD }
+						OR = { tag = SPR tag = SPD }
 						has_dlc = "La Resistance"
 					}
 				}

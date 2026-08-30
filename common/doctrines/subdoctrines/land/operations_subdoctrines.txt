@@ -93,10 +93,7 @@ last_stand = {
 
     rewards = {
         werwolf_groups = {
-        #1
-            category_army = {
-                dig_in_speed_factor = 0.1
-            }
+            dig_in_speed_factor = 0.1
         }
 
         pocket_consolidation = {
@@ -557,6 +554,10 @@ guerilla_war = {
         #5
             out_of_supply_factor = -0.15
             stability_factor = 0.1    
+
+            effect = {
+                custom_effect_tooltip = ABILITY_LAST_STAND_allowed
+            }
         }
     }
 }
@@ -669,9 +670,7 @@ expeditionary_warfare = {
         #1
             dig_in_speed_factor = 0.05
             out_of_supply_factor = -0.20
-            category_army = {
-                land_night_attack = 0.15
-            }
+            land_night_attack = 0.15
 
         }
         landing_operations = {
@@ -692,9 +691,7 @@ expeditionary_warfare = {
         breakout_emphasis = {
         #4
             no_supply_grace = 32
-            category_army = {
-                land_night_attack = 0.15
-            }
+            land_night_attack = 0.15
             category_tanks = {
                 max_organisation = 4
             }

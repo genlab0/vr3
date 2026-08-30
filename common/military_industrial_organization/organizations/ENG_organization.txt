@@ -194,21 +194,14 @@ ENG_harland_wolff_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 
-	override_trait = {
-		token = generic_mio_trait_underway_replenishment_equipment
-
-		position = { x=1 y=0 }
-		relative_position_id = generic_mio_trait_transom_stern
-	}
-
 	add_trait = { 
 		token = ENG_mio_trait_flared_bow
 		name = ENG_mio_trait_flared_bow
 		icon = GFX_generic_mio_department_icon_ship_general_quality
 		special_trait_background = yes
 
-		position = { x=1 y=0 }
-		relative_position_id = generic_mio_trait_underway_replenishment_equipment
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_splinter_protection
 
 		any_parent = { generic_mio_trait_splinter_protection }
 

@@ -1725,7 +1725,6 @@ generic_task_force_ship_organization = {
 		mio_cat_eq_all_carrier
 		mio_cat_eq_all_cruiser
 		mio_cat_eq_all_destroyer
-		mio_cat_eq_all_support_ships
 	}
 	research_categories = {
 		mio_cat_tech_all_carrier_and_modules
@@ -1811,36 +1810,14 @@ generic_task_force_ship_organization = {
 		name = generic_mio_trait_transom_stern
 		icon = GFX_generic_mio_trait_icon_maximum_speed
 
-		position = { x=-1 y=2 }
+		position = { x=0 y=2 }
 		relative_position_id = generic_mio_trait_splinter_protection
 		
 		any_parent = { generic_mio_trait_splinter_protection }
-
-		mutually_exclusive = { generic_mio_trait_underway_replenishment_equipment }
 
 		equipment_bonus = {
 			naval_speed = 0.05
 			fuel_consumption = -0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_underway_replenishment_equipment
-		name = generic_mio_trait_underway_replenishment_equipment
-		icon = GFX_generic_mio_trait_icon_fuel_consumption
-
-		position = { x=1 y=2 }
-		relative_position_id = generic_mio_trait_splinter_protection
-		
-		any_parent = { generic_mio_trait_splinter_protection }
-
-		mutually_exclusive = { generic_mio_trait_transom_stern }
-
-		limit_to_equipment_type = { mio_cat_eq_all_support_ships }
-
-		equipment_bonus = {
-			naval_range = 0.25
-			build_cost_ic = -0.15
 		}
 	}
 
@@ -2532,7 +2509,7 @@ generic_raider_ship_organization = {
 	allowed = {
 		AND = {
 			has_dlc = "Arms Against Tyranny"
-			original_tag = ICE
+			original_tag = WST
 		}
 		#always = no # Archetype only - countries using it have their own versions
 	}

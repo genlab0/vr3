@@ -1158,90 +1158,6 @@ ideas = {
 				defense_bonus_against = 0.05
 			}
 
-			targeted_modifier = {
-				tag = PRC
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-
-			targeted_modifier = {
-				tag = SHX
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-
-			targeted_modifier = {
-				tag = XSM
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-
-			targeted_modifier = {
-				tag = YUN
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-
-			targeted_modifier = {
-				tag = GXC
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-
-			targeted_modifier = {
-				tag = SIK
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-
-			targeted_modifier = {
-				tag = SND
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-
-			targeted_modifier = {
-				tag = GDC
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-
-			targeted_modifier = {
-				tag = HBC
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-
-			targeted_modifier = {
-				tag = XIC
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-
-			targeted_modifier = {
-				tag = KHM
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-
-			targeted_modifier = {
-				tag = NXM
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-
-			targeted_modifier = {
-				tag = GSM
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-
-			targeted_modifier = {
-				tag = SIC
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.05
-			}
-
 		}
 
 		JAP_the_london_naval_treaty = {
@@ -1414,7 +1330,6 @@ ideas = {
 
 			modifier = {
 				navy_capital_ship_defence_factor = 0.10
-				sp_naval_super_heavy_battleship_speed_factor = 1
 			}
 		}
 

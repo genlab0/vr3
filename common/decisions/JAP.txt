@@ -121,7 +121,7 @@ foreign_politics = {
 		fire_only_once = yes
 
 		activation = {
-			is_special_project_completed = sp:sp_nuclear_bomb
+			has_tech = nukes
 			has_war_with = JAP
 		}
 

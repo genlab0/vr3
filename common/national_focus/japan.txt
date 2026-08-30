@@ -4026,7 +4026,6 @@ focus_tree = {
 						value = 1 
 					}
 					add_faction_goal = faction_goal_secure_the_oil_supply
-					set_faction_rule = faction_peace_rule_puppeting_focus
 				}
 				set_faction_name = JAP_greater_east_asian_co_prosperity_sphere
 			}
@@ -10628,10 +10627,6 @@ focus_tree = {
 			factor = 3
 		}
 
-		available = {
-			is_special_project_completed = sp:sp_rocket_interceptor
-		}
-
 		bypass = {
 			
 		}
@@ -11621,11 +11616,11 @@ focus_tree = {
 				}
 				AND = {
 					has_tech = improved_ship_hull_carrier
-					is_special_project_completed = sp:sp_naval_super_heavy_battleship
+					has_tech = ship_hull_super_heavy
 					has_completed_focus = JAP_balanced_naval_approach
 				}
 				AND = {
-					is_special_project_completed = sp:sp_naval_super_heavy_battleship
+					has_tech = ship_hull_super_heavy
 					has_completed_focus = JAP_sea_battleship_initiative	
 				}
 			}

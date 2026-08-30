@@ -33,6 +33,21 @@ new_strategic_destruction = {
     }
     air_superiority_detect_factor = 0.1
     air_interception_detect_factor = 0.1 
+
+    milestones = {   # NOTE: milestones are in the same order as the tracks
+        {
+            # ACTIVATION EFFECTS - SEE BELOW
+        }
+        {
+            # ACTIVATION EFFECTS - SEE BELOW
+        }
+        {
+            # ACTIVATION EFFECTS - SEE BELOW
+        }
+        {
+            # ACTIVATION EFFECTS - SEE BELOW
+        }
+    }
 }
 
 new_battlefield_support = {
@@ -76,6 +91,20 @@ new_battlefield_support = {
     category_heavy_fighter = {
         air_defence = 0.1
     }
+    milestones = {   # NOTE: milestones are in the same order as the tracks
+        {
+            # ACTIVATION EFFECTS - SEE BELOW
+        }
+        {
+            # ACTIVATION EFFECTS - SEE BELOW
+        }
+        {
+            # ACTIVATION EFFECTS - SEE BELOW
+        }
+        {
+            # ACTIVATION EFFECTS - SEE BELOW
+        }
+    }
 }
 
 new_operational_integrity = {
@@ -112,5 +141,19 @@ new_operational_integrity = {
     }
     category_heavy_fighter = {		  
         air_attack = 0.10			  
+    }
+    milestones = {   # NOTE: milestones are in the same order as the tracks
+        {
+            # ACTIVATION EFFECTS - SEE BELOW
+        }
+        {
+            # ACTIVATION EFFECTS - SEE BELOW
+        }
+        {
+            # ACTIVATION EFFECTS - SEE BELOW
+        }
+        {
+            # ACTIVATION EFFECTS - SEE BELOW
+        }
     }
 }

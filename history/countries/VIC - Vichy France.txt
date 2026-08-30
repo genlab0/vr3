@@ -2,7 +2,7 @@
 set_stability = 0
 set_war_support = 0
 add_command_power = 20
-
+capital = 270
 
 # Starting tech
 set_technology = {
@@ -11,6 +11,22 @@ set_technology = {
 	gw_artillery = 1
 	basic_train = 1
 }
+
+recruit_character = VIC_philippe_petain
+recruit_character = VIC_jean_de_laborde
+recruit_character = VIC_rene_emile_godfroy
+recruit_character = VIC_martial_valin
+recruit_character = VIC_jean_francois_jannekeyn
+recruit_character = VIC_alfred_heurtaux
+recruit_character = VIC_robert_odic
+recruit_character = VIC_marcel_gensoul
+recruit_character = VIC_pierre_alombert_goget
+recruit_character = VIC_victor_denain
+recruit_character = VIC_jean_decoux
+recruit_character = VIC_frederic_irene_joliot_curie
+recruit_character = VIC_paul_baudouin
+recruit_character = VIC_jacques_duclos
+
 set_convoys = 300
 set_politics = {
 	ruling_party = fascism
@@ -20,28 +36,12 @@ set_politics = {
 }
 set_popularities = {
 	democratic = 0
-	fascism = 10
-	neutrality = 90
+	fascism = 100
 	communism = 0
 }
 
 add_ideas = {
 	free_trade
 }
-
-recruit_character = FRA_philippe_petain
-recruit_character = FRA_jean_de_laborde
-recruit_character = FRA_rene_emile_godfroy
-recruit_character = FRA_martial_valin
-recruit_character = FRA_jean_francois_jannekeyn
-recruit_character = FRA_alfred_heurtaux
-recruit_character = FRA_robert_odic
-recruit_character = FRA_marcel_gensoul
-recruit_character = FRA_pierre_alombert_goget
-recruit_character = FRA_victor_denain
-recruit_character = FRA_jean_decoux
-recruit_character = FRA_frederic_irene_joliot_curie
-recruit_character = FRA_paul_baudouin
-recruit_character = FRA_jacques_duclos
 
 

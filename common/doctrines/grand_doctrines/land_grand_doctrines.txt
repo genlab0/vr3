@@ -376,12 +376,16 @@ mass_assault = {
         operations
     }
 
+    effect = {
+        custom_effect_tooltip = ABILITY_LAST_STAND_grand_doctrine_allowed
+    }
+
     # EFFECTS
     no_supply_grace = 48
     out_of_supply_factor = -0.10
     enable_tactic = tactic_relentless_assault
     additional_brigade_column_size = 1
-    
+
 
     milestones = {
         {   

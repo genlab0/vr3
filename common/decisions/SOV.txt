@@ -3568,8 +3568,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 			base = 0.5
 		}
 
-		cosmetic_tag = BLR
-		cosmetic_ideology = communism
 
 		allowed = {
 			original_tag = SOV
@@ -3606,8 +3604,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 			base = 0.5
 		}
 
-		cosmetic_tag = UKR
-		cosmetic_ideology = communism
 
 		allowed = {
 			original_tag = SOV
@@ -3644,8 +3640,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 			base = 0.5
 		}
 
-		cosmetic_tag = KAZ
-		cosmetic_ideology = communism
 
 		allowed = {
 			original_tag = SOV
@@ -3682,8 +3676,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 			base = 0.5
 		}
 
-		cosmetic_tag = GEO
-		cosmetic_ideology = communism
 
 		allowed = {
 			original_tag = SOV
@@ -3720,8 +3712,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 			base = 0.5
 		}
 
-		cosmetic_tag = ARM
-		cosmetic_ideology = communism
 
 		allowed = {
 			original_tag = SOV
@@ -3757,8 +3747,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 			base = 0.5
 		}
 
-		cosmetic_tag = AZR
-		cosmetic_ideology = communism
 
 		allowed = {
 			original_tag = SOV
@@ -3795,8 +3783,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 			base = 0.5
 		}
 
-		cosmetic_tag = UZB
-		cosmetic_ideology = communism
 
 		allowed = {
 			original_tag = SOV
@@ -3833,8 +3819,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 			base = 0.5
 		}
 
-		cosmetic_tag = TMS
-		cosmetic_ideology = communism
 
 		allowed = {
 			original_tag = SOV
@@ -3871,8 +3855,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 			base = 0.5
 		}
 
-		cosmetic_tag = KYR
-		cosmetic_ideology = communism
 
 		allowed = {
 			original_tag = SOV
@@ -3909,9 +3891,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 			base = 0.5
 		}
 
-		cosmetic_tag = TAJ
-		cosmetic_ideology = communism
-
 		allowed = {
 			original_tag = SOV
 		}
@@ -3938,7 +3917,7 @@ SOV_national_academy_of_sciences_dec_cat = {
 		}
 	}
 
-	#Not gonna have these unless they're released, just like with the others
+#	#Not gonna have these unless they're released, just like with the others
 #	SOV_build_national_academy_of_sciences_integrated_republic_DON = {
 #		priority = 1
 #
@@ -3947,9 +3926,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 #		ai_will_do = { #Integrated republics go after puppets
 #			base = 0.5
 #		}
-#
-#		cosmetic_tag = DON
-#		cosmetic_ideology = communism
 #
 #		allowed = {
 #			original_tag = SOV
@@ -3962,7 +3938,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 #		visible = {
 #			has_completed_focus = SOV_national_academies_of_sciences
 #			NOT = { has_country_flag = SOV_national_academy_of_sciences_built_DON_flag }
-#			NOT = { country_exists = DON }
 #		}
 #
 #		fire_only_once = yes
@@ -3989,10 +3964,7 @@ SOV_national_academy_of_sciences_dec_cat = {
 #		ai_will_do = { #Integrated republics go after puppets
 #			base = 0.5
 #		}
-#
-#		cosmetic_tag = KUB
-#		cosmetic_ideology = communism
-#
+#        
 #		allowed = {
 #			original_tag = SOV
 #		}
@@ -4004,7 +3976,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 #		visible = {
 #			has_completed_focus = SOV_national_academies_of_sciences
 #			NOT = { has_country_flag = SOV_national_academy_of_sciences_built_KUB_flag }
-#			NOT = { country_exists = KUB }
 #		}
 #
 #		fire_only_once = yes

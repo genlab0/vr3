@@ -89,16 +89,10 @@ SPR_hispano_aviacion_organization = {
 	include = generic_light_aircraft_organization
 	icon = GFX_idea_SPR_hispano_aviacion
 	allowed = {
-		OR = {
-			AND = {
-				has_dlc = "La Resistance"
-				tag = SPR
-			}					
-			AND = {
-				has_dlc = "By Blood Alone"
-				tag = SWI
-			}
-		}
+		AND = {
+			has_dlc = "La Resistance"
+			tag = SPR
+		}	
 	}
 
 	available = {
@@ -190,16 +184,10 @@ SPR_hispano_suiza_organization = {
 	icon = GFX_idea_SPR_hispano_suiza
 	
 	allowed = {
-		OR = {
-			AND = {
-				has_dlc = "La Resistance"
-				tag = SPR
-			}					
-			AND = {
-				has_dlc = "By Blood Alone"
-				tag = SWI
-			}
-		}
+		AND = {
+			has_dlc = "La Resistance"
+			tag = SPR
+		}					
 	}
 
 	available = {

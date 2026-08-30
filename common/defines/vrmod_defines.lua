@@ -192,6 +192,7 @@ NDefines_Graphics.NGraphics.DRAW_FOW_FADE_LENGTH = 0
 
 
 --NMilitary:
+NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1	-- If using the 'immobile' cohesion setting, factor ALL planning speed growth by this
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1.0
 NDefines.NMilitary.ENCIRCLED_PENALTY = 0.1
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.04

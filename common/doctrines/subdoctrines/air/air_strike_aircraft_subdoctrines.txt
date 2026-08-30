@@ -25,11 +25,16 @@ air_subdoctrine_flying_artillery = {
         }
     }
 
-    air_cas_efficiency = 0.40
-    ground_attack_factor = 0.10
-    air_cas_present_factor = 0.40
-    category_cas = {
-        air_agility = 0.2
+    
+    rewards = {
+        suppression_runs = {
+        	air_cas_efficiency = 0.40
+            ground_attack_factor = 0.10
+            air_cas_present_factor = 0.40
+            category_cas = {
+                air_agility = 0.2
+            }
+        }
     }
 }
 
@@ -55,8 +60,13 @@ air_subdoctrine_dive_bombers = {
         }
     }
 
-   air_cas_present_factor = 0.1
-   air_nav_efficiency = 0.15
+
+   rewards = {
+        forward_air_controllers = {
+        	    air_cas_present_factor = 0.1
+                air_nav_efficiency = 0.15
+        }
+    }
 }
 
 air_subdoctrine_flexible_fire_support = {
@@ -74,13 +84,17 @@ air_subdoctrine_flexible_fire_support = {
 
     ai_will_do = { base = 0 }
 
-    air_cas_efficiency = 0.40
-    air_nav_efficiency = 0.15
-    ground_attack_factor = 0.10
-    air_cas_present_factor = 0.20
-    army_bonus_air_superiority_factor = 0.10
-    category_cas = {
-        air_agility = 0.2
+    rewards = {
+        cas_preservation = {
+            air_cas_efficiency = 0.40
+            air_nav_efficiency = 0.15
+            ground_attack_factor = 0.10
+            air_cas_present_factor = 0.20
+            army_bonus_air_superiority_factor = 0.10
+            category_cas = {
+                air_agility = 0.2
+            }
+        }
     }
 }
 
@@ -110,14 +124,17 @@ air_subdoctrine_naval_strike_tactics = {
         }
     }
 
-    naval_strike_targetting_factor = 0.1
-    attack_synchronization = {
-        air_nav_efficiency = 0.1
+    
+    rewards = {
+        naval_disruption = {
+            naval_strike_targetting_factor = 0.1
+            air_nav_efficiency = 0.1
+            category_nav_bomber = {
+                air_range = 0.10
+            }
+            tac_bomber = {
+                air_range = 0.10
+            }          
+        }
     }
-    category_nav_bomber = {
-        air_range = 0.10
-    }
-    tac_bomber = {
-        air_range = 0.10
-    } 
 }
