@@ -795,35 +795,6 @@ faction_manifest_african_decolonization = {
 	}
 }
 
-# Habsburg Hegemony 
-faction_manifest_habsburg_hegemony = {
-	name = habsburg_hegemony_goal_name
-	description = habsburg_hegemony_goal_desc
-	is_manifest = yes
-	ratio_progress = {
-		total_amount_collection = collection:potential_habsburg_countries_total
-		completed_amount_collection = collection:habsburg_countries_in_our_faction
-		range = { 
-			max = 1
-		}
-		
-		scale = {
-			stability_factor = 0.15
-		}
-		
-		progress_sections = {
-			manifest_fulfilled = {
-				min = @manifest_fulfilled_value
-	
-				modifier = {
-					war_support_factor = 0.10
-					army_core_defence_factor = 0.1
-				}			
-			}
-		}
-	}
-}
-
 # Mapuche Liberation of the Americas 
 faction_manifest_amerindian_liberation = {
 	name = amerindian_liberation_goal_name

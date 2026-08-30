@@ -26,14 +26,6 @@ mountaineers_1 = {
 
     ai_will_do = {
         base = 1
-        modifier = {
-            factor = 25
-           	OR = {
-           		original_tag = SWE
-           		original_tag = FIN
-           		original_tag = NOR
-           	} 
-        }
     }
 
     # EFFECTS
@@ -214,7 +206,7 @@ marines_1 = {
     mastery = {
         multiplier = 6
         categories = {
-            category_marines_and_amphibious
+            category_marines
         }
     }
 
@@ -322,7 +314,7 @@ marines_2 = {
     mastery = {
         multiplier = 6
         categories = {
-            category_marines_and_amphibious
+            category_marines
         }
     }
 
@@ -634,15 +626,6 @@ rangers_1 = {
 
     ai_will_do = {
         base = 1
-        modifier = {
-            factor = 25
-            OR = {
-            	original_tag = FIN
-            	original_tag = SWE
-            	original_tag = NOR
-            	original_tag = BEL
-            }          
-        }
     }
 
     # EFFECTS
@@ -650,7 +633,7 @@ rangers_1 = {
 			unlock_subunit = rangers_support
 		}
 		rangers_special_forces_contribution_factor = -0.25
-	    ranger_battalion = {
+	    rangers = {
 			acclimatization_cold_climate_gain_factor = 0.25
 			forest = {
 				attack = 0.1
@@ -700,7 +683,7 @@ rangers_1 = {
 			supply_consumption = -0.02		
 		}
 
-		ranger_battalion = {	
+		rangers = {	
 			urban = {
 				attack = 0.1
 				defence = 0.1
@@ -710,7 +693,7 @@ rangers_1 = {
 	}
 	reward_5 = {
 	    mastery = 60
-	    ranger_battalion = {
+	    rangers = {
 			max_organisation = 10
 			soft_attack = 0.1
 			breakthrough = 0.1
@@ -762,7 +745,7 @@ rangers_2 = {
 		unlock_subunit = rangers_support
 	}
 	rangers_special_forces_contribution_factor = -0.25
-	ranger_battalion = {
+	rangers = {
 		acclimatization_hot_climate_gain_factor = 0.25
 		jungle = {
 			attack = 0.1
@@ -797,7 +780,7 @@ rangers_2 = {
 		}
 		reward_3 = {
 			mastery = 60
-			ranger_battalion = {
+			rangers = {
 				supply_consumption = -0.03
 			}
 			special_forces_no_supply_grace = 36

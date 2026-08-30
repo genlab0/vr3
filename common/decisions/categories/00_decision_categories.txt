@@ -378,11 +378,6 @@ lar_local_recruitment = {
 			}
 			NOT = {
 				tag = RAJ
-				tag = PAK
-				tag = BAN
-				tag = NEP
-				tag = BHU
-				tag = SRL
 			}
 		}
 	}
@@ -409,11 +404,6 @@ lar_local_recruitment = {
 			OR = {
 				has_country_flag = india_recruitment_unlocked
 				tag = RAJ
-				tag = PAK
-				tag = BAN
-				tag = NEP
-				tag = BHU
-				tag = SRL
 			}
 		}
 	}

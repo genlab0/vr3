@@ -78,12 +78,7 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 		}
-
-		iconType = {
-			name = "ship_category_icon"
-			spriteType = "GFX_ship_category_icon_small"
-			position = { x = 490 y = 56 }
-		}
+		
 		iconType = {
 			name = "role_icon_bg"
 			spriteType = "GFX_role_icon_bg"

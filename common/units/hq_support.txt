@@ -17,7 +17,6 @@ sub_units = {
 		
 		categories = {
 			category_support_battalions
-			category_divisional_support_battalions
 			category_army
 		}
 
@@ -69,7 +68,7 @@ sub_units = {
 		categories = {
 			category_front_line
 			category_support_battalions
-			category_divisional_support_battalions
+			
 			category_army
 		}
 
@@ -128,7 +127,7 @@ sub_units = {
 		categories = {
 			category_front_line
 			category_support_battalions
-			category_divisional_support_battalions
+			
 			category_army
 			category_recon
 		}
@@ -188,7 +187,7 @@ sub_units = {
 
 		categories = {
 			category_support_battalions
-			category_divisional_support_battalions
+			
 			category_army
 		}
 
@@ -240,7 +239,7 @@ sub_units = {
 
 		categories = {
 			category_support_battalions
-			category_divisional_support_battalions
+			
 			category_army
 		}
 
@@ -293,7 +292,7 @@ sub_units = {
 
 		categories = {
 			category_support_battalions
-			category_divisional_support_battalions
+			
 			category_army
 		}
 
@@ -349,7 +348,7 @@ sub_units = {
 
 		categories = {
 			category_support_battalions
-			category_divisional_support_battalions
+			
 			category_army
 		}
 
@@ -358,7 +357,6 @@ sub_units = {
 			supply_consumption_factor = -0.05
 		}
 
-		enable_ability = { front_overrun }
 
 		regimental = no
 		combat_width = 0
@@ -403,7 +401,7 @@ sub_units = {
 
 		categories = {
 			category_support_battalions
-			category_divisional_support_battalions
+			
 			category_army
 		}
 
@@ -412,8 +410,6 @@ sub_units = {
 			recon_factor_while_entrenched = 0.1
 			enemy_operative_capture_chance_factor = 0.1 #maybe this is useless
 		}
-
-		enable_ability = { rotating_reserves }
 
 		regimental = no
 		combat_width = 0
@@ -456,7 +452,7 @@ sub_units = {
 
 		categories = {
 			category_support_battalions
-			category_divisional_support_battalions
+			
 			category_army
 		}
 
@@ -508,7 +504,7 @@ sub_units = {
 
 		categories = {
 			category_support_battalions
-			category_divisional_support_battalions
+			
 			category_army
 		}
 
@@ -560,7 +556,7 @@ sub_units = {
 
 		categories = {
 			category_support_battalions
-			category_divisional_support_battalions
+			
 			category_army
 		}
 

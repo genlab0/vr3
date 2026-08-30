@@ -92,9 +92,9 @@ defensive_postures = {
 
     category_all_infantry = {
         entrenchment = 0.05
-        army_core_defence_factor = 0.05
     }
-
+    army_core_defence_factor = 0.05
+    
     rewards = {
         improvised_fighting_position = {
             dig_in_speed_factor = 0.10

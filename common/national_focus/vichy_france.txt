@@ -28,7 +28,7 @@
 			factor = 1
 		}
 		available = {
-			has_country_leader = { ruling_only = yes character = FRA_philippe_petain }
+			controls_state = 20
 			VIC = { is_ai = no }
 		}
 		
@@ -405,80 +405,6 @@
 		}
 	}
 	focus = {
-		id = VIC_concessions_to_the_germans
-		icon = GFX_focus_chi_mission_to_germany
-		x = -1
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_the_legionary_service_order
-		}
-		relative_position_id = VIC_the_legionary_service_order
-		
-		cost = 2
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			16 = {
-				is_controlled_by = GER
-			}
-		}
-		
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_FRA_OCCUPATION_COST }
-		completion_reward = {
-			20 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			32 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			21 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			22 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			26 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
 		id = VIC_mandatory_work_service
 		icon = GFX_goal_generic_construction2
 		x = 0
@@ -556,17 +482,66 @@
 		}
 	}
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	focus = {
-		id = VIC_the_legionary_service_order
-		icon = GFX_goal_generic_small_arms
-		x = -1
+		id = VIC_analyze_our_defeat
+		icon = GFX_goal_generic_army_doctrines
+		x = 3
 		y = 1
 		offset = {
 			x = 0
 			y = 0
 		}
-		prerequisite = { focus = VIC_form_the_milice focus = VIC_analyze_our_defeat }
-		relative_position_id = VIC_form_the_milice
+		prerequisite = { 
+			focus = VIC_emergency_powers_to_petain
+		}
+		mutually_exclusive = { focus = VIC_form_the_milice }
+		relative_position_id = VIC_emergency_powers_to_petain
 		
 		cost = 2
 		ai_will_do = {
@@ -582,9 +557,17 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_ideas = { FRA_legionary_service_order }
-			hidden_effect = { add_named_threat = { threat = 10 name = VIC_the_legionary_service_order } }
+			army_experience = 750
+			set_technology = {
+				mechanised_infantry = 1
+				improved_light_tank_chassis = 1
+				basic_medium_tank_chassis = 1
+				improved_medium_tank_chassis = 1 
+				basic_heavy_tank_chassis = 1
+				improved_heavy_tank_chassis = 1
+			}
 		}
 	}
 	focus = {
@@ -636,6 +619,111 @@
 				antiair2 = 1
 				antitank1 = 1
 				antitank2 = 1
+			}
+		}
+	}
+	focus = {
+		id = VIC_the_legionary_service_order
+		icon = GFX_goal_generic_small_arms
+		x = -1
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { focus = VIC_form_the_milice focus = VIC_analyze_our_defeat }
+		relative_position_id = VIC_form_the_milice
+		
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = { FRA_legionary_service_order }
+			hidden_effect = { add_named_threat = { threat = 10 name = VIC_the_legionary_service_order } }
+		}
+	}
+	focus = {
+		id = VIC_concessions_to_the_germans
+		icon = GFX_focus_chi_mission_to_germany
+		x = -1
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = VIC_the_legionary_service_order
+		}
+		relative_position_id = VIC_the_legionary_service_order
+		
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			16 = {
+				is_controlled_by = GER
+			}
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_FRA_OCCUPATION_COST }
+		completion_reward = {
+			20 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			32 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			21 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			22 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			26 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -737,48 +825,6 @@
 				category = support_tech
 				uses = 3
 				bonus = 0.75
-			}
-		}
-	}
-	focus = {
-		id = VIC_analyze_our_defeat
-		icon = GFX_goal_generic_army_doctrines
-		x = 3
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_emergency_powers_to_petain
-		}
-		mutually_exclusive = { focus = VIC_form_the_milice }
-		relative_position_id = VIC_emergency_powers_to_petain
-		
-		cost = 2
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			army_experience = 750
-			set_technology = {
-				mechanised_infantry = 1
-				improved_light_tank_chassis = 1
-				basic_medium_tank_chassis = 1
-				improved_medium_tank_chassis = 1 
-				basic_heavy_tank_chassis = 1
-				improved_heavy_tank_chassis = 1
 			}
 		}
 	}

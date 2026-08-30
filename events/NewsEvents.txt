@@ -5979,17 +5979,10 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.285.b
-		trigger = {
-			TAG = PAK
-		}
-	}
-	option = {
 		name = news.285.c
 		trigger = { 
 			NOT = {
 				TAG = RAJ
-				TAG = PAK
 			}
 		}
 	}

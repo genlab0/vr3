@@ -771,9 +771,7 @@ leader_traits = {
 			FROM = {
 				OR = {
 					original_tag = ITA
-					original_tag = SWI
 					original_tag = SWE
-					original_tag = BRA
 				}
 			}
 		}
@@ -787,9 +785,7 @@ leader_traits = {
 			owner = {
 				OR = {
 					original_tag = ITA
-					original_tag = SWI
 					original_tag = SWE
-					original_tag = BRA
 				}
 				NOT = {
 					OR = {

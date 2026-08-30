@@ -28,9 +28,14 @@ air_subdoctrine_operational_air_support = {
     }
 
     # EFFECTS
-	air_strategic_bomber_bombing_factor = 0.15
-    tac_bomber = { 
-        air_bombing = 0.10
+	
+    rewards = {
+        efficient_support_crews = {
+			air_strategic_bomber_bombing_factor = 0.15
+            tac_bomber = { 
+                air_bombing = 0.10
+            }
+		}
     }
 }
 
@@ -65,8 +70,13 @@ air_subdoctrine_tactical_battlefield_support = {
     }
 
     # EFFECTS
-	air_cas_present_factor = 0.1
-    air_cas_efficiency = 0.15
+	
+    rewards = {
+        keypoint_bombing = {
+			air_cas_present_factor = 0.1
+            air_cas_efficiency = 0.15
+		}
+    }
 }
 
 air_subdoctrine_theater_interdiction = {
@@ -97,6 +107,12 @@ air_subdoctrine_theater_interdiction = {
 
     tac_bomber = { air_bombing = 0.2 }	
     air_nav_efficiency = 0.1
+    rewards = {
+        extended_reach = {
+			tac_bomber = { air_bombing = 0.2 }	
+            air_nav_efficiency = 0.1
+		}
+    }
 }
 
 air_subdoctrine_aerial_reconnaissance = {
@@ -122,12 +138,17 @@ air_subdoctrine_aerial_reconnaissance = {
     ai_will_do = { base = 0 }
 
     # EFFECTS
-	category_scout_plane = {
-		air_agility = 0.1
-        air_range = 0.15
-        army_intel_factor = 0.1
-        airforce_intel_factor = 0.1
-        civilian_intel_factor = 0.1
-        navy_intel_factor = 0.1
-	}
+	
+    rewards = {
+        extended_reconnaissance_radius = {
+			category_scout_plane = {
+                air_agility = 0.1
+                air_range = 0.15
+            }
+            army_intel_factor = 0.1
+            airforce_intel_factor = 0.1
+            civilian_intel_factor = 0.1
+            navy_intel_factor = 0.1
+		}
+    }
 }

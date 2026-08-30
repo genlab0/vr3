@@ -1906,7 +1906,8 @@
  SPR_republican_general_name_2:0"Lol"
  SPR_republican_general_name_3:0"Lol"
  ##Abilities:
- ABILITY_LAST_STAND_allowed:0"§GAllows the Ability Last Stand§!"
+ ABILITY_LAST_STAND_allowed:0"\n §GAllows the Ability Last Stand§!"
+ ABILITY_LAST_STAND_grand_doctrine_allowed:0"\n §GAllows the Ability Last Stand if you pick the Guerilla War Subdoctrine§!"
  dreams_of_a_new_byzantium_fulfilled:0"Christian Emperor"
  form_country_byzantium_coring_states_tt:0"All states that need to be controlled will be cored."
  BUL_the_return_of_ferdinand_i_tt:0"Allows decision to form §GByzantium§!"

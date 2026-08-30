@@ -26,10 +26,13 @@ air_subdoctrine_night_bombing = {
     	}
     }
 
-    # EFFECTS
-	air_strategic_bomber_night_penalty = -0.5
-	air_strategic_bomber_bombing_factor = 0.2
-
+	
+    rewards = {
+        night_raids = {
+			air_strategic_bomber_night_penalty = -0.5
+	        air_strategic_bomber_bombing_factor = 0.2
+		}
+    }
 }
 
 air_subdoctrine_carpet_bombing = {
@@ -62,8 +65,13 @@ air_subdoctrine_carpet_bombing = {
     }
 
     # EFFECTS
-	air_strategic_bomber_bombing_factor = 0.3
-	air_escort_efficiency = 0.25
+	
+    rewards = {
+        veteran_bomber_crews = {
+			air_strategic_bomber_bombing_factor = 0.3
+	        air_escort_efficiency = 0.25
+		}
+    }
 }
 
 air_subdoctrine_deep_air_raids = {
@@ -96,11 +104,13 @@ air_subdoctrine_deep_air_raids = {
     }
 
     # EFFECTS
-	air_range_factor = 0.05
-	strategic_bomb_visibility = -0.5
-	air_strategic_bomber_defence_factor = 0.2
+
 
     rewards = {
-        
+        bad_weather_operations = {
+			air_range_factor = 0.05
+            strategic_bomb_visibility = -0.5
+            air_strategic_bomber_defence_factor = 0.2
+		}
     }
 }

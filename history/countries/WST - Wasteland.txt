@@ -9,6 +9,7 @@ set_politics = {
 set_popularities = {
 	neutrality = 100
 }
+recruit_character = WST_federal_assembly 
 set_technology = {
 	basic_machine_tools = 1
 	concentrated_industry = 1

@@ -60,9 +60,6 @@ ROM_galati_shipyard_organization = {
 		tag = ROM
 		has_dlc = "Death or Dishonor"
 	}
-	available = {
-		FROM = { has_completed_focus = ROM_coastal_defense_navy }
-	}
 	initial_trait = {
 		name = ROM_mio_trait_coastal_defense_production
 		limit_to_equipment_type = { mio_cat_eq_all_cruiser }
@@ -82,9 +79,6 @@ ROM_Braila_organization = {
 	allowed = { 
 		tag = ROM
 		has_dlc = "Death or Dishonor"
-	}
-	available = {
-		FROM = { has_completed_focus = ROM_black_sea_dominance }
 	}
 }
 

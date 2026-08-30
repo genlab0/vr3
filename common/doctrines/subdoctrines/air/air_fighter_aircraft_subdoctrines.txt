@@ -20,8 +20,13 @@ air_subdoctrine_fighter_homeland_defense = {
         }
     }
 
-    air_intercept_efficiency = 0.2
-    air_mission_xp_gain_factor = 0.05
+
+    rewards = {
+        interception_priority = {
+            air_intercept_efficiency = 0.2
+            air_mission_xp_gain_factor = 0.05
+        }
+    }
 }
 
 
@@ -51,10 +56,14 @@ air_subdoctrine_tactical_flexibility = {
         }
     }
 
-    air_intercept_efficiency = 0.2
-    air_superiority_efficiency = 0.2
-    air_interception_detect_factor = 0.20
-    air_superiority_detect_factor = 0.2
+    rewards = {
+        loose_formation = {
+                air_intercept_efficiency = 0.2
+                air_superiority_efficiency = 0.2
+                air_interception_detect_factor = 0.20
+                air_superiority_detect_factor = 0.2
+		}
+    }
 }
 
 air_subdoctrine_dogfighting_mastery = {
@@ -84,9 +93,13 @@ air_subdoctrine_dogfighting_mastery = {
         }
     }
 
-    # EFFECTS
-    air_ace_generation_chance_factor = 0.25
-    air_mission_xp_gain_factor = 0.25
+
+    rewards = {
+        pilot_quality_focus = {
+			air_ace_generation_chance_factor = 0.25
+            air_mission_xp_gain_factor = 0.25
+		}
+    }
 }
 
 air_subdoctrine_escort_fighter = {
@@ -118,7 +131,11 @@ air_subdoctrine_escort_fighter = {
         }
     }
 
-    # EFFECTS
-    air_superiority_efficiency = 0.15
-	air_mission_xp_gain_factor = 0.05
+    
+    rewards = {
+        escort_procedures = {
+			air_superiority_efficiency = 0.15
+	        air_mission_xp_gain_factor = 0.05
+		}
+    }
 }

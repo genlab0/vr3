@@ -118,9 +118,6 @@ escort_carrier_support = {
     xp_cost = 100
     xp_type = navy
 
-    available = {
-        is_special_project_completed = sp:sp_naval_escort_carrier
-    }
     visible = {
         has_dlc = "No Compromise, No Surrender"
     }
@@ -153,46 +150,6 @@ escort_carrier_support = {
     	convoy_carrier_support_groups = {
     	}
    	}
-}
-
-broad_naval_support = {
-    track = carriers
-    name = SUBDOCTRINE_BROAD_NAVAL_SUPPORT
-    description = SUBDOCTRINE_BROAD_NAVAL_SUPPORT_DESC
-    icon = GFX_doctrine_carrier_task_forces_medium
-
-    xp_cost = 100
-    xp_type = navy
-
-    available = {
-        OR = {
-            is_special_project_completed = sp:sp_naval_escort_carrier
-            is_special_project_completed = sp:sp_naval_support_ships
-        }
-    }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
-
-    critical_receive_chance = -0.1
-
-    rewards = {
-    	carrier_maneuvering = {
-    		carrier = {
-    			naval_speed = 0.1
-    		}
-    	}
-    	task_force_concentration = {
-    		ships_at_battle_start = 0.1
-    	}
-
-    	organized_support_protocols = {
-    	}
-    	escorts_in_battle = {
-    	}
-    	support_rotation = {
-    	}
-	}
 }
 
 massed_carrier_fleet = {

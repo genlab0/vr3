@@ -39,7 +39,7 @@ German_historical = {
 		GER_infantry_equipment_focus #910
 		GER_end_of_czechoslovakia #980
 		GER_synthetic_rubber #1015
-		GER_tactical_air_effort 1050
+		GER_tactical_air_effort #1050
 		GER_extra_tech_slot #1120
 
 		#1939
