@@ -1,0 +1,271 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+
+SPR_dont_attack_at_startup_of_civil_war = {
+	allowed = {
+		original_tag = SPR
+	}
+
+	enable = {
+		has_global_flag = SPR_civil_war_startup
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+
+		country_trigger = {
+			original_tag = SPR
+		}
+
+		execute_order = no
+		manual_attack = no
+	}
+}
+
+# Prevent Nationalist SPRin to join any faction on historical mode
+nationalist_SPRin_allies_nobody_on_historical = {
+	allowed = {
+		tag = SPR
+		has_dlc = "La Resistance"
+	}
+	enable = {
+		GER = { has_war = yes }
+	}
+	abort = {
+		GER = { NOT = { has_government = fascism } }
+	}
+	ai_strategy = {
+		type = support
+		id = "GER"
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "GER"
+		value = 1000
+	}
+	ai_strategy = {
+		type = support
+		id = "ITA"
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "ITA"
+		value = 1000
+	}
+}
+
+#SPRin does D-Day Wall ig
+spr_minors_normandy_buffer = {
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		GER = { has_war = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.9
+		states = {
+			806
+			19
+			23					
+			30
+			14
+			15
+			785
+			29
+			6
+			35
+			7
+			36
+			56
+			59
+			58
+			909
+			912
+			99
+			911
+			37
+		}
+		subtract_fronts_from_need = no
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratrooper
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = mountaineers
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = 15000
+	}
+}
+
+#Mills after April 1937
+SPR_industry_we_are_the_baddies = {
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		date > 1939.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 5000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = naval_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = -1000
+	}
+}
+
+SPR_wants_civ = {
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		date < 1939.1.1
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 35
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = naval_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = -1000
+	}
+}

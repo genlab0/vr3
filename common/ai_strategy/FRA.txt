@@ -1,0 +1,225 @@
+FRA_no_train_production = {
+	allowed = {
+		original_tag = FRA
+	}
+
+	enable = {
+		controls_state = 16
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = equipment_production_factor
+		id = train
+		value = -100  # Always have some production of trains
+	}
+}
+
+fra_bba_air_prod_0 = {
+	# TODO BFW:
+	allowed = { original_tag = FRA }
+	enable = {
+		date>1936.1.1
+	}
+
+	abort_when_not_enabled = yes
+
+	# Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = -5000
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -5000
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -5000
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -5000
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = large_plane_airframe
+		value = -5000
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = heavy_fighter
+		value = -5000
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = heavy_fighter
+		value = -5000
+	}
+}
+
+FRA_eco_build = {
+	allowed = {
+		original_tag = FRA 
+	}
+	enable = {
+		date<1945.1.1
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = arms_factory
+		target = 677
+		value = 10
+	}
+	ai_strategy = {
+		type = build_building
+		id = arms_factory
+		target = 680
+		value = 10
+	}
+	ai_strategy = {
+		type = build_building
+		id = arms_factory
+		target = 554
+		value = 10
+	}
+	ai_strategy = {
+		type = build_building
+		id = arms_factory
+		target = 553
+		value = 10
+	}
+	ai_strategy = {
+		type = build_building
+		id = arms_factory
+		target = 460
+		value = 10
+	}
+	ai_strategy = {
+		type = build_building
+		id = arms_factory
+		target = 459
+		value = 10
+	}
+	ai_strategy = {
+		type = build_building
+		id = arms_factory
+		target = 556
+		value = 10
+	}
+	ai_strategy = {
+		type = build_building
+		id = arms_factory
+		target = 781
+		value = 10
+	}
+}
+
+FRA_unit_production = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		date>1936.1.1
+	}
+	abort_when_not_enabled = yes 
+
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 2000
+	}
+	ai_strategy = {
+		type = build_army
+		id = rangers
+		value = 600
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 200
+	}
+	#Please don't do tanks ty
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = -10000
+	}
+}
+
+FRA_ignore_these_countries = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		NOT = { has_capitulated = yes }
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = SPR
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = SPD
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = ITA
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = CHI
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = JAP
+		value = -1000
+	}
+}
+
+FRA_war_starts_prepare_for_benelux = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		GER = {
+			has_completed_focus = GER_danzig_or_war
+		}
+	}
+	abort = {
+		GER = {
+			has_completed_focus = GER_around_maginot
+		}
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		# french states bordering benelux
+		states = {
+			29
+			785
+			18
+		}
+		ratio = 0.5
+		area = europe
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = yes
+	}
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = -150
+	}
+}

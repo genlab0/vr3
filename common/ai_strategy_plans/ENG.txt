@@ -1,0 +1,62 @@
+England_historical = {
+	name = "English historical plan"
+	desc = "Essentially historical behaviour for Britain"
+
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		date>1960.1.1
+	}
+
+	ai_national_focuses = {
+		# grab as fast as you can if available
+		general_rearmament_focus
+		air_rearmament_focus
+		fighter_command_focus
+		ENG_us_economic_support
+		ENG_imperial_conference
+
+		limited_rearmament_focus
+		naval_rearmament_focus
+		ENG_steady_as_she_goes
+		uk_empire_focus
+		uk_service_focus
+		uk_colonial_focus
+		uk_commonwealth_focus
+		uk_south_africa_focus
+		uk_canada_focus
+		uk_india_focus
+		ENG_home_defence
+		ENG_prepare_for_the_inevitable
+		shadow_scheme_focus
+		uk_industrial_focus
+		uk_extra_tech_slot
+		royal_ordinance_focus
+		ENG_chiefs_of_staff_committee
+		ENG_royal_artillery
+		uk_small_arms_focus
+		ENG_home_guard
+		uk_mediterranean_focus
+		uk_rock_focus
+		uk_protect_suez
+		ENG_operation_compass
+		uk_waves_focus
+		uk_carrier_focus
+		uk_carrier_spawnins
+		ENG_secure_the_imperial_shipping_routes
+	}
+
+	research = {
+		infantry_tech = 15.0
+		support_tech = 6.5
+	}
+
+	traits = {
+		silent_workhorse = 10
+	}
+
+}

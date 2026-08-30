@@ -1,0 +1,134 @@
+﻿capital = 275
+oob = "SAF_1936"
+
+
+set_research_slots = 5
+set_stability = 0.65
+set_war_support = 0.15
+add_ideas = low_economic_mobilisation
+add_ideas = free_trade
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	basic_train = 1
+	motorised_infantry = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	tech_maintenance_company = 1
+	tech_field_hospital = 1
+	tech_military_police = 1
+	tech_logistics_company = 1 
+	tech_signal_company = 1 
+	gw_artillery = 1
+	fuel_silos = 1
+	tech_mountaineers = 1
+	tech_special_forces = 1
+	interwar_antiair = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "Together for Victory" }
+	add_ideas = SAF_ossewabrandwag
+	add_ideas = SAF_history_of_segregation
+	add_ideas = spain_volunteers_allies
+
+	add_to_tech_sharing_group = commonwealth_research
+	add_opinion_modifier = { target = ENG modifier = SAF_anti_british_sentiment }
+}
+
+
+set_convoys = 25
+set_politics = {
+	ruling_party = democratic
+	last_election = "1933.5.17"
+	election_frequency = 60
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 75
+	fascism = 20
+	communism = 5
+}
+
+recruit_character = SAF_mathijs
+recruit_character = SAF_j_b_m_hertzog
+recruit_character = SAF_d_f_malan
+recruit_character = SAF_moses_kotane
+recruit_character = SAF_pixley_ka_isaka_seme
+recruit_character = SAF_george_edwin_brink
+recruit_character = SAF_guy_hallifax
+recruit_character = SAF_pierre_oliver_knoll
+recruit_character = SAF_cornelis_van_zuigenbrogge
+recruit_character = SAF_pierre_van_ryneveld
+recruit_character = SAF_s_p_le_roux
+recruit_character = SAF_adolf_malan
+recruit_character = SAF_marinus_van_osterkamp
+recruit_character = SAF_robert_palmer
+recruit_character = SAF_leonard_beyers
+recruit_character = SAF_c_de_weenburg_du_toit
+recruit_character = SAF_james_mitchell_baker
+recruit_character = SAF_jeannot_de_la_tourier
+recruit_character = SAF_j_f_van_rensburg
+recruit_character = SAF_e_g_jansen
+recruit_character = SAF_nicolaas_havenga
+recruit_character = SAF_sir_patrick_duncan
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1938.5.18"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+
+	#retire_character = SAF_j_b_m_hertzog
+	# Took office 5 days after this date
+	recruit_character = SAF_jan_smuts
+	promote_character = SAF_jan_smuts
+	retire_character = SAF_j_b_m_hertzog
+}

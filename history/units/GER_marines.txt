@@ -1,0 +1,14 @@
+﻿units = {
+	division= {	
+		location = 3326
+		name = "Seebattaillon"
+		division_template = "Seebattaillon"
+		start_experience_factor = 0.65
+	}
+	division= {	
+		location = 3326
+		name = "Seebattaillon"
+		division_template = "Seebattaillon"
+		start_experience_factor = 0.65
+	}
+}

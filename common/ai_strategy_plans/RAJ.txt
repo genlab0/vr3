@@ -1,0 +1,47 @@
+raj_historical = {
+	name = "German historical plan"
+	desc = "Essentially historical behaviour for Germany"
+
+	allowed = {
+		original_tag = RAJ
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		date>1960.1.1
+	}
+
+	ai_national_focuses = {
+
+		RAJ_provincial_elections
+		RAJ_indian_national_congress
+		RAJ_princely_state_donations
+
+		RAJ_lessons_of_the_great_war
+		RAJ_vickers_berthier_gun
+		RAJ_great_indian_peninsula_railway
+		RAJ_east_india_railways
+		RAJ_integrate_princely_railways
+		RAJ_clamp_down_on_corruption
+		RAJ_administrative_oversight
+		RAJ_land_clearance
+		RAJ_ishapore_arsenal
+		RAJ_strengthen_ties_with_british_investors
+		RAJ_british_rail_investors
+		RAJ_british_arms_investors
+		RAJ_industrial_expansion
+
+	}
+
+	traits = {
+		silent_workhorse = 100
+	}
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

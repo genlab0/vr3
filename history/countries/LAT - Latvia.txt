@@ -1,0 +1,39 @@
+﻿capital = 808
+
+oob = "LAT_1936"
+
+
+
+recruit_character = LAT_karlis_ulmanis
+
+
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_support = 1
+	basic_train = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+	}
+}
+
+set_research_slots = 3
+
+set_convoys = 10
+
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1931.10.3"
+	election_frequency = 10
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 100
+}

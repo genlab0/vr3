@@ -1,0 +1,52 @@
+# For minor countries where advisors are not defined
+# Generate them from a generic template
+
+# Political advisors
+
+
+
+
+
+every_possible_country = {
+	limit = {
+		has_dlc = "La Resistance"
+		IF = {
+			limit = {
+				has_dlc = "Battle for the Bosporus"
+			}
+			NOT = {
+				tag = GRE
+				tag = TUR
+			}
+		}
+		IF = {
+			limit = { has_dlc = "Arms Against Tyranny" }
+			NOT = { OR = { tag = SWE } }
+		}
+
+		NOT = {
+			has_allowed_idea_with_traits = { idea = head_of_intelligence characters = yes }
+		}
+		is_dynamic_country = no
+	}
+	generate_character = {
+		token_base = generic_head_of_intelligence # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { head_of_intelligence }
+			available = {
+				has_intelligence_agency = yes
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					has_intelligence_agency = no
+					factor = 0
+				}
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_head_of_intelligence }
+		}
+	}
+}

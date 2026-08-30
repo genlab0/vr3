@@ -1,0 +1,27 @@
+characters={
+
+
+#################################
+#################################
+####                         ####
+####     Country Leaders     ####
+####                         ####
+#################################
+#################################
+
+		VIC_no_government={
+		name=VIC_no_government
+		portraits={
+			civilian={
+				large=GFX_portrait_ENG_neville_chamberlain
+			}
+		}
+		country_leader={
+			ideology=nazism
+			traits={  }
+			id=-1
+		}
+	}
+
+
+}

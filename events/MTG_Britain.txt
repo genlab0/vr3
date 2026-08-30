@@ -1,0 +1,76 @@
+﻿add_namespace = mtg_britain 
+
+# Abdication Crisis Edward VIII
+country_event = {
+	id = mtg_britain.1
+	title = mtg_britain.1.t
+	desc = mtg_britain.1.d
+	picture = GFX_report_event_eng_edward_and_wallis
+	is_triggered_only = yes
+
+	# Reject
+	option = {
+		name = mtg_britain.1.c
+		ai_chance = {
+			factor = 70
+		}
+		add_stability = 0.05
+		set_country_flag = ENG_edward_abdicating
+		country_event = { id = mtg_britain.14 days = 5 random_days = 5 }
+	}
+}
+
+# Abdication Crisis Edward VIII - King's support coalesces
+country_event = {
+	id = mtg_britain.2
+	title = mtg_britain.2.t
+	desc = mtg_britain.2.d
+	picture = GFX_report_event_generic_rally
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_britain.2.a
+		add_popularity = { ideology = neutrality popularity = 0.1 }
+		add_political_power = 100
+		add_timed_idea = { idea = ENG_support_for_the_king_idea days = 150 }
+		custom_effect_tooltip = mtg_britain.2_tt
+		hidden_effect = { country_event = { id = mtg_britain.3 days = 50 } }
+	}
+
+	# On second thought, maybe we shouldn't
+	option = {
+		name = mtg_britain.2.b
+		ai_chance = {
+			factor = 0
+		}
+		country_event = { id = mtg_britain.14 days = 40 random_days = 10 }
+		set_country_flag = ENG_abdication_crisis_changed_mind
+	}
+}
+# King abdicates - Man the Guns version
+country_event = {
+	id = mtg_britain.14
+	title = britain.17.t
+	desc = britain.17.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			remove_ideas = ENG_king_edward
+			add_ideas = ENG_george_vi
+			set_country_flag = ENG_edward_viii_abdicated
+		}
+	}
+
+	option = {
+		name = britain.17.a
+		effect_tooltip = {
+			remove_ideas = ENG_king_edward
+			add_ideas = ENG_george_vi		
+		}
+	}
+}

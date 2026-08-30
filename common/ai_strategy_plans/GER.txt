@@ -1,0 +1,96 @@
+German_historical = {
+	name = "German historical plan"
+	desc = "Essentially historical behaviour for Germany"
+
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		date<1960.1.1
+	}
+	abort = {
+		date>1960.1.1
+	}
+
+	ai_national_focuses = {
+		# grab as fast as you can if available
+		GER_around_maginot
+		GER_support_spain
+
+		GER_rhineland	#70
+		GER_luftwaffe   #105
+		GER_army_innovation #140
+		GER_medium_tank_branch #175
+		GER_four_year_plan #210
+		GER_accelerate_rearmament #280
+		GER_hermann_goring_werke #350
+
+		#1937
+		GER_kdf_wagen #420
+		GER_autobahn #455
+		GER_nationalise_industries #525
+		GER_anschluss #595
+		GER_german_war_economy #665
+		GER_war_footing #735
+
+		#1938
+		GER_autarky #770
+		GER_demand_sudetenland #840
+		GER_infantry_equipment_focus #910
+		GER_end_of_czechoslovakia #980
+		GER_synthetic_rubber #1015
+		GER_tactical_air_effort 1050
+		GER_extra_tech_slot #1120
+
+		#1939
+		GER_demand_memel
+		GER_air_innovation_2
+		GER_coal_liquidization
+		GER_mol_rib_pact
+		GER_danzig_or_war
+
+		#Later:
+		GER_weserubung
+		GER_nationalised_military_industrial_complex
+		GER_encourage_innovation
+		GER_war_with_france
+		GER_reintegrate_luxemburg_and_alsace_lorraine
+		GER_west_wall
+		GER_atlantikwall
+		GER_strategic_air_effort
+		GER_ussr_war_goal
+
+		GER_fall_blau 
+		GER_operation_citadel
+	}
+
+	research = {
+		infantry_tech = 15.0
+		support_tech = 6.5
+	}
+
+	traits = {
+		war_industrialist = 10
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 111
+	}
+
+	focus_factors = {
+		GER_rhineland = 1.0
+	}
+
+}
+

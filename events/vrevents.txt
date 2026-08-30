@@ -1,0 +1,100 @@
+add_namespace = germany
+add_namespace = AAT_germany
+
+country_event = {
+	id = germany.1002
+	title = germany.1002.t
+	desc = germany.1002.d
+	picture = GFX_report_event_german_afrikakorps
+
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1002.a		#join
+        custom_effect_tooltip = germany_rommel_africa_tt
+        hidden_effect = {
+            GER_erwin_rommel = {
+                add_unit_leader_trait = africa_command 
+            }
+            GER_erich_von_manstein = {
+                add_unit_leader_trait = barb_preparation
+            }
+            GER_heinz_guderian = {
+                add_unit_leader_trait = barb_preparation
+            }
+        }
+	}
+
+	option = {
+		name = germany.1002.b		#refuse
+		custom_effect_tooltip = germany_manstein_africa_tt
+        hidden_effect = {
+            GER_erwin_rommel = {
+                add_unit_leader_trait = barb_preparation
+            }
+            GER_erich_von_manstein = {
+                add_unit_leader_trait = africa_command_manstein
+            }
+            GER_heinz_guderian = {
+                add_unit_leader_trait = barb_preparation
+            }
+        }
+	}
+
+}
+country_event = {
+	id = germany.1003
+	title = germany.1003.t
+	desc = germany.1003.d
+	picture = GFX_report_event_case_anton
+
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1003.a		#join
+        VIC = {
+            transfer_units_fraction= {
+                target = FRA
+                size = 0
+                navy_ratio = 0.5
+                keep_unit_leaders_trigger = { always = yes }
+		    }
+            transfer_units_fraction= {
+                target = GER
+                size = 0
+                navy_ratio = 0.5
+                keep_unit_leaders_trigger = { always = yes }
+		    }
+        }
+        VIC = {
+            declare_war_on = {
+					target = FRA
+					type = annex_everything
+           		}
+            }
+        if = {
+    limit = {
+        VIC = { is_ai = yes }
+    }
+        GER = {
+            transfer_state = 32
+            transfer_state = 20
+            transfer_state = 21
+            transfer_state = 22
+            transfer_state = 31
+            transfer_state = 25
+            transfer_state = 33
+            transfer_state = 26
+        }
+        ITA = {
+            transfer_state = 851
+            transfer_state = 735
+        }
+        hidden_effect = {
+            news_event = news.417
+         }
+	    }
+    }
+}

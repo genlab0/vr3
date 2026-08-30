@@ -1,0 +1,84 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+FRA_initiate_legitimacy_power_balance = {
+	set_power_balance = {
+		id = FRA_legitimacy_power_balance
+		left_side = FRA_low_legitimacy # will keep the last set side if not specified
+		right_side = FRA_high_legitimacy # will keep the last set side if not specified
+		set_value = -0.8 # if specified will set the value of the power balance, this option will override the effect of set_default so the two options should not be used together. if neither set_default or set_value is specified the current value of the power balance will not change
+	}
+}
+
+FRA_bop_medium_increase_effect = {
+	add_power_balance_value = {
+		id = FRA_legitimacy_power_balance
+		value = 0.15
+	}
+}
+
+FRA_bop_low_increase_effect = {
+	add_power_balance_value = {
+		id = FRA_legitimacy_power_balance
+		value = 0.1
+	}
+}
+
+FRA_bop_medium_decrease_effect = {
+	add_power_balance_value = {
+		id = FRA_legitimacy_power_balance
+		value = -0.15
+	}
+}
+
+FRA_bop_low_decrease_effect = {
+	add_power_balance_value = {
+		id = FRA_legitimacy_power_balance
+		value = -0.1
+	}
+}
+
+
+
+remove_worker_shortage_effect = {	
+	if = {
+		limit = { has_idea = FRA_worker_shortage }
+		remove_ideas = FRA_worker_shortage
+	}
+	else_if = {
+		limit = { has_idea = FRA_full_employment }
+		remove_ideas = FRA_full_employment
+	}
+}
+
+FRA_right_wing_riot_effect = {
+	if = {
+		limit = {
+			has_idea = FRA_political_violence
+		}
+		country_event = lar_france_political_violence.1
+	}
+}
+FRA_communism_riot_effect = {
+	if = {
+		limit = {
+			has_idea = FRA_political_violence
+		}
+		country_event = lar_france_political_violence.2
+	}
+}

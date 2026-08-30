@@ -1,0 +1,36 @@
+SPD_frontline_army = {
+	allowed = {
+		original_tag = SPD
+	}
+
+	enable = {
+		has_war = yes
+	}
+
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_control
+		tag = SPR
+		execution_type = careful
+	}
+	ai_strategy = {
+		type = front_control
+		state = 170
+		execution_type = balanced
+	}
+	ai_strategy = {
+		type = front_control
+		state = 788
+		execution_type = balanced
+	}
+	ai_strategy = {
+		type = front_control
+		state = 169
+		execution_type = balanced
+	}
+
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+}

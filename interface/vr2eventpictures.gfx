@@ -1,0 +1,50 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_report_event_canada_ronnie"
+		texturefile = "gfx/event_pictures/report_event_canada_ronnie.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_invasion_sicily"
+		texturefile = "gfx/event_pictures/news_event_invasion_sicily.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_german_afrikakorps"
+		texturefile = "gfx/event_pictures/report_event_german_afrikakorps.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_case_anton"
+		texturefile = "gfx/event_pictures/report_event_case_anton.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_operation_sealion"
+		texturefile = "gfx/event_pictures/news_event_operation_sealion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_liberation_england"
+		texturefile = "gfx/event_pictures/news_event_liberation_england.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_case_anton"
+		texturefile = "gfx/event_pictures/news_event_case_anton.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_operation_overlord"
+		texturefile = "gfx/event_pictures/news_event_operation_overlord.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_invasion_sicily"
+		texturefile = "gfx/event_pictures/report_event_invasion_sicily.dds"
+	}
+}
+
+
+

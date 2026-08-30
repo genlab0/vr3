@@ -1,0 +1,281 @@
+prospect_for_resources = {
+    develop_tasmania_aluminium_deposits = { #518
+
+		icon = aluminium
+
+		allowed = {
+
+		}
+
+		available = {
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 518
+			controls_state = 518
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 518
+			}
+		}
+
+		visible = {
+            has_completed_focus = AST_rationing_and_recycling
+			owns_state = 518
+			controls_state = 518
+			518 = {
+				NOT = {
+					has_state_flag = tasmania_aluminium_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {
+				factor = 0
+				OR = {
+					AND = { #Ultimatum decisions are available and we should prio them
+						original_tag = SOV
+						SOV_we_want_to_send_ultimatums = yes
+					}
+					AND = { #Too low MP we need to save PP for the laws
+						has_manpower < 10000
+						NOT = { has_idea = scraping_the_barrel }
+					}
+				}
+			}
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = aluminium
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			518 = {
+				set_state_flag = tasmania_aluminium_developed
+			}
+			518 = {
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+			}
+		}
+	}
+	"Expand Victoria Steel Mines" = { #517
+
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 3
+			owns_state = 517
+			controls_state = 517
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 517
+			}
+		}
+
+		visible = {
+			owns_state = 517
+			controls_state = 517
+			has_completed_focus = AST_rationing_and_recycling
+			517 = {
+				NOT = {
+					has_state_flag = victoria_steel_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+
+		remove_effect = {
+			517 = { set_state_flag = victoria_steel_developed }
+			517 = {
+				add_resource = {
+					type = steel 
+					amount = 15
+				}
+			}
+		}
+	}
+
+	"Expand Queensland Tungsten Mines" = { #521
+
+		icon = tungsten
+
+		allowed = {
+
+		}
+
+		available = {
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 11
+			owns_state = 521
+			controls_state = 521
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 521
+			}
+		}
+
+		visible = {
+			owns_state = 521
+			controls_state = 521
+			has_completed_focus = AST_rationing_and_recycling
+			521 = {
+				NOT = {
+					has_state_flag = queensland_tungsten_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 120
+
+		modifier = {
+			civilian_factory_use = 12
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+
+		remove_effect = {
+			521 = { set_state_flag = queensland_tungsten_developed }
+			521 = {
+				add_resource = {
+					type = tungsten 
+					amount = 40
+				}
+			}
+		}
+	}
+
+    "Expand New Zealand Mineral Mines" = { #521
+
+		icon = tungsten
+
+		allowed = {
+
+		}
+
+		available = {
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 9
+			AND = {
+                controls_state = 723
+                controls_state = 284
+            }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 723
+                state = 284
+			}
+		}
+
+		visible = {
+			has_completed_focus = AST_rationing_and_recycling
+			723 = {
+				NOT = {
+					has_state_flag = new_zealand_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 120
+
+		modifier = {
+			civilian_factory_use = 10
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+
+		remove_effect = {
+			723 = { set_state_flag = new_zealand_developed }
+			723 = {
+				add_resource = {
+					type = tungsten 
+					amount = 13
+				}
+                add_resource = {
+					type = steel 
+					amount = 7
+				}
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes 
+                }
+			}
+            284 = {
+				add_resource = {
+					type = chromium 
+					amount = 15
+				}
+                add_resource = {
+					type = steel 
+					amount = 11
+				}
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes 
+                }
+			}
+		}
+	}
+}

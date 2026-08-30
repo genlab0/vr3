@@ -1,0 +1,29 @@
+japan_historical = {
+	name = "Japan historical plan"
+	desc = "Essentially historical behaviour for Germany"
+
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		date>1960.1.1
+	}
+
+	ai_national_focuses = {
+
+	}
+
+	traits = {
+		silent_workhorse = 100
+	}
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

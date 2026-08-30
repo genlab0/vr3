@@ -1,0 +1,1433 @@
+﻿add_namespace = lar_news
+
+
+# End of the Spanish Civil War (Nationalist/Carlist victory)
+news_event = {
+	id = lar_news.1
+	title = {
+		text = lar_news.1.t_franco
+	}
+	desc = {
+		text = lar_news.1.desc_franco
+		trigger = {
+			has_global_flag = SPR_franco_won
+			NOT = {
+				has_global_flag = SPR_carlist_uprising_flag
+				has_global_flag = scw_early_end
+			}
+		}
+	}
+	picture = GFX_news_event_033
+	
+	major = yes
+	immediate = {
+		hidden_effect = {
+			HUN = { leave_faction = yes }
+			ROM = { leave_faction = yes }
+			set_global_flag = SPR_franco_won
+			SPR = {
+				annex_country = {
+					target = SPD
+					transfer_troops = no
+				}
+				SPR_clr_national_strikes = yes
+				delete_unit_template_and_units = {
+					division_template = "Brigada Legionario"
+					disband = yes
+				}
+				delete_unit_template_and_units = {
+					division_template = "Carlist Brigade"
+					disband = yes
+				}
+				remove_ideas = SPA_death_before_surrender
+				add_timed_idea = { idea = SPA_recovering_from_civil_war days = 2190 }
+				if = {
+					limit = {
+						has_idea = SPA_foreign_training_staff
+					}
+					remove_ideas = SPA_foreign_training_staff
+				}
+				if = {
+					limit = {
+						has_idea = SPA_a_methodical_approach
+					}
+					remove_ideas = SPA_a_methodical_approach
+				}
+			}
+			every_state = {
+				limit = {
+					has_dynamic_modifier = { modifier = unplanned_offensive }
+				}
+				remove_dynamic_modifier = {
+					modifier = unplanned_offensive
+				}
+			}
+			every_state = {
+				limit = { is_core_of = SPD }
+				remove_core_of = SPD
+			}
+			set_global_flag = nationalist_victory
+			set_global_flag = scw_over
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = news.28.a
+	}
+}
+
+#news event - France - Vichy France regains its northern territories
+news_event = {
+	id = lar_news.4
+	title = lar_news.4.t
+	desc = lar_news.4.desc
+	picture = GFX_news_event_021
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.4.a
+		trigger = {
+			is_in_faction_with = VIC
+			NOT = { tag = VIC }
+		}
+	}
+	option = {
+		name = lar_news.4.b #France friends
+		trigger = {
+			is_in_faction_with = FRA
+			NOT = { tag = FRA }
+		}
+	}
+	option = {
+		name = lar_news.4.c #everyone else
+		trigger = {
+			NOT = {
+				is_in_faction_with = FRA
+				is_in_faction_with = VIC
+				tag = FRA
+				tag = VIC
+			}
+		}
+	}
+	option = {
+		name = lar_news.4.d #France
+		trigger = {
+			
+			tag = FRA
+		}
+	}
+	option = {
+		name = lar_news.4.e #Vichy
+		trigger = {
+			tag = VIC
+		}
+	}
+}
+
+#news event - France - Stresa Front ratified
+news_event = {
+	id = lar_news.5
+	title = lar_news.5.t
+	desc = lar_news.5.desc
+	picture = GFX_news_event_generic_read_write
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.5.a
+		trigger = {
+			tag = ITA
+		}
+	}
+	option = {
+		name = lar_news.5.b #France friends
+		trigger = {
+			is_in_faction_with = FRA
+			NOT = { 
+				tag = FRA 
+				tag = ITA
+			}
+		}
+	}
+	option = {
+		name = lar_news.5.c #everyone else
+		trigger = {
+			NOT = {
+				is_in_faction_with = FRA
+				tag = FRA
+				tag = ITA
+				tag = GER
+			}
+		}
+	}
+	option = {
+		name = lar_news.5.d #France
+		trigger = {
+			tag = FRA
+		}
+	}
+	option = {
+		name = lar_news.5.e #Germany
+		trigger = {
+			tag = GER
+		}
+	}
+}
+
+#news event - France - France abandons eastern allies
+news_event = {
+	id = lar_news.6
+	title = lar_news.6.t
+	desc = lar_news.6.desc
+	picture = GFX_news_event_067
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.6.a
+		trigger = {
+			OR = {
+				tag = CZE
+				tag = POL
+				tag = ROM
+			}
+		}
+	}
+	option = {
+		name = lar_news.6.b #France friends
+		trigger = {
+			is_in_faction_with = FRA
+			NOT = { 
+				tag = FRA 
+				tag = CZE
+				tag = POL
+				tag = ROM
+			}
+		}
+	}
+	option = {
+		name = lar_news.6.c #everyone else
+		trigger = {
+			NOT = {
+				is_in_faction_with = FRA
+				tag = FRA
+				tag = CZE
+				tag = POL
+				tag = ROM
+				tag = GER
+				tag = SOV
+			}
+		}
+	}
+	option = {
+		name = lar_news.6.d #France
+		trigger = {
+			tag = FRA
+		}
+	}
+	option = {
+		name = lar_news.6.e #Germany
+		trigger = {
+			OR = {
+				tag = GER
+				tag = SOV
+			}
+		}
+	}
+}
+
+#news event - France - France and Germany agree on Spheres of Influence
+news_event = {
+	id = lar_news.7
+	title = lar_news.7.t
+	desc = lar_news.7.desc
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.7.a
+		trigger = {
+			OR = {
+				tag = HOL
+				tag = BEL
+				tag = LUX
+			}
+		}
+	}
+	option = {
+		name = lar_news.7.b #France friends
+		trigger = {
+			is_in_faction_with = FRA
+			NOT = { 
+				tag = FRA 
+				tag = GER
+				tag = HOL
+				tag = BEL
+				tag = LUX
+			}
+		}
+	}
+	option = {
+		name = lar_news.7.c #everyone else
+		trigger = {
+			NOT = {
+				is_in_faction_with = FRA
+				tag = FRA
+				tag = HOL
+				tag = BEL
+				tag = LUX
+				tag = GER
+			}
+		}
+	}
+	option = {
+		name = lar_news.7.d #France
+		trigger = {
+			tag = FRA
+		}
+	}
+	option = {
+		name = lar_news.7.e #Germany
+		trigger = {
+			tag = GER
+		}
+	}
+}
+
+
+
+#news event - France - Communists force the issue
+news_event = {
+	id = lar_news.9
+	title = lar_news.9.t
+	desc = lar_news.9.desc
+	picture = GFX_news_event_generic_rally2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.9.a #unaligned
+		trigger = {
+			has_government = neutrality
+		}
+	}
+	option = {
+		name = lar_news.9.b #commies
+		trigger = {
+			has_government = communism
+			NOT = { tag = FRA }
+		}
+	}
+	option = {
+		name = lar_news.9.c #democrats
+		trigger = {
+			has_government = democratic
+		}
+	}
+	option = {
+		name = lar_news.9.e #fascist 
+		trigger = {
+			has_government = fascism
+
+		}
+	}
+	option = {
+		name = lar_news.9.d #France
+		trigger = {
+			tag = FRA
+		}
+	}
+}
+
+
+
+# News event - Spain joins the Allies
+news_event = {
+	id = lar_news.12
+	title = lar_news.12.t
+	desc = lar_news.12.desc
+	picture = GFX_news_event_generic_read_write
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.12.a # Spain
+		trigger = {
+			original_tag = SPR
+		}
+	}
+	option = {
+		name = lar_news.12.b # Allies
+		trigger = {
+			any_other_country = {
+				original_tag = SPR
+				is_in_faction_with = ROOT
+			}
+		}
+	}
+	option = {
+		name = lar_news.12.c # Enemies
+		trigger = {
+			any_other_country = {
+				has_war_with = ROOT
+				OR = {
+					is_in_faction_with = SPD
+					is_in_faction_with = SPA
+				}
+			}
+		}
+	}
+	option = {
+		name = lar_news.12.d # Everyone else
+		trigger = {
+			NOT = {
+				original_tag = SPR
+				any_other_country = {
+					original_tag = SPR
+					is_in_faction_with = ROOT
+				}
+				any_other_country = {
+					has_war_with = ROOT
+					OR = {
+						is_in_faction_with = SPD
+						is_in_faction_with = SPA
+					}
+				}
+			}
+		}
+	}
+}
+
+# News event - Spain joins the Axis
+news_event = {
+	id = lar_news.13
+	title = lar_news.12.t
+	desc = lar_news.13.desc
+	picture = GFX_news_event_generic_read_write
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.12.a # Spain
+		trigger = {
+			original_tag = SPR
+		}
+	}
+	option = {
+		name = lar_news.12.b # Axis
+		trigger = {
+			any_other_country = {
+				original_tag = SPR
+				is_in_faction_with = ROOT
+			}
+		}
+	}
+	option = {
+		name = lar_news.12.c # Enemies
+		trigger = {
+			any_other_country = {
+				has_war_with = ROOT
+				OR = {
+					is_in_faction_with = SPD
+					is_in_faction_with = SPA
+				}
+			}
+		}
+	}
+	option = {
+		name = lar_news.12.d # Everyone else
+		trigger = {
+			NOT = {
+				original_tag = SPR
+				any_other_country = {
+					original_tag = SPR
+					is_in_faction_with = ROOT
+				}
+				any_other_country = {
+					has_war_with = ROOT
+					OR = {
+						is_in_faction_with = SPD
+						is_in_faction_with = SPA
+					}
+				}
+			}
+		}
+	}
+}
+
+# News event - Spain demands North Africa
+news_event = {
+	id = lar_news.14
+	title = lar_news.14.t
+	desc = lar_news.14.desc
+	picture = GFX_news_event_soldiers_marching
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.14.a # Spain
+		trigger = {
+			original_tag = SPR
+		}
+	}
+	option = {
+		name = lar_news.14.b # Guilty France
+		trigger = {
+			original_tag = FRA
+			has_country_flag = surrendered_french_north_africa
+		}
+	}
+	option = {
+		name = lar_news.14.c # Other France
+		trigger = {
+			original_tag = FRA
+			NOT = { has_country_flag = surrendered_french_north_africa }
+		}
+	}
+	option = {
+		name = lar_news.14.d # GER
+		trigger = {
+			tag = GER
+		}
+	}
+	option = {
+		name = lar_news.14.e # Everyone else
+		trigger = {
+			NOT = {
+				original_tag = SPR
+				original_tag = FRA
+				tag = GER
+			}
+		}
+	}
+}
+
+# News event - Franco-Spanish Union
+news_event = {
+	id = lar_news.15
+	title = lar_news.15.t
+	desc = lar_news.15.desc
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.15.a # Spain
+		trigger = {
+			original_tag = SPR
+		}
+	}
+	option = {
+		name = lar_news.15.b # France
+		trigger = {
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = lar_news.15.c # Everyone else
+		trigger = {
+			NOT = {
+				original_tag = SPR
+				original_tag = FRA
+			}
+		}
+	}
+}
+
+# News event - Iberian Union
+news_event = {
+	id = lar_news.16
+	title = lar_news.16.t
+	desc = lar_news.16.desc
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.16.a # Spain
+		trigger = {
+			original_tag = SPR
+		}
+	}
+	option = {
+		name = lar_news.16.b # Everyone else
+		trigger = {
+			NOT = {
+				original_tag = SPR
+			}
+		}
+	}
+}
+
+# News event - Carlist Spanish monarchy restoration
+news_event = {
+	id = lar_news.17
+	title = lar_news.17.t
+	desc = lar_spain.35.desc
+	picture = GFX_news_event_royal_visit
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					original_tag = SPR
+				}
+				if = {
+					limit = {
+						has_country_flag = SPB_xavier_king
+					}
+					create_country_leader = {
+						name = "Javier I"
+						desc = "POLITICS_JAVIER_I_DESC"
+						picture = "GFX_portrait_SPA_xavier_of_bourbon_parma"
+						expire = "1965.1.1"
+						ideology = despotism
+						traits = {
+							the_sacred_king
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = SPB_xavier_king }
+						NOT = { has_global_flag = SPB_alfonso_xiii_dead }
+					}
+					create_country_leader = {
+						name = "Alfonso XIII"
+						desc = "POLITICS_ALFONSO_XIII_DESC"
+						picture = "GFX_portrait_SPA_alfonso_xiii"
+						expire = "1965.1.1"
+						ideology = despotism
+						traits = {
+							disgraced_monarch
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = SPB_xavier_king }
+						has_global_flag = SPB_alfonso_xiii_dead
+					}
+					create_country_leader = {
+						name = "Jaime IV"
+						desc = "POLITICS_JAIME_IV_DESC"
+						picture = "GFX_portrait_fra_infante_jaime"
+						expire = "1965.1.1"
+						ideology = despotism
+						traits = {
+							the_legitimist
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = lar_spain.35.a # Spain
+		trigger = {
+			original_tag = SPR
+		}
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = SPB_kingdom
+		effect_tooltip = {
+			if = {
+				limit = {
+					has_country_flag = SPB_xavier_king
+				}
+				create_country_leader = {
+					name = "Javier I"
+					desc = "POLITICS_JAVIER_I_DESC"
+					picture = "GFX_portrait_SPA_xavier_of_bourbon_parma"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						the_sacred_king
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = SPB_xavier_king }
+					NOT = { has_global_flag = SPB_alfonso_xiii_dead }
+				}
+				create_country_leader = {
+					name = "Alfonso XIII"
+					desc = "POLITICS_ALFONSO_XIII_DESC"
+					picture = "GFX_portrait_SPA_alfonso_xiii"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						disgraced_monarch
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = SPB_xavier_king }
+					has_global_flag = SPB_alfonso_xiii_dead
+				}
+				create_country_leader = {
+					name = "Jaime IV"
+					desc = "POLITICS_JAIME_IV_DESC"
+					picture = "GFX_portrait_fra_infante_jaime"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						the_legitimist
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = lar_news.17.b # Everyone else
+		trigger = {
+			NOT = {
+				original_tag = SPR
+			}
+		}
+	}
+}
+
+# News event - Francoist Spanish monarchy restoration
+news_event = {
+	id = lar_news.18
+	title = lar_news.17.t
+	desc = lar_news.18.desc
+	picture = GFX_news_event_royal_visit
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					original_tag = SPR
+				}
+				if = {
+					limit = {
+						has_country_flag = SPB_xavier_king
+					}
+					create_country_leader = {
+						name = "Javier I"
+						desc = "POLITICS_JAVIER_I_DESC"
+						picture = "GFX_portrait_SPA_xavier_of_bourbon_parma"
+						expire = "1965.1.1"
+						ideology = despotism
+						traits = {
+							the_sacred_king
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = SPB_xavier_king }
+						NOT = { has_global_flag = SPB_alfonso_xiii_dead }
+					}
+					create_country_leader = {
+						name = "Alfonso XIII"
+						desc = "POLITICS_ALFONSO_XIII_DESC"
+						picture = "GFX_portrait_SPA_alfonso_xiii"
+						expire = "1965.1.1"
+						ideology = despotism
+						traits = {
+							disgraced_monarch
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = SPB_xavier_king }
+						has_global_flag = SPB_alfonso_xiii_dead
+					}
+					create_country_leader = {
+						name = "Jaime IV"
+						desc = "POLITICS_JAIME_IV_DESC"
+						picture = "GFX_portrait_fra_infante_jaime"
+						expire = "1965.1.1"
+						ideology = despotism
+						traits = {
+							the_legitimist
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = lar_news.18.a # Spain
+		trigger = {
+			original_tag = SPR
+		}
+		effect_tooltip = {
+			if = {
+				limit = {
+					has_country_flag = SPB_xavier_king
+				}
+				create_country_leader = {
+					name = "Javier I"
+					desc = "POLITICS_JAVIER_I_DESC"
+					picture = "GFX_portrait_SPA_xavier_of_bourbon_parma"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						the_sacred_king
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = SPB_xavier_king }
+					NOT = { has_global_flag = SPB_alfonso_xiii_dead }
+				}
+				create_country_leader = {
+					name = "Alfonso XIII"
+					desc = "POLITICS_ALFONSO_XIII_DESC"
+					picture = "GFX_portrait_SPA_alfonso_xiii"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						disgraced_monarch
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = SPB_xavier_king }
+					has_global_flag = SPB_alfonso_xiii_dead
+				}
+				create_country_leader = {
+					name = "Jaime IV"
+					desc = "POLITICS_JAIME_IV_DESC"
+					picture = "GFX_portrait_fra_infante_jaime"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						the_legitimist
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = lar_news.18.b # Everyone else
+		trigger = {
+			NOT = {
+				original_tag = SPR
+			}
+		}
+	}
+}
+
+# News event - Latin Bloc
+news_event = {
+	id = lar_news.19
+	title = lar_news.19.t
+	desc = lar_news.19.desc
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.19.a # Spain or new allies
+		trigger = {
+			is_in_faction_with = SPA
+		}
+	}
+	option = {
+		name = lar_news.19.b # Everyone else
+		trigger = {
+			NOT = {
+				is_in_faction_with = SPA
+			}
+		}
+	}
+}
+
+# News event - Independence War
+news_event = {
+	id = lar_news.20
+	title = lar_news.20.t
+	desc = lar_news.20.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.20.a # Spain
+		trigger = {
+			original_tag = SPR
+		}
+	}
+	option = {
+		name = lar_news.20.b # Soviet Union
+		trigger = {
+			original_tag = SOV
+		}
+	}
+	option = {
+		name = lar_news.20.c # Other enemies of Soviet Union
+		trigger = {
+			NOT = { original_tag = SPR }
+			has_war_with = SOV
+		}
+	}
+	option = {
+		name = lar_news.20.d # Everyone else
+		trigger = {
+			NOT = {
+				original_tag = SOV
+				has_war_with = SOV
+				original_tag = SPR
+			}
+		}
+	}
+}
+
+# News event - London Bureau
+news_event = {
+	id = lar_news.21
+	title = lar_news.21.t
+	desc = lar_news.21.desc
+	picture = GFX_news_event_sign_treaty2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.21.a # Spain
+		trigger = {
+			original_tag = SPR
+		}
+	}
+	option = {
+		name = lar_news.21.b # Soviet Union and MEX if they have Trotsky
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV
+			}
+		}
+	}
+	option = {
+		name = lar_news.21.c # Unaligned Communists
+		trigger = {
+			has_government = communism
+			NOT = { tag = SOV }
+			NOT = {
+				is_in_faction_with = SOV
+			}
+		}
+	}
+	option = {
+		name = lar_news.21.d # Everyone else
+		trigger = {
+			NOT = {
+				has_government = communism
+				original_tag = SOV
+				original_tag = SPR
+			}
+		}
+	}
+}
+
+# News event - Anarchism Successful
+news_event = {
+	id = lar_news.22
+	title = lar_news.22.t
+	desc = lar_news.22.desc
+	picture = GFX_news_event_generic_rally2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.22.a # Spain
+		trigger = {
+			original_tag = SPR
+		}
+	}
+	option = {
+		name = lar_news.22.b # Everyone else
+		trigger = {
+			NOT = { original_tag = SPR }
+		}
+	}
+}
+
+
+#news event - Portugal - Iberian Nations join the Axis
+news_event = {
+	id = lar_news.24
+	title = lar_news.24.t
+	desc = lar_news.24.desc
+	picture = GFX_news_event_por_salazar_franco
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.24.a #Portugal and Nationalist Spain
+		trigger = {
+			OR = {
+				tag = POR
+				tag = SPA
+			}
+		}
+	}
+	option = {
+		name = lar_news.24.b #Axis
+		trigger = {
+			OR = {
+				tag = GER
+				is_in_faction_with = GER
+			}
+		}
+	}
+	option = {
+		name = lar_news.24.c #Allies
+		trigger = {
+			OR = {
+				tag = ENG
+				is_in_faction_with = ENG
+			}
+			NOT = { tag = SPR }
+
+		}
+	}
+	option = {
+		name = lar_news.24.d #Everyone else
+		trigger = {
+			NOT = {
+				is_in_faction_with = ENG
+				is_in_faction_with = GER
+				tag = ENG
+				tag = GER
+				tag = POR
+				tag = SPA
+			}
+		}
+	}
+}
+
+#news event - Portugal - A Royal Wedding in Brazil
+news_event = {
+	id = lar_news.25
+	title = lar_news.25.t
+	desc = lar_news.25.desc
+	picture = GFX_news_event_royal_visit
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.25.a #Portugal
+		trigger = {
+			tag = POR
+		}
+	}
+	option = {
+		name = lar_news.25.b #Everyone else
+		trigger = {
+			NOT = { tag = POR }
+		}
+	}
+}
+
+#news event - Portugal - The Empire of Portugal and Brazil
+news_event = {
+	id = lar_news.26
+	title = lar_news.26.t
+	desc = lar_news.26.desc
+	picture = GFX_news_event_por_return_of_monarchy
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.26.a #Portugal
+		trigger = {
+			tag = POR
+		}
+	}
+	option = {
+		name = lar_news.26.b #countries at war with Portugal
+		trigger = {
+			has_war_with = POR
+		}
+	}
+	option = {
+		name = lar_news.26.c #Everyone else
+		trigger = {
+			NOT = { 
+				has_war_with = POR
+				tag = POR 
+			}
+		}
+	}
+}
+
+#news event - Portugal - The Unification of Iberia
+news_event = {
+	id = lar_news.27
+	title = lar_news.27.t
+	desc = lar_news.27.desc
+	picture = GFX_news_event_generic_rally2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.27.a #Portugal
+		trigger = {
+			tag = POR
+		}
+	}
+	option = {
+		name = lar_news.27.b #Communists
+		trigger = {
+			NOT = { tag = POR }
+			has_government = communism
+		}
+	}
+	option = {
+		name = lar_news.27.c #Fascists
+		trigger = {
+			NOT = { tag = POR }
+			has_government = fascism
+		}
+	}
+
+	option = {
+		name = lar_news.27.d #Everyone else
+		trigger = {
+			NOT = {
+				has_government = communism
+				has_government = fascism
+				tag = POR
+			}
+		}
+	}
+}
+
+# News event - Nationalist Victory but Carlists might still rise up
+news_event = {
+	id = lar_news.28
+	title = lar_news.28.t
+	desc = lar_news.28.desc
+	picture = GFX_news_event_033
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = scw_early_end
+			every_state = {
+				limit = {
+					has_state_flag = SPR_core_of_spain_flag
+					has_state_flag = SPR_sided_with_nationalists_flag
+				}
+				remove_core_of = SPC
+				remove_core_of = SPD
+			}
+			every_state = {
+				limit = {
+					has_state_flag = SPR_core_of_spain_flag
+					has_state_flag = SPR_sided_with_republicans_flag
+				}
+				remove_core_of = SPC
+				remove_core_of = SPD
+			}
+			118 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_core_of = ROOT
+					remove_core_of = SPD
+					remove_core_of = SPC
+				}
+				else = {
+					add_claim_by = SPA
+					remove_claim_by = SPC
+					remove_claim_by = SPD
+				}
+			}
+		}
+	}
+
+	option = {
+		name = lar_news.28.a
+		trigger = {
+			OR = {
+				AND = {
+					tag = GER
+					has_government = fascism
+				}
+				AND = {
+					tag = ITA
+					has_government = fascism
+				}
+			}
+		}
+	}
+
+	option = {
+		name = lar_news.28.b
+		trigger = {
+			NOT = {
+				AND = {
+					tag = GER
+					has_government = fascism
+				}
+				AND = {
+					tag = ITA
+					has_government = fascism
+				}
+				tag = SOV
+				tag = SPA
+			}
+		}
+	}
+
+	option = {
+		name = lar_news.28.c
+		trigger = {
+			tag = SOV
+		}
+	}
+
+
+	option = {
+		name = lar_news.28.e
+		trigger = {
+			tag = SPA
+			has_completed_focus = SPA_unify_the_nationalist_front
+		}
+		#effect_tooltip = {
+		#	every_state = {
+		#		limit = {
+		#			has_state_flag = SPR_sided_with_republicans_flag
+		#		}
+		#		remove_core_of = ROOT
+		#		start_resistance = yes
+		#	}
+		#}
+	}
+}
+
+# News event - Republican Victory but Anarchists might still rise up
+news_event = {
+	id = lar_news.29
+	title = lar_news.29.t
+	desc = lar_news.29.desc
+	picture = GFX_news_event_033
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = scw_early_end
+			every_state = {
+				limit = {
+					has_state_flag = SPR_core_of_spain_flag
+					has_state_flag = SPR_sided_with_republicans_flag
+				}
+				remove_core_of = SPA
+				remove_core_of = SPB
+			}
+			every_state = {
+				limit = {
+					has_state_flag = SPR_core_of_spain_flag
+					has_state_flag = SPR_sided_with_nationalists_flag
+				}
+				remove_core_of = SPB
+				remove_core_of = SPA
+			}
+			118 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_core_of = ROOT
+					remove_core_of = SPA
+					remove_core_of = SPB
+				}
+				else = {
+					add_claim_by = SPD
+					remove_claim_by = SPA
+					remove_claim_by = SPB
+				}
+			}
+		}
+	}
+
+	option = { #GER/ITA
+		name = lar_news.28.c
+		trigger = {
+			OR = {
+				AND = {
+					tag = GER
+					has_government = fascism
+				}
+				AND = {
+					tag = ITA
+					has_government = fascism
+				}
+			}
+		}
+	}
+
+	option = {
+		name = lar_news.28.b
+		trigger = {
+			NOT = {
+				AND = {
+					tag = GER
+					has_government = fascism
+				}
+				AND = {
+					tag = ITA
+					has_government = fascism
+				}
+				tag = SPD
+				tag = SOV
+			}
+		}
+	}
+
+	option = { #SOV
+		name = lar_news.28.a
+		trigger = {
+			tag = SOV
+		}
+	}
+
+
+	option = { # SPD
+		name = lar_news.29.e
+		trigger = {
+			tag = SPD
+			has_completed_focus = SPR_maintain_the_second_republic
+		}
+		#effect_tooltip = {
+		#	every_state = {
+		#		limit = {
+		#			has_state_flag = SPR_sided_with_nationalists_flag
+		#		}
+		#		remove_core_of = ROOT
+		#		start_resistance = yes
+		#	}
+		#}
+	}
+}
+
+#Andalusia Restored
+news_event = {
+	id = lar_news.281
+	title = lar_news.281.t
+	desc = lar_news.281.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.281.a
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = lar_news.281.b
+		trigger = {
+			NOT = { tag = FROM }
+		}
+	}
+}
+
+#Polynesia United
+news_event = {
+	id = lar_news.291
+	title = lar_news.291.t
+	desc = {
+		text = lar_news.291.new_zealand_desc
+		trigger = {
+			FROM = {
+				original_tag = NZL
+			}
+		}
+	}
+	desc = {
+		text = lar_news.291.desc
+		trigger = {
+			FROM = {
+				NOT = { original_tag = NZL }
+			}
+		}
+	}
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.291.a
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = lar_news.291.b
+		trigger = {
+			NOT = { tag = FROM }
+		}
+	}
+}

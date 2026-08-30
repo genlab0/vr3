@@ -1,0 +1,116 @@
+soviet_historical = {
+	name = "soviet historical plan"
+	desc = "Essentially historical behaviour for soviet"
+
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		date>1960.1.1
+	}
+
+	ai_national_focuses = {
+
+		SOV_winter_41
+
+		# grab as fast as you can if available
+		SOV_found_the_pcdi
+		SOV_pc_of_mechanical_engineering
+		SOV_superior_war_machines
+		SOV_the_means_to_wage_war
+		SOV_pps_43
+		SOV_soviet_artillery
+		SOV_transpolar_flights
+		SOV_the_path_of_marxism_leninism
+		SOV_the_comintern
+		SOV_improve_railway_network
+		SOV_infrastructure_effort_nsb
+		SOV_heavy_industry
+		SOV_finish_the_five_year_plan
+		SOV_the_centre	#1937
+		SOV_socialism_in_one_country
+		SOV_the_stalin_constitution
+		SOV_the_zinovyevite_terrorist_center
+
+		SOV_gulag_infra
+		SOV_the_collectivization_process
+		SOV_the_collectivization_process
+		SOV_shift_to_armaments_production
+		SOV_third_five_year_plan
+		SOV_secure_the_administration
+
+		SOV_the_anti_soviet_trotskyist_center
+
+		SOV_gulag_construction #1938
+		SOV_organization_centralization_discipline
+		SOV_war_economy
+		SOV_national_specialists
+		SOV_develop_the_urals
+		SOV_collective_farms
+		SOV_the_workers_dictatorship
+
+		SOV_the_military_conspiracy
+		SOV_behead_the_snake
+		SOV_gulag_civ
+		SOV_nkvd_primacy
+		SOV_optimize_production_lines
+		SOV_claims_in_baltic
+		SOV_steel_casting_industry
+		SOV_the_bloc_of_rights_and_trotskyites
+		SOV_gulag_mil
+		SOV_addressing_internal_affairs
+		SOV_expand_the_agitprop
+		SOV_send_military_advisors_to_spain
+		SOV_the_ussr_academy_of_sciences
+		SOV_transformation_of_nature
+
+		SOV_strengthen_the_mobilization_plan
+		SOV_keep_commissars_organization
+		SOV_secure_leningrad
+		SOV_claim_on_bessarabia
+		SOV_rehabilitated_military
+		SOV_military_reorganization
+		SOV_restore_cossack_units
+		SOV_an_adaptable_army
+		SOV_experts_in_camouflage
+
+		SOV_the_komsomol
+		SOV_positive_heroism
+		SOV_revive_the_stakhanovite_movement
+		SOV_war_heroes
+		SOV_foster_flying_clubs
+		SOV_expand_the_aircraft_industry
+		SOV_modernize_aircraft_facilities
+		SOV_increase_aircraft_production
+		SOV_intensify_pilot_training_program
+		SOV_long_range_aircraft
+		SOV_the_modern_war_in_the_skies
+
+		SOV_military_engineering_university
+		SOV_lessons_of_war
+		SOV_the_glory_of_the_red_army
+		SOV_stalins_cult_of_personality
+		SOV_lend_lease_1
+		SOV_architect_of_communism
+		SOV_great_commander
+		SOV_father_of_nations
+
+
+
+
+	}
+
+	traits = {
+		silent_workhorse = 100
+	}
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

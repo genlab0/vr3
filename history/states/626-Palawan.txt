@@ -1,0 +1,30 @@
+state=
+{
+	id=626
+	name="STATE_626"
+	manpower = 83041
+	
+	state_category = rural
+	
+	history=
+{ 
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			4429 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = WST
+		1936.1.2 = {
+			remove_core_of = USA 
+			add_core_of = WST
+			owner = WST
+		}
+	}
+	provinces={
+		4429 7419 10145 
+	}
+
+	local_supplies=0.0 
+}

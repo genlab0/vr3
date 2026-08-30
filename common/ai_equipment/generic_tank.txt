@@ -1,0 +1,1316 @@
+# AI tank design for testing
+
+generic_light_tanks = {
+	category = land
+
+	blocked_for = {ENG JAP ITA}
+
+	available_for = {}
+
+	roles = {
+		land_light_tank
+	}
+
+	priority = {
+		factor = 1000
+	}
+
+	basic_light_tank_default = {
+		priority = {
+			factor = 100
+			modifier = { 
+				has_tech = improved_light_tank_chassis 
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 2000
+			type = light_tank_chassis_1
+			modules = {
+				main_armament_slot = { 
+					any_of = { 
+						tank_small_cannon 
+						tank_auto_cannon
+					} 
+				}
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = light_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = universal_radios
+				secondary_armament_type_slot = secondary_turret_hmg
+			}
+		}
+
+		allowed_modules = {
+			tank_auto_cannon 
+			tank_small_cannon 
+			tank_light_one_man_tank_turret
+			tank_bogie_suspension
+			light_tank_riveted_armor
+			tank_gasoline_engine
+			universal_radios
+			secondary_turret_hmg
+		}
+	}
+
+	improved_light_tank_default = {
+		priority = {
+			factor = 10
+			modifier = { 
+				has_tech = advanced_light_tank_chassis 
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 3000
+			type = light_tank_chassis_2
+			modules = {
+				main_armament_slot = { 
+					any_of = { 
+						tank_auto_cannon_2
+						tank_small_cannon_2
+					} 
+				}
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = light_tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = universal_radios
+				secondary_armament_type_slot = secondary_turret_hmg
+			}
+		}
+
+		allowed_modules = {
+			tank_auto_cannon_2 
+			tank_small_cannon_2 
+			tank_light_two_man_tank_turret
+			light_tank_welded_armor
+			tank_bogie_suspension
+			tank_gasoline_engine
+			universal_radios
+			secondary_turret_hmg
+		}
+	}
+
+	advanced_light_tank_default = {
+		priority = {
+			factor = 10
+		}
+
+		target_variant = {
+			match_value = 4000
+			type = light_tank_chassis_3
+			modules = {
+				main_armament_slot = { 
+					any_of = { 
+						tank_small_cannon_3
+						tank_auto_cannon_3
+					} 
+				}
+				turret_type_slot = tank_light_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = light_tank_cast_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = universal_radios
+				secondary_armament_type_slot = secondary_turret_small_cannon
+			}
+		}
+
+		allowed_modules = { 
+			tank_auto_cannon_3  
+			tank_small_cannon_3 
+			tank_light_three_man_tank_turret
+			tank_interleaved_suspension
+			light_tank_cast_armor
+			tank_gasoline_engine
+			universal_radios
+			secondary_turret_small_cannon
+		}
+	}
+}
+
+generic_light_tank_destroyers = {
+	category = land
+
+	blocked_for = { WST }
+
+	available_for = {}
+
+	roles = {
+		land_light_tank_destroyer
+	}
+
+	priority = {
+		factor = 100
+		modifier = {
+			NOT = { has_tech = improved_medium_tank_chassis } 
+			any_enemy_country = {
+				has_tech = improved_medium_tank_chassis
+			}
+			factor = 15
+		}
+	}
+	light_tank_destroyer_1 = {
+		priority = {
+			factor = 100			
+		}
+		enable = {
+			has_tech = basic_light_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1000
+			type = light_tank_destroyer_chassis_1
+			modules = {
+				main_armament_slot = tank_auto_cannon 
+				turret_type_slot = tank_light_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = light_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_small_cannon
+			}
+		}
+
+		allowed_modules = {
+			tank_auto_cannon
+			tank_light_fixed_superstructure_turret
+			tank_bogie_suspension
+			light_tank_riveted_armor
+			tank_gasoline_engine
+			signal_flags
+			secondary_turret_small_cannon
+		}
+	}
+	light_tank_destroyer_2 = {
+		priority = {
+			factor = 200
+			
+		}
+		enable = {
+			has_tech = improved_light_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = light_tank_destroyer_chassis_2
+			modules = {
+				main_armament_slot = tank_auto_cannon_2
+				turret_type_slot = tank_light_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = light_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_small_cannon
+			}
+		}
+
+		allowed_modules = {
+			tank_auto_cannon_2
+			tank_light_fixed_superstructure_turret
+			tank_bogie_suspension
+			light_tank_riveted_armor
+			tank_gasoline_engine
+			signal_flags
+			secondary_turret_small_cannon
+		}
+	}
+	light_tank_destroyer_3 = {
+		priority = {
+			factor = 200
+			
+		}
+		enable = {
+			has_tech = advanced_light_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = light_tank_destroyer_chassis_3
+			modules = {
+				main_armament_slot = tank_auto_cannon_3
+				turret_type_slot = tank_light_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = light_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_small_cannon
+			}
+		}
+
+		allowed_modules = {
+			tank_auto_cannon_3
+			tank_light_fixed_superstructure_turret
+			tank_bogie_suspension
+			light_tank_riveted_armor
+			tank_gasoline_engine
+			signal_flags
+			secondary_turret_small_cannon
+		}
+	}
+
+
+}
+
+generic_light_tank_artillery = {
+	category = land
+
+	blocked_for = { WST }
+
+	available_for = {}
+
+	roles = {
+		land_light_tank_artillery
+	}
+
+	priority = {
+		factor = 500
+	}
+	light_tank_artillery_1 = {
+		priority = {
+			factor = 100
+			
+		}
+		enable = {
+			has_tech = basic_light_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1000
+			type = light_tank_artillery_chassis_1
+			modules = {
+				main_armament_slot = tank_light_howitzer
+				turret_type_slot = tank_light_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = light_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = additional_machine_guns
+			}
+		}
+
+		allowed_modules = {
+			tank_light_howitzer
+			tank_light_fixed_superstructure_turret
+			tank_bogie_suspension
+			light_tank_riveted_armor
+			tank_gasoline_engine
+			signal_flags
+			additional_machine_guns
+		}
+	}
+	light_tank_artillery_2 = {
+		priority = {
+			factor = 200
+			
+		}
+		enable = {
+			has_tech = improved_light_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = light_tank_artillery_chassis_2
+			modules = {
+				main_armament_slot = tank_light_howitzer_2
+				turret_type_slot = tank_light_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = light_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = additional_machine_guns
+			}
+		}
+
+		allowed_modules = {
+			tank_light_howitzer_2
+			tank_light_fixed_superstructure_turret
+			tank_bogie_suspension
+			light_tank_riveted_armor
+			tank_gasoline_engine
+			signal_flags
+			additional_machine_guns
+		}
+	}
+
+	light_tank_artillery_3 = {
+		priority = {
+			factor = 200
+			
+		}
+		enable = {
+			has_tech = advanced_light_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 2000
+			type = light_tank_artillery_chassis_3
+			modules = {
+				main_armament_slot = tank_light_howitzer_3
+				turret_type_slot = tank_light_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = light_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = additional_machine_guns
+			}
+		}
+
+		allowed_modules = {
+			tank_light_howitzer_3
+			tank_light_fixed_superstructure_turret
+			tank_bogie_suspension
+			light_tank_riveted_armor
+			tank_gasoline_engine
+			signal_flags
+			additional_machine_guns
+		}
+	}
+}
+
+generic_light_tank_anti_air = {
+	category = land
+
+	blocked_for = { WST }
+
+	available_for = {}
+
+	roles = {
+		land_light_tank_anti_air
+	}
+
+	priority = {
+		factor = 50
+	}
+	light_tank_anti_air_1 = {
+		priority = {
+			factor = 10
+			
+		}
+		enable = {
+			has_tech = basic_light_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1000
+			type = light_tank_aa_chassis_1
+			modules = {
+				main_armament_slot = tank_anti_air_cannon
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = light_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = empty
+				secondary_armament_type_slot = empty
+			}
+		}
+
+		allowed_modules = {
+			tank_anti_air_cannon
+			tank_light_one_man_tank_turret
+			tank_bogie_suspension
+			light_tank_riveted_armor
+			tank_gasoline_engine
+		}
+	}
+	light_tank_anti_air_2 = {
+		priority = {
+			factor = 20
+			
+		}
+		enable = {
+			has_tech = improved_light_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = light_tank_aa_chassis_2
+			modules = {
+				main_armament_slot = tank_anti_air_cannon_2
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = light_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = empty
+				secondary_armament_type_slot = empty
+			}
+		}
+
+		allowed_modules = {
+			tank_anti_air_cannon_2
+			tank_light_two_man_tank_turret
+			tank_bogie_suspension
+			light_tank_riveted_armor
+			tank_gasoline_engine
+		}
+	}
+
+	light_tank_anti_air_3 = {
+		priority = {
+			factor = 20
+			
+		}
+		enable = {
+			has_tech = advanced_light_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 2500
+			type = light_tank_aa_chassis_3
+			modules = {
+				main_armament_slot = tank_anti_air_cannon_3
+				turret_type_slot = tank_light_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = light_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = empty
+				secondary_armament_type_slot = empty
+			}
+		}
+
+		allowed_modules = {
+			tank_anti_air_cannon_3
+			tank_light_three_man_tank_turret
+			tank_bogie_suspension
+			light_tank_riveted_armor
+			tank_gasoline_engine
+		}
+	}
+}
+
+generic_medium_tanks = {
+	category = land
+
+	blocked_for = { WST }
+
+	available_for = {}
+
+	roles = {
+		land_medium_tank
+	}
+
+	priority = {
+		factor = 2000
+		modifier = {
+			num_of_factories < 100
+			factor = 0.5
+		}
+		modifier = {
+			num_of_factories < 50
+			factor = 0.5
+		}
+	}
+
+	basic_medium_tank_default = {
+		priority = {
+			factor = 100
+			modifier = { 
+				has_tech = improved_medium_tank_chassis
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 2000
+			type = medium_tank_chassis_1
+			modules = {
+				main_armament_slot = { 
+					any_of = { 
+						tank_high_velocity_cannon 
+						tank_medium_cannon
+					} 
+				}
+				turret_type_slot = tank_medium_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = medium_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = universal_radios
+				secondary_armament_type_slot = secondary_turret_hmg
+			}
+		}
+
+		allowed_modules = {
+			
+			tank_high_velocity_cannon 
+			tank_medium_cannon
+			tank_medium_one_man_tank_turret
+			tank_bogie_suspension
+			medium_tank_riveted_armor
+			tank_gasoline_engine
+			universal_radios
+			secondary_turret_hmg
+		}
+	}
+
+	improved_medium_tank_default = {
+		priority = {
+			factor = 100
+			modifier = { 
+				has_tech = advanced_medium_tank_chassis 
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 3000
+			type = medium_tank_chassis_2
+			modules = {
+				main_armament_slot = { 
+					any_of = { 
+						tank_high_velocity_cannon_2
+						tank_medium_cannon_2
+					} 
+				}
+				turret_type_slot = tank_medium_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = medium_tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = universal_radios
+				secondary_armament_type_slot = additional_machine_guns
+			}
+		}
+
+		allowed_modules = {
+			
+			tank_high_velocity_cannon_2
+			tank_medium_cannon_2
+			tank_medium_two_man_tank_turret
+			tank_bogie_suspension
+			medium_tank_welded_armor
+			tank_gasoline_engine
+			universal_radios
+			additional_machine_guns
+		}
+	}
+
+	advanced_medium_tank_default = {
+		priority = {
+			factor = 100
+		}
+
+		target_variant = {
+			match_value = 4000
+			type = medium_tank_chassis_3
+			modules = {
+				main_armament_slot = { 
+					any_of = { 
+						tank_high_velocity_cannon_3
+						tank_medium_cannon_3
+					} 
+				}
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = medium_tank_cast_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = universal_radios
+				secondary_armament_type_slot = additional_machine_guns
+			}
+		}
+
+		allowed_modules = {
+			
+			tank_high_velocity_cannon_3
+			tank_medium_cannon_3
+			tank_medium_three_man_tank_turret
+			tank_bogie_suspension
+			medium_tank_cast_armor
+			tank_gasoline_engine
+			universal_radios
+			additional_machine_guns
+		}
+	}
+}
+
+generic_medium_tank_destroyer = {
+	category = land
+
+	blocked_for = { WST }
+
+	available_for = {}
+
+	roles = {
+		land_medium_tank_destroyer
+	}
+
+	priority = {
+		factor = 500
+		modifier = {
+			any_enemy_country = {
+				has_tech = improved_heavy_tank_chassis
+			}
+			factor = 5
+		}
+	}
+	medium_tank_destroyer_1 = {
+		priority = {
+			factor = 100
+			
+		}
+		enable = {
+			has_tech = basic_medium_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1000
+			type = medium_tank_destroyer_chassis_1
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_medium_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = medium_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_hmg
+			}
+		}
+
+		allowed_modules = {
+			tank_high_velocity_cannon
+			tank_medium_fixed_superstructure_turret
+			tank_bogie_suspension
+			medium_tank_riveted_armor
+			tank_gasoline_engine
+			signal_flags
+			secondary_turret_hmg
+		}
+	}
+	medium_tank_destroyer_2 = {
+		priority = {
+			factor = 200
+			
+		}
+		enable = {
+			has_tech = improved_medium_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = medium_tank_destroyer_chassis_2
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon_2
+				turret_type_slot = tank_medium_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = medium_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_hmg
+			}
+		}
+
+		allowed_modules = {
+			tank_high_velocity_cannon_2
+			tank_medium_fixed_superstructure_turret
+			tank_bogie_suspension
+			medium_tank_riveted_armor
+			tank_gasoline_engine
+			signal_flags
+			secondary_turret_hmg
+		}
+	}
+
+	medium_tank_destroyer_3 = {
+		priority = {
+			factor = 200
+			
+		}
+		enable = {
+			has_tech = advanced_medium_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 2000
+			type = medium_tank_destroyer_chassis_3
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon_3
+				turret_type_slot = tank_medium_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = medium_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_hmg
+			}
+		}
+
+		allowed_modules = {
+			tank_high_velocity_cannon_3
+			tank_medium_fixed_superstructure_turret
+			tank_bogie_suspension
+			medium_tank_riveted_armor
+			tank_gasoline_engine
+			signal_flags
+			secondary_turret_hmg
+		}
+	}
+}
+
+generic_medium_tank_artillery = {
+	category = land
+
+	blocked_for = {WST}
+
+	available_for = {}
+
+	roles = {
+		land_medium_tank_artillery
+	}
+
+	priority = {
+		factor = 500
+	}
+	medium_tank_artillery_1 = {
+		priority = {
+			factor = 100
+			
+		}
+		enable = {
+			has_tech = basic_medium_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1000
+			type = medium_tank_artillery_chassis_1
+			modules = {
+				main_armament_slot = tank_medium_howitzer
+				turret_type_slot = tank_medium_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = medium_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_hmg
+			}
+		}
+
+		allowed_modules = {
+			tank_medium_howitzer
+			tank_medium_fixed_superstructure_turret
+			tank_bogie_suspension
+			medium_tank_riveted_armor
+			tank_gasoline_engine
+			signal_flags
+			secondary_turret_hmg
+		}
+	}
+	medium_tank_artillery_2 = {
+		priority = {
+			factor = 200
+			
+		}
+		enable = {
+				has_tech = improved_medium_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = medium_tank_artillery_chassis_2
+			modules = {
+				main_armament_slot = tank_medium_howitzer_2
+				turret_type_slot = tank_medium_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = medium_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_hmg
+			}
+		}
+
+		allowed_modules = {
+			tank_medium_howitzer_2
+			tank_medium_fixed_superstructure_turret
+			tank_bogie_suspension
+			medium_tank_riveted_armor
+			tank_gasoline_engine
+			signal_flags
+			secondary_turret_hmg
+		}
+	}
+
+	medium_tank_artillery_3 = {
+		priority = {
+			factor = 200
+			
+		}
+		enable = {
+			has_tech = advanced_medium_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 2000
+			type = medium_tank_artillery_chassis_3
+			modules = {
+				main_armament_slot = tank_medium_howitzer_3
+				turret_type_slot = tank_medium_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = medium_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_hmg
+			}
+		}
+
+		allowed_modules = {
+			tank_medium_howitzer_3
+			tank_medium_fixed_superstructure_turret
+			tank_bogie_suspension
+			medium_tank_riveted_armor
+			tank_gasoline_engine
+			signal_flags
+			secondary_turret_hmg
+		}
+	}
+}
+
+generic_medium_tank_anti_air = {
+	category = land
+
+	blocked_for = {WST}
+
+	available_for = {}
+
+	roles = {
+		land_medium_tank_anti_air
+	}
+
+	priority = {
+		factor = 50
+	}
+	medium_tank_anti_air_1 = {
+		priority = {
+			factor = 10
+			
+		}
+		enable = {
+			has_tech = basic_medium_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1000
+			type = medium_tank_aa_chassis_1
+			modules = {
+				main_armament_slot = tank_anti_air_cannon
+				turret_type_slot = tank_medium_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = medium_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = empty
+				secondary_armament_type_slot = empty
+			}
+		}
+
+		allowed_modules = {
+			tank_anti_air_cannon
+			tank_medium_one_man_tank_turret
+			tank_bogie_suspension
+			medium_tank_riveted_armor
+			tank_gasoline_engine
+		}
+	}
+	medium_tank_anti_air_2 = {
+		priority = {
+			factor = 20
+			
+		}
+		enable = {
+			has_tech = improved_medium_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = medium_tank_aa_chassis_2
+			modules = {
+				main_armament_slot = tank_anti_air_cannon_2
+				turret_type_slot = tank_medium_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = medium_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = empty
+				secondary_armament_type_slot = empty
+			}
+		}
+
+		allowed_modules = {
+			tank_anti_air_cannon_2
+			tank_medium_two_man_tank_turret
+			tank_bogie_suspension
+			medium_tank_riveted_armor
+			tank_gasoline_engine
+		}
+	}
+
+	medium_tank_anti_air_3 = {
+		priority = {
+			factor = 20
+			
+		}
+		enable = {
+			has_tech = advanced_medium_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 2500
+			type = medium_tank_aa_chassis_3
+			modules = {
+				main_armament_slot = tank_anti_air_cannon_3
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = medium_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = empty
+				secondary_armament_type_slot = empty
+			}
+		}
+
+		allowed_modules = {
+			tank_anti_air_cannon_3
+			tank_medium_three_man_tank_turret
+			tank_bogie_suspension
+			medium_tank_riveted_armor
+			tank_gasoline_engine
+		}
+	}
+}
+###HEAVY TANKS
+generic_heavy_tanks = {
+	category = land
+
+	blocked_for = {WST}
+
+	available_for = {}
+
+	roles = {
+		land_heavy_tank
+	}
+
+	priority = {
+		factor = 200
+		modifier = {
+			num_of_factories < 50
+			factor = 0
+		}
+	}
+
+	improved_heavy_tank_default = {
+		priority = {
+			factor = 10
+			modifier = { 
+				has_tech = advanced_heavy_tank_chassis 
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 2000
+			type = heavy_tank_chassis_2
+			modules = {
+				main_armament_slot = { 
+					any_of = { 
+						tank_heavy_cannon_2
+						tank_heavy_high_velocity_cannon_2
+					} 
+				}
+				turret_type_slot = tank_heavy_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = heavy_tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = universal_radios
+				secondary_armament_type_slot = secondary_turret_small_cannon
+			}
+		}
+
+		allowed_modules = {
+			
+			tank_heavy_cannon_2
+			tank_heavy_high_velocity_cannon_2
+			tank_heavy_two_man_tank_turret
+			tank_bogie_suspension
+			heavy_tank_welded_armor
+			tank_gasoline_engine
+			secondary_turret_small_cannon
+			universal_radios
+		}
+	}
+
+	advanced_heavy_tank_default = {
+		priority = {
+			factor = 10
+		}
+
+		target_variant = {
+			match_value = 4000
+			type = heavy_tank_chassis_3
+			modules = {
+				main_armament_slot = { 
+					any_of = { 
+						tank_heavy_cannon_3
+						tank_heavy_high_velocity_cannon_3
+					} 
+				}
+				turret_type_slot = tank_heavy_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = heavy_tank_cast_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = universal_radios
+				secondary_armament_type_slot = secondary_turret_small_cannon
+			}
+		}
+
+		allowed_modules = {
+			
+			tank_heavy_cannon_3
+			tank_heavy_high_velocity_cannon_3
+			tank_heavy_three_man_tank_turret
+			tank_bogie_suspension
+			heavy_tank_cast_armor
+			tank_gasoline_engine
+			secondary_turret_small_cannon
+			universal_radios
+		}
+	}
+}
+
+generic_heavy_tank_destroyer = {
+	category = land
+
+	blocked_for = {WST}
+
+	available_for = {}
+
+	roles = {
+		land_heavy_tank_destroyer
+	}
+
+	priority = {
+		factor = 500
+		modifier = {
+			NOT = { has_tech = basic_heavy_tank_chassis } 
+			any_enemy_country = {
+				has_tech = basic_heavy_tank_chassis
+			}
+			factor = 3
+		}
+	}
+	heavy_tank_destroyer_1 = {
+		priority = {
+			factor = 100
+			
+		}
+		enable = {
+			has_tech = basic_heavy_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1000
+			type = heavy_tank_destroyer_chassis_1
+			modules = {
+				main_armament_slot = tank_heavy_high_velocity_cannon
+				turret_type_slot = tank_heavy_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = heavy_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_small_cannon
+			}
+		}
+
+		allowed_modules = {
+			
+			tank_heavy_high_velocity_cannon
+			tank_heavy_fixed_superstructure_turret
+			tank_bogie_suspension
+			heavy_tank_riveted_armor
+			tank_gasoline_engine
+			secondary_turret_small_cannon
+			signal_flags
+		}
+	}
+	heavy_tank_destroyer_2 = {
+		priority = {
+			factor = 200
+			
+		}
+		enable = {
+			has_tech = improved_heavy_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = heavy_tank_destroyer_chassis_2
+			modules = {
+				main_armament_slot = tank_heavy_high_velocity_cannon_2
+				turret_type_slot = tank_heavy_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = heavy_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_small_cannon
+			}
+		}
+
+		allowed_modules = {
+			
+			tank_heavy_high_velocity_cannon_2
+			tank_heavy_fixed_superstructure_turret
+			tank_bogie_suspension
+			heavy_tank_riveted_armor
+			tank_gasoline_engine
+			secondary_turret_small_cannon
+			signal_flags
+		}
+	}
+
+	heavy_tank_destroyer_3 = {
+		priority = {
+			factor = 200
+			
+		}
+		enable = {
+			has_tech = advanced_heavy_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 2000
+			type = heavy_tank_destroyer_chassis_3
+			modules = {
+				main_armament_slot = tank_heavy_high_velocity_cannon_3
+				turret_type_slot = tank_heavy_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = heavy_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_small_cannon
+			}
+		}
+
+		allowed_modules = {
+			
+			tank_heavy_high_velocity_cannon_3
+			tank_heavy_fixed_superstructure_turret
+			tank_bogie_suspension
+			heavy_tank_riveted_armor
+			tank_gasoline_engine
+			secondary_turret_small_cannon
+			signal_flags
+		}
+	}
+}
+
+generic_heavy_tank_artillery = {
+	category = land
+
+	blocked_for = {WST}
+
+	available_for = {}
+
+	roles = {
+		land_heavy_tank_artillery
+	}
+
+	priority = {
+		factor = 500
+	}
+	heavy_tank_artillery_1 = {
+		priority = {
+			factor = 100
+			
+		}
+		enable = {
+			has_tech = basic_heavy_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1000
+			type = heavy_tank_artillery_chassis_1
+			modules = {
+				main_armament_slot = tank_heavy_howitzer
+				turret_type_slot = tank_heavy_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = heavy_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_hmg
+			}
+		}
+
+		allowed_modules = {
+			
+			tank_heavy_howitzer
+			tank_heavy_fixed_superstructure_turret
+			tank_bogie_suspension
+			heavy_tank_riveted_armor
+			tank_gasoline_engine
+			secondary_turret_hmg
+			signal_flags
+		}
+	}
+	heavy_tank_artillery_2 = {
+		priority = {
+			factor = 200
+			
+		}
+		enable = {
+				has_tech = improved_heavy_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = heavy_tank_artillery_chassis_2
+			modules = {
+				main_armament_slot = tank_heavy_howitzer_2
+				turret_type_slot = tank_heavy_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = heavy_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_hmg
+			}
+		}
+
+		allowed_modules = {
+			
+			tank_heavy_howitzer_2
+			tank_heavy_fixed_superstructure_turret
+			tank_bogie_suspension
+			heavy_tank_riveted_armor
+			tank_gasoline_engine
+			secondary_turret_hmg
+			signal_flags
+		}
+	}
+
+	heavy_tank_artillery_3 = {
+		priority = {
+			factor = 200
+			
+		}
+		enable = {
+			has_tech = advanced_heavy_tank_chassis
+		}
+
+		target_variant = {
+			match_value = 2000
+			type = heavy_tank_artillery_chassis_3
+			modules = {
+				main_armament_slot = tank_heavy_howitzer_3
+				turret_type_slot = tank_heavy_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = heavy_tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				radio_type_slot = signal_flags
+				secondary_armament_type_slot = secondary_turret_hmg
+			}
+		}
+
+		allowed_modules = {
+			
+			tank_heavy_howitzer_3
+			tank_heavy_fixed_superstructure_turret
+			tank_bogie_suspension
+			heavy_tank_riveted_armor
+			tank_gasoline_engine
+			secondary_turret_hmg
+			signal_flags
+		}
+	}
+}

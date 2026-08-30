@@ -1,0 +1,37 @@
+characters = {
+
+
+	POL_ignacy_moscicki = {
+		name=POL_ignacy_moscicki
+		portraits = {
+			army={
+				small=GFX_portrait_POL_ignacy_moscicki_small
+			}
+			civilian = {
+				large="GFX_portrait_POL_ignacy_moscicki"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_ignacy_moscicki
+			available = {
+			}
+			allowed = {
+				original_tag = POL
+				OR = {
+					has_dlc = "No Step Back"
+					has_dlc = "Poland: United and Ready"
+				}
+			}
+			traits = {
+				the_king_of_the_castle 
+			}
+		}
+		
+		country_leader = {
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,240 @@
+﻿add_namespace = lar_spain 
+
+# Election of 1936 - La Resistance Edition
+country_event = {
+	id = lar_spain.1
+	title = spain.9.t
+	desc = lar_spain.1.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SPR
+		has_dlc = "La Resistance"
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = SPR_spanish_elections_flag
+			activate_mission = SPA_military_plot_nationalists
+			activate_mission = SPA_military_plot_nationalists
+			SPR = { set_variable = { SPR.SPR_division_quality = 6 }}    ##
+			SPR = { set_variable = { SPR.SPR_division_quantity = 48 }}	##  ==> 48*6=288 Brigades 
+		}
+	}
+	
+
+	# Falange
+	option = {
+		name = lar_spain.1.b
+		trigger = {
+			NOT = {
+				has_completed_focus = SPR_the_popular_front
+			}
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+	}
+}
+
+
+country_event = {
+	id = lar_spain.2
+	title = lar_spain.2.t
+	desc = lar_spain.2.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = { flag = SPR_civil_war_startup value = 1 days = 3 } # Make AI avoid attacking for a few days
+			set_global_flag = spanish_civil_war
+			###Unplanned Offensive
+			every_state = {
+				limit = {
+					OR = {
+						state = 41
+						state = 165
+						state = 166
+						state = 167
+						state = 168
+						state = 169
+						state = 170
+						state = 171
+						state = 172
+						state = 173
+						state = 174
+						state = 175
+						state = 176
+						state = 788
+						state = 789
+						state = 791
+						state = 793
+						state = 794
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = unplanned_offensive
+				}
+			}
+			if = {
+				limit = { NOT = { SPR = { has_completed_focus = SPA_secure_the_northern_garrisons }}}
+				792 = { 
+					add_dynamic_modifier = {
+						modifier = unplanned_offensive
+					}
+				}
+				790 = { 
+					add_dynamic_modifier = {
+						modifier = unplanned_offensive
+					}
+				}
+			}
+			
+			###Nationalist Brigada Legionario Spawn:
+			SPR_brigada_legionario_spawn = yes
+
+			##Nationalist Ideas: 
+			SPR = { add_ideas = SPA_death_before_surrender }
+			SPR = { remove_ideas = SPR_political_violence }
+			SPR = { activate_mission = "War Imminent" }
+			SPR = { remove_ideas = SPR_military_disloyalty}
+			SPR = { country_lock_all_division_template = no }
+
+
+
+
+
+			##Republicans:
+			SPD = {
+				load_oob = "SPD_civil_war_base"
+			}
+			SPD = { add_ideas = SPR_death_before_surrender }
+			SPD = { remove_ideas = SPR_political_violence }
+			SPD = { country_lock_all_division_template = no }
+		}	
+	}
+	
+	option = { # Option for Nationalists - Franco
+		name = lar_spain.2.a
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Spain - Sanjurjo Dies
+country_event = {
+	id = lar_spain.78
+	title = lar_spain.78.t
+	desc = lar_spain.78.desc
+	picture = GFX_report_event_spr_plane_crash
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Military Junta"
+				desc = "POLITICS_MILITARY_JUNTA_DESC"
+				picture = "GFX_portrait_SPA_military_junta"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					divided_interests
+				}
+			}
+		}
+	}
+	
+	option = { # RIP
+		name = lar_spain.78.a
+		effect_tooltip = {
+			custom_effect_tooltip = lar_spain.78_tt
+			hidden_effect = {
+				kill_country_leader = yes
+			}
+			create_country_leader = {
+				name = "Military Junta"
+				desc = "POLITICS_MILITARY_JUNTA_DESC"
+				picture = "GFX_portrait_SPA_military_junta"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					divided_interests
+				}
+			}
+		}
+	}
+}
+
+# Petition for French Aid - Event for France
+country_event = {
+	id = lar_spain.64
+	title = lar_spain.64.t
+	desc = lar_spain.64.desc
+	picture = GFX_report_event_spr_no_pasaran
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = lar_spain.64.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0.5
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0.2
+				has_country_flag = FRA_non_intervention
+			}
+		}
+		army_experience = 65
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 5000
+			target = SPD
+		}
+	}
+
+	option = { # Decline
+		name = lar_spain.64.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = FRA_arms_purchases_allowed
+					has_country_flag = FRA_sending_weapons_allowed
+					has_country_flag = FRA_volunteer_work_allowed
+				}
+			}
+		}
+		add_political_power = 10
+	}
+}
+

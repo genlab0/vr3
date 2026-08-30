@@ -1,0 +1,68 @@
+australia_historical = {
+	name = "australia historical plan"
+	desc = "Essentially historical behaviour for australia"
+
+	allowed = {
+		original_tag = AST
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		date>1960.1.1
+	}
+
+	ai_national_focuses = {
+		# grab as fast as you can if available
+		AST_support_the_policy_of_appeasement
+		AST_establish_advisory_war_council
+		AST_national_security_act
+		AST_army_inventions_directorate
+		AST_fund_australian_defense_research
+		AST_civil_construction_corps
+		AST_classify_aliens
+		AST_invest_in_victory
+		AST_squash_the_squanderbugs
+		AST_fight_work_or_perish
+
+		AST_additional_militia_training
+		AST_royal_australian_artillery
+
+		AST_cockatoo_island_shipyards
+		AST_standard_gauge_railway
+		AST_industries_assistance_corporation
+		AST_western_australian_government_railways
+		AST_south_australian_housing_trust
+		AST_strengthen_ties_with_uk
+		AST_rats_of_tobruk
+		AST_the_singapore_strategy
+		AST_adopt_westminster
+		AST_swpa_protector
+		AST_department_of_supply_and_development
+		AST_expand_lithgow_small_arms_factory
+		AST_allied_works_council
+		AST_australian_arms_production
+	
+
+		AST_hmas_assault
+		AST_fund_owen_gun_research
+		AST_promote_reservists
+		AST_specialize_equipment
+		AST_airborne_defence
+		AST_introduce_unconventional_warfare
+		AST_z_special_unit
+		AST_rationing_and_recycling
+
+	}
+
+	traits = {
+		silent_workhorse = 1000
+	}
+	weight = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}
+	}
+
+}

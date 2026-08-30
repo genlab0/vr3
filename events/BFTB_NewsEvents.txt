@@ -1,0 +1,89 @@
+﻿add_namespace = bftb_news
+
+#Third Bulgarian Empire
+news_event = {
+	id = bftb_news.7
+	title = bftb_news.7.t
+	desc = bftb_news.7.desc
+	picture = GFX_news_event_bulgarian_troops
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bftb_news.7.a 
+		trigger = {
+			tag = BUL
+		}
+	}
+
+	option = {
+		name = bftb_news.7.b
+		trigger = {
+			NOT = { tag = BUL }
+			OR = {
+				has_war_with = BUL
+				has_wargoal_against = BUL
+				is_justifying_wargoal_against = BUL
+				any_country = {
+					is_in_faction_with = ROOT
+					has_war_with = BUL
+				}
+			}
+		}
+	}
+
+	option = {
+		name = bftb_news.7.c
+		trigger = {
+			NOT = { tag = BUL }
+			NOT = {	has_war_with = BUL }
+			NOT = { has_wargoal_against = BUL }
+			NOT = { is_justifying_wargoal_against = BUL }
+			NOT = {
+				any_country = {
+					is_in_faction_with = ROOT
+					has_war_with = BUL
+				}
+			}
+		}
+	}
+}
+
+#The return of Ferdinand I
+news_event = {
+	id = bftb_news.4
+	title = bftb_news.4.t
+	desc = bftb_news.4.desc
+	picture = GFX_news_event_tsar_ferdinand_of_bulgaria
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Bulgaria
+		name = bftb_news.4.a
+		trigger = {
+			tag = BUL
+		}
+	}
+
+	option = { #Nations that seek Balkan stability
+		name = bftb_news.4.b
+		trigger = {
+			BUL_country_seeks_macedonian_stability = yes
+			NOT = { tag = BUL }
+		}
+	}
+
+	option = { #Fallback - Others
+		name = bftb_news.4.c
+		trigger = {
+			NOT = {
+				tag = BUL
+			}
+			BUL_country_seeks_macedonian_stability = no
+		}
+	}
+}

@@ -1,0 +1,297 @@
+
+FRA_legitimacy_power_balance = {
+	FRA_expatriate_industrial_donations = {
+		priority = 99
+		icon = GFX_decision_eng_trade_unions_demand
+
+		allowed = {
+			original_tag = FRA
+		}
+
+		visible = {
+			has_completed_focus = FRA_refus_absurde
+		}
+
+		available = {
+			has_completed_focus = FRA_refus_absurde
+		}
+		days_re_enable = 90
+		cost = 50
+
+		complete_effect = {
+			FRA_bop_low_decrease_effect = yes
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	FRA_seek_british_support = {
+		priority = 99
+		icon = GFX_decision_eng_trade_unions_demand
+
+		allowed = {
+			original_tag = FRA
+		}
+		days_re_enable = 90
+		visible = {
+			has_completed_focus = FRA_refus_absurde
+		}
+
+		available = {
+			has_completed_focus = FRA_refus_absurde
+		}
+
+		cost = 50
+
+		complete_effect = {
+			FRA_bop_medium_increase_effect = yes
+			ENG = {
+				add_war_support = 0.02
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	FRA_seek_us_support = {
+		priority = 99
+		icon = GFX_decision_eng_trade_unions_demand
+
+		allowed = {
+			original_tag = FRA
+		}
+		days_re_enable = 100
+		visible = {
+			has_completed_focus = FRA_refus_absurde
+		}
+
+		available = {
+			date>1941.1.1
+		}
+
+		cost = 0
+
+		complete_effect = {
+			FRA_bop_medium_increase_effect = yes
+			add_political_power = 100
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	FRA_force_recruiting = {
+		priority = 99
+		icon = GFX_decision_eng_trade_unions_demand
+
+		allowed = {
+			original_tag = FRA
+		}
+		days_re_enable = 80
+		visible = {
+			has_completed_focus = FRA_refus_absurde
+		}
+
+		available = {
+		}
+
+		cost = 0
+
+		complete_effect = {
+			FRA_bop_low_decrease_effect = yes
+			add_manpower = 75000
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	FRA_force_total_mobilisation = {
+		priority = 99
+		icon = GFX_decision_eng_trade_unions_demand
+
+		allowed = {
+			original_tag = FRA
+		}
+		visible = {
+			has_completed_focus = FRA_refus_absurde
+		}
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = FRA_refus_absurde
+		}
+
+		cost = 0
+
+		complete_effect = {
+			FRA_bop_medium_decrease_effect = yes
+			add_ideas = tot_economic_mobilisation
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}
+
+
+
+
+
+
+
+
+FRA_civil_unrest_category = {
+
+#	FRA_communist_civil_war_decision = {
+#
+#		icon = generic_civil_support
+#
+#		available = {
+#			OR = {
+#				has_stability > 0.25	
+#				communism < 0.01
+#				has_government = communism
+#				has_completed_focus = FRA_form_the_popular_front
+#				custom_trigger_tooltip = {
+#					tooltip = french_communist_civil_war_intervention_tt 
+#					AND = {
+#						has_war = yes
+#						NOT = {
+#							AND = {
+#								SPR_scw_in_progress = yes
+#								any_enemy_country = {
+#									original_tag = SPR #civil war still fires if in intervention in Spain
+#								}
+#							}
+#						}
+#					}
+#				}	
+#			}
+#		}
+#
+#		days_mission_timeout = 90
+#		days_remove = 0
+#
+#		activation = {
+#			has_stability < 0.25
+#			communism > 0.00
+#			OR = {
+#				has_war = no
+#				AND = {
+#					has_war = yes
+#					AND = {
+#						SPR_scw_in_progress = yes
+#						any_enemy_country = {
+#							original_tag = SPR #civil war still fires if in intervention in Spain
+#						}
+#					}
+#				}
+#			}
+#			not = { has_completed_focus = FRA_form_the_popular_front }
+#			not = { has_global_flag = flag_french_communist_civil_war }
+#		}
+#
+#		allowed = {
+#			original_tag = FRA
+#		}
+#
+#		fixed_random_seed = no
+#
+#		fire_only_once = no
+#
+#		is_good = no
+#		
+#		timeout_effect = {
+#			set_global_flag = flag_french_communist_civil_war
+#			country_event = { id = lar_low_stability_civil_war.1 }
+#		}
+#	}
+#	
+#	FRA_fascist_civil_war_decision = {
+#
+#		icon = generic_civil_support
+# 
+#		available = {
+#			OR = {
+#				has_stability > 0.25	
+#				has_government = fascism
+#				has_completed_focus = FRA_destroy_the_counter_revolution
+#				custom_trigger_tooltip = {
+#					tooltip = french_communist_civil_war_intervention_tt 
+#					AND = {
+#						has_war = yes
+#						NOT = {
+#							AND = {
+#								SPR_scw_in_progress = yes
+#								any_enemy_country = {
+#									original_tag = SPR #civil war still fires if in intervention in Spain
+#								}
+#							}
+#						}
+#					}
+#				}	
+#			}
+#		}
+#
+#		days_mission_timeout = 90
+#		days_remove = 0
+#
+#		activation = {
+#			has_stability < 0.25
+#			OR = {
+#				has_war = no
+#				AND = {
+#					has_war = yes
+#					AND = {
+#						SPR_scw_in_progress = yes
+#						any_enemy_country = {
+#							original_tag = SPR #civil war still fires if in intervention in Spain
+#						}
+#					}
+#				}
+#			}
+#			has_completed_focus = FRA_form_the_popular_front
+#			NOT = { has_completed_focus = FRA_destroy_the_counter_revolution }
+#			not = { has_global_flag = flag_french_fascist_civil_war }
+#		}
+#
+#		allowed = {
+#			original_tag = FRA
+#		}
+#
+#		fixed_random_seed = no
+#
+#		fire_only_once = no
+#
+#		is_good = no
+#		
+#		timeout_effect = {
+#			set_global_flag = flag_french_fascist_civil_war
+#			country_event = { id = lar_low_stability_civil_war.2 }
+#		}
+#	}
+	
+}
+
+

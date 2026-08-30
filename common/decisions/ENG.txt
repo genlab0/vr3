@@ -1,0 +1,698 @@
+ENG_combined_chiefs_of_staff = {
+	ENG_operation_husky_in_effect = {
+		icon = eng_propaganda_campaigns
+		activation = {
+			has_completed_focus = ENG_operation_husky
+		}
+		available = {
+			always = no 
+		}
+		is_good = yes 
+		days_mission_timeout = 90
+		fire_only_once = yes 
+		timeout_effect = {
+			115 = {
+				remove_dynamic_modifier = { modifier = allied_invasion }
+			}
+		}
+	}
+}
+
+
+ENG_operation_sealion = {
+	ENG_division_spawns_1 = {
+		icon = eng_propaganda_campaigns
+		activation = {
+			always = no
+		}
+		available = {
+			has_global_flag = ENG_capitulated
+		}
+		is_good = yes
+		days_mission_timeout = 7
+		fire_only_once = yes
+		timeout_effect = {
+			activate_mission = ENG_division_spawns_2
+			random_owned_controlled_state = {
+				limit = { AND = { is_core_of = ENG is_fully_controlled_by = ENG } }
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+			}
+    	}
+	}
+	ENG_division_spawns_2 = {
+		icon = eng_propaganda_campaigns
+		activation = {
+			always = no
+		}
+		available = {
+			has_global_flag = ENG_capitulated
+		}
+		is_good = yes
+		days_mission_timeout = 7
+		fire_only_once = yes
+		timeout_effect = {
+			activate_mission = ENG_division_spawns_3
+			random_owned_controlled_state = {
+				limit = { AND = { is_core_of = ENG is_fully_controlled_by = ENG } }
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+			}
+    	}
+	}
+	ENG_division_spawns_3 = {
+		icon = eng_propaganda_campaigns
+		activation = {
+			always = no
+		}
+		available = {
+			has_global_flag = ENG_capitulated
+		}
+		is_good = yes
+		days_mission_timeout = 7
+		fire_only_once = yes
+		timeout_effect = {
+			activate_mission = ENG_division_spawns_4
+			random_owned_controlled_state = {
+				limit = { AND = { is_core_of = ENG is_fully_controlled_by = ENG } }
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+			}
+    	}
+	}
+	ENG_division_spawns_4 = {
+		icon = eng_propaganda_campaigns
+		activation = {
+			always = no
+		}
+		available = {
+			has_global_flag = ENG_capitulated
+		}
+		is_good = yes
+		days_mission_timeout = 7
+		fire_only_once = yes
+		timeout_effect = {
+			random_owned_controlled_state = {
+				limit = { AND = { is_core_of = ENG is_fully_controlled_by = ENG } }
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Militia Brigade\" division_template = \"Local Militia\" start_experience_factor = 0.1"
+					owner = ENG
+				}
+			}
+    	}
+	}
+	ENG_desperate_defense = {
+		icon = eng_propaganda_campaigns
+		allowed = {
+			tag = ENG
+		}
+		available = {
+			AND = { 
+				tag = ENG
+				has_global_flag = sealion_happened_flag 
+				NOT = { has_global_flag = ENG_capitulated }
+			}
+		}
+		cost = 10
+		is_good = yes
+		fire_only_once = yes
+		visible = {
+			AND = { 
+				tag = ENG
+				has_global_flag = sealion_happened_flag 
+				NOT = { has_global_flag = ENG_capitulated }
+				NOT = { has_global_flag = ENG_liberated_flag }
+			}
+		}
+		modifier = {
+			army_core_attack_factor = 0.1
+			army_core_defence_factor = 0.15
+			army_speed_factor = 0.1
+			industrial_capacity_factory = -0.2
+			industrial_capacity_dockyard = -0.2
+		}
+		days_remove = 90
+	}
+}
+
+
+
+ENG_us_interventionism = {
+
+	"Integrate French Forces" = {
+		icon = eng_propaganda_campaigns
+		available = {
+			FRA = { is_ai = yes }
+			GER = { controls_state = 16 }
+		}
+		visible = {
+			has_completed_focus = ENG_us_economic_support
+		}
+		cost = 0
+		is_good = yes 
+		fire_only_once = yes
+		complete_effect = {
+			FRA = {
+				transfer_units_fraction= {
+					target = ENG
+					size = 0
+					navy_ratio = 1
+					air_ratio = 1
+				}
+				transfer_units_fraction= {
+					target = RAJ
+					size = 0
+					stockpile_ratio = 1
+					army_ratio = 1
+				}
+			}
+			RAJ = {
+				add_offsite_building = { 
+					type = arms_factory
+					level = FRA.total_constructed_military_factory
+				}
+				add_offsite_building = { 
+					type = industrial_complex 
+					level = FRA.total_constructed_civilian_factory
+				}
+			}
+			FRA = { add_ideas = ai_enabled_idea }
+		}
+	}
+
+	ENG_us_support_increases_1 = {
+		icon = eng_propaganda_campaigns
+		activation = {
+			has_completed_focus = ENG_us_economic_support
+		}
+		available = {
+			always = no
+		}
+		is_good = yes
+		days_mission_timeout = 45
+		fire_only_once = yes
+		timeout_effect = {
+			ENG = { transfer_state = 357}
+			activate_mission = ENG_us_support_increases_2
+    	}
+	}
+	ENG_us_support_increases_2 = {
+		icon = eng_propaganda_campaigns
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		is_good = yes
+		days_mission_timeout = 45
+		fire_only_once = yes
+		timeout_effect = {
+			ENG = { transfer_state = 358}
+			activate_mission = ENG_us_support_increases_3
+    	}
+	}
+	ENG_us_support_increases_3 = {
+		icon = eng_propaganda_campaigns
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		is_good = yes
+		days_mission_timeout = 45
+		fire_only_once = yes
+		timeout_effect = {
+			ENG = { transfer_state = 359}
+			activate_mission = ENG_us_support_increases_4
+    	}
+	}
+	ENG_us_support_increases_4 = {
+		icon = eng_propaganda_campaigns
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		is_good = yes
+		days_mission_timeout = 45
+		fire_only_once = yes
+		timeout_effect = {
+			ENG = { transfer_state = 360}
+			activate_mission = ENG_us_support_increases_5
+    	}
+	}
+	ENG_us_support_increases_5 = {
+		icon = eng_propaganda_campaigns
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		is_good = yes
+		days_mission_timeout = 45
+		fire_only_once = yes
+		timeout_effect = {
+			ENG = { transfer_state = 361}
+			activate_mission = ENG_us_support_increases_6
+    	}
+	}
+	ENG_us_support_increases_6 = {
+		icon = eng_propaganda_campaigns
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		is_good = yes
+		days_mission_timeout = 45
+		fire_only_once = yes
+		timeout_effect = {
+			ENG = { transfer_state = 362}
+			activate_mission = ENG_us_support_increases_7
+    	}
+	}
+	ENG_us_support_increases_7 = {
+		icon = eng_propaganda_campaigns
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		is_good = yes
+		days_mission_timeout = 45
+		fire_only_once = yes
+		timeout_effect = {
+			ENG = { transfer_state = 363}
+			activate_mission = ENG_us_support_increases_8
+    	}
+	}
+	ENG_us_support_increases_8 = {
+		icon = eng_propaganda_campaigns
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		is_good = yes
+		days_mission_timeout = 45
+		fire_only_once = yes
+		timeout_effect = {
+			ENG = { transfer_state = 364}
+			activate_mission = ENG_us_support_increases_9
+    	}
+	}
+	ENG_us_support_increases_9 = {
+		icon = eng_propaganda_campaigns
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		is_good = yes
+		days_mission_timeout = 45
+		fire_only_once = yes
+		timeout_effect = {
+			ENG = { transfer_state = 365}
+    	}
+	}
+}
+
+political_actions = {
+	hold_blood_toil_tears_sweat_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+			has_war_with = GER
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			set_country_flag = blood_toil_tears_sweat_speech
+		}
+		ai_will_do = {
+			factor = 200 #Gotta allow the Americans to help
+		}
+	}
+
+	hold_fight_on_the_beaches_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+			has_war_with = GER
+			is_in_faction_with = FRA
+			FRA = {
+				surrender_progress > 0.2
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_flag = blood_toil_tears_sweat_speech
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			set_country_flag = fight_on_the_beaches_speech
+		}
+
+		ai_will_do = {
+			factor = 200 #Gotta allow the Americans to help
+		}
+	}
+
+	hold_this_was_their_finest_hour_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+			has_war_with = GER
+			is_in_faction_with = FRA
+			FRA = { has_capitulated = yes }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_flag = fight_on_the_beaches_speech
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			set_country_flag = this_was_their_finest_hour_speech
+		}
+
+		ai_will_do = {
+			factor = 200 #Gotta allow the Americans to help
+		}
+	}
+
+	ENG_request_azores_lease = {
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			has_war = yes
+			has_government = democratic
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		visible = {
+			has_war = yes
+		}
+		
+		complete_effect = {
+			transfer_state = 698
+		}
+	}
+
+	ENG_operation_catapult = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		cost = 50
+
+		fire_only_once = yes 
+		
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			VIC = { controls_state = 20 }
+		}
+
+		visible = {
+			VIC = { controls_state = 20 }
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			VIC = {
+				add_war_support = 0.05
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = FRA_mers_el_kebir
+				}
+			}
+			GER = { add_popularity = { ideology = fascism popularity = 0.05 } }
+			hidden_effect = {
+				news_event = { id = news.333 days = 1 }
+			}
+			random_list = {
+				60 = {
+					VIC = {
+						destroy_ships = {
+							type = ship_hull_light
+							count = 4
+						}
+						destroy_ships = {
+							type = ship_hull_heavy
+							count = 1
+						}
+					}
+				}
+				30 = {
+					VIC = {
+						destroy_ships = {
+							type = ship_hull_light
+							count = 8
+						}
+						destroy_ships = {
+							type = ship_hull_heavy
+							count = 2
+						}
+					}
+				}
+				10 = {
+					VIC = {
+						destroy_ships = {
+							type = ship_hull_light
+							count = 12
+						}
+						destroy_ships = {
+							type = ship_hull_heavy
+							count = 3
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

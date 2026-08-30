@@ -1,0 +1,210 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+SS_set_templates = {
+	if = {
+		limit = {
+			has_tech = improved_medium_tank_chassis
+		}
+		division_template = {
+			name = "SS Panzer Division (vollgep.)"
+			priority = 2
+			division_names_group = GER_SS_01
+			is_locked = yes
+			regiments = {
+				SS_medium_armor = { x = 0 y = 0 }
+				SS_medium_armor = { x = 0 y = 1 }
+				SS_medium_armor = { x = 0 y = 2 }
+				SS_medium_armor = { x = 0 y = 3 }
+				SS_medium_armor = { x = 0 y = 4 }
+
+				SS_medium_armor = { x = 1 y = 0 }
+				SS_medium_armor = { x = 1 y = 1 }
+				SS_medium_armor = { x = 1 y = 2 }
+				SS_medium_armor = { x = 1 y = 3 }
+				SS_medium_armor = { x = 1 y = 4 }
+
+				ss_mechanized = { x = 2 y = 0 }
+				ss_mechanized = { x = 2 y = 1 }
+				ss_mechanized = { x = 2 y = 2 }
+				ss_mechanized = { x = 2 y = 3 }
+				ss_mechanized = { x = 2 y = 4 }
+
+				ss_mechanized = { x = 3 y = 0 }
+				ss_mechanized = { x = 3 y = 1 }
+				ss_mechanized = { x = 3 y = 2 }
+				ss_mechanized = { x = 3 y = 3 }
+
+				SS_medium_armor = { x = 4 y = 0 }
+			}
+			support = {
+				anti_air = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				light_tank_recon = { x = 0 y = 2 }
+				medium_flame_tank = { x = 0 y = 3 }
+				logistics_company = { x = 0 y = 4}
+				signal_company = { x = 1 y = 0}
+			}
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				NOT = {
+					has_tech = improved_medium_tank_chassis
+				}
+				has_tech = basic_heavy_tank_chassis
+
+			}
+		}
+		division_template = {
+			name = "SS Panzer Division (vollgep.)"
+			priority = 2
+			division_names_group = GER_SS_01
+			is_locked = yes
+			regiments = {
+				SS_heavy_armor = { x = 0 y = 0 }
+				SS_heavy_armor = { x = 0 y = 1 }
+				SS_heavy_armor = { x = 0 y = 2 }
+				SS_heavy_armor = { x = 0 y = 3 }
+				SS_heavy_armor = { x = 0 y = 4 }
+
+				SS_heavy_armor = { x = 1 y = 0 }
+				SS_heavy_armor = { x = 1 y = 1 }
+				SS_heavy_armor = { x = 1 y = 2 }
+				SS_heavy_armor = { x = 1 y = 3 }
+				SS_heavy_armor = { x = 1 y = 4 }
+
+				ss_mechanized = { x = 2 y = 0 }
+				ss_mechanized = { x = 2 y = 1 }
+				ss_mechanized = { x = 2 y = 2 }
+				ss_mechanized = { x = 2 y = 3 }
+				ss_mechanized = { x = 2 y = 4 }
+
+				ss_mechanized = { x = 3 y = 0 }
+				ss_mechanized = { x = 3 y = 1 }
+				ss_mechanized = { x = 3 y = 2 }
+				ss_mechanized = { x = 3 y = 3 }
+
+				SS_heavy_armor = { x = 4 y = 0 }
+			}
+			support = {
+				anti_air = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				light_tank_recon = { x = 0 y = 2 }
+				medium_flame_tank = { x = 0 y = 3 }
+				logistics_company = { x = 0 y = 4}
+				signal_company = { x = 1 y = 0}
+			}
+		}
+	}
+
+	division_template = {
+			name = "SS Infantry Division"
+			priority = 2
+			division_names_group = GER_SS_01
+			is_locked = yes
+			regiments = {
+				ss_infantry = { x = 0 y = 0 }
+				ss_infantry = { x = 0 y = 1 }
+				ss_infantry = { x = 0 y = 2 }
+				ss_infantry = { x = 0 y = 3 }
+				ss_infantry = { x = 0 y = 4 }
+
+				ss_infantry = { x = 1 y = 0 }
+				ss_infantry = { x = 1 y = 1 }
+				ss_infantry = { x = 1 y = 2 }
+				ss_infantry = { x = 1 y = 3 }
+				ss_infantry = { x = 1 y = 4 }
+
+				ss_infantry = { x = 2 y = 0 }
+				ss_infantry = { x = 2 y = 1 }
+				ss_infantry = { x = 2 y = 2 }
+				ss_infantry = { x = 2 y = 3 }
+				ss_infantry = { x = 2 y = 4 }
+
+				ss_infantry = { x = 3 y = 0 }
+				ss_infantry = { x = 3 y = 1 }
+				ss_infantry = { x = 3 y = 2 }
+				ss_infantry = { x = 3 y = 3 }
+				ss_infantry = { x = 3 y = 4 }
+			}
+			support = {
+				anti_air = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				light_tank_recon = { x = 0 y = 2 }
+				medium_flame_tank = { x = 0 y = 3 }
+				logistics_company = { x = 0 y = 4}
+				signal_company = { x = 1 y = 0}
+			}
+		}
+	
+	division_template = {
+		name = "SS Freikorps"
+		priority = 2
+		division_names_group = GER_SS_01
+		is_locked = yes
+		regiments = {
+			ss_infantry = { x = 0 y = 0 }
+			ss_infantry = { x = 0 y = 1 }
+			ss_infantry = { x = 0 y = 2 }
+			ss_infantry = { x = 0 y = 3 }
+			ss_infantry = { x = 0 y = 4 }
+		}
+	}
+
+	division_template = {
+			name = "SS Mechanized Division"
+			priority = 2
+			division_names_group = GER_SS_01
+			is_locked = yes
+			regiments = {
+				ss_mechanized = { x = 0 y = 0 }
+				ss_mechanized = { x = 0 y = 1 }
+				ss_mechanized = { x = 0 y = 2 }
+				ss_mechanized = { x = 0 y = 3 }
+				ss_mechanized = { x = 0 y = 4 }
+
+				ss_mechanized = { x = 1 y = 0 }
+				ss_mechanized = { x = 1 y = 1 }
+				ss_mechanized = { x = 1 y = 2 }
+				ss_mechanized = { x = 1 y = 3 }
+				ss_mechanized = { x = 1 y = 4 }
+
+				ss_mechanized = { x = 2 y = 0 }
+				ss_mechanized = { x = 2 y = 1 }
+				ss_mechanized = { x = 2 y = 2 }
+				ss_mechanized = { x = 2 y = 3 }
+				ss_mechanized = { x = 2 y = 4 }
+
+				ss_mechanized = { x = 3 y = 0 }
+				ss_mechanized = { x = 3 y = 1 }
+				ss_mechanized = { x = 3 y = 2 }
+				ss_mechanized = { x = 3 y = 3 }
+				ss_mechanized = { x = 3 y = 4 }
+			}
+			support = {
+				anti_air = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				light_tank_recon = { x = 0 y = 2 }
+				medium_flame_tank = { x = 0 y = 3 }
+				logistics_company = { x = 0 y = 4}
+				signal_company = { x = 1 y = 0}
+			}
+		}
+}

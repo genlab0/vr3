@@ -1,0 +1,38 @@
+is_playable_country = {
+	OR = {
+		original_tag = ENG
+		original_tag = GER
+		original_tag = SOV
+		original_tag = FRA
+		original_tag = ITA
+		original_tag = HUN
+		original_tag = ROM
+		original_tag = CAN
+		original_tag = SAF
+		original_tag = RAJ
+		original_tag = SPR
+	}
+}
+
+is_limited_country = {
+	OR = {
+		original_tag = ALB
+		original_tag = AUS
+		original_tag = CZE
+		original_tag = EST
+		original_tag = LAT
+		original_tag = LIT
+		original_tag = POL
+		original_tag = SWE
+		original_tag = WST
+		original_tag = YUG 
+		original_tag = DEN 
+		original_tag = NOR 
+		original_tag = IRE
+		original_tag = BUL
+	}
+}
+
+DIPLOMACY_PEACE_PROPOSAL_ENABLE_TRIGGER = {
+	always = no
+}

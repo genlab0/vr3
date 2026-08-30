@@ -1,0 +1,16 @@
+
+
+
+
+
+
+#operation_infiltrate_risk
+#operation_infiltrate_outcome
+#operation_infiltrate_cost
+#
+#operation_steal_tech_risk
+#operation_steal_tech_outcome
+#
+#target_sabotage_factor
+#target_sabotage_risk
+#target_sabotage_cost

@@ -1,0 +1,163 @@
+ai_historical_focus_list_ITA = {
+	ai_national_focuses = {
+		ITA_war_with_allies
+		ITA_balkan_ambition
+		ITA_air_innovations_bba
+		ITA_naval_power_projection #70
+		ITA_expand_naval_facilities
+		ITA_italian_highways_bba #140
+		ITA_railway_innovations
+		ITA_fiocchi_munizioni #210
+		ITA_brescia_small_arms_industry
+		ITA_investments_in_edison #280
+		ITA_expand_national_universities
+		ITA_army_primacy_bba #350
+
+		#1937
+		ITA_increase_artillery_production
+		ITA_expand_foggia_farm_fields #70
+		ITA_steel_industry_in_terni #140
+		ITA_solid_progress 
+		ITA_servizio_informazione_militare
+		ITA_triumph_in_africa_bba #210
+		ITA_incrociatori_pesanti 
+		ITA_navi_da_battaglia #280
+		ITA_flotta_d_evasione #350
+
+		#1938:
+		ITA_foreign_affairs
+		ITA_albanian_occupation #70
+		ITA_culto_del_duce 
+		ITA_security_militias #140
+		ITA_strengthen_the_regime #210
+		ITA_redirect_alfa_romeo_production #280
+		ITA_keep_specialization #350
+		ITA_preserve_army_traditions #420
+
+		#1939:
+		ITA_pact_of_steel
+		ITA_devotion #105
+		ITA_ministry_of_italian_africa #140
+		ITA_improve_overseas_naval_bases
+		ITA_libyan_railway #210
+		ITA_litoranea_balbo
+		ITA_via_della_vittoria #280
+		ITA_army_leaders #350
+		ITA_citta_dell_aria
+		ITA_diving_bombers
+		ITA_towards_a_greater_italy
+		ITA_by_blood_alone
+		ITA_superesercito
+		ITA_bersaglieri
+		ITA_divisioni_alpine
+		ITA_italian_tankettes
+		ITA_modernize_ansaldo_facilities
+		ITA_ferrea_mole_ferreo_cuore
+		ITA_prospect_for_oil
+		ITA_libyan_refineries
+
+
+
+	}
+}
+
+ai_focus_defense_ITA = {
+	research = {
+		defensive = 5.0	
+		radar_tech = 1.0
+		construction_tech = 2.0
+		artillery = 2.0
+	}
+}
+
+ai_focus_aggressive_ITA = {
+	research = {
+		offensive = 5.0
+		synth_resources = 1.0
+		motorized_equipment = 2.0
+		armor = 2.0
+	}
+}
+
+ai_focus_war_production_ITA = {
+	research = {
+		industry = 10.0
+		construction_tech = 2.0
+		electronics = 2.0
+		computing_tech = 2.0		
+	}
+}
+
+ai_focus_military_equipment_ITA = {
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+}
+
+ai_focus_military_advancements_ITA = {
+	research = {
+		armor = 15.0
+		jet_technology = 5.0
+		land_doctrine = 100.0
+		rocketry = 7.5
+		radar_tech = 3.0
+		encryption_tech = 7.5
+		decryption_tech = 7.5
+		synth_resources = 3.0
+		motorized_equipment = 4.0
+		nuclear = 5.0
+		night_vision = 5.0
+		train_tech = 2.0
+	}
+}
+
+ai_focus_peaceful_ITA = {
+	research = {
+		industry = 15.0
+		construction_tech = 5.0
+		electronics = 10.0
+		computing_tech = 10.0
+	}
+}
+
+ai_focus_naval_ITA = {
+    research = {
+        naval_equipment = 8.0
+        naval_doctrine = 75.0
+        marine_tech = 10.0
+        dd_tech = 10.0
+        cl_tech = 8.0
+        ca_tech = 5.0
+        bc_tech = 3.0
+        bb_tech = 10.0
+        shbb_tech = 3.0
+        tp_tech = 5.0
+        cv_tech = 3.0
+        ss_tech = 8.0
+    }
+}
+
+ai_focus_naval_air_ITA = {
+	research = {
+		naval_air = 4.0
+		naval_bomber = 3.0
+	}
+}
+
+ai_focus_aviation_ITA = {
+	research = {
+		air_doctrine = 50.0
+		light_air = 20.0
+		light_fighter = 20.0
+		jet_technology = 1.0
+		cas_bomber = 2.0		
+		medium_air = 4.0
+		tactical_bomber = 5.0
+		heavy_air = 1.5
+		air_equipment = 5.0
+		para_tech = 10.0
+	}
+}

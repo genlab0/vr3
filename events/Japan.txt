@@ -1,0 +1,127 @@
+﻿###########################
+# Japanese Events
+###########################
+
+add_namespace = japan
+
+# Soviets Push Back And Win
+country_event = {
+	id = japan.3
+	title = japan.3.t
+	desc = japan.3.d
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	is_triggered_only = yes
+	
+	option = {
+		if = {
+			limit = { 
+			714 = { 
+				OR = {
+					is_owned_by = JAP
+					is_owned_by = MAN
+				} 
+				any_neighbor_state = { is_owned_by = SOV } }
+			} 
+			714 = { add_manpower = -30000 }
+		}		
+		if = {
+			limit = {
+				NOT = {
+					714 = {
+						OR = {
+							is_owned_by = JAP
+							is_owned_by = MAN
+						}
+						any_neighbor_state = { is_owned_by = SOV } 
+					}
+				}
+			}
+			random_owned_state = {
+				limit = { any_neighbor_state = { is_owned_by = SOV } }
+				add_manpower = -30000
+			}
+		}
+
+		army_experience = 5
+		add_tech_bonus = {
+			name = japan.3.t #test_the_ussr_focus
+			bonus = 1.0
+			uses = 1
+			category = cat_anti_tank
+		}
+		name = japan.3.a
+		SOV = {
+			country_event = { id = soviet.2 }
+		}
+	}
+}
+# Soviets Push Back And Lose
+country_event = {
+	id = japan.4
+	title = japan.4.t
+	desc = japan.4.d
+	picture = GFX_report_event_japanese_soldiers_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.4.a
+		if = {
+			limit = { 
+			714 = { 
+				OR = {
+					is_owned_by = JAP
+					is_owned_by = MAN						
+				}
+				any_neighbor_state = { is_owned_by = SOV } }
+			} 
+			714 = { add_manpower = -20000 }
+		}		
+		if = {
+			limit = {
+				NOT = {
+					714 = {
+						OR = {
+							is_owned_by = JAP							
+							is_owned_by = MAN						
+						}
+						any_neighbor_state = { is_owned_by = SOV } 
+					}
+				}
+			}
+			random_owned_state = {
+				limit = { any_neighbor_state = { is_owned_by = SOV } }
+				add_manpower = -20000
+			}
+		}
+		army_experience = 15
+		add_doctrine_cost_reduction = {
+			name = japan.4.t
+			cost_reduction = 0.35
+			uses = 1
+			category = cat_grand_battle_plan
+		}
+		SOV = {
+			country_event = { id = soviet.3 }
+		}
+	}
+}
+
+# Soviets Yield
+country_event = {
+	id = japan.5
+	title = japan.5.t
+	desc = japan.5.d
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.5.a
+		add_war_support = 0.05
+		hidden_effect = {
+			country_event = { days = 5 id = news.9 }
+		}
+	}
+}

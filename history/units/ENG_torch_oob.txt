@@ -1,0 +1,94 @@
+﻿units = {
+	division= {
+		location = 7069
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		location = 10070
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		location = 11943
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		location = 1194
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		location = 10023
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		location = 4084
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		location = 1145
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		location = 1145
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		location = 4084
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		location = 7100
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		location = 4097
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		location = 7173
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		location = 12042
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		location = 7132
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		location = 7132
+		division_template = "Torch Mountaineers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+
+}
+

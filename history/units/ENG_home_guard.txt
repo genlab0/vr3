@@ -1,0 +1,153 @@
+﻿units = {
+	#Aldershot Command
+	division= {
+		location = 540
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 540
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 9458
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 9458
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 3501
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 3501
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 271
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 271
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 11297
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 11297
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 351
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 351
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 9392
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 9392
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}	#14
+	division= {
+		location = 11136
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 11136
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 9075
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 9075
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 11064
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 11064
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 377
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 377
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 3369
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 3369
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 6384
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 6384
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	} 
+	division= {
+		location = 3379
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 3379
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 11374
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+	division= {
+		location = 11374
+		division_template = "Home Guard"
+		start_experience_factor = 0.3
+	}
+}

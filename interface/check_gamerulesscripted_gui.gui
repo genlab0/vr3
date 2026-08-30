@@ -1,0 +1,524 @@
+@STATUS_TEXT_X = 240
+@GAMERULE_ICONS_X = 10
+@GAMERULE_NAMES_X = 55
+
+@VPSCORE_ICONS_X = 10
+@VPSCORE_NAMES_X = 55
+@VPSCORE_POINTS_X = 280
+
+guiTypes = {
+
+
+	####Rules:
+	containerWindowType = {
+		name = "check_gamerules_decision_ui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 150 }
+
+		######################
+		iconType = {
+			name ="volunteers_in_china"
+			spriteType = "GFX_decision_SOV_socialism_in_one_country"
+			position = { x = @GAMERULE_ICONS_X y = 5 }
+		}
+
+		instantTextBoxType = {
+			name ="volunteers_in_china_text"
+			position = { x = @GAMERULE_NAMES_X y = 10 }
+			font = "hoi_18mbs"
+			text = "Volunteers in China"
+			format = left
+			maxHeight = 24
+		}
+
+		instantTextBoxType = {
+			name ="volunteers_in_china_status"
+			position = { x = @STATUS_TEXT_X y = 19 }
+			font = "hoi_18mbs"
+			text = "volunteers_in_china_status"
+			format = center
+			maxwidth = 110
+		}
+		######################
+		iconType = {
+			name ="fleet_size_limitations"
+			spriteType = "GFX_decision_hol_war_on_pacifism"
+			position = { x = @GAMERULE_ICONS_X y = 45 }
+		}
+
+		instantTextBoxType = {
+			name ="fleet_size_limitations_text"
+			position = { x = @GAMERULE_NAMES_X y = 55 }
+			font = "hoi_18mbs"
+			text = "Fleet Size Limitations"
+			format = left
+			maxHeight = 24
+		}
+
+		instantTextBoxType = {
+			name ="fleet_size_limitations_status"
+			position = { x = @STATUS_TEXT_X y = 55 }
+			font = "hoi_18mbs"
+			text = "fleet_size_limitations_status"
+			format = center
+			maxwidth = 110
+		}
+		######################
+		iconType = {
+			name ="sealion_icon"
+			spriteType = "GFX_decision_generic_army_support"
+			position = { x = @GAMERULE_ICONS_X y = 90 }
+		}
+
+		instantTextBoxType = {
+			name ="sealion_rule_text"
+			position = { x = @GAMERULE_NAMES_X y = 100 }
+			font = "hoi_18mbs"
+			text = "Operation Sealion"
+			format = left
+			maxHeight = 24
+		}
+
+		instantTextBoxType = {
+			name ="sealion_rule_status"
+			
+				position = { x = @STATUS_TEXT_X y = 100 }
+			font = "hoi_18mbs"
+			text = "sealion_rule_status"
+			format = center
+			maxwidth = 110
+		}
+	}
+
+
+
+	#VP Scores
+	containerWindowType = {
+		name = "check_scoring_system_ui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 700 }
+		######################
+		#Axis points until now!
+		######################
+
+		instantTextBoxType = {
+			name ="axispointstext"
+			position = { x = 55 y = 0 }
+			font = "hoi_18mbs"
+			text = "Axis Points"
+			format = left
+			maxHeight = 24
+		}
+
+		instantTextBoxType = {
+			name ="axispointscounter"
+			position = { x = 55 y = 25 }
+			font = "hoi_18mbs"
+			text = "[?global.axispointscounter|R]"
+			format = center
+			maxwidth = 110
+		}
+
+		instantTextBoxType = {
+			name ="axispointsgain"
+			position = { x = 55 y = 50 }
+			font = "hoi_18mbs"
+			text = "+[?global.axispointsgain|R]/week"
+			format = center
+			maxwidth = 110
+		}
+		######################
+		#Allies points until now!
+		######################
+		instantTextBoxType = {
+			name ="alliedpointstext"
+			position = { x = 280 y = 0 }
+			font = "hoi_18mbs"
+			text = "Allied Points"
+			format = left
+			maxHeight = 24
+		}
+
+		instantTextBoxType = {
+			name ="alliespointscounter"
+			position = { x = 280 y = 25 }
+			font = "hoi_18mbs"
+			text = "[?global.alliespointscounter|B]"
+			format = center
+			maxwidth = 110
+		}
+
+		instantTextBoxType = {
+			name ="alliespointsgain"
+			position = { x = 280 y = 50 }
+			font = "hoi_18mbs"
+			text = "+[?global.alliespointsgain|B]/week"
+			format = center
+			maxwidth = 110
+		}
+		######################
+		#Cities!
+		######################
+
+
+		#London
+		instantTextBoxType = {
+			name ="london"
+			position = { x = @VPSCORE_NAMES_X y = 90 }
+			font = "hoi_18mbs"
+			text = "london_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_london"
+			position = { x = @VPSCORE_POINTS_X y = 90 }
+			font = "hoi_18mbs"
+			text = "3_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#Paris
+		instantTextBoxType = {
+			name ="paris"
+			position = { x = @VPSCORE_NAMES_X y = 120 }
+			font = "hoi_18mbs"
+			text = "paris_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_paris"
+			position = { x = @VPSCORE_POINTS_X y = 120 }
+			font = "hoi_18mbs"
+			text = "3_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#Rome
+		instantTextBoxType = {
+			name ="rome"
+			position = { x = @VPSCORE_NAMES_X y = 150 }
+			font = "hoi_18mbs"
+			text = "rome_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_rome"
+			position = { x = @VPSCORE_POINTS_X y = 150 }
+			font = "hoi_18mbs"
+			text = "3_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#Berlin
+		instantTextBoxType = {
+			name ="berlin"
+			position = { x = @VPSCORE_NAMES_X y = 180 }
+			font = "hoi_18mbs"
+			text = "berlin_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_berlin"
+			position = { x = @VPSCORE_POINTS_X y = 180 }
+			font = "hoi_18mbs"
+			text = "3_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#gibraltar
+		instantTextBoxType = {
+			name ="gibraltar"
+			position = { x = @VPSCORE_NAMES_X y = 210 }
+			font = "hoi_18mbs"
+			text = "gibraltar_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_gibraltar"
+			position = { x = @VPSCORE_POINTS_X y = 210 }
+			font = "hoi_18mbs"
+			text = "2_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#Warsaw
+		instantTextBoxType = {
+			name ="warsaw"
+			position = { x = @VPSCORE_NAMES_X y = 240 }
+			font = "hoi_18mbs"
+			text = "warsaw_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_warsaw"
+			position = { x = @VPSCORE_POINTS_X y = 240 }
+			font = "hoi_18mbs"
+			text = "2_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#Tobruk
+		instantTextBoxType = {
+			name ="tobruk"
+			position = { x = @VPSCORE_NAMES_X y = 270 }
+			font = "hoi_18mbs"
+			text = "tobruk_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_tobruk"
+			position = { x = @VPSCORE_POINTS_X y = 270 }
+			font = "hoi_18mbs"
+			text = "2_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#El Alamein
+		instantTextBoxType = {
+			name ="elalamein"
+			position = { x = @VPSCORE_NAMES_X y = 300 }
+			font = "hoi_18mbs"
+			text = "elalamein_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_elalamein"
+			position = { x = @VPSCORE_POINTS_X y = 300 }
+			font = "hoi_18mbs"
+			text = "2_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#Cairo
+		instantTextBoxType = {
+			name ="cairo"
+			position = { x = @VPSCORE_NAMES_X y = 330 }
+			font = "hoi_18mbs"
+			text = "cairo_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_cairo"
+			position = { x = @VPSCORE_POINTS_X y = 330 }
+			font = "hoi_18mbs"
+			text = "2_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#Oslo
+		instantTextBoxType = {
+			name ="oslo"
+			position = { x = @VPSCORE_NAMES_X y = 360 }
+			font = "hoi_18mbs"
+			text = "oslo_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_oslo"
+			position = { x = @VPSCORE_POINTS_X y = 360 }
+			font = "hoi_18mbs"
+			text = "2_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#Moscow
+		instantTextBoxType = {
+			name ="moscow"
+			position = { x = @VPSCORE_NAMES_X y = 390 }
+			font = "hoi_18mbs"
+			text = "moscow_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_moscow"
+			position = { x = @VPSCORE_POINTS_X y = 390 }
+			font = "hoi_18mbs"
+			text = "3_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#Kyiv
+		instantTextBoxType = {
+			name ="kiev"
+			position = { x = @VPSCORE_NAMES_X y = 420 }
+			font = "hoi_18mbs"
+			text = "kiev_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_kiev"
+			position = { x = @VPSCORE_POINTS_X y = 420 }
+			font = "hoi_18mbs"
+			text = "2_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#Stalingrad
+		instantTextBoxType = {
+			name ="stalingrad"
+			position = { x = @VPSCORE_NAMES_X y = 450 }
+			font = "hoi_18mbs"
+			text = "stalingrad_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_stalingrad"
+			position = { x = @VPSCORE_POINTS_X y = 450 }
+			font = "hoi_18mbs"
+			text = "2_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#Leningrad
+		instantTextBoxType = {
+			name ="leningrad"
+			position = { x = @VPSCORE_NAMES_X y = 480 }
+			font = "hoi_18mbs"
+			text = "leningrad_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_leningrad"
+			position = { x = @VPSCORE_POINTS_X y = 480 }
+			font = "hoi_18mbs"
+			text = "2_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#Tokyo
+		instantTextBoxType = {
+			name ="tokyo"
+			position = { x = @VPSCORE_NAMES_X y = 510 }
+			font = "hoi_18mbs"
+			text = "tokyo_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_tokyo"
+			position = { x = @VPSCORE_POINTS_X y = 510 }
+			font = "hoi_18mbs"
+			text = "3_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+#		#Athens
+#		instantTextBoxType = {
+#			name ="athens"
+#			position = { x = @VPSCORE_NAMES_X y = 360 }
+#			font = "hoi_18mbs"
+#			text = "athens_status"
+#			format = left
+#			maxHeight = 24
+#		}
+#		instantTextBoxType = {
+#			name ="status_athens"
+#			position = { x = @VPSCORE_POINTS_X y = 360 }
+#			font = "hoi_18mbs"
+#			text = "2_points_status"
+#			format = center
+#			maxwidth = 110
+#		}
+
+
+		#singapore
+		instantTextBoxType = {
+			name ="singapore"
+			position = { x = @VPSCORE_NAMES_X y = 540 }
+			font = "hoi_18mbs"
+			text = "singapore_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_singapore"
+			position = { x = @VPSCORE_POINTS_X y = 540 }
+			font = "hoi_18mbs"
+			text = "2_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#delhi
+		instantTextBoxType = {
+			name ="delhi"
+			position = { x = @VPSCORE_NAMES_X y = 570 }
+			font = "hoi_18mbs"
+			text = "delhi_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_delhi"
+			position = { x = @VPSCORE_POINTS_X y = 570 }
+			font = "hoi_18mbs"
+			text = "2_points_status"
+			format = center
+			maxwidth = 110
+		}
+		#honolulu
+		instantTextBoxType = {
+			name ="honolulu"
+			position = { x = @VPSCORE_NAMES_X y = 600 }
+			font = "hoi_18mbs"
+			text = "honolulu_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_honolulu"
+			position = { x = @VPSCORE_POINTS_X y = 600 }
+			font = "hoi_18mbs"
+			text = "2_points_status"
+			format = center
+			maxwidth = 110
+		}
+
+		#taiwan
+		instantTextBoxType = {
+			name ="taiwan"
+			position = { x = @VPSCORE_NAMES_X y = 630 }
+			font = "hoi_18mbs"
+			text = "taiwan_status"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="status_taiwan"
+			position = { x = @VPSCORE_POINTS_X y = 630 }
+			font = "hoi_18mbs"
+			text = "2_points_status"
+			format = center
+			maxwidth = 110
+		}
+	}
+}

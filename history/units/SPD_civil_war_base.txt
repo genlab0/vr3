@@ -1,0 +1,492 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Brigada Popular" 
+	division_names_group = SPR_INF_02
+	# Note: Spanish divisions were 2x brigades of 2x2 rgts each, + support
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+	}
+}
+##### Republican Guard #####
+division_template = {
+	name = "Republican Guard" 
+	division_names_group = SPR_INF_01
+	# Note: Spanish divisions were 2x brigades of 2x2 rgts each, + support
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 1 y = 3}
+		artillery_brigade = { x = 1 y = 4}
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1}
+	}
+}
+###### OOB ######
+units = {		
+	
+	division = {			
+		name = "Brigada Popular"		
+		location = 915
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}	
+	division = {			
+		name = "Brigada Popular"		
+		location = 11821
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 11793
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}	
+	division = {			
+		name = "Brigada Popular"		
+		location = 11793
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 790
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}			
+	division = {			
+		name = "Brigada Popular"		
+		location = 790
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 3954
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 3954
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 3909
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 3909
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 798
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 798
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 871
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 871
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 3891
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 3891
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 3945
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 3945
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 9933
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 9785
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 6841
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 6841
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 977
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 977
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 3794
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 3794
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 939
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 939
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 3845
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 3845
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 11820
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 3986
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 9881
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 6832
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 6896
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 6896
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 12081
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 9821
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 11870
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 11870
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 4195
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 7196
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 11956
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 1176
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 7068
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 7068
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 10009
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 7153
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 11807
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 9828
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 11807
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 9828
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 6832
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 9881
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 9800
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 9785
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 9933
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 9813
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 6906
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Brigada Popular"		
+		location = 6906
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Republican Guard"		
+		location = 3938
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Republican Guard"		
+		location = 3938
+		division_template = "Brigada Popular" 
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Republican Guard"		
+		location = 3938
+		division_template = "Republican Guard"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {			
+		name = "Republican Guard"		
+		location = 3938
+		division_template = "Republican Guard"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+
+}

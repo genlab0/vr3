@@ -1,0 +1,81 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+###SHARED FOCUSES###
+defined_text = { # Country
+	name = GetLeftDesc
+	text = {
+		localization_key = POL_san_left_desc
+	}
+}
+
+defined_text = { # Country
+	name = GetRightDesc
+	text = {
+		localization_key = POL_san_right_desc
+	}
+}
+
+defined_text = { # Country
+	name = GetKingQueen
+	text = {
+		trigger = {
+			is_female = yes
+		}
+		localization_key = queen
+	}
+	text = {
+		trigger = {
+			is_female = no
+		}
+		localization_key = king
+	}
+}
+
+defined_text = { # Country
+	name = GetStalinistOrTrotskyite
+	text = {
+		trigger = {
+			SOV = {
+				has_country_leader = {
+					character = SOV_lev_trotsky
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = stalinist
+	}
+	text = {
+		trigger = {
+			SOV = {
+				NOT = {
+					has_country_leader = {
+						character = SOV_lev_trotsky
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		localization_key = trotskyite
+	}
+}
+
+defined_text = { #MM: So that focus description in bookmark talks about actual Polish leader and not Adolf Hitler
+	name = GetAppropriateLeaderNameInBookmark
+	text = {
+		trigger = {
+			original_tag = POL
+		}
+		localization_key = [ROOT.GetLeader]
+	}
+	text = {
+		localization_key = POL_ignacy_moscicki
+	}
+}

@@ -1,0 +1,3496 @@
+﻿##############################
+#### Japanese Country Events ####
+#################################
+
+add_namespace = SEA_japan
+add_namespace = SEA_japan_foreign_policy
+add_namespace = SEA_japan_popup_events
+add_namespace = SEA_japan_tokko_arrest_events
+add_namespace = SEA_japan_news_events
+add_namespace = SEA_japan_hidden_events
+add_namespace = SEA_japan_air_accidents_events
+
+add_namespace = SEA_imperial_influence_events
+
+# The February 26 Incident - event for Japan, base version of the Kodoha event
+country_event = {
+	id = SEA_japan.1
+	title = SEA_japan.1.t
+	desc = SEA_japan.1.desc
+	picture = GFX_report_event_JAP_kodoha_coup_attempt_preparation 
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# We want to go for the historical option :/
+	option = { 
+		name = SEA_japan.1.a
+		ai_chance = {
+			base = 100
+		}
+
+		custom_effect_tooltip = JAP_kodoha_coup_will_fail_historically_tt
+		IF = {
+			limit = {
+				NOT = {
+					has_country_flag = JAP_korekiyo_protected_flag
+				}
+			}
+			retire_character = JAP_takahashi_korekiyo
+			set_country_flag = JAP_takahashi_korekiyo_was_killed
+		}
+		IF = {
+			limit = {
+				NOT = {
+					has_country_flag = JAP_watanabe_protected_flag
+				}
+			}
+			retire_character = JAP_jotaro_watanabe
+			set_country_flag = JAP_jotaro_watanabe_was_killed
+		}
+		IF = {
+			limit = {
+				has_dlc = "No Compromise, No Surrender"
+				OR = {
+					has_country_flag = JAP_watanabe_protected_flag
+					has_country_flag = JAP_korekiyo_protected_flag
+				}
+			}
+			# Due to one of the other assassinations failing, they will go harder for Saionji Kinmochi instead, killing him. 
+			retire_character = JAP_saionji_kinmochi
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		complete_national_focus = JAP_sea_purge_the_kodoha_faction
+
+		hidden_effect = {
+			set_country_flag = JAP_aizawas_trial_over_flag
+		}
+
+	}
+
+	# It's shougunating time heck yea
+	option = { 
+		name = SEA_japan.1.b
+		ai_chance = {
+			base = 0
+		}
+
+		custom_effect_tooltip = JAP_kodoha_coup_will_succeed_tt
+		
+		retire_character = JAP_takahashi_korekiyo
+		set_country_flag = JAP_takahashi_korekiyo_was_killed
+	
+		retire_character = JAP_jotaro_watanabe
+		set_country_flag = JAP_jotaro_watanabe_was_killed
+		
+		IF = {
+			limit = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			# Due to one of the other assassinations failing, they will go harder for Saionji Kinmochi instead, killing hnm. 
+			retire_character = JAP_saionji_kinmochi
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		IF = {
+			limit = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			IF = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes
+						character = JAP_keisuke_okada
+					}	
+				}
+				kill_country_leader = yes
+			}
+			add_country_leader_role = {
+				character =  JAP_jinzaburo_masaki
+				promote_leader = yes
+				country_leader = {
+					ideology = japan_militarism_ideology
+					expire = "1952.1.1.1"
+					traits = { JAP_military_prime_minister } 
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			complete_national_focus = JAP_revere_the_emperor_destroy_the_traitors
+			#custom_effect_tooltip = focus_effects_are_as_follows_tt
+			#effect_tooltip = {
+			#	
+			#}
+		}
+
+		hidden_effect = {
+			set_country_flag = JAP_aizawas_trial_over_flag
+		}
+
+	}
+}
+
+# The Question of East Asian Co-Prosperity - event for JAP
+country_event = {
+	id = SEA_japan_foreign_policy.40
+	title = SEA_japan_foreign_policy.40.t
+	desc = SEA_japan_foreign_policy.40.desc
+	picture = GFX_report_event_JAP_greater_east_asia_conference
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# The Emperors supreme authority must always come first!
+	option = { 
+		name = SEA_japan_foreign_policy.40.a
+		ai_chance = {
+			base = 95
+		}
+
+		set_country_flag = JAP_chose_to_exploit_east_asia_flag
+
+		custom_effect_tooltip = JAP_unlock_east_asia_occupation_law_tt
+		show_ideas_tooltip = GEACPS_exploitation_occupation_law_fake_idea
+
+		ROOT = { set_occupation_law_where_available = GEACPS_exploitation_occupation_law } # Set law in all countries/states where it's available.
+
+	}
+
+	# We must pursue prosperity for all Asian states!
+	option = { 
+		name = SEA_japan_foreign_policy.40.b
+		ai_chance = {
+			base = 5
+		}
+
+		set_country_flag = JAP_chose_to_support_east_asia_flag
+
+		custom_effect_tooltip = JAP_unlock_east_asia_occupation_law_tt
+		show_ideas_tooltip = GEACPS_prosperity_occupation_law_fake_idea
+
+		ROOT = { set_occupation_law_where_available = GEACPS_prosperity_occupation_law } # Set law in all countries/states where it's available.
+
+	}
+
+}
+
+
+# An Attack on Pearl Harbor - event for USA 
+country_event = {
+	id = SEA_japan_foreign_policy.136
+	title = SEA_japan_foreign_policy.136.t
+	desc = SEA_japan_foreign_policy.136.desc
+	picture = GFX_report_event_usa_pearl_harbor_airphoto
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	# This day will live on in infamy!
+	option = {
+		name = SEA_japan_foreign_policy.136.a
+
+		add_war_support = 0.05
+
+		IF = {
+			limit = {
+				has_country_flag = JAP_inflicted_loss_nr_3
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = JAP_day_of_infamy_3 
+					days = 180
+				}	
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				has_country_flag = JAP_inflicted_loss_nr_2
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = JAP_day_of_infamy_2 
+					days = 180
+				}	
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				has_country_flag = JAP_inflicted_loss_nr_1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = JAP_day_of_infamy_1 
+					days = 180
+				}	
+			}
+		}
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+# The Harakiri Debate - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.3
+	title = SEA_japan_popup_events.3.t
+	desc = SEA_japan_popup_events.3.desc
+	picture = GFX_report_event_JAP_diet_speech
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# This is a disaster!
+	option = {
+		name = SEA_japan_popup_events.3.a
+
+		add_ideas = JAP_collapsing_government_idea	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		JAP_small_army_faction_gain = yes
+
+		hidden_effect = {
+			set_country_flag = JAP_harakiri_debate_has_taken_place_flag
+		}
+
+	}
+
+}
+
+# Convincing the Emperor - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.4
+	title = SEA_japan_popup_events.4.t
+	desc = SEA_japan_popup_events.4.desc
+	picture = GFX_report_event_JAP_kodoha_coup_attempt_occupation
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# We must gain his support, by any means necessary!
+	option = {
+		name = SEA_japan_popup_events.4.a
+		ai_chance = {
+			base = 50
+		}
+		
+		add_political_power = -150
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		country_event = {
+			id = SEA_japan_popup_events.5
+			days = 7
+			random_days = 4
+		}	
+
+	}
+
+}
+
+# Hirohito Decides to Support the New Government - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.5
+	title = SEA_japan_popup_events.5.t
+	desc = SEA_japan_popup_events.5.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Excellent!
+	option = {
+		name = SEA_japan_popup_events.5.a
+
+		add_stability = 0.05
+		
+		hidden_effect = {
+			set_country_flag = JAP_kodoha_the_emperor_cooperated_flag
+		}
+
+	}
+
+}
+
+# Hirohito Refuses to Support the New Government - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.6
+	title = SEA_japan_popup_events.6.t
+	desc = SEA_japan_popup_events.6.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Then he must abdicate in favor of his son
+	option = {
+		name = SEA_japan_popup_events.6.a
+		ai_chance = {
+			base = 75
+		}
+
+		custom_effect_tooltip = JAP_yasuhito_takes_up_the_throne_tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_political_power = -25
+
+		hidden_effect = {
+			set_country_flag = JAP_emperor_hirohito_has_abdicated_flag
+			set_country_flag = JAP_yasuhito_is_the_current_regent_or_emperor_flag
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+	# Place him under house arrest!
+	option = {
+		name = SEA_japan_popup_events.6.b
+		ai_chance = {
+			base = 25
+		}
+
+		custom_effect_tooltip = JAP_yasuhito_takes_up_the_throne_tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_political_power = -50
+		add_war_support = 0.02
+
+		hidden_effect = {
+			set_country_flag = JAP_emperor_hirohito_under_house_arrest_flag
+			set_country_flag = JAP_yasuhito_is_the_current_regent_or_emperor_flag
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+}
+
+# Hirohito Assassinated! - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.7
+	title = SEA_japan_popup_events.7.t
+	desc = SEA_japan_popup_events.7.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Yasuhito will take his place
+	option = {
+		name = SEA_japan_popup_events.7.a
+
+		custom_effect_tooltip = JAP_yasuhito_takes_up_the_throne_tt
+
+		hidden_effect = {
+			set_country_flag = JAP_hirohito_has_been_killed_flag
+			set_country_flag = JAP_yasuhito_is_the_current_regent_or_emperor_flag
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+}
+
+# Question of the Military Clique's Leadership - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.8
+	title = SEA_japan_popup_events.8.t
+	desc = SEA_japan_popup_events.8.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Mazaki is more popular among the men
+	option = {
+		name = SEA_japan_popup_events.8.a
+		ai_chance = {
+			base = 50
+		}
+
+		JAP_jinzaburo_masaki = {
+			add_country_leader_trait = JAP_soto_trait
+		}
+
+		hidden_effect = { # For if you choose to go fascist in a later event 
+			JAP_jinzaburo_masaki = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = emperor_fascism
+						expire = "1966.1.1.1"
+						traits = { JAP_military_prime_minister JAP_soto_trait } 
+					}
+				}	
+			}
+		}
+
+	}
+
+	# Araki should be the nation's Sōtō
+	option = {
+		name = SEA_japan_popup_events.8.b
+		ai_chance = {
+			base = 50
+		}
+
+		JAP_sadao_araki = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = japan_militarism_ideology
+					expire = "1966.1.1.1"
+					traits = { JAP_staunch_traditionalist_trait JAP_soto_trait } 
+				}
+			}	
+		}
+
+		hidden_effect = { # For if you choose to go fascist in a later event 
+			JAP_sadao_araki = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = emperor_fascism
+						expire = "1966.1.1.1"
+						traits = { JAP_staunch_traditionalist_trait JAP_soto_trait } 
+					}
+				}	
+			}
+		}
+
+	}
+
+}
+
+# The Question of Morality, Bushido and Fascism - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.9
+	title = SEA_japan_popup_events.9.t
+	desc = SEA_japan_popup_events.9.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# We must stay clear of such western concepts!
+	option = {
+		name = SEA_japan_popup_events.9.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_stability = 0.05
+		add_political_power = 50
+
+	}
+
+	# Araki is right, and we should embrace those ideas
+	option = {
+		name = SEA_japan_popup_events.9.b
+		ai_chance = {
+			base = 0
+		}
+		trigger = {
+			has_government = neutrality
+			OR = {
+				has_country_leader = {
+					ruling_only = yes
+					character = JAP_emperor_yasuhito
+				}	
+				#has_country_leader = {
+				#	ruling_only = yes
+				#	character = JAP_jinzaburo_masaki
+				#}	
+				has_country_leader = {
+					ruling_only = yes
+					character = JAP_sadao_araki
+				}	
+			}
+		}
+
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+			long_name = JAP_fascism_party_kodoha_long
+			name = JAP_fascism_party_kodoha
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.35
+		}	
+
+	}
+
+}
+
+# Rumors of a Military Coup - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.10
+	title = SEA_japan_popup_events.10.t
+	desc = SEA_japan_popup_events.10.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# How dishonorable! We must act swiftly!
+	option = {
+		name = SEA_japan_popup_events.10.a
+
+		add_stability = -0.02
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		unlock_decision_tooltip = JAP_increase_takahashi_korekiyo_security_decision
+		unlock_decision_tooltip = JAP_increase_jotaro_watanabe_security_decision
+
+		hidden_effect = {
+			set_country_flag = JAP_can_now_save_advisors_flag
+		}
+
+	}
+
+}
+
+# Rumors of a Popular Rebellion - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.11
+	title = SEA_japan_popup_events.11.t
+	desc = SEA_japan_popup_events.11.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Very well, but try not to leave evidence
+	option = {
+		name = SEA_japan_popup_events.11.a
+		ai_chance = {
+			base = 90
+		}
+
+		add_political_power = 25
+
+		country_event = {
+			id = SEA_japan_popup_events.12
+			days = 14
+			random_days = 7
+		}		
+
+	}
+
+	# No, the former Emperor must live!
+	option = {
+		name = SEA_japan_popup_events.11.b
+		ai_chance = {
+			base = 10
+		}
+
+		add_stability = 0.1
+
+		add_political_power = -75
+
+	}
+
+}
+
+# The Emperor Found Dead in his Residence - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.12
+	title = SEA_japan_popup_events.12.t
+	desc = SEA_japan_popup_events.12.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# The nation mourns
+	option = {
+		name = SEA_japan_popup_events.12.a
+		ai_chance = {
+			base = 90
+		}
+
+		add_stability = 0.03	
+
+	}
+
+	# Find the perpetrators, Nagako demands answers!
+	option = {
+		name = SEA_japan_popup_events.12.b
+		ai_chance = {
+			base = 10
+		}
+
+		country_event = {
+			id = SEA_japan_popup_events.13
+			days = 7
+		}		
+
+	}
+
+}
+
+# Kōdōha Officers Indicted for Hirohito's Murder - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.13
+	title = SEA_japan_popup_events.13.t
+	desc = SEA_japan_popup_events.13.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Declare martial law, Nagako will solve the nations instability!
+	option = {
+		name = SEA_japan_popup_events.13.a
+
+		IF = {
+			limit = {
+				NOT = {
+					has_government = neutrality
+				}
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}	
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}	
+		}
+
+		add_stability = -0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_country_leader_role = {
+			character = JAP_empress_nagako
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
+				expire = "1989.1.1.1"
+				traits = {  } 
+			}
+		}	
+
+		hidden_effect = {
+			set_country_flag = JAP_empress_nagako_became_queen_flag
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+}
+
+# Conclusion of the 1936 General Election - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.14
+	title = SEA_japan_popup_events.14.t
+	desc = SEA_japan_popup_events.14.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# May Machida Chūji lad the Rikken Minseitō well
+	option = {
+		name = SEA_japan_popup_events.14.a
+
+		IF = {
+			limit = {
+				has_dlc = "No Compromise, No Surrender"
+				NOT = {
+					AND = {
+						has_government = democratic
+						has_country_leader = {
+							ruling_only = yes
+							character = JAP_keisuke_okada
+						}	
+					}
+				}
+			}
+			add_country_leader_role = {
+				character = JAP_machida_chuuji
+				promote_leader = yes
+				country_leader = {
+					ideology = liberalism
+					expire = "1989.1.1.1"
+					traits = { HUN_popular_liberal } 
+				}
+			}	
+		}
+
+		set_party_name = {
+			ideology = democratic
+			long_name = JAP_minseito_party_long
+			name = JAP_minseito_party
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.025
+		}	
+
+	}
+
+}
+
+# The Navy Demands we Strike South - event for JAP
+country_event = {
+	id = SEA_imperial_influence_events.500
+	title = SEA_imperial_influence_events.500.t
+	desc = SEA_imperial_influence_events.500.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	trigger = {
+
+		original_tag = JAP
+
+		# So that the 1-year timer on the mission allows a hisotrical date to happen within
+		date > 1941.06.01
+
+		date < 1942.02.01
+		
+		# So that you are going down a branch that actually has the specified focus 
+		OR = {
+			has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+			has_completed_focus = JAP_sea_purge_the_kodoha_faction
+		}
+
+		# So that said focus hasn't already been taken 
+		NOT = {
+			has_completed_focus = JAP_strike_the_southern_road
+		}
+
+		# They can't do this if they are subdued
+		JAP_naval_faction_is_not_subdued = yes
+
+		# They won't do this if you are at war with the Soviets
+		NOT = {
+			has_war_with = SOV
+		}
+
+		# They won't do this if you are already at war with the West
+		NOT = {
+			has_war_with = USA
+			has_war_with = ENG
+		}
+
+		has_civil_war = no
+		is_subject = no
+
+	}
+
+	mean_time_to_happen = { days = 35 }
+
+	hidden = no
+
+	fire_only_once = yes
+
+	# Preparations must be made with haste!
+	option = {
+		name = SEA_imperial_influence_events.500.a
+
+		activate_mission = JAP_naval_faction_demands_strike_south_happen_mission 
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = take_the_strike_south_focus_tt
+		
+	}
+}
+
+# Naval Officers Resign in Anger - event for JAP
+country_event = {
+	id = SEA_imperial_influence_events.501
+	title = SEA_imperial_influence_events.501.t
+	desc = SEA_imperial_influence_events.501.desc
+	picture = GFX_report_event_JAP_imperial_influence
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Such a dishonorable act!
+	option = {
+		name = SEA_imperial_influence_events.501.a
+
+		navy_experience = -50
+		add_command_power = -50
+		add_political_power = -50
+		add_war_support = -0.1
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		JAP_small_naval_faction_loss = yes
+
+	}
+
+}
+
+# Okada Killed at Tokyo Station - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.15
+	title = SEA_japan_popup_events.15.t
+	desc = SEA_japan_popup_events.15.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# They must be stopped!
+	option = {
+		name = SEA_japan_popup_events.15.a
+
+		kill_country_leader = yes 
+
+		add_stability = -0.1
+
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		country_event = {
+			id = SEA_japan_popup_events.16
+			days = 6
+		}	
+
+	}
+
+}
+
+# The Emperor Nominates a new Prime Minister - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.16
+	title = SEA_japan_popup_events.16.t
+	desc = SEA_japan_popup_events.16.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# The Liberal Machida Chūji
+	option = {
+		name = SEA_japan_popup_events.16.a
+		ai_chance = {
+			base = 50 
+			modifier = {
+				factor = 0 
+			}
+		}
+		
+		IF = {
+			limit = {
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = JAP_machida_chuuji
+					}	
+				}
+			}
+			add_country_leader_role = {
+				character = JAP_machida_chuuji
+				promote_leader = yes
+				country_leader = {
+					ideology = liberalism
+					expire = "1989.1.1.1"
+					traits = { HUN_popular_liberal } 
+				}
+			}
+			set_party_name = {
+				ideology = democratic
+				long_name = JAP_unity_cabinet_party_long
+				name = JAP_unity_cabinet_party
+			}	
+		}
+		ELSE = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}	
+			add_political_power = 75
+			set_party_name = {
+				ideology = democratic
+				long_name = JAP_unity_cabinet_party_long
+				name = JAP_unity_cabinet_party
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		country_event = {
+			id = SEA_japan_popup_events.17
+			days = 7
+		}
+
+	}
+
+	# The Socialist Abe Isoo
+	option = {
+		name = SEA_japan_popup_events.16.b
+		ai_chance = {
+			base = 30 
+			modifier = {
+				factor = 0
+			}
+		}
+		
+		add_country_leader_role = {
+			character = JAP_abe_isoo
+			promote_leader = yes
+			country_leader = {
+				ideology = socialism
+				expire = "1989.1.1.1"
+				traits = { JAP_socialist_politician } 
+			}
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = JAP_unity_cabinet_party_long
+			name = JAP_unity_cabinet_party
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		country_event = {
+			id = SEA_japan_popup_events.17
+			days = 7
+		}
+
+	}
+
+	# President of the House of Peers, Tokugawa Iesato
+	option = {
+		name = SEA_japan_popup_events.16.c
+		ai_chance = {
+			base = 20 
+		}
+		
+		add_country_leader_role = {
+			character = JAP_tokugawa_iesato
+			promote_leader = yes
+			country_leader = {
+				ideology = conservatism
+				expire = "1989.1.1.1"
+				traits = { JAP_popular_diplomat } 
+			}
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = JAP_unity_cabinet_party_long
+			name = JAP_unity_cabinet_party
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		country_event = {
+			id = SEA_japan_popup_events.17
+			days = 7
+		}
+
+	}
+
+}
+
+# The Military Declares a Strike - event for JAP
+country_event = {
+	id = SEA_japan_popup_events.17
+	title = SEA_japan_popup_events.17.t
+	desc = SEA_japan_popup_events.17.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Things are ramping up...
+	option = {
+		name = SEA_japan_popup_events.17.a
+
+		add_ideas = JAP_military_strike_idea
+
+		country_lock_all_division_template = {
+			is_locked = yes
+			desc = JAP_cannot_train_due_to_military_strike
+		}
+		custom_effect_tooltip = JAP_must_take_revoke_ppl_focus_tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		every_army_leader = {
+			limit = {
+				NOT = {
+					has_trait = JAP_tohokai_sympathies
+					has_trait = JAP_government_supporter
+					has_trait = JAP_communist_sympathizer
+					has_trait = JAP_IJA_loyalist
+					has_character_flag = JAP_do_not_align_me_flag
+				}
+			}
+			add_trait = {
+				trait = JAP_IJA_loyalist
+			}	
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		every_navy_leader = {
+			limit = {
+				NOT = {
+					has_trait = JAP_tohokai_sympathies
+					has_trait = JAP_government_supporter
+					has_trait = JAP_communist_sympathizer
+					has_trait = JAP_IJA_loyalist
+					has_character_flag = JAP_do_not_align_me_flag
+				}
+			}
+			add_trait = {
+				trait = JAP_IJA_loyalist
+			}	
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		country_event = {
+			id = SEA_japan_popup_events.18
+			days = 5
+		}
+
+	}
+
+}
+
+# A Rural Base of Operations - event for JAP 
+country_event = {
+	id = SEA_japan_popup_events.28
+	title = SEA_japan_popup_events.28.t
+	desc = SEA_japan_popup_events.28.desc
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	# Hokkaido is perfect
+	option = {
+		name = SEA_japan_popup_events.28.a
+		ai_chance = {
+			base = 50
+		}
+		trigger = {
+
+			536 = {
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = JAP_state_infiltrated_by_the_jcp
+					}	
+				}
+			}
+
+		}
+		
+		IF = {
+			limit = {
+				536 = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = JAP_state_infiltrated_by_the_jcp
+						}	
+					}
+				}
+			}
+			536 = {
+				IF = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = JAP_state_under_army_control
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = JAP_state_under_army_control
+					}
+				}
+				IF = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = JAP_state_under_rebel_control
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = JAP_state_under_rebel_control
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = JAP_state_infiltrated_by_the_jcp
+				}
+				set_state_flag = JAP_communists_chose_this_state_as_headquarters_flag
+			}
+		}
+
+
+	}
+
+	# Shikoku is remote enough
+	option = {
+		name = SEA_japan_popup_events.28.b
+		ai_chance = {
+			base = 30
+		}
+		trigger = {
+
+			530 = {
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = JAP_state_infiltrated_by_the_jcp
+					}	
+				}
+			}
+
+		}
+		
+		IF = {
+			limit = {
+				530 = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = JAP_state_infiltrated_by_the_jcp
+						}	
+					}
+				}
+			}
+			530 = {
+				IF = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = JAP_state_under_army_control
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = JAP_state_under_army_control
+					}
+				}
+				IF = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = JAP_state_under_rebel_control
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = JAP_state_under_rebel_control
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = JAP_state_infiltrated_by_the_jcp
+				}
+				set_state_flag = JAP_communists_chose_this_state_as_headquarters_flag
+			}
+		}
+
+
+	}
+
+	# Establish a branch in Kagoshima
+	option = {
+		name = SEA_japan_popup_events.28.c
+		ai_chance = {
+			base = 20
+		}
+		trigger = {
+
+			1018 = {
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = JAP_state_infiltrated_by_the_jcp
+					}	
+				}
+			}
+
+		}
+		
+
+		IF = {
+			limit = {
+				1018 = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = JAP_state_infiltrated_by_the_jcp
+						}	
+					}
+				}
+			}
+			1018 = {
+				IF = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = JAP_state_under_army_control
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = JAP_state_under_army_control
+					}
+				}
+				IF = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = JAP_state_under_rebel_control
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = JAP_state_under_rebel_control
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = JAP_state_infiltrated_by_the_jcp
+				}
+				set_state_flag = JAP_communists_chose_this_state_as_headquarters_flag
+			}
+		}
+
+	}
+}
+
+
+
+
+# The Revitalization of Buddhism - event for JAP 
+country_event = {
+	id = SEA_japan_popup_events.39
+	title = SEA_japan_popup_events.39.t
+	desc = SEA_japan_popup_events.39.desc
+	picture = GFX_report_event_JAP_workers_celebrating
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# This is the way forward!
+	option = {
+		name = SEA_japan_popup_events.39.a
+		ai_chance = { 
+			base = 95 # If they happen to have this specific combo, sure go for it! 
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		set_party_name = {
+			ideology = communism
+			long_name = JAP_youth_league_for_buddhism_party_long
+			name = JAP_youth_league_for_buddhism_party
+		}		
+	}
+
+	# No, [ROOT.GetLeader] will continue to lead
+	option = {
+		name = SEA_japan_popup_events.39.b
+		ai_chance = { 
+			base = 5 
+		}
+		
+		add_political_power = 50
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}	
+
+	}
+}
+
+
+
+# The People Lose Trust in [ROOT.GetLeader] - event for JAP when the late-game war starts going badly
+country_event = {
+	id = SEA_japan_popup_events.42
+	title = SEA_japan_popup_events.42.t
+	desc = SEA_japan_popup_events.42.desc
+	picture = GFX_report_event_JAP_national_defense_brotherhood
+
+	trigger = {
+
+		ROOT = {
+			tag = JAP
+			exists = yes
+			has_capitulated = no
+			has_civil_war = no
+			is_subject = no
+			has_offensive_war = yes
+			OR = {
+				has_country_leader = {
+					ruling_only = yes
+					character = JAP_hideki_tojo
+				}	
+				has_country_leader = {
+					ruling_only = yes
+					character = JAP_isoroku_yamamoto
+				}	
+				has_country_leader = {
+					ruling_only = yes
+					character = JAP_seigo_nakano
+				}	
+			}
+		}
+
+		# They have lost either of the "Ring Islands" protecting the Home Islands, or have been nuked at least once  
+		OR = {
+			# Okinawa 
+			526 = {
+				is_owned_by = ROOT
+				NOT = {
+					is_controlled_by = ROOT
+				}
+			}
+			# Iwo Jima 
+			645 = {
+				is_owned_by = ROOT
+				NOT = {
+					is_controlled_by = ROOT
+				}
+			}
+			# Saipan
+			646 = {
+				is_owned_by = ROOT
+				NOT = {
+					is_controlled_by = ROOT
+				}
+			}
+			# Taiwan
+			524 = {
+				is_owned_by = ROOT
+				NOT = {
+					is_controlled_by = ROOT
+				}
+			}
+			# Kuril Islands 
+			555 = {
+				is_owned_by = ROOT
+				NOT = {
+					is_controlled_by = ROOT
+				}
+			}
+			has_global_flag = JAP_nuke_1
+		}
+
+	}
+
+	mean_time_to_happen = { days = 70 }
+
+	hidden = no
+
+	fire_only_once = yes
+
+	immediate = {
+	}
+
+	# We must put an end to this quagmire!
+	option = {
+		name = SEA_japan_popup_events.42.a
+
+		set_country_flag = JAP_tojo_or_yamamoto_resigned_flag
+		mark_focus_tree_layout_dirty = yes
+		
+		add_ideas = JAP_crumbling_military_cabinet_idea 
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = JAP_unlock_the_surrender_subbranch_tt
+
+	}
+
+}
+
+# The Kyūjō Incident - event for JAP 
+country_event = {
+	id = SEA_japan_popup_events.43
+	title = SEA_japan_popup_events.43.t
+	desc = SEA_japan_popup_events.43.desc
+	picture = GFX_report_event_JAP_kodoha_coup_attempt_occupation
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	# How dare they oppose the Emperors wish? 
+	option = {
+		name = SEA_japan_popup_events.43.a
+		ai_chance = { 
+			base = 100 
+		}
+
+		add_country_leader_role = {
+			character = JAP_naruhiko_higashikuni
+			promote_leader = yes
+			country_leader = {
+				ideology = emperor_fascism
+				expire = "1952.1.1.1"
+				traits = { JAP_noble_prime_minister }
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		IF = {
+			limit = {
+				has_idea = korechika_anami
+			}
+			remove_ideas = korechika_anami
+		}
+		retire_character = JAP_korechika_anami
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		swap_ideas = {
+			remove_idea = JAP_crumbling_military_cabinet_idea_2
+			add_idea = JAP_crumbling_military_cabinet_idea_3
+		}	
+
+		custom_effect_tooltip = JAP_unlock_surrender_broadcast_tt
+		
+		set_country_flag = JAP_kyujo_incident_rebels_lost_flag 
+
+		hidden_effect = {
+			JAP_tetsu_katayama = {
+				promote_character = {
+				    ideology = liberalism
+				}
+			}
+		}
+
+	}
+
+	# The dark clouds must disappear from the reign of the Emperor!
+	option = {
+		name = SEA_japan_popup_events.43.b
+		ai_chance = { 
+			base = 0 
+		}
+
+		add_country_leader_role = {
+			character = JAP_yasuhiko_asaka
+			promote_leader = yes
+			country_leader = {
+				ideology = emperor_fascism
+				expire = "1952.1.1.1"
+				traits = { JAP_noble_prime_minister }
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		swap_ideas = {
+			remove_idea = JAP_crumbling_military_cabinet_idea_2
+			add_idea = JAP_crumbling_military_cabinet_idea_4
+		}	
+
+		custom_effect_tooltip = JAP_unlock_japans_longest_day_tt
+		
+		set_country_flag = JAP_kyujo_incident_rebels_won_flag 
+
+		hidden_effect = {
+			JAP_tetsu_katayama = {
+				promote_character = {
+				    ideology = liberalism
+				}
+			}
+		}
+
+	}
+
+}
+
+
+
+
+
+# A Joint Demand from the Tokkō and the Zaibatsus - event for JAP   
+country_event = {
+	id = SEA_japan_popup_events.50
+	title = SEA_japan_popup_events.50.t
+	desc = SEA_japan_popup_events.50.desc
+	picture = GFX_report_event_JAP_diet_speech
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Very well, if that is the Prime minister they want...
+	option = {
+		name = SEA_japan_popup_events.50.a
+		ai_chance = {
+			base = 50
+		}
+		
+		add_country_leader_role = {
+			character = JAP_seigo_nakano
+			promote_leader = yes
+			country_leader = {
+				ideology = gen_nazism
+				expire = "1952.1.1.1"
+				traits = { JAP_tohokai_leader } 
+			}
+		}
+
+		hidden_effect = {
+			set_cosmetic_tag = JAP_tohokai_rule
+			set_country_flag = JAP_tohokai_prime_minister_added 
+			mark_focus_tree_layout_dirty = yes
+		}	
+
+	}
+
+	# We will not comply with their demands!
+	option = {
+		name = SEA_japan_popup_events.50.b
+		ai_chance = {
+			base = 50
+		}
+		
+		add_stability = -0.15
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		JAP_big_zaibatsu_faction_loss = yes
+
+	}
+
+}
+
+
+
+
+
+
+###################################################
+################# TOKKO EVENTS ####################
+###################################################
+
+
+# The Popular Front Incident - event for JAP
+country_event = {
+	id = SEA_japan_tokko_arrest_events.1
+	title = SEA_japan_tokko_arrest_events.1.t
+	desc = SEA_japan_tokko_arrest_events.1.desc
+	picture = GFX_report_event_JAP_communists_arrested
+
+	trigger = {
+
+		original_tag = JAP
+
+		date > 1937.12.01
+
+		date < 1939.06.01
+		
+		has_completed_focus = JAP_crackdown_on_foreign_agents
+
+		NOT = {
+			has_country_flag = JAP_tokko_arrests_cooldown_flag
+		}
+
+		has_civil_war = no
+
+		is_subject = no
+
+		OR = {
+			has_government = neutrality
+			has_government = fascism
+		}
+
+	}
+
+	mean_time_to_happen = { days = 30 }
+
+	hidden = no
+
+	fire_only_once = yes
+
+	# Great
+	option = {
+		name = SEA_japan_tokko_arrest_events.1.a
+
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}	
+
+		add_stability = 0.03
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = JAP_popular_front_incident_tt
+
+		hidden_effect = {
+			set_country_flag = { flag = JAP_tokko_arrests_cooldown_flag value = 1 days = 60 }
+		}
+		
+	}
+}
+
+# The Cox Incident - event for JAP
+country_event = {
+	id = SEA_japan_tokko_arrest_events.2
+	title = SEA_japan_tokko_arrest_events.2.t
+	desc = SEA_japan_tokko_arrest_events.2.desc
+	picture = GFX_report_event_japanese_reply
+
+	trigger = {
+
+		original_tag = JAP
+
+		date > 1940.06.01
+
+		date < 1942.07.27
+		
+		has_completed_focus = JAP_crackdown_on_foreign_agents
+
+		NOT = {
+			has_country_flag = JAP_tokko_arrests_cooldown_flag
+		}
+
+		has_civil_war = no
+
+		is_subject = no
+
+		OR = {
+			has_government = neutrality
+			has_government = fascism
+		}
+
+		ENG = {
+			exists = yes
+			NOT = {
+				is_ally_with = ROOT
+			}
+		}
+
+		NOT = {
+			has_idea = JAP_increased_national_security_lar
+			has_idea = JAP_increased_national_security_no_lar
+		}
+
+	}
+
+	mean_time_to_happen = { days = 30 }
+
+	hidden = no
+
+	fire_only_once = yes
+
+	# Foreign Agents get what they deserve!
+	option = {
+		name = SEA_japan_tokko_arrest_events.2.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_popularity = {
+			ideology = ENG
+			popularity = -0.05
+		}	
+
+		add_political_power = 25
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		IF = {
+			limit = {
+				NOT = {
+					has_dlc = "La Resistance"
+				}
+			}
+			add_timed_idea = {
+				idea = JAP_increased_national_security_no_lar
+				days = 180
+			}	
+		}
+		ELSE = {
+			add_timed_idea = {
+				idea = JAP_increased_national_security_lar
+				days = 180
+			}	
+		}
+
+		hidden_effect = {
+			set_country_flag = { flag = JAP_tokko_arrests_cooldown_flag value = 1 days = 60 }
+		}
+		
+	}
+
+	# Try not to anger the [ENG.GetAdjective]
+	option = {
+		name = SEA_japan_tokko_arrest_events.2.b
+		ai_chance = {
+			base = 0
+		}
+
+		add_stability = -0.02
+
+		hidden_effect = {
+			set_country_flag = { flag = JAP_tokko_arrests_cooldown_flag value = 1 days = 60 }
+		}
+		
+	}
+}
+
+# The Kyōsakusha Incident - event for JAP
+country_event = {
+	id = SEA_japan_tokko_arrest_events.3
+	title = SEA_japan_tokko_arrest_events.3.t
+	desc = SEA_japan_tokko_arrest_events.3.desc
+	picture = GFX_report_event_JAP_communists_arrested
+
+	trigger = {
+
+		original_tag = JAP
+
+		date > 1941.12.01
+
+		date < 1944.01.01
+		
+		has_completed_focus = JAP_crackdown_on_foreign_agents
+
+		NOT = {
+			has_country_flag = JAP_tokko_arrests_cooldown_flag
+		}
+
+		has_civil_war = no
+
+		is_subject = no
+
+		OR = {
+			has_government = neutrality
+			has_government = fascism
+		}
+
+		MAN = {
+			exists = yes
+			is_ally_with = ROOT
+		}
+
+	}
+
+	mean_time_to_happen = { days = 30 }
+
+	hidden = no
+
+	fire_only_once = yes
+
+	# Let the Kwantung Army Deal with it
+	option = {
+		name = SEA_japan_tokko_arrest_events.3.a
+		ai_chance = {
+			base = 100
+		}
+
+		MAN = {
+			country_event = {
+				id = SEA_japan_tokko_arrest_events.8
+				hours = 6
+				random_hours = 12
+			}	
+		}
+
+		hidden_effect = {
+			set_country_flag = { flag = JAP_tokko_arrests_cooldown_flag value = 1 days = 60 }
+		}
+		
+	}
+
+	# We must make mass arrest immediately!
+	option = {
+		name = SEA_japan_tokko_arrest_events.3.b
+		ai_chance = {
+			base = 0
+		}
+
+		add_political_power = 25
+		add_war_support = 0.02
+		add_stability = -0.02
+
+		hidden_effect = {
+			set_country_flag = { flag = JAP_tokko_arrests_cooldown_flag value = 1 days = 60 }
+		}
+		
+	}
+
+	# They pose no threat to us, ignore them
+	option = {
+		name = SEA_japan_tokko_arrest_events.3.c
+		ai_chance = {
+			base = 0
+		}
+
+		MAN = {
+			add_stability = -0.02
+		}
+
+		hidden_effect = {
+			set_country_flag = { flag = JAP_tokko_arrests_cooldown_flag value = 1 days = 60 }
+		}
+		
+	}
+}
+
+# The Sorge Incident - event for JAP
+country_event = {
+	id = SEA_japan_tokko_arrest_events.4
+	title = SEA_japan_tokko_arrest_events.4.t
+	desc = SEA_japan_tokko_arrest_events.4.desc
+	picture = GFX_report_event_JAP_communists_arrested
+
+	trigger = {
+
+		original_tag = JAP
+
+		date > 1941.09.01
+
+		date < 1943.01.01
+		
+		has_completed_focus = JAP_crackdown_on_foreign_agents
+
+		NOT = {
+			has_country_flag = JAP_tokko_arrests_cooldown_flag
+		}
+
+		has_civil_war = no
+
+		is_subject = no
+
+		OR = {
+			has_government = neutrality
+			has_government = fascism
+		}
+
+		NOT = {
+			has_idea = JAP_increased_national_security_lar
+			has_idea = JAP_increased_national_security_no_lar
+		}
+
+		SOV = {
+			exists = yes
+			has_government = communism
+			NOT = {
+				is_ally_with = ROOT
+			}
+		}
+
+	}
+
+	mean_time_to_happen = { days = 30 }
+
+	hidden = no
+
+	fire_only_once = yes
+
+	# Foreign Agents get what they deserve!
+	option = {
+		name = SEA_japan_tokko_arrest_events.4.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_popularity = {
+			ideology = SOV
+			popularity = -0.05
+		}	
+
+		add_political_power = 25
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		IF = {
+			limit = {
+				NOT = {
+					has_dlc = "La Resistance"
+				}
+			}
+			add_timed_idea = {
+				idea = JAP_increased_national_security_no_lar
+				days = 180
+			}	
+		}
+		ELSE = {
+			add_timed_idea = {
+				idea = JAP_increased_national_security_lar
+				days = 180
+			}	
+		}
+
+		hidden_effect = {
+			set_country_flag = { flag = JAP_tokko_arrests_cooldown_flag value = 1 days = 60 }
+		}
+		
+	}
+
+	# Try not to anger the [SOV.GetAdjective]s
+	option = {
+		name = SEA_japan_tokko_arrest_events.4.b
+		ai_chance = {
+			base = 0
+		}
+
+		add_stability = -0.02
+
+		add_popularity = {
+			ideology = SOV
+			popularity = 0.05
+		}	
+
+		hidden_effect = {
+			set_country_flag = { flag = JAP_tokko_arrests_cooldown_flag value = 1 days = 60 }
+		}
+		
+	}
+
+}
+
+# The Yokohama Incident - event for JAP
+country_event = {
+	id = SEA_japan_tokko_arrest_events.5
+	title = SEA_japan_tokko_arrest_events.5.t
+	desc = SEA_japan_tokko_arrest_events.5.desc
+	picture = GFX_report_event_JAP_communists_arrested
+
+	trigger = {
+
+		original_tag = JAP
+
+		date > 1942.01.01
+
+		date < 1945.01.01
+		
+		has_completed_focus = JAP_crackdown_on_foreign_agents
+
+		NOT = {
+			has_country_flag = JAP_tokko_arrests_cooldown_flag
+		}
+
+		has_civil_war = no
+
+		is_subject = no
+
+		OR = {
+			has_government = neutrality
+			has_government = fascism
+		}
+
+	}
+
+	mean_time_to_happen = { days = 30 }
+
+	hidden = no
+
+	fire_only_once = yes
+
+	# More dissidence suppressed
+	option = {
+		name = SEA_japan_tokko_arrest_events.5.a
+
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}	
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_stability = 0.05
+		add_political_power = -50
+
+		hidden_effect = {
+			set_country_flag = { flag = JAP_tokko_arrests_cooldown_flag value = 1 days = 60 }
+		}
+		
+	}
+
+}
+
+# The Nakano Seigo Incident - event for JAP
+country_event = {
+	id = SEA_japan_tokko_arrest_events.6
+	title = SEA_japan_tokko_arrest_events.6.t
+	desc = SEA_japan_tokko_arrest_events.6.desc
+	picture = GFX_report_event_japanese_reply
+
+	trigger = {
+
+		original_tag = JAP
+
+		date > 1943.08.01
+
+		date < 1946.01.01
+		
+		has_completed_focus = JAP_crackdown_on_foreign_agents
+
+		NOT = {
+			has_country_flag = JAP_tokko_arrests_cooldown_flag
+		}
+
+		has_civil_war = no
+
+		is_subject = no
+
+		has_war = yes
+
+		OR = {
+			has_government = neutrality
+			has_government = fascism
+		}
+
+		OR = {
+			has_completed_focus = JAP_tojos_premiership
+			has_completed_focus = JAP_yamamotos_premiership
+		}
+
+	}
+
+	mean_time_to_happen = { days = 30 }
+
+	hidden = no
+
+	fire_only_once = yes
+
+	# How dare he speak ill of our Prime Minister? Arrest him!
+	option = {
+		name = SEA_japan_tokko_arrest_events.6.a
+
+		add_war_support = 0.05
+		add_political_power = -25
+
+		hidden_effect = {
+			set_country_flag = { flag = JAP_tokko_arrests_cooldown_flag value = 1 days = 60 }
+		}
+		
+	}
+
+}
+
+# The Bamboo Spear Incident - event for JAP
+country_event = {
+	id = SEA_japan_tokko_arrest_events.7
+	title = SEA_japan_tokko_arrest_events.7.t
+	desc = SEA_japan_tokko_arrest_events.7.desc
+	picture = GFX_report_event_japanese_reply
+
+	trigger = {
+
+		original_tag = JAP
+
+		date > 1944.01.01
+
+		date < 1947.01.01
+		
+		has_completed_focus = JAP_crackdown_on_foreign_agents
+
+		NOT = {
+			has_country_flag = JAP_tokko_arrests_cooldown_flag
+		}
+
+		has_civil_war = no
+
+		is_subject = no
+
+		has_war = yes
+
+		any_enemy_country = {
+			is_major = yes
+		}	
+
+		OR = {
+			has_government = neutrality
+			has_government = fascism
+		}
+
+	}
+
+	mean_time_to_happen = { days = 30 }
+
+	hidden = no
+
+	fire_only_once = yes
+
+	# Why do they not trust we will win this war?
+	option = {
+		name = SEA_japan_tokko_arrest_events.7.a
+
+		JAP_small_naval_faction_gain = yes
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_war_support = -0.03
+
+		hidden_effect = {
+			set_country_flag = { flag = JAP_tokko_arrests_cooldown_flag value = 1 days = 60 }
+		}
+		
+	}
+
+}
+
+# The Kyōsakusha Incident - event for JAP
+country_event = {
+	id = SEA_japan_tokko_arrest_events.8
+	title = SEA_japan_tokko_arrest_events.8.t
+	desc = SEA_japan_tokko_arrest_events.8.desc
+	picture = GFX_report_event_JAP_communists_arrested
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Follow the directe and begin mass arrests!
+	option = {
+		name = SEA_japan_tokko_arrest_events.8.a
+		ai_chance = {
+			base = 50
+		}
+
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.1
+		}	
+		add_political_power = 50
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_stability = -0.1
+
+	}
+
+	# Sweep it under the rug, it benefits us anyway
+	option = {
+		name = SEA_japan_tokko_arrest_events.8.b
+		ai_chance = {
+			base = 50
+		}
+
+		add_ideas = MAN_kyousakusha_uplifted
+
+	}
+
+}
+
+
+
+
+
+#### ##     ## ########  ######## ########  ####    ###    ##          #### ##    ## ######## ##       ##     ## ######## ##    ##  ######  ######## 
+ ##  ###   ### ##     ## ##       ##     ##  ##    ## ##   ##           ##  ###   ## ##       ##       ##     ## ##       ###   ## ##    ## ##       
+ ##  #### #### ##     ## ##       ##     ##  ##   ##   ##  ##           ##  ####  ## ##       ##       ##     ## ##       ####  ## ##       ##       
+ ##  ## ### ## ########  ######   ########   ##  ##     ## ##           ##  ## ## ## ######   ##       ##     ## ######   ## ## ## ##       ######   
+ ##  ##     ## ##        ##       ##   ##    ##  ######### ##           ##  ##  #### ##       ##       ##     ## ##       ##  #### ##       ##       
+ ##  ##     ## ##        ##       ##    ##   ##  ##     ## ##           ##  ##   ### ##       ##       ##     ## ##       ##   ### ##    ## ##       
+#### ##     ## ##        ######## ##     ## #### ##     ## ########    #### ##    ## ##       ########  #######  ######## ##    ##  ######  ########
+
+country_event = {
+	#A Faction has climbed the hierarchy and the player has to choose which one of the 3 Influential Factions that gets demoted
+	id = SEA_imperial_influence_events.1
+	title = SEA_imperial_influence_events.1.t
+	desc = SEA_imperial_influence_events.1.desc
+	picture = GFX_report_event_JAP_imperial_influence
+	
+	is_triggered_only = yes
+
+	#Demote the Army Faction
+	option = { 
+		name = SEA_imperial_influence_events.1.a
+		trigger = {
+			JAP_army_faction_is_tier_3 = yes
+		}
+		ai_chance = {
+			base = 1
+		}
+		
+		set_variable = { JAP_army_faction_influence_level = JAP_tier_2_to_tier_3_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+
+		JAP_army_faction_goes_down_from_tier_3_to_tier_2 = yes
+
+		hidden_effect = { clr_country_flag = JAP_pending_imperial_influence_decision } 
+
+		#If there, for some unforseen reason (like my bad scripting) still are more than 2 Influential factions, trigger this event again
+		if = { 
+			limit = {
+				check_variable = { JAP_num_of_influential_imperial_factions > 2 }
+			}
+			hidden_effect = { set_country_flag = JAP_pending_imperial_influence_decision } #Used to block players from influencing the Imperial Influence system. Remember to clear it!
+			country_event = { id = SEA_imperial_influence_events.1 hours = 1 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+	}
+
+	#Demote the Naval Faction
+	option = { 
+		name = SEA_imperial_influence_events.1.b
+		trigger = {
+			JAP_naval_faction_is_tier_3 = yes
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_completed_focus = JAP_nanshin_ron
+				NOT = {
+					has_completed_focus = JAP_strike_the_southern_road
+				}
+			}
+		}
+
+		set_variable = { JAP_naval_faction_influence_level = JAP_tier_2_to_tier_3_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+
+		JAP_naval_faction_goes_down_from_tier_3_to_tier_2 = yes
+
+		hidden_effect = { clr_country_flag = JAP_pending_imperial_influence_decision } 
+
+		#If there, for some unforseen reason (like my bad scripting) still are more than 2 Influential factions, trigger this event again
+		if = { 
+			limit = {
+				check_variable = { JAP_num_of_influential_imperial_factions > 2 }
+			}
+			hidden_effect = { set_country_flag = JAP_pending_imperial_influence_decision } #Used to block players from influencing the Imperial Influence system. Remember to clear it!
+			country_event = { id = SEA_imperial_influence_events.1 hours = 1 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+	}
+
+	#Demote the Zaibatsu Faction
+	option = { 
+		name = SEA_imperial_influence_events.1.c
+		trigger = {
+			has_idea = JAP_zaibatsu_faction_tier_3
+		}
+		ai_chance = {
+			base = 1
+		}
+
+		set_variable = { JAP_zaibatsu_faction_influence_level = JAP_tier_2_to_tier_3_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+
+		JAP_zaibatsu_faction_goes_down_from_tier_3_to_tier_2 = yes
+		
+		hidden_effect = { clr_country_flag = JAP_pending_imperial_influence_decision }
+
+		#If there, for some unforseen reason (like my bad scripting) still are more than 2 Influential factions, trigger this event again
+		if = { 
+			limit = {
+				check_variable = { JAP_num_of_influential_imperial_factions > 2 }
+			}
+			hidden_effect = { set_country_flag = JAP_pending_imperial_influence_decision } #Used to block players from influencing the Imperial Influence system. Remember to clear it!
+			country_event = { id = SEA_imperial_influence_events.1 hours = 1 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+	}
+
+	#Demote the Government Faction
+	option = { 
+		name = SEA_imperial_influence_events.1.d
+		trigger = {
+			has_idea = JAP_government_faction_tier_3
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+		}
+
+		set_variable = { JAP_government_faction_influence_level = JAP_tier_2_to_tier_3_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+		
+		JAP_government_faction_goes_down_from_tier_3_to_tier_2 = yes
+
+		hidden_effect = { clr_country_flag = JAP_pending_imperial_influence_decision } 
+
+		#If there, for some unforseen reason (like my bad scripting) still are more than 2 Influential factions, trigger this event again
+		if = { 
+			limit = {
+				check_variable = { JAP_num_of_influential_imperial_factions > 2 }
+			}
+			hidden_effect = { set_country_flag = JAP_pending_imperial_influence_decision } #Used to block players from influencing the Imperial Influence system. Remember to clear it!
+			country_event = { id = SEA_imperial_influence_events.1 hours = 1 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+	}
+}
+
+###############################
+	### FACTION DEMANDS ###
+###############################
+
+#ARMY Demands
+country_event = { #The Army FAILED to meet their demands
+	id = SEA_imperial_influence_events.100
+	title = SEA_imperial_influence_events.100.t
+	desc = SEA_imperial_influence_events.100.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.b #Very Intentional 
+
+		IF = {
+			limit = {
+				check_variable = { JAP_army_faction_demand_failure = 1 }
+			}
+			army_experience = -10
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_army_faction_demand_failure = 2 }
+			}
+			army_experience = -15
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_army_faction_demand_failure = 3 }
+			}
+			army_experience = -20
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_army_faction_demand_failure = 4 }
+			}
+			army_experience = -25
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_army_faction_demand_failure = 5 }
+			}
+			army_experience = -25
+			add_command_power = -15
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_army_faction_demand_failure = 6 }
+			}
+			army_experience = -25
+			add_command_power = -25
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_army_faction_demand_failure = 7 }
+			}
+			add_war_support = -0.05
+			army_experience = -25
+			add_command_power = -25
+		}
+		#Reset the variable
+		set_variable = { JAP_army_faction_demand_failure = 0 }
+
+		JAP_small_army_faction_loss = yes
+
+		hidden_effect = {
+			JAP_faction_demand_finalize_mission_effect = yes
+			JAP_faction_demand_add_to_failed_missions = yes
+		}
+
+	}
+}
+
+country_event = { #Build more Military Factories
+	id = SEA_imperial_influence_events.110
+	title = SEA_imperial_influence_events.110.t
+	desc = SEA_imperial_influence_events.110.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_army_faction_demands_military_factories
+
+		#Basically, we want 5 more factories
+		set_variable = { JAP_desired_military_factories = num_of_military_factories }
+		add_to_variable = { JAP_desired_military_factories = 4 }
+
+	}
+}
+
+country_event = { #Appoint Chief of Army
+	id = SEA_imperial_influence_events.120
+	title = SEA_imperial_influence_events.120.t
+	desc = SEA_imperial_influence_events.120.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_army_faction_demands_political_appointment
+	}
+}
+
+country_event = { #Change Conscription Laws
+	id = SEA_imperial_influence_events.130
+	title = SEA_imperial_influence_events.130.t
+	desc = SEA_imperial_influence_events.130.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_army_faction_demands_conscription_law_change
+
+		hidden_effect = {
+			IF = {
+				limit = {
+					has_idea = disarmed_nation
+				}
+				set_country_flag = JAP_in_on_disarmed_nation_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = volunteer_only
+				}
+				set_country_flag = JAP_in_on_volunteer_only_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = limited_conscription
+				}
+				set_country_flag = JAP_in_on_limited_conscription_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = extensive_conscription
+				}
+				set_country_flag = JAP_in_on_extensive_conscription_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = service_by_requirement
+				}
+				set_country_flag = JAP_in_on_service_by_requirement_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = all_adults_serve
+				}
+				set_country_flag = JAP_in_on_all_adults_serve_flag
+			}
+		}
+		
+	}
+}
+
+country_event = { #Field more men
+	id = SEA_imperial_influence_events.140
+	title = SEA_imperial_influence_events.140.t
+	desc = SEA_imperial_influence_events.140.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_army_faction_demands_larger_army
+
+		hidden_effect = {
+			IF = {
+				limit = {
+					has_army_manpower = {
+						size < 550000
+					}	
+				}
+				set_country_flag = JAP_has_less_than_600k_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_army_manpower = {
+						size < 650000
+					}	
+				}
+				set_country_flag = JAP_has_less_than_750k_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_army_manpower = {
+						size < 900000
+					}	
+				}
+				set_country_flag = JAP_has_less_than_1mil_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_army_manpower = {
+						size < 1300000
+					}	
+				}
+				set_country_flag = JAP_has_less_than_1_and_a_half_mil_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_army_manpower = {
+						size < 1900000
+					}	
+				}
+				set_country_flag = JAP_has_less_than_2mil_flag
+			}
+		}
+
+	}
+}
+
+country_event = { #More Trucks
+	id = SEA_imperial_influence_events.150
+	title = SEA_imperial_influence_events.150.t
+	desc = SEA_imperial_influence_events.150.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	is_triggered_only = yes
+
+	trigger = {
+		JAP_army_faction_is_tier_3_at_least = yes
+		check_variable = { JAP_num_of_faction_demands < 3 } #Don't have more than 2 Demands ongoing at the same time
+	}
+	
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_army_faction_demands_more_trucks
+	}
+}
+
+country_event = { #More Tanks
+	id = SEA_imperial_influence_events.160
+	title = SEA_imperial_influence_events.160.t
+	desc = SEA_imperial_influence_events.160.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_army_faction_demands_more_tanks
+	}
+}
+
+country_event = { #More Artillery
+	id = SEA_imperial_influence_events.161
+	title = SEA_imperial_influence_events.161.t
+	desc = SEA_imperial_influence_events.161.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_army_faction_demands_more_artillery
+	}
+}
+
+#NAVAL Demands
+country_event = { #The Navy FAILED to meet their demands
+	id = SEA_imperial_influence_events.200
+	title = SEA_imperial_influence_events.200.t
+	desc = SEA_imperial_influence_events.200.desc
+	picture = GFX_report_event_JAP_imperial_influence
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.b #Very Intentional 
+
+		IF = {
+			limit = {
+				check_variable = { JAP_naval_faction_demand_failure = 1 }
+			}
+			navy_experience = -10
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_naval_faction_demand_failure = 2 }
+			}
+			navy_experience = -15
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_naval_faction_demand_failure = 3 }
+			}
+			navy_experience = -20
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_naval_faction_demand_failure = 4 }
+			}
+			navy_experience = -25
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_naval_faction_demand_failure = 5 }
+			}
+			navy_experience = -25
+			add_command_power = -15
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_naval_faction_demand_failure = 6 }
+			}
+			navy_experience = -25
+			add_command_power = -25
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_naval_faction_demand_failure = 7 }
+			}
+			add_war_support = -0.05
+			navy_experience = -25
+			add_command_power = -25
+		}
+		#Reset the variable
+		set_variable = { JAP_naval_faction_demand_failure = 0 }
+
+		JAP_small_naval_faction_loss = yes
+		
+		hidden_effect = {
+			JAP_faction_demand_finalize_mission_effect = yes
+			JAP_faction_demand_add_to_failed_missions = yes
+		}
+
+	}
+}
+
+country_event = { #Build more Dockyards
+	id = SEA_imperial_influence_events.210
+	title = SEA_imperial_influence_events.210.t
+	desc = SEA_imperial_influence_events.210.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_naval_faction_demands_dockyards
+
+		#Basically, we want 5 more dockyards
+		set_variable = { JAP_desired_naval_factories = num_of_naval_factories }
+		add_to_variable = { JAP_desired_naval_factories = 4 }
+
+	}
+}
+
+country_event = { #Appoint Chief of Navy
+	id = SEA_imperial_influence_events.220
+	title = SEA_imperial_influence_events.220.t
+	desc = SEA_imperial_influence_events.220.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_naval_faction_demands_political_appointment
+	}
+}
+
+country_event = { #Change Conscription Laws
+	id = SEA_imperial_influence_events.230
+	title = SEA_imperial_influence_events.230.t
+	desc = SEA_imperial_influence_events.230.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_naval_faction_demands_conscription_law_change
+
+		hidden_effect = {
+			IF = {
+				limit = {
+					has_idea = disarmed_nation
+				}
+				set_country_flag = JAP_in_on_disarmed_nation_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = volunteer_only
+				}
+				set_country_flag = JAP_in_on_volunteer_only_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = limited_conscription
+				}
+				set_country_flag = JAP_in_on_limited_conscription_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = extensive_conscription
+				}
+				set_country_flag = JAP_in_on_extensive_conscription_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = service_by_requirement
+				}
+				set_country_flag = JAP_in_on_service_by_requirement_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = all_adults_serve
+				}
+				set_country_flag = JAP_in_on_all_adults_serve_flag
+			}
+		}
+		
+	}
+}
+
+country_event = { #Build Carriers
+	id = SEA_imperial_influence_events.240
+	title = SEA_imperial_influence_events.240.t
+	desc = SEA_imperial_influence_events.240.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+	}
+}
+
+country_event = { #Build Carriers AND Battleships
+	id = SEA_imperial_influence_events.241
+	title = SEA_imperial_influence_events.241.t
+	desc = SEA_imperial_influence_events.241.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_naval_faction_demands_more_carriers
+	}
+}
+
+country_event = { #Build Battleships
+	id = SEA_imperial_influence_events.242
+	title = SEA_imperial_influence_events.242.t
+	desc = SEA_imperial_influence_events.242.desc
+	picture = GFX_report_event_JAP_imperial_influence
+
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+	}
+}
+
+
+#ZAIBATSU Demands
+country_event = {
+	id = SEA_imperial_influence_events.300
+	title = SEA_imperial_influence_events.300.t
+	desc = SEA_imperial_influence_events.300.desc
+	picture = GFX_report_event_JAP_imperial_influence
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.b #Very Intentional
+
+		JAP_small_zaibatsu_faction_loss = yes
+		
+		hidden_effect = {
+			JAP_faction_demand_finalize_mission_effect = yes
+			JAP_faction_demand_add_to_failed_missions = yes
+		}
+
+		IF = {
+			limit = {
+				check_variable = { JAP_zaibatsu_faction_demand_failure = 1 }
+			}
+			add_political_power = -10
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_zaibatsu_faction_demand_failure = 2 }
+			}
+			add_political_power = -15
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_zaibatsu_faction_demand_failure = 3 }
+			}
+			add_political_power = -20
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_zaibatsu_faction_demand_failure = 4 }
+			}
+			add_political_power = -25
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_zaibatsu_faction_demand_failure = 5 }
+			}
+			add_political_power = -25
+			add_stability = -0.02
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_zaibatsu_faction_demand_failure = 6 }
+			}
+			add_political_power = -25
+			add_stability = -0.03
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_zaibatsu_faction_demand_failure = 7 }
+			}
+			add_political_power = -25
+			add_stability = -0.05 
+		}
+		#Reset the variable
+		set_variable = { JAP_zaibatsu_faction_demand_failure = 0 }
+	}
+}
+
+country_event = { #Build Civilian Factories
+	id = SEA_imperial_influence_events.310
+	title = SEA_imperial_influence_events.310.t
+	desc = SEA_imperial_influence_events.310.desc
+	picture = GFX_report_event_JAP_imperial_influence
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_zaibatsu_faction_demands_factories
+
+		#Basically, we want 5 more dockyards
+		set_variable = { JAP_desired_civilian_factories = num_of_civilian_factories }
+		add_to_variable = { JAP_desired_naval_factories = 2 }
+	}
+}
+
+country_event = { #Appoint Industrial Advisor
+	id = SEA_imperial_influence_events.320
+	title = SEA_imperial_influence_events.320.t
+	desc = SEA_imperial_influence_events.320.desc
+	picture = GFX_report_event_JAP_imperial_influence
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_zaibatsu_faction_demands_political_appointment
+
+	}
+}
+
+country_event = { #Change Economy Laws
+	id = SEA_imperial_influence_events.330
+	title = SEA_imperial_influence_events.330.t
+	desc = SEA_imperial_influence_events.330.desc
+	picture = GFX_report_event_JAP_imperial_influence
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_zaibatsu_faction_demands_economy_law_change
+
+		hidden_effect = {
+			IF = {
+				limit = {
+					OR = {
+						has_idea = tot_economic_mobilisation
+						has_idea = national_defense_state
+					}
+				}
+				set_country_flag = JAP_in_on_total_economic_mobilization_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = war_economy
+				}
+				set_country_flag = JAP_in_on_war_economy_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = partial_economic_mobilisation
+				}
+				set_country_flag = JAP_in_on_partial_economic_mobilisation_flag
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = low_economic_mobilisation
+				}
+				set_country_flag = JAP_in_on_low_economic_mobilisation_flag
+			}
+		}
+
+	}
+}
+
+country_event = { #Hire Industrial Company
+	id = SEA_imperial_influence_events.340
+	title = SEA_imperial_influence_events.340.t
+	desc = SEA_imperial_influence_events.340.desc
+	picture = GFX_report_event_JAP_imperial_influence
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_zaibatsu_faction_demands_industrial_company_employment
+	}
+}
+
+
+#GOVERNMENT Demands
+country_event = {
+	id = SEA_imperial_influence_events.400
+	title = SEA_imperial_influence_events.400.t
+	desc = SEA_imperial_influence_events.400.desc
+	picture = GFX_report_event_JAP_imperial_influence
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.b #Very Intentional
+
+		JAP_small_government_faction_loss = yes
+		
+		hidden_effect = {
+			JAP_faction_demand_finalize_mission_effect = yes
+			JAP_faction_demand_add_to_failed_missions = yes
+		}
+
+		IF = {
+			limit = {
+				check_variable = { JAP_government_faction_demand_failure = 1 }
+			}
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.02
+			}	
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_government_faction_demand_failure = 2 }
+			}
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.03
+			}	
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_government_faction_demand_failure = 3 }
+			}
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.05
+			}	
+			add_political_power = -15
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_government_faction_demand_failure = 4 }
+			}
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.05
+			}	
+			add_political_power = -25
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_government_faction_demand_failure = 5 }
+			}
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.05
+			}	
+			add_political_power = -25
+			add_stability = -0.01
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_government_faction_demand_failure = 6 }
+			}
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.05
+			}	
+			add_political_power = -25
+			add_stability = -0.03
+		}
+		ELSE_IF = {
+			limit = {
+				check_variable = { JAP_government_faction_demand_failure = 7 }
+			}
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.05
+			}	
+			add_political_power = -25
+			add_stability = -0.05
+		}
+		#Reset the variable
+		set_variable = { JAP_government_faction_demand_failure = 0 }
+	}
+}
+
+country_event = { #Appoint Civilian Advisor
+	id = SEA_imperial_influence_events.420 #Trust me, we're following a pattern here
+	title = SEA_imperial_influence_events.420.t
+	desc = SEA_imperial_influence_events.420.desc
+	picture = GFX_report_event_JAP_imperial_influence
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_government_faction_demands_political_appointment
+
+	}
+}
+
+country_event = { #Change Trade Laws
+	id = SEA_imperial_influence_events.430
+	title = SEA_imperial_influence_events.430.t
+	desc = SEA_imperial_influence_events.430.desc
+	picture = GFX_report_event_JAP_imperial_influence
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_government_faction_demands_trade_law_change
+
+		hidden_effect = {
+			IF = {
+				limit = {
+					has_idea = closed_economy
+				}
+				set_country_flag = JAP_is_on_closed_economy_flag 
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = limited_exports
+				}
+				set_country_flag = JAP_is_on_limited_exports_flag 
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = export_focus
+				}
+				set_country_flag = JAP_is_on_export_focus_flag 
+			}
+		}
+	}
+}
+
+country_event = { #Limit the Army's Influence
+	id = SEA_imperial_influence_events.440
+	title = SEA_imperial_influence_events.440.t
+	desc = SEA_imperial_influence_events.440.desc
+	picture = GFX_report_event_JAP_imperial_influence
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_government_faction_demands_limited_army_influence
+	}
+}
+
+country_event = { #Limit the Navy's Influence
+	id = SEA_imperial_influence_events.450
+	title = SEA_imperial_influence_events.450.t
+	desc = SEA_imperial_influence_events.450.desc
+	picture = GFX_report_event_JAP_imperial_influence
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_government_faction_demands_limited_navy_influence
+	}
+}
+
+country_event = { #Limit the Zaibatsu's Influence
+	id = SEA_imperial_influence_events.460
+	title = SEA_imperial_influence_events.460.t
+	desc = SEA_imperial_influence_events.460.desc
+	picture = GFX_report_event_JAP_imperial_influence
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = SEA_imperial_influence_events.00.a #Intentional
+
+		activate_mission = JAP_government_faction_demands_limited_zaibatsu_influence
+	}
+}
+
+
+
+# HIDDEN Timer Reduction event - event for China
+country_event = {
+	id = SEA_japan_hidden_events.1
+	title = SEA_japan_hidden_events.1.t
+	desc = SEA_japan_hidden_events.1.desc
+	picture = GFX_report_event_generic_construction_site
+
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		
+	}
+	
+	# ok
+	option = { 
+		name = SEA_japan_hidden_events.1.a
+
+		
+
+	}
+}
+
+### Yamamoto death events 
+
+# Operation Vengeance - Event Dispatcher
+country_event = {
+	id = SEA_japan_air_accidents_events.10
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = JAP
+		has_character = JAP_isoroku_yamamoto
+		NOT = {
+			has_completed_focus = JAP_yamamotos_premiership
+			focus_progress = {
+				focus = JAP_yamamotos_premiership
+				progress > 0
+			}
+			has_country_leader = {
+				ruling_only = yes
+				character = JAP_isoroku_yamamoto
+			}	
+		}
+		USA = {
+			has_war_with = ROOT
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 180
+		modifier = {
+			factor = 0.5
+			date < 1943.01.01
+		}
+	}
+
+	immediate = {
+		random_list = {
+			10 = { # Yamamoto dies - Historical
+				modifier = {
+					factor = 10
+					is_historical_focus_on = yes
+				}
+				modifier = {
+					factor = 0.5
+					has_completed_focus = JAP_escort_efficiency
+				}
+				modifier = {
+					factor = 0
+					has_completed_focus = JAP_sea_sturdy_aircraft
+				}
+				country_event = { id = SEA_japan_air_accidents_events.01 hours = 16 random_hours = 8 }
+			}
+			10 = { # No one dies
+				modifier = {
+					factor = 2.5
+					has_completed_focus = JAP_escort_efficiency
+				}
+				country_event = { id = SEA_japan_air_accidents_events.02 hours = 16 random_hours = 8 }
+			}
+		}
+	}
+}
+
+# Operation Vengeance - Yamamoto dies
+country_event = {
+	id = SEA_japan_air_accidents_events.01
+	title = SEA_japan_air_accidents_events.01.t
+	desc = SEA_japan_air_accidents_events.01.desc
+	picture = GFX_report_event_ITA_air_crash
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = JAP_yamamoto_shot_down_flag
+		}
+	}
+
+	trigger = {
+		has_character = JAP_isoroku_yamamoto
+		NOT = { has_completed_focus = JAP_yamamotos_premiership }
+	}
+
+	# Sayonara Yamamoto 
+	option = { 
+		name = SEA_japan_air_accidents_events.01.a
+
+		add_stability = -0.05
+		add_war_support = -0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		effect_tooltip = {
+			retire_character = JAP_isoroku_yamamoto
+		}
+		
+		hidden_effect = {
+			JAP_isoroku_yamamoto = {
+				remove_advisor_role = {
+					character = isoroku_yamamoto
+					slot = theorist 
+				}	
+			}
+		}
+		
+	}
+}
+
+# Operation Vengeance - No one dies - Everyone is happy
+country_event = {
+	id = SEA_japan_air_accidents_events.02
+	title = SEA_japan_air_accidents_events.02.t
+	desc = SEA_japan_air_accidents_events.02.desc
+	picture = GFX_report_event_generic_bombers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = JAP_yamamoto_survived_flag
+		}
+	}
+
+	trigger = {
+		has_character = JAP_isoroku_yamamoto
+	}
+
+	# Lucky bois
+	option = { 
+		name = SEA_japan_air_accidents_events.02.a
+		
+		JAP_isoroku_yamamoto = {
+			add_coordination = 1
+			add_maneuver = 1
+		}
+		
+	}
+}
+
+# News event for Japanese Young Officer Coup leading to Okada's speech 
+news_event = {
+	id = SEA_japan_news_events.01
+	title = SEA_japan_news_events.01.t
+	desc = SEA_japan_news_events.01.desc
+	picture = GFX_news_event_japanese_army_parade
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = SEA_japan_news_events.01.a
+		trigger = {
+			original_tag = JAP
+		}
+	}
+	option = {
+		name = SEA_japan_news_events.01.b
+		trigger = {
+			NOT = {
+				original_tag = JAP
+			}
+		}
+	}
+	
+}
+
+# News event for Formation of the Greater East Asia Co-Prosperity Sphere
+news_event = {
+	id = SEA_japan_news_events.02
+	title = SEA_japan_news_events.02.t
+	desc = SEA_japan_news_events.02.desc
+	picture = GFX_news_event_JAP_greater_east_asia_conference
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = SEA_japan_news_events.02.a
+		trigger = {
+			original_tag = JAP
+		}
+	}
+	option = {
+		name = SEA_japan_news_events.02.b
+		trigger = {
+			NOT = {
+				original_tag = JAP
+			}
+		}
+	}
+	
+}
+
+# The Fall of Rangoon
+news_event = {
+	id = SEA_japan_news_events.03
+	title = SEA_japan_news_events.03.t
+	desc = SEA_japan_news_events.03.d
+	picture = GFX_news_event_JAP_rangoon_occupation
+	
+	major = yes
+	
+	trigger = {
+		288 = { 
+			controller = {
+				OR = {
+					original_tag = JAP
+					is_ally_with = JAP
+				}
+			}
+		}
+		NOT = { has_global_flag = fall_of_rangoon }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_rangoon
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = news.145.a
+		trigger = {
+			NOT = {
+				TAG = JAP
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = news.117.b
+		trigger = { 
+			TAG = JAP 
+			NOT = {
+				has_government = communism
+			}
+		}
+	}
+	option = {
+		name = SEA_japan_news_events.03.a
+		trigger = { 
+			TAG = JAP 
+			has_government = communism
+		}
+	}
+}
+

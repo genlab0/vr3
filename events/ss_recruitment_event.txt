@@ -1,0 +1,40 @@
+﻿###########################
+#ss recruitment events
+###########################
+
+add_namespace = ss_recruitment_event
+
+#SS recruitment, denmark
+country_event = {
+	id = ss_recruitment_event.1
+	title = ss_scale_event.1.t	
+	desc = ss_scale_event.1.desc	#
+	picture = GFX_report_event_german_volunteers					# 
+	is_triggered_only = yes
+
+	option = { 
+		name = ss_scale_event.1.a #historical
+		ai_chance = {
+			base = 50
+		}
+		SS_set_templates = yes
+		add_stability = -0.03
+		custom_effect_tooltip = ss_scale_low_tt
+		hidden_effect = {
+			activate_mission = GER_ss_small_1
+		}
+	}
+
+	option = {
+		name = ss_scale_event.1.b #big
+		ai_chance = {
+			base = 50
+		}
+		SS_set_templates = yes
+		add_stability = -0.06
+		custom_effect_tooltip = ss_scale_high_tt
+		hidden_effect = {
+			activate_mission = GER_ss_big_1
+		}
+	}
+}

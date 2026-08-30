@@ -1,0 +1,309 @@
+
+SAF_unit_production = {
+	allowed = {
+		original_tag = SAF
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+		type = template_prio
+		id = paratrooper
+		value = -1000
+	}
+	ai_strategy = {
+		type = template_prio
+		id = mountaineers
+		value = -1000
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = -1000
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = -1000
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = -1000
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = -1000
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = -1000
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 10000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -1000
+	}
+}
+
+SAF_support_spain = {
+	allowed = {
+		original_tag = SAF
+	}
+	enable = {
+		country_exists = SPD
+	}
+	abort = {
+		date>1940.1.1
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SPD"
+		value = 1000
+	}
+}
+
+#Where to put units
+SAF_try_to_hold_africa = {
+	allowed = {
+		original_tag = SAF
+	}
+	enable = {
+		date>1936.1.1
+	}
+	abort = {
+		GER = { has_war_with = SOV }
+	} 
+
+	ai_strategy = {
+		type = force_build_armies
+		value = 100
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = ENG
+		value = 300
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = FRA
+		value = 100
+	}
+	ai_strategy = {
+		type = garrison
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_control
+		tag = ITA
+		tag = GER
+		area = africa						# Target a specific ai area. Can specify multiple.
+		ratio = 0.9						# The strategy is enabled only if ratio of the front covered by this strategy's targets is greater than this ratio.
+		priority = 10						# Default 0, higher prio strats will override lower.
+		ordertype = front					# `front` or `invasion`. If set this strategy will only apply to that specific order type.
+		execution_type = careful
+		execute_order = no					# `yes` or `no`. If set will override execute or not decision of front.
+		manual_attack = yes					# Default `yes`. If `no` AI will not do manual pokes at enemy (only for front orders).
+	}
+}
+
+#Where to put units
+SAF_push_back = {
+	allowed = {
+		original_tag = SAF
+	}
+	enable = {
+		GER = { has_war_with = SOV }
+	}
+	abort = {
+		has_global_flag = ENG_victory_in_africa
+	} 
+	ai_strategy = {
+		type = garrison
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_control
+		tag = ITA
+		tag = GER 
+		area = africa						# Target a specific ai area. Can specify multiple.
+		ratio = 0.9						# The strategy is enabled only if ratio of the front covered by this strategy's targets is greater than this ratio.
+		priority = 10						# Default 0, higher prio strats will override lower.
+		ordertype = front					# `front` or `invasion`. If set this strategy will only apply to that specific order type.
+		execution_type = balanced
+		execute_order = yes					# `yes` or `no`. If set will override execute or not decision of front.
+		manual_attack = yes					# Default `yes`. If `no` AI will not do manual pokes at enemy (only for front orders).
+	}
+}
+
+#Where to put units
+SAF_support_dday_and_husky = {
+	allowed = {
+		original_tag = SAF
+	}
+	enable = {
+		GER = { has_war_with = SOV }
+	}
+	abort = {
+		has_global_flag = ENG_victory_in_africa
+	} 
+	ai_strategy = {
+		type = garrison
+		value = -1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = mainland_europe
+		value = 60
+	}
+}
+
+
+
+#Mills after April 1937
+SAF_industry_we_are_the_baddies = {
+	allowed = {
+		original_tag = SAF
+	}
+	enable = {
+		date > 1937.5.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 5000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = -1000
+	}
+}
+
+SAF_wants_civ = {
+	allowed = {
+		original_tag = SAF
+	}
+	enable = {
+		date < 1937.5.1
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 40
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = naval_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = -1000
+	}
+	
+
+}
+
+
+SAF_trade_with_britain = {
+	allowed = {
+		original_tag = SAF
+	}
+	enable = {
+		ENG = { has_government = democratic }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = ENG
+		value = 50
+	}
+}
+
+SAF_have_some_train_production = {
+	allowed = {
+		original_tag = SAF
+	}
+
+	enable = {
+		date < 1945.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = train
+		value = 1  # Always have some production of trains
+	}
+}
+
+saf_ignore_usa = {
+	allowed = {
+		original_tag = SAF 
+	}
+	enable = {
+		original_tag = SAF
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = USA
+		value = -1000
+	}
+}
+

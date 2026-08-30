@@ -1,0 +1,58 @@
+add_namespace = DOD_yugoslavia
+
+country_event = {
+	id = DOD_yugoslavia.20
+	title = DOD_yugoslavia.20.t
+	desc = DOD_yugoslavia.20.desc
+	picture = GFX_report_event_fighters
+	
+	is_triggered_only = yes
+	
+	option = { # send some fighters
+		name = DOD_yugoslavia.20.a
+		ai_chance = {
+			factor = 70
+		}	
+		trigger = {
+			has_equipment = { small_plane_airframe > 50 }
+		}
+		add_timed_idea = { idea = YUG_air_payment days = 180 }
+	}	
+	option = { # send some bombers
+		name = DOD_yugoslavia.20.b
+		ai_chance = {
+			factor = 70
+		}
+		trigger = {
+			has_equipment = { medium_plane_airframe > 25 }
+		}
+		add_timed_idea = { idea = YUG_air_payment days = 180 }
+	}
+
+	option = { # divert some fighters from production
+		name = DOD_yugoslavia.20.d
+		ai_chance = {
+			factor = 70
+		}	
+		trigger = {
+			NOT = { has_equipment = { small_plane_airframe > 50 } }
+		}
+		add_timed_idea = { idea = YUG_air_payment days = 180 }
+	}
+
+	option = { # divert some bombers from production
+		name = DOD_yugoslavia.20.e
+		ai_chance = {
+			factor = 70
+		}
+		add_timed_idea = { idea = YUG_air_payment days = 180 }
+	}
+	option = { # no
+		name = DOD_yugoslavia.20.c
+		ai_chance = {
+			factor = 30
+		}	
+	}	
+		
+	
+}

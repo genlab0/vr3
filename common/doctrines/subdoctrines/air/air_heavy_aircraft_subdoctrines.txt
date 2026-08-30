@@ -1,0 +1,106 @@
+air_subdoctrine_night_bombing = {
+    track = heavy_aircraft
+    name = SUBDOCTRINE_NIGHT_BOMBING
+    description = SUBDOCTRINE_NIGHT_BOMBING_DESC
+    icon = GFX_doctrine_night_bombing_medium
+
+    xp_cost = 100
+    xp_type = air
+
+    available = {
+        has_doctrine = new_strategic_destruction
+    }
+
+    ai_will_do = {
+
+        base = 1
+        modifier = {
+            factor = 25
+            OR = {
+            	original_tag = ENG  
+            	original_tag = AST 
+            	original_tag = CAN 
+            	original_tag = NZL 
+            	original_tag = SAF 
+        	}
+    	}
+    }
+
+    # EFFECTS
+	air_strategic_bomber_night_penalty = -0.5
+	air_strategic_bomber_bombing_factor = 0.2
+
+}
+
+air_subdoctrine_carpet_bombing = {
+    track = heavy_aircraft
+    name = SUBDOCTRINE_CARPET_BOMBING
+    description = SUBDOCTRINE_CARPET_BOMBING_DESC
+    icon = GFX_doctrine_mass_destruction_medium
+
+    xp_cost = 100
+    xp_type = air
+
+    available = {
+        has_doctrine = new_strategic_destruction
+    }
+
+    ai_will_do = {
+
+        base = 1
+        modifier = {
+            factor = 25
+            OR = {
+            	original_tag = JAP 
+            	original_tag = FRA 
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_major = no 
+        }
+    }
+
+    # EFFECTS
+	air_strategic_bomber_bombing_factor = 0.3
+	air_escort_efficiency = 0.25
+}
+
+air_subdoctrine_deep_air_raids = {
+    track = heavy_aircraft
+    name = SUBDOCTRINE_DEEP_AIR_RAIDS
+    description = SUBDOCTRINE_DEEP_AIR_RAIDS_DESC
+    icon = GFX_doctrine_offensive_formations_medium
+
+    xp_cost = 100
+    xp_type = air
+
+    available = {
+        has_doctrine = new_operational_integrity
+    }
+
+    ai_will_do = {
+
+        base = 1
+        modifier = {
+            factor = 25
+            OR = {
+            	original_tag = SOV 
+            	original_tag = GER 
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_major = no 
+        }
+    }
+
+    # EFFECTS
+	air_range_factor = 0.05
+	strategic_bomb_visibility = -0.5
+	air_strategic_bomber_defence_factor = 0.2
+
+    rewards = {
+        
+    }
+}

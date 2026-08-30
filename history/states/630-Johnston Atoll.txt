@@ -1,0 +1,29 @@
+state=
+{
+	id=630
+	name="STATE_630"
+	manpower = 100
+	state_category = tiny_island
+
+history={ 
+		owner = USA
+		add_core_of = USA
+		buildings = {
+			infrastructure = 1
+			13051 = {
+				naval_base = 1
+			}
+		}
+		1936.1.2 = {
+			remove_core_of = USA 
+			add_core_of = WST
+			owner = WST
+		}
+	}
+	
+	provinces={
+		13051 	
+	}
+
+	local_supplies=0.0 
+}

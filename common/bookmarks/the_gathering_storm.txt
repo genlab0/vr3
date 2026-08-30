@@ -1,0 +1,182 @@
+bookmarks = {
+	bookmark = {
+		name = "NO_ASIA_NAME"
+		desc = "NO_ASIA_DESC"
+		date = 1936.1.2.12
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		default = yes
+
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				FRA_victors_of_wwi
+				FRA_disjointed_government
+				FRA_protected_by_the_maginot_line
+			}
+			focuses = {
+				FRA_army_reform
+				FRA_defensive_strategems
+			}
+		}
+
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				stiff_upper_lip
+				ENG_the_war_to_end_all_wars
+				george_v
+			}
+			focuses = {
+				ENG_imperial_conference
+				ENG_us_economic_support
+				ENG_home_guard
+			}
+		}
+
+		"GER"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = fascism
+
+			ideas = {
+				sour_loser
+				general_staff
+				GER_mefo_bills_1
+			}
+			focuses = {
+				GER_anschluss
+				GER_danzig_or_war
+				GER_ussr_war_goal
+			}
+		}
+		"ITA"={
+			history = "ITA_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				vittorio_emanuele
+				ITA_iri_fake_ns
+				ITA_re_fake_ns
+			}	
+			focuses = {
+				ITA_by_blood_alone
+				ITA_war_with_allies
+			}		
+		}
+
+		"SOV"={
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = communism
+
+			ideas = {
+				trotskyite_plot_nsb
+				SOV_second_five_year_plan_fake_1936_ns
+			}
+			focuses = {
+				SOV_the_glory_of_the_red_army
+				SOV_the_centre
+				SOV_the_road_of_life
+			}	
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+
+		# minors from DLC ####
+		"CAN"={
+			minor = yes
+			history = "CAN_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				CAN_great_depression_1
+				CAN_conscription_crisis
+				spain_volunteers_allies
+			}
+			focuses = {
+				CAN_strengthen_the_commonwealth_ties
+				CAN_commit_to_the_war
+				CAN_war_fueled_economy
+			}
+		}
+		"SAF"={
+			minor = yes
+			history = "SAF_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				SAF_ossewabrandwag
+				SAF_history_of_segregation
+				spain_volunteers_allies
+			}
+			focuses = {
+				SAF_secure_interests_in_africa
+				SAF_work_for_all_poor
+				SAF_expand_the_cape_corps
+			}
+		}
+		"RAJ"={
+			minor = yes
+			history = "RAJ_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				spain_volunteers_allies
+			}
+			focuses = {
+				RAJ_provincial_elections
+				RAJ_indian_gurkhas
+			}
+		}
+
+
+		"HUN"={
+			minor = yes
+			history = "HUN_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				HUN_treaty_of_triannon
+				spain_volunteers_allies
+			}
+			focuses = {
+				HUN_proclaim_greater_hungary
+				HUN_secret_rearmament
+				HUN_renounce_the_treaty_of_trianon
+			}
+		}
+
+		"ROM"={
+			minor = yes
+			history = "ROM_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				ROM_king_carol_ii_hedonist
+				neutrality_idea
+				spain_volunteers_allies
+			}
+			focuses = {
+				ROM_support_germany 
+				ROM_institute_royal_dictatorship
+				ROM_preserve_greater_romania
+			}
+		}
+		"SPR"={
+			minor = yes
+			history = "SPAIN_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				SPR_military_disloyalty
+				SPA_carlism_1
+				SPR_political_violence
+			}
+			focuses = {
+				SPA_caudillo_of_spain
+				SPA_la_division_azul
+			}
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

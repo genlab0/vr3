@@ -1,0 +1,57 @@
+usa_historical = {
+	name = "USA historical plan"
+	desc = "Essentially historical behaviour for USA"
+
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		date>1960.1.1
+	}
+
+	ai_national_focuses = {
+		# grab as fast as you can if available
+		USA_arsenal_of_democracy
+		USA_the_giant_wakes
+		USA_military_construction
+		USA_USACE_projects
+		USA_wartime_industry
+		USA_scientist_haven
+		USA_manhattan_project
+
+		USA_continue_the_new_deal
+		USA_wpa
+		USA_agricultural_adjustment_act
+		USA_neutrality_act
+		USA_war_department
+		USA_selective_training_act
+		USA_fair_labour_standards_act
+		USA_office_of_scientific_research_and_development
+		USA_two_ocean_navy_act
+		USA_bureau_of_ships
+		USA_air_war_plans_division
+		USA_federal_housing_act
+		USA_air_support
+		USA_war_plans_division
+		USA_build_the_pentagon
+		USA_intervention_in_europe
+		USA_war_plan_black
+		USA_war_plan_silver
+		USA_intervention_in_asia
+		USA_war_plan_orange
+	}
+
+	traits = {
+		silent_workhorse = 100
+	}
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

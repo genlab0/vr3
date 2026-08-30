@@ -1,0 +1,132 @@
+#Scripted Triggers for VP system
+
+is_axis = {
+	has_war = yes
+	OR = {
+		tag = GER 
+		tag = ITA 
+		tag = JAP 
+		tag = MAN 
+		tag = ROM 
+		tag = HUN 
+		tag = BUL 
+		tag = SPR 
+		is_in_faction_with = GER
+	}
+}
+
+is_allies = {
+	has_war = yes
+	OR = {
+		tag = USA 
+		tag = ENG 
+		tag = FRA
+		tag = CAN 
+		tag = SAF 
+		tag = RAJ 
+		tag = AUS
+		tag = SPD 
+		tag = SOV
+		is_in_faction_with = ENG
+	}
+}
+
+is_neutral = {
+	has_war = no
+}
+
+should_play_south_american_music = {
+	always = no 
+}
+
+offensive_infantry_nation = {
+	OR = {
+		tag = ENG 
+		tag = ROM 
+		tag = JAP 
+		tag = USA 
+	}
+}
+
+heavy_tank_nation = {
+	tag = SWE #Cant be empty
+}
+
+tank_nation = {
+	AND = {
+		NOT = { tank_nation_light_tanks = yes }
+		OR = {
+			tag = GER 
+			tag = SOV 
+			tag = CAN 
+			tag = SAF
+			tag = USA
+		}
+	}
+}
+
+has_mech_focus = {
+	OR = {
+		AND = { tag = GER has_completed_focus = GER_army_innovation }
+		AND = { tag = SOV has_completed_focus = SOV_pc_of_mechanical_engineering }
+		AND = { tag = SAF has_completed_focus = SAF_mechanization_effort }
+		AND = { tag = CAN has_completed_focus = CAN_cmp_truck }
+		AND = { tag = USA has_completed_focus = USA_armored_infantry }
+		AND = { tag = HUN has_completed_focus = HUN_the_botond }
+	}
+}
+
+tank_nation_light_tanks = {
+	AND = {
+		OR = {
+			tag = GER 
+		}
+		NOT = { has_tech = improved_light_tank_chassis }
+	}
+}
+
+inf_nation = {
+	OR = {
+		tag = SPR 
+		tag = ROM 
+		tag = RAJ 
+		tag = JAP 
+		tag = ENG 
+		tag = AST
+		tag = FRA
+		tag = HUN 
+	}
+}
+
+air_research_nation = {
+	OR = {
+		tag = ENG 
+		tag = GER 
+		tag = ITA 
+		tag = JAP 
+		tag = USA 
+		tag = SOV 
+	}
+}
+
+
+#Change this pls
+GER_naval_larp_day1_trigger = {
+	date>1960.1.1
+}
+
+#Change this pls
+GER_naval_larp_late_trigger = {
+	AND = {
+		original_tag = GER
+		date>1960.1.1 			#Watch out here!
+		NOT = { GER_naval_larp_day1_trigger = yes }
+		ENG = { is_ai = yes }
+		USA = { is_ai = yes }
+	}
+}
+
+#Change this pls
+AI_allied_boost_yes = {
+	always = yes
+}

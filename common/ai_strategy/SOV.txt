@@ -1,0 +1,598 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+SOV_market_management = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_market_for_sale_factor
+		id = infantry
+		value = -50  # put less rifles up for sale
+	}
+}
+
+SOV_pp_spending = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		has_political_power < 1000
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { # dont burn PP on admirals if you need manpower laws
+		type = pp_spend_priority
+		id = admiral
+		value = -100
+	}
+}
+SOV_home_land_is_safe = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = garrison
+		value = -25
+	}
+}
+
+SOV_have_some_train_production = {
+	allowed = {
+		original_tag = SOV
+	}
+
+	enable = {
+		date > 1936.7.1
+		num_of_military_factories > 50
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = train
+		value = 3
+	}
+}
+SOV_dont_do_so_many_naval_invasions_please = {
+	allowed = { original_tag = SOV }
+
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invasion_unit_request
+		tag = GER
+		value = -50
+	}
+}
+
+SOV_avoid_ger_border_before_barb  = {
+	allowed = {
+		original_tag = SOV
+	}
+
+	enable = {
+		AND = {
+			has_war = no 
+			date>1941.1.1
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		# ratio of total armeis in country to be buffered
+		ratio = 0.4
+
+		# you can specify an order id. ratio of same orders ids will be share same ratio
+		#order_id = 2
+
+		# states to put garrison orders (if no state is friendly, strat is invalid)
+		states = {
+			564
+			563
+			566
+			567
+			561
+			657
+			408
+			409
+		}
+
+		# ai areas that the orders will use these buffers in
+		area = asia
+
+		# by default if you have orders in target areas, the buffer will request less units.
+		# you can override this to disable the feature
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = yes
+	}
+}
+
+
+SOV_defend_during_german_offensive  = {#Only perform careful attacks, we want to defend while germany has buffs.
+	allowed = {
+		original_tag = SOV
+	}
+
+	enable = {
+
+		AND = {
+			has_war_with = GER 
+			OR = {
+				GER = {	has_idea = GER_barbarossa }
+				GER = {	has_idea = GER_fall_blau_idea }
+				GER = {	has_idea = GER_operation_citadel_idea }
+				date < 1941.12.1
+			}
+		}
+
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+
+		tag = GER
+
+		ratio = 0.4
+
+		priority = 100
+		ordertype = front
+		execution_type = careful
+		execute_order = no
+	}
+
+	ai_strategy = {
+		type = force_concentration_factor
+		value = -100  # Just don't
+	}
+
+}
+
+SOV_defend_blitzkrieg_2  = {#Only perform careful attacks, we want to defend for a bit
+	allowed = {
+		original_tag = SOV
+	}
+
+	enable = {
+		NOT = {
+			OR = {
+				GER = {	has_idea = GER_barbarossa }
+				GER = {	has_idea = GER_fall_blau_idea }
+				GER = {	has_idea = GER_operation_citadel_idea }
+				date < 1941.12.1
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+
+		tag = GER
+
+		ratio = 0.4
+
+		priority = 100
+		ordertype = front
+		execution_type = careful
+	}
+}
+
+SOV_offensive_1941 = {#Only perform careful attacks, we want to defend for a bit
+	allowed = {
+		original_tag = SOV
+	}
+
+	enable = {
+		has_idea = SOV_offensive_1941_idea
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_concentration_factor
+		value = 50  
+	}
+
+	ai_strategy = {
+		type = front_control
+
+		strategic_region = 133	#Central Russia
+
+		ratio = 0.3
+
+		priority = 100
+		ordertype = front
+		execution_type = balanced 
+		execute_order = yes
+	}
+}
+
+SOV_wants_civ = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		date < 1938.5.1
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 90
+	}
+}
+
+SOV_wants_mil = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		date > 1938.5.1
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 10000
+	}
+}
+
+SOV_defense_in_depth = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		is_historical_focus_on = yes
+		date > 1940.1.1 
+		date < 1943.1.1 #Maybe this isn't such a good idea now?
+		OR = {
+			has_war = no
+			GER = { has_idea = GER_barbarossa }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		# ratio of total armeis in country to be buffered
+		ratio = 0.15
+
+		# you can specify an order id. ratio of same orders ids will be share same ratio
+		order_id = 5
+
+		# states to put garrison orders (if no state is friendly, strat is invalid)
+		states = {
+			219 #Moscow
+			254 #Ryazan
+			253 #Ivanovo
+			248 #Yaroslavl
+			223 #Tula
+		}
+
+		area = defend_moscow_zone #Hold in reserve until the line encroaches
+
+		# by default if you have orders in target areas, the buffer will request less units.
+		# you can override this to disable the feature
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = yes
+	}
+}
+
+SOV_passive = { 
+	allowed = {
+		original_tag = GER
+	}
+
+	enable = {
+		AND = {
+			has_equipment = { infantry_equipment < 10000 }
+			date>1942.1.1
+		}
+
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+
+		tag = GER
+		tag = ROM
+
+		ratio = 0.85
+
+		priority = 100
+		ordertype = front
+		execution_type = careful
+		execute_order = no
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SOV_unit_production_early = {
+	allowed = {
+		original_tag = SOV 
+	}
+	enable = {
+		NOT = { has_tech = fighter2 }
+	}
+	abort = {
+		has_tech = fighter2
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 500
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = -500
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = -500
+	}
+
+	#Please don't do tanks ty
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = -10000
+	}
+
+	# Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -50
+	}
+}
+
+SOV_just_get_inf = {
+	allowed = {
+		original_tag = SOV 
+	}
+	enable = {
+		date>1936.1.1
+	}
+	abort = {
+		date>1950.1.1
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 400
+	}
+}
+
+
+sov_bba_air_prod_1 = {
+	# TODO BFW:
+	allowed = { original_tag = SOV }
+	enable = {
+		has_tech = fighter2 
+	}
+
+	abort_when_not_enabled = yes
+
+	# Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 200
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 50
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 50  # Germany needs a minimum production of fighters
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 25 # because doctrine this = 15
+	}
+
+ 	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 10
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 5  # Germany needs a minimum production of CAS planes
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = naval_bomber
+		value = -50
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 10
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = 5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = large_plane_airframe
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = heavy_fighter
+		value = -50
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = heavy_fighter
+		value = -50
+	}
+}
+
+sov_before_mech_production = {
+	# TODO BFW:
+	allowed = { original_tag = SOV }
+	enable = {
+		AND = {
+			date>1936.1.1
+			NOT = { has_tech = mechanised_infantry  }
+		}
+	}
+
+	abort = {
+		has_tech = mechanised_infantry 
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mobile
+		value = -100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = -10
+	}
+}
+
+sov_mech_production = {
+	# TODO BFW:
+	allowed = { original_tag = SOV }
+	enable = {
+		has_tech = mechanised_infantry 
+	}
+
+	abort_when_not_enabled = yes
+
+ 	ai_strategy = {
+		type = equipment_production_factor
+		id = mechanized
+		value = 20
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = mechanized
+		value = 20
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mobile
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = -10
+	}
+}
+
+sov_tank_production = {
+	# TODO BFW:
+	allowed = { original_tag = SOV }
+	enable = {
+		has_tech = improved_medium_tank_chassis 
+	}
+
+	abort_when_not_enabled = yes
+
+	#Please don't do tanks ty
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = 30
+	}
+}

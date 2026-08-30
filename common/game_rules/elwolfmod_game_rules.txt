@@ -1,0 +1,58 @@
+volunteers_in_china = {
+	name = "Soviet Volunteers in China"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_hol_war_on_pacifism"
+	default = {
+		name = BLOCKED
+		text = "GBanned"
+		desc = "Soviet Volunteers in China are banned"
+	}
+	option = {
+		name = ALLOWED
+		text = "RAllowed"
+		desc = "Up to 8 Volunteers can be sent to China"
+	}
+}
+
+fleet_size_limitations = {
+	name = "Fleet Size Limitations"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_hol_war_on_pacifism"
+	default = {
+		name = PACIFIC
+		text = "GPacific Only"
+		desc = "Fleet Limitations only for Japan and the US"
+	}
+	option = {
+		name = ATLANTIC
+		text = "GAtlantic Only"
+		desc = "Fleet Limitations only for Germany, Italy and the United Kingdom"
+	}
+	option = {
+		name = NO
+		text = "GNowhere"
+		desc = "No fleet limitations whatsoever"
+	}
+	option = {
+		name = YES
+		text = "REverywhere"
+		desc = "Fleet limitations for every country"
+	}
+}
+
+sealion_rule = {
+	name = "Sealion Rule"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_hol_war_on_pacifism"
+	default = {
+		name = ALLOWED
+		text = "GAllowed"
+		desc = "Sealion is allowed with all of its mechanics!"
+	}
+	option = {
+		name = BANNED
+		text = "RBanned"
+		desc = "Sealion is banned!"
+	}
+}
+

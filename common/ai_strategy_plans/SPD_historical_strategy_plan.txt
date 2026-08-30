@@ -1,0 +1,54 @@
+SPD_historical_plan = {
+	name = "Spanish Democratic historical plan"
+	desc = "Historical behavior for Democratic Spain"
+
+	allowed = {
+		original_tag = SPD
+	}
+	enable = {
+		tag = SPD
+	}
+	abort = {		
+		date>1960.1.1
+	}
+
+	ai_national_focuses = {
+		SPR_the_popular_front
+		SPR_secure_the_guardia_de_asalto
+		SPR_train_the_union_youth
+		SPR_enlarge_the_weapon_caches
+		SPR_distribute_arms_to_the_people
+		SPR_disband_the_army
+		SPR_maintain_the_second_republic
+		SPR_new_leadership
+		SPR_ensure_loyalty
+		SPR_the_popular_army
+		SPR_no_pasaran
+		SPR_take_the_initiative
+		SPR_new_leadership
+		SPR_the_future_of_the_republic
+		SPR_petition_for_french_aid
+		SPR_strengthen_the_anti_fascist_coalition
+		SPR_reprofessionalize_the_military
+		SPR_experiences_from_the_civil_war
+		SPR_a_new_military_academy
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

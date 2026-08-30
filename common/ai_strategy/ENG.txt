@@ -1,0 +1,1376 @@
+
+
+#Eco 
+ENG_industry_we_are_the_baddies = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		date > 1937.5.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 5000
+	}
+}
+
+ENG_wants_docks = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		date < 1936.6.6
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = dockyard
+		value = 50
+	}
+}
+
+ENG_wants_civ = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		AND = {
+			date > 1936.6.6
+			date < 1937.8.1
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 60
+	}
+}
+
+ENG_wants_mills = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		date > 1937.8.1
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 400
+	}
+}
+
+ENG_baltic_is_a_trap = {
+	allowed = { original_tag = ENG }
+	enable = {
+		has_war_with = GER
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 9 #northern baltic
+		value = 600
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 206 #central baltic
+		value = 600
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 207 #danish belts
+		value = 600
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 9 #gulf of finland
+		value = 600
+	}
+}
+
+ENG_unit_production_early = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		date>1936.1.1
+	}
+	abort = {
+		has_tech = fighter2
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 500
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 60
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 75
+	}
+
+	#Please don't do tanks ty
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = -10000
+	}
+}
+
+ENG_unit_production_mid = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		AND = {
+			has_tech = fighter2
+			NOT = { date>1941.1.1 }
+		}
+	}
+	abort = {
+		date>1941.1.1
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 15
+	}
+
+	#Please don't do tanks ty
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = -10000
+	}
+}
+
+ENG_unit_production_late = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		date>1941.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 180
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 16
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = marines
+		value = 10
+	}	
+
+
+	#Please don't do tanks ty
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = -100
+	}
+}
+
+ENG_defend_gibraltar = {
+	allowed = {
+		original_tag = ENG 
+	}
+	enable = {
+		date<1950.1.1
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.1
+		states = {
+			118
+		}
+		subtract_fronts_from_need = no
+	}
+}
+
+ENG_unit_buffer_for_african_defense = {
+	allowed = { 
+		original_tag = ENG 
+	}
+	enable = {
+		NOT = { has_war_with = ITA }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		# ratio of total armies in country to be buffered
+		ratio = 0.3
+
+		# you can specify an order id. ratio of same orders ids will be share same ratio
+		#order_id = 2
+
+		# states to put garrison orders (if no state is friendly, strat is invalid)
+		states = {
+			446
+			447
+			452
+		}
+
+		area = suez
+
+		subtract_invasions_from_need = yes
+		subtract_fronts_from_need = yes
+	}
+}
+
+ENG_support_india = {
+	allowed = { 
+		original_tag = ENG
+	}
+	enable = {
+		RAJ = { surrender_progress > 0.2 }
+	}
+	abort = {
+		RAJ = { surrender_progress < 0.1 }
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = RAJ
+		value = 150
+	}
+}
+
+
+ENG_africa = {
+	allowed = { 
+		original_tag = ENG
+	}
+	enable = {
+		GER = { has_completed_focus = GER_danzig_or_war }
+	}
+	abort = {
+		has_global_flag = ENG_victory_in_africa
+	}
+	ai_strategy = {
+		type = front_control
+		tag = ITA
+		tag = GER
+		ratio = 0.2
+		priority = 100
+		ordertype = front
+		execution_type = careful
+		execute_order = no 
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 69  # Strategic Region ID - Southern England
+		value = 1000  # Value of stocked main front in active combat is usually around 35,000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 128  # Strategic Region ID - Southern England
+		value = 5000  # Value of stocked main front in active combat is usually around 35,000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 289  # Strategic Region ID - Southern England
+		value = 5000  # Value of stocked main front in active combat is usually around 35,000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 216  # Strategic Region ID - Southern England
+		value = 5000  # Value of stocked main front in active combat is usually around 35,000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = 100
+	}
+}
+
+ENG_to_tobruk = {
+	allowed = { 
+		OR = {
+			original_tag = ENG 
+			original_tag = SAF 
+			original_tag = RAJ
+		}
+	}
+	enable = {
+		AND = {
+			NOT = { has_global_flag = ENG_victory_in_africa }
+			date > 1941.6.6
+			NOT = { SOV = { surrender_progress > 0.7 } }
+		} 
+	}
+
+	abort = {
+		OR = {
+			has_global_flag = ENG_victory_in_africa
+			SOV = { surrender_progress > 0.7 }
+		}
+	}
+
+	ai_strategy = {
+		type = front_control
+
+		tag = ITA
+		tag = GER
+
+		ratio = 0.8
+
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+	
+	ai_strategy = {
+		type = invasion_unit_request
+		area = north_africa
+		value = 30
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = north_africa
+		value = 50
+	}
+
+	#Torch
+	ai_strategy = {
+		type = front_unit_request
+
+		strategic_region = 126
+		strategic_region = 182
+		strategic_region = 225
+
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = invade
+		id = "ITA"
+		value = 550 #counterbalances...
+	}
+}
+
+ENG_dont_help_france_early = {
+	allowed = {
+		OR = {
+			original_tag = ENG 
+			original_tag = SAF 
+			original_tag = RAJ 
+			original_tag = AST 
+		}
+	}
+	enable = {
+		GER = { has_completed_focus = GER_danzig_or_war }
+	}
+	abort = {
+		has_global_flag = ENG_victory_in_africa
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 29
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = FRA
+		value = 1000
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = POL 
+		value = 1000
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = NOR 
+		value = 1000
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = DEN
+		value = 1000
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = LUX 
+		value = 1000
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = BEL 
+		value = 1000
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = HOL
+		value = 1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = mainland_europe
+		value = -10000
+	}
+}
+
+ENG_post_africa = {
+	allowed = {
+		original_tag = ENG 
+	}
+	enable = {
+		OR = {
+			has_global_flag = ENG_victory_in_africa
+			SOV = { surrender_progress > 0.7 }
+		}
+	}
+	abort = {
+		date>1960.1.1
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 208 #Strategic Region ID - France
+		value = 15000 #value of stocked main front in active combat is usually around 35,000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 5 #Strategic Region ID - France
+		value = 15000 #value of stocked main front in active combat is usually around 35,000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 19 #Strategic Region ID - France
+		value = 15000 #value of stocked main front in active combat is usually around 35,000
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		strategic_region = 208
+		value = 80
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		strategic_region = 290
+		value = 100
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		strategic_region = 169
+		value = 150
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = FRA
+		value = 10000
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = BEL
+		value = 10000
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = HOL
+		value = 10000
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = LUX
+		value = 10000
+	}
+}
+
+eng_bba_air_prod_0 = {
+	# TODO BFW:
+	allowed = { original_tag = ENG }
+	enable = {
+		date>1936.1.1
+	}
+
+	abort = {
+		has_tech = fighter2
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = train
+		value = 1  # Always have some production of trains
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 1  # Always have some production of trains
+	}
+
+	# Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -50
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cv_naval_bomber
+		value = 2
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = large_plane_airframe
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = heavy_fighter
+		value = -50
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = heavy_fighter
+		value = -50
+	}
+}
+
+eng_bba_air_prod_1 = {
+	# TODO BFW:
+	allowed = { original_tag = ENG }
+	enable = {
+		has_tech = fighter2
+	}
+
+	abort = {
+		date>1940.6.1
+	}
+
+	ai_strategy = {
+		type = air_factory_balance
+		value = 180
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cv_naval_bomber
+		value = 2
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 200
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 45
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 10  # Germany needs a minimum production of fighters
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = -10
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = large_plane_airframe
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = heavy_fighter
+		value = -50
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = heavy_fighter
+		value = -50
+	}
+
+}
+
+eng_bba_air_prod_2 = {
+	# TODO BFW:
+	allowed = { original_tag = ENG }
+	enable = {
+		date > 1940.6.1
+	}
+	abort = {
+		AND = {
+			date>1941.1.1
+			check_variable = { ENG.fighter_ratio > 1.7 }
+		}
+	}
+
+	ai_strategy = {
+		type = air_factory_balance
+		value = 180
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cv_naval_bomber
+		value = 2
+	}
+	#Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 300
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 75
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 60
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 60 #because doctrine this = 15
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 50
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 20
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 5
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = 5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = large_plane_airframe
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = heavy_fighter
+		value = -50
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = heavy_fighter
+		value = -50
+	}
+}
+
+ENG_less_planes = {
+	enable = {
+		AND = {
+			original_tag = ENG
+			date>1941.1.1 			#Watch out here!
+			check_variable = { ENG.fighter_ratio > 1.7 }
+		}
+	}
+	abort = {
+		date>1960.1.1
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cv_naval_bomber
+		value = 2
+	}
+	ai_strategy = {
+		type = air_factory_balance
+		value = 50
+	}
+
+	#Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 100
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 25
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 50
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 60 #because doctrine this = 15
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 60
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 25
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 5
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = 5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = large_plane_airframe
+		value = -50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = heavy_fighter
+		value = -50
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = heavy_fighter
+		value = -50
+	}
+
+
+}
+
+ENG_less_weapon_purchases_more_for_construction = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		date < 1939.1.1
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_market_spend_factories
+		value = -80  # 80 % less factories
+	}
+	ai_strategy = {  # Don't even try buying infantry equipment too early
+		type = equipment_market_buying_threshold
+		id = infantry_equipment
+		value = -20000  # Absolute number of units
+	}
+}
+
+ENG_fewer_factories_for_purchases_please = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		date > 1939.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_market_spend_factories
+		value = -50  # 50 % less factories
+	}
+}
+
+ENG_air_day1 = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		has_war_with = GER
+		FRA = { has_capitulated = yes }
+	}
+	abort = {
+		has_global_flag = ENG_victory_in_africa
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 289 #Strategic Region ID - Southern England
+		value = 15000 #value of stocked main front in active combat is usually around 35,000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 128 #Strategic Region ID - English Channel
+		value = 15000 #Too easy to lose planes here
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 216 #Strategic Region ID - English Channel
+		value = 15000 #Too easy to lose planes here
+	}
+}
+
+ENG_air_late = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		has_war_with = GER
+		has_global_flag = ENG_victory_in_africa
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 290 #Strategic Region ID - Southern England
+		value = 15000 #value of stocked main front in active combat is usually around 35,000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 23 #Strategic Region ID - English Channel
+		value = 15000 #Too easy to lose planes here
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 208 #Strategic Region ID - English Channel
+		value = 15000 #Too easy to lose planes here
+	}
+}
+
+
+# lets make sure the allies dont overcommit to invasions early on
+ENG_ALLIES_careful_with_early_invasions = {
+	enable = {
+		AND = {
+			OR = {
+				NOT = { has_global_flag = ENG_victory_in_africa}
+				NOT = {
+					SOV = {
+						has_war_with = GER
+						surrender_progress > 0.5
+					}
+				}
+			}
+			OR = {
+				original_tag = ENG 
+				is_in_faction_with = ENG 
+			}
+		}
+	}
+	abort = {
+		OR = {
+			SOV = {
+				has_war_with = GER
+				surrender_progress > 0.55
+			}
+			has_global_flag = ENG_victory_in_africa
+		}
+	}
+
+	ai_strategy = {
+		type = invade
+		id = ITA
+		value = -500
+	}
+
+	ai_strategy = {
+		type = invade
+		id = GER
+		value = -500
+	}
+
+	ai_strategy = {
+		type = invade
+		id = VIC
+		value = -500
+	}
+
+	ai_strategy = {
+		type = invade
+		id = JAP
+		value = -500
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = scandinavia
+		value = -300
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+############################################################################################################
+############################################################################################################
+############################################################################################################
+############################################################################################################
+############################################################################################################
+############################################################################################################
+############################################################################################################
+############################################################################################################
+############################################################################################################
+############################################################################################################
+############################################################################################################
+############################################################################################################
+############################################################################################################
+############################################################################################################
+############################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#################NAVY
+
+
+ENG_the_home_fleet  = {
+	allowed = { original_tag = ENG }
+
+	enable = {
+		has_war = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 16 # north sea
+		value = 70
+	}
+}
+
+ENG_the_med_fleet  = {
+	allowed = { original_tag = ENG }
+
+	enable = {
+		has_war = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 69 #western med
+		value = 20
+	}
+}
+
+
+
+
+
+
+
+#Naval Production
+ENG_naval_role_ratios_historical_early = {
+	allowed = {
+		original_tag = ENG
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		NOT = { has_tech = improved_ship_hull_heavy }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bb
+		value = 20
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bc
+		value = -100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = 20
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_submarine
+		value = -200
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = submarine
+		value = -200
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_light
+		value = 60
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_heavy
+		value = -15
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_sweeper
+		value = -100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_layer
+		value = -100
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = -30
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 30
+	}
+}
+
+#Naval Production
+ENG_naval_role_ratios_historical_late = {
+	allowed = {
+		original_tag = ENG
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		has_tech = improved_ship_hull_heavy
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bc
+		value = -10
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = 3
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_submarine
+		value = -10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = submarine
+		value = -10
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_escort
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_light
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_heavy
+		value = -15
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_sweeper
+		value = -10
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_layer
+		value = -10
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 5
+	}
+}
+
+
+
+#Naval Production
+ENG_ignore_med_early = {
+	allowed = {
+		original_tag = ENG
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_navy_size = {
+				size < 180
+			}
+			NOT = { has_global_flag = ENG_victory_in_africa }
+		}
+	}
+	abort_when_not_enabled = yes 
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 68 #adriatic
+		value = 48
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 169 #adriatic
+		value = 75
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 169  #adriatic
+		value = 75
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 29  #adriatic
+		value = 75
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 292  #adriatic
+		value = 75
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 202  #adriatic
+		value = 75
+	}
+}
+
+#Naval Production
+ENG_raid_italy_late = {
+	allowed = {
+		original_tag = ENG
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_global_flag = ENG_victory_in_africa 
+			OR = {
+				ITA = {
+					has_navy_size = {
+						size < 100
+					}
+				}
+				ITA = {
+					has_navy_size = {
+						size < 3
+						type = capital_ship
+					}
+				}
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 169 #adriatic
+		value = 75
+	}
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 29 #adriatic
+		value = 75
+	}
+}

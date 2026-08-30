@@ -1,0 +1,185 @@
+﻿add_namespace = wtt_britain 
+
+
+
+#Mers-El-Kebir Raid: France gets choice; transfer fleet or lose a portion
+country_event = {
+	id = wtt_britain.25
+	title = wtt_britain.25.t
+	desc = wtt_britain.25.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+	
+	#accept
+	option = {
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_opinion = { target = ENG value < -99 }
+			}
+			modifier = {
+				factor = 1.5
+				has_opinion = { target = ENG value > -50 }
+			}
+			modifier = {
+				factor = 1.5
+				has_opinion = { target = ENG value > -25 }
+			}
+			modifier = {
+				factor = 2
+				has_opinion = { target = ENG value > 0 }
+			}
+		}
+		name = wtt_britain.25.a
+		ENG = { country_event = { id = wtt_britain.26 } }
+		hidden_effect = {
+			news_event = { id = news.332 days = 1 }
+		}
+		transfer_navy = { target = ENG }
+	}
+	#decline
+	option = {
+		ai_chance = {
+			factor = 90
+		}
+		name = wtt_britain.25.b
+		ENG = { country_event = { id = wtt_britain.27 } }
+	}
+}
+
+#Mers-El-Kebir Raid: Notification event for French accepted
+country_event = {
+	id = wtt_britain.26
+	title = wtt_britain.26.t
+	desc = wtt_britain.26.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	#excellent
+	option = {
+		name = wtt_britain.26.a
+	}
+}
+
+#Mers-El-Kebir Raid: British informed of rejection; choice of going through with bombardment or not
+country_event = {
+	id = wtt_britain.27
+	title = wtt_britain.27.t
+	desc = wtt_britain.27.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	#bombard!
+	option = {
+		ai_chance = {
+			factor = 85
+		}
+		name = wtt_britain.27.a
+		add_popularity = { ideology = democratic popularity = -0.05 }
+		add_war_support = 0.05
+		random_other_country = {
+			limit = {
+				original_tag = FRA
+				has_government = fascism
+			}
+			add_war_support = 0.05
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = FRA_mers_el_kebir
+			}
+		}
+		if = {
+			limit = {
+				GER = { has_government = fascism }
+			}
+			GER = { add_popularity = { ideology = fascism popularity = 0.05 } }
+		}
+		if = {
+			limit = {
+				GER = { has_government = neutrality }
+			}
+			GER = { add_popularity = { ideology = neutrality popularity = 0.05 } }
+		}
+		hidden_effect = {
+			news_event = { id = news.333 days = 1 }
+		}
+		random_list = {
+			60 = {
+				random_other_country = {
+					limit = {
+						original_tag = FRA
+						has_government = fascism
+					}
+					destroy_ships = {
+						type = ship_hull_light
+						count = 1
+					}
+					destroy_ships = {
+						type = ship_hull_heavy
+						count = 1
+					}
+				}
+			}
+			30 = {
+				random_other_country = {
+					limit = {
+						original_tag = FRA
+						has_government = fascism
+					}
+					destroy_ships = {
+						type = ship_hull_light
+						count = 2
+					}
+					destroy_ships = {
+						type = ship_hull_heavy
+						count = 2
+					}
+				}
+			}
+			10 = {
+				random_other_country = {
+					limit = {
+						original_tag = FRA
+						has_government = fascism
+					}
+					destroy_ships = {
+						type = ship_hull_light
+						count = 4
+					}
+					destroy_ships = {
+						type = ship_hull_heavy
+						count = 3
+					}
+				}
+			}
+		}
+	}
+	#let it go
+	option = {
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 0
+				FROM = { has_opinion = { target = ENG value < -99 } }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { has_opinion = { target = ENG value > -50 } }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { has_opinion = { target = ENG value > -25 } }
+			}
+			modifier = {
+				factor = 2
+				FROM = { has_opinion = { target = ENG value > 0 } }
+			}
+		}
+		name = wtt_britain.27.b
+		add_war_support = -0.05
+	}
+}

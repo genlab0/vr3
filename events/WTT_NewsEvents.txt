@@ -1,0 +1,428 @@
+﻿add_namespace = wtt_news
+
+# Formation of Byzantine Empire
+news_event = {
+	id = wtt_news.66
+	title = wtt_news.66.t
+	desc = wtt_news.66.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.66.a
+		trigger = {
+			original_tag = BUL
+		}
+	}
+	option = {
+		name = wtt_news.66.b
+		trigger = {
+			NOT = { original_tag = BUL }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+# Canals - Suez Canal Blown
+news_event = {
+	id = wtt_news.40
+	title = wtt_news.40.t
+	desc = {
+		text = wtt_news.40.desc_eng
+		trigger = {
+			FROM = {
+				has_country_flag = blew_up_suez
+				owns_state = 446
+				#owns_state = 453
+			}
+		}
+	}
+	desc = {
+		text = wtt_news.40.desc_not_eng
+		trigger = {
+			FROM = {
+				OR = {
+					NOT = {	has_country_flag = blew_up_suez }
+					NOT = {
+						owns_state = 446
+						#owns_state = 453
+					}
+				}
+			}
+		}
+	}
+	picture = GFX_news_event_020
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.40.a
+		trigger = {
+			NOT = { has_country_flag = blew_up_suez }
+			owns_state = 446
+			#owns_state = 453
+		}
+		if = {
+			limit = {
+				original_tag = ENG
+			}
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+	}
+	option = {
+		name = wtt_news.40.b
+		trigger = {
+			has_country_flag = blew_up_suez
+			owns_state = 446
+			#owns_state = 453
+		}
+		if = {
+			limit = {
+				original_tag = ENG
+			}
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+		clr_country_flag = blew_up_suez
+	}
+	option = {
+		name = wtt_news.40.c
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 446
+				#owns_state = 453
+				has_country_flag = blew_up_suez
+			}
+		}
+	}
+	option = {
+		name = wtt_news.40.d
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 446
+				#owns_state = 453
+			}
+			has_country_flag = blew_up_suez
+		}
+		clr_country_flag = blew_up_suez
+	}
+	option = {
+		name = wtt_news.40.e
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 446
+				#owns_state = 453
+				NOT = { has_country_flag = blew_up_suez }
+			}
+			any_other_country = {
+				has_war_together_with = ROOT
+				has_country_flag = blew_up_suez
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+	option = {
+		name = wtt_news.40.f
+		trigger = {
+			any_other_country = {
+				has_war_together_with = ROOT
+				owns_state = 446
+				#owns_state = 453
+				has_country_flag = blew_up_suez
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+	option = {
+		name = wtt_news.40.g
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				has_country_flag = blew_up_suez
+			}
+			any_other_country = {
+				has_war_together_with = ROOT
+				owns_state = 446
+				#owns_state = 453
+				NOT = { has_country_flag = blew_up_suez }
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+	option = {
+		name = wtt_news.40.h
+		trigger = {
+			NOT = {
+				any_country = {
+					has_war_with = ROOT
+					has_country_flag = blew_up_suez
+				}
+			}
+			NOT = {
+				any_other_country = {
+					has_war_together_with = ROOT
+					owns_state = 446
+					#owns_state = 453
+					has_country_flag = blew_up_suez
+				}
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+}
+# Canals - Suez Canal Rebuilt
+news_event = {
+	id = wtt_news.42
+	title = wtt_news.42.t
+	desc = wtt_news.42.desc
+	picture = GFX_news_event_020
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.42.a
+		trigger = {
+			original_tag = ENG
+			has_country_flag = rebuilt_suez
+		}
+		clr_country_flag = rebuilt_suez
+	}
+	option = {
+		name = wtt_news.42.b
+		trigger = {
+			NOT = { original_tag = ENG }
+			has_country_flag = rebuilt_suez
+		}
+		clr_country_flag = rebuilt_suez
+	}
+	option = {
+		name = wtt_news.42.c
+		trigger = {
+			any_other_country = {
+				has_war_together_with = ROOT
+				has_country_flag = rebuilt_suez
+			}
+			NOT = { has_country_flag = rebuilt_suez }
+		}
+	}
+	option = {
+		name = wtt_news.42.d
+		trigger = {
+			any_other_country = {
+				has_war_with = ROOT
+				has_country_flag = rebuilt_suez
+			}
+			NOT = { has_country_flag = rebuilt_suez }
+		}
+	}
+	option = {
+		name = wtt_news.42.e
+		trigger = {
+			NOT = { has_country_flag = rebuilt_suez }
+			NOT = {
+				any_other_country = {
+					has_war_together_with = ROOT
+					has_country_flag = rebuilt_suez
+				}
+			}
+			NOT = {
+				any_other_country = {
+					has_war_with = ROOT
+					has_country_flag = rebuilt_suez
+				}
+			}
+		}
+	}
+}
+
+
+# Germany - Hitler assassinated by Wehrmacht officers
+news_event = {
+	id = wtt_news.50
+	title = wtt_news.50.t
+	desc = wtt_news.50.desc
+	picture = GFX_news_event_generic_ruins
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.50.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.50.b
+		trigger = {
+			is_in_faction_with = GER
+			NOT = {
+				original_tag = GER
+			}
+		}
+	}
+	option = {
+		name = wtt_news.50.c
+		trigger = {
+			has_war_with = GER
+		}
+	}
+	option = {
+		name = wtt_news.50.d
+		trigger = {
+			NOT = {
+			 	has_war_with = GER
+			}
+			NOT = {
+				original_tag = GER
+			}
+			NOT = {
+				is_in_faction_with = GER
+			}
+		}
+	}
+}
+# Germany - assassination attempt on Hitler by Wehrmacht officers
+news_event = {
+	id = wtt_news.51
+	title = wtt_news.51.t
+	desc = wtt_news.51.desc
+	picture = GFX_news_event_generic_ruins
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.50.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.50.b
+		trigger = {
+			is_in_faction_with = GER
+			NOT = {
+				original_tag = GER
+			}
+		}
+	}
+	option = {
+		name = wtt_news.51.c
+		trigger = {
+			has_war_with = GER
+		}
+	}
+	option = {
+		name = wtt_news.50.d
+		trigger = {
+			NOT = {
+			 	has_war_with = GER
+			}
+			NOT = {
+				original_tag = GER
+			}
+			NOT = {
+				is_in_faction_with = GER
+			}
+		}
+	}
+}
+
+# Germany - Hitler assassinated by SS
+news_event = {
+	id = wtt_news.52
+	title = wtt_news.51.t
+	desc = wtt_news.52.desc
+	picture = GFX_news_event_generic_ruins
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.50.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.50.b
+		trigger = {
+			is_in_faction_with = GER
+			NOT = {
+				original_tag = GER
+			}
+		}
+	}
+	option = {
+		name = wtt_news.50.c
+		trigger = {
+			has_war_with = GER
+		}
+	}
+	option = {
+		name = wtt_news.50.d
+		trigger = {
+			NOT = {
+			 	has_war_with = GER
+			}
+			NOT = {
+				original_tag = GER
+			}
+			NOT = {
+				is_in_faction_with = GER
+			}
+		}
+	}
+}
+
+
+###############
+news_event = {
+	id = wtt_news.1000
+	title = wtt_germany.1001.t
+	desc = wtt_news.1000.desc
+	picture = GFX_news_event_japanese_parade
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+	
+	option = {
+		name = wtt_news.1000.a
+		trigger = {
+			NOT = { original_tag = GER }
+		}
+	}
+}
+
+news_event = {
+	id = wtt_news.1001
+	title = wtt_germany.1001.t
+	desc = wtt_news.1001.desc
+	picture = GFX_news_event_japanese_parade
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+	
+	option = {
+		name = wtt_news.1001.a
+		trigger = {
+			NOT = { original_tag = GER }
+		}
+	}
+}

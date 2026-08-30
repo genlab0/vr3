@@ -1,0 +1,568 @@
+﻿add_namespace = britain 
+
+
+### The Fall of Britain
+
+#hidden pre-event to check before capitulation
+country_event = {
+	id = britain.27
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = ENG
+		has_war_with = GER
+		AND = {
+			127 = { NOT = { is_controlled_by = ENG } }
+			123 = { NOT = { is_controlled_by = ENG } }
+			338 = { NOT = { is_controlled_by = ENG } }
+			126 = { NOT = { is_controlled_by = ENG } }
+			125 = { NOT = { is_controlled_by = ENG } }
+			129 = { NOT = { is_controlled_by = ENG } }
+			122 = { NOT = { is_controlled_by = ENG } }
+			130 = { NOT = { is_controlled_by = ENG } }
+			132 = { NOT = { is_controlled_by = ENG } }
+		}
+	}
+	mean_time_to_happen = { days = 1 }
+	immediate = {
+		country_event = britain.28
+	}
+}
+
+# England Capitulates
+country_event = {
+	id = britain.28
+	title = britain.28.t
+	desc = britain.28.d
+	picture = GFX_report_event_french_british_officers
+	
+	is_triggered_only = yes
+	immediate = { hidden_effect = { ENG_capitulation_effect = yes  } }
+
+	option = {
+		trigger = { tag = ENG }
+		name = britain.28.a
+	}
+	option = {
+		trigger = { NOT = { tag = ENG }}
+		name = britain.28.b
+	}
+}
+
+##Liberation of Britain
+#country_event = {
+#	id = britain.29
+#	hidden = yes
+#	trigger = {
+#		AND = {
+#			AND = {
+#				123 = { is_controlled_by = ENG }
+#				126 = { is_controlled_by = ENG }
+#				127 = { is_controlled_by = ENG }
+#				338 = { is_controlled_by = ENG }
+#				125 = { is_controlled_by = ENG }
+#				129 = { is_controlled_by = ENG }
+#				128 = { is_controlled_by = ENG }
+#				122 = { is_controlled_by = ENG }
+#				132 = { is_controlled_by = ENG }
+#				130 = { is_controlled_by = ENG }
+#				131 = { is_controlled_by = ENG }
+#				931 = { is_controlled_by = ENG }
+#				121 = { is_controlled_by = ENG }
+#				133 = { is_controlled_by = ENG }
+#				136 = { is_controlled_by = ENG }
+#				120 = { is_controlled_by = ENG }
+#			}
+#			has_global_flag = ENG_capitulated
+#		}
+#	}
+#	fire_only_once = yes
+#	mean_time_to_happen = { days = 1 }
+#	immediate = {
+#		hidden_effect = {
+#			ENG_liberation_effect = yes
+#			news_event = { id = news.416 hours = 6 } 
+#		}
+#	}
+#}
+
+
+# Chamberlain Resigns
+country_event = {
+	id = britain.9
+	title = britain.9.t
+	desc = britain.9.d
+	picture = GFX_report_event_chamberlain
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		has_war = yes
+		has_government = democratic
+		POL = { has_capitulated = yes }
+		OR = {
+			has_global_flag = fall_of_france
+			FRA = { surrender_progress > 0.1 }
+			HOL = { surrender_progress > 0.1 }
+			BEL = { surrender_progress > 0.1 }
+			LUX = { surrender_progress > 0.1 }
+			DEN = { surrender_progress > 0.1 }
+			NOR = { surrender_progress > 0.1 }
+			AND = {
+				110 = { is_controlled_by = GER }
+				NOT = { is_in_faction_with = GER }
+			}
+		}
+		NOT = { has_country_flag = chamberlain_died }
+		has_country_leader = {
+			character = ENG_neville_chamberlain
+			ruling_only = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 4
+	}
+
+	immediate = { set_country_flag = chamberlain_resigned }
+	
+	option = {
+		name = britain.9.a
+		promote_character = ENG_winston_churchill
+		retire_character = ENG_neville_chamberlain
+		add_stability = 0.1
+		add_war_support = 0.1
+
+	}
+}
+
+
+# Chamberlain Passes Away
+country_event = {
+	id = britain.10
+	title = britain.10.t
+	desc = britain.10.d
+	picture = GFX_report_event_chamberlain
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		has_government = democratic
+		date > 1940.9.11
+		NOT = { has_country_flag = chamberlain_resigned }
+		has_country_leader = {
+			character = ENG_neville_chamberlain
+			ruling_only = yes
+		}
+	}	
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = { set_country_flag = chamberlain_died }
+
+	option = {
+		name = britain.10.a
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Winston Churchill"
+			desc = "POLITICS_WINSTON_CHURCHILL_DESC"
+			picture = GFX_portrait_Winston_Churchill
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+				british_bulldog
+			}
+		}
+	}
+	option = {
+		name = britain.10.b
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Lord Edward Halifax"
+			desc = "POLITICS_EDWARD_HALIFAX_DESC"
+			picture = GFX_portrait_Lord_Edward_Halifax
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+				
+			}
+		}
+	}
+}
+
+
+
+
+# France leaves the Allies
+country_event = {
+	id = britain.15
+	title = britain.15.t
+	desc = britain.15.d
+	picture = GFX_report_event_french_british_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.15.a
+		FRA = {
+			add_opinion_modifier = { target = ENG modifier = abandoned_yugoslavia }
+		}
+	}
+}
+
+# King dies
+country_event = {
+	id = britain.16
+	title = britain.16.t
+	desc = britain.16.d
+	picture = GFX_report_event_europe_funeral
+	
+	# trigger = {
+	# 	tag = ENG
+	# 	date > 1936.1.19
+	# 	has_start_date < 1936.01.02
+	# }	
+
+	# fire_only_once = yes
+
+	# mean_time_to_happen = { days = 7 }
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ENG_king_died
+			remove_ideas = george_v
+			add_ideas = ENG_king_edward
+		}		
+	}
+	
+	option = {
+		name = britain.16.a
+		effect_tooltip = {
+			remove_ideas = george_v		
+			add_ideas = ENG_king_edward
+		}
+	}
+}
+
+# King abdicates
+country_event = {
+	id = britain.17
+	title = britain.17.t
+	desc = britain.17.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	trigger = {
+		tag = ENG
+		has_country_flag = ENG_king_died
+		date > 1936.12.1
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 14 }
+	
+	immediate = {
+		hidden_effect = {
+			remove_ideas = ENG_king_edward
+			add_ideas = ENG_george_vi		
+		}
+	}
+
+	option = {
+		name = britain.17.a
+		effect_tooltip = {
+			remove_ideas = ENG_king_edward
+			add_ideas = ENG_george_vi		
+		}
+	}
+}
+
+
+
+# Stanley Baldwin Resigns
+country_event = {
+    id = britain.22
+    title = britain.22.t
+    desc = britain.22.d
+    picture = GFX_report_event_royal_parade
+ 
+    # fire_only_once = yes
+ 
+    # trigger = {
+    #     original_tag = ENG
+    #     has_government = democratic
+    #     has_idea = ENG_george_vi
+    #     date > 1937.5.27
+    #     has_start_date < 1936.01.02
+    #     NOT = { has_country_flag = baldwin_resigned }
+    # }
+
+    # mean_time_to_happen = {
+    #     days = 7
+    # }
+
+	is_triggered_only = yes
+
+	option = {
+        name = britain.22.a
+        retire_country_leader = yes
+		create_country_leader = {
+        	name = "Neville Chamberlain"
+        	desc = "POLITICS_NEVILLE_CHAMBERLAIN_DESC"
+			picture = GFX_portrait_Neville_Chamberlain
+        	expire = "1965.1.1"
+        	ideology = conservatism
+        	traits = {
+        		chamberlain_appeaser rearmer
+        	}
+		}
+        set_country_flag = baldwin_resigned
+	}
+}
+
+
+# Shadow Scheme Factories
+country_event = {
+    id = britain.24
+    title = britain.24.t
+    desc = britain.24.d
+    picture = GFX_report_event_generic_factory
+ 
+    fire_only_once = yes
+ 
+    trigger = {
+        original_tag = ENG
+        has_completed_focus = shadow_scheme_focus
+        has_war = yes
+    }
+
+    mean_time_to_happen = {
+        days = 7
+    }
+
+    option = {
+        name = britain.24.a
+        random_owned_controlled_state = {
+			limit = {
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = shadow_scheme_2AF
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_in_home_area = yes
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = shadow_scheme_2AF
+		}
+    }
+}
+#Operation Countenance
+country_event = {
+	id = britain.25
+	title = britain.25.t
+	desc = britain.25.d
+	picture = GFX_report_event_indian_soldiers
+
+	is_triggered_only = yes
+
+	
+	immediate = {
+		hidden_effect = {
+			410 = { transfer_state_to = ENG }
+			414 = { transfer_state_to = ENG }
+			412 = { transfer_state_to = ENG }
+			411 = { transfer_state_to = ENG }
+			417 = { transfer_state_to = ENG }
+			413 = { transfer_state_to = ENG }
+			421 = { transfer_state_to = ENG }
+
+			419 = { transfer_state_to = WST }
+			420 = { transfer_state_to = WST }
+			266 = { transfer_state_to = WST }
+			416 = { transfer_state_to = WST }
+			418 = { transfer_state_to = WST }
+
+			division_template = {
+				name = "Persian Mountaineers"
+				division_names_group = ENG_INF_01
+				priority = 0
+				regiments = {
+					mountaineers = { x = 0 y = 0 }
+					mountaineers = { x = 0 y = 1 }
+					mountaineers = { x = 0 y = 2 }
+					mountaineers = { x = 0 y = 3 }
+					mountaineers = { x = 0 y = 4 }
+
+					mountaineers = { x = 1 y = 0 }
+					mountaineers = { x = 1 y = 1 }
+					mountaineers = { x = 1 y = 2 }
+					mountaineers = { x = 1 y = 3 }
+					mountaineers = { x = 1 y = 4 }
+
+					mountaineers = { x = 2 y = 0 }
+					mountaineers = { x = 2 y = 1 }
+					mountaineers = { x = 2 y = 2 }
+					mountaineers = { x = 2 y = 3 }
+					mountaineers = { x = 2 y = 4 }
+
+					artillery_brigade = { x = 3 y = 0 }
+					artillery_brigade = { x = 3 y = 1 }
+					artillery_brigade = { x = 3 y = 2 }
+					anti_tank_brigade = { x = 3 y = 3 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					anti_air = { x = 0 y = 1 }
+					engineer = { x = 0 y = 2 }
+					anti_tank = { x = 0 y = 3 }
+					light_tank_recon = { x = 0 y = 4 }
+				}
+			}
+			load_oob = "ENG_countenance_oob"
+		}
+	}
+	option = {
+		name = britain.25.a
+	}
+}
+
+country_event = {
+	id = britain.26
+	title = britain.26.t
+	desc = britain.26.d
+	picture = GFX_report_event_indian_soldiers
+
+	is_triggered_only = yes
+
+	
+	immediate = {
+		hidden_effect = {
+			460 = { transfer_state_to = ENG }
+			461 = { transfer_state_to = ENG }
+			462 = { transfer_state_to = ENG }
+			459 = { transfer_state_to = ENG }
+			513 = { transfer_state_to = ENG }
+			514 = { transfer_state_to = ENG }
+
+			if = { 
+				limit = {
+					AND = {
+						458 = {
+							NOT = {
+								is_controlled_by = ITA
+							}
+						}
+						448 = {
+							is_controlled_by = ITA
+						}
+						661 = {
+							is_controlled_by = ITA
+						}
+					}
+				}
+				458 = { transfer_state_to = ITA}
+			}
+
+			if = { 
+				limit = {
+					AND = {
+						665 = {
+							NOT = {
+								is_controlled_by = ITA
+							}
+						}
+						448 = {
+							is_controlled_by = ITA
+						}
+						661 = {
+							is_controlled_by = ITA
+						}
+					}
+				}
+				665 = { transfer_state_to = ITA}
+			}
+
+
+			division_template = {
+				name = "Torch Mountaineers"
+				division_names_group = ENG_INF_01
+				priority = 0
+				regiments = {
+					mountaineers = { x = 0 y = 0 }
+					mountaineers = { x = 0 y = 1 }
+					mountaineers = { x = 0 y = 2 }
+					mountaineers = { x = 0 y = 3 }
+					mountaineers = { x = 0 y = 4 }
+
+					mountaineers = { x = 1 y = 0 }
+					mountaineers = { x = 1 y = 1 }
+					mountaineers = { x = 1 y = 2 }
+					mountaineers = { x = 1 y = 3 }
+					mountaineers = { x = 1 y = 4 }
+
+					mountaineers = { x = 2 y = 0 }
+					mountaineers = { x = 2 y = 1 }
+					mountaineers = { x = 2 y = 2 }
+					mountaineers = { x = 2 y = 3 }
+					mountaineers = { x = 2 y = 4 }
+
+					artillery_brigade = { x = 3 y = 0 }
+					artillery_brigade = { x = 3 y = 1 }
+					artillery_brigade = { x = 3 y = 2 }
+					anti_tank_brigade = { x = 3 y = 3 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					anti_air = { x = 0 y = 1 }
+					engineer = { x = 0 y = 2 }
+					anti_tank = { x = 0 y = 3 }
+					light_tank_recon = { x = 0 y = 4 }
+				}
+			}
+			load_oob = "ENG_torch_oob"
+			GER = {
+				if = {
+					limit = { 
+						VIC = { is_ai = yes }
+					}
+					country_event = {
+						id = germany.1003
+						days = 2
+					}
+				}
+			}
+		}
+	}
+	option = {
+			name = britain.26.a
+	}
+}

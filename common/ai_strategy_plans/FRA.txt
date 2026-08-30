@@ -1,0 +1,59 @@
+france_historical = {
+	name = "English historical plan"
+	desc = "Essentially historical behaviour for Britain"
+
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		date>1960.1.1
+	}
+
+	ai_national_focuses = {
+		FRA_begin_rearmament
+		FRA_defensive_focus
+		FRA_defensive_strategems
+
+		FRA_revive_the_national_bloc
+		FRA_review_foreign_policy
+		FRA_buy_time
+		FRA_strengthen_government_support
+		FRA_devalue_the_franc
+		FRA_laissez_faire
+		FRA_economic_devolution
+		FRA_promote_entrepeneurship
+		FRA_stimulate_the_dynamic_market
+
+		FRA_invest_in_the_colonies
+		FRA_colonial_industry
+		FRA_military_factories
+		FRA_methodical_battle
+		FRA_extend_the_maginot_line
+		FRA_army_reform
+		FRA_arms_purchases_in_the_us
+
+		FRA_protect_the_rights_of_man
+
+		FRA_refus_absurde
+		FRA_appeal_to_the_french_nation
+		FRA_colonial_naval_bases
+		FRA_continue_the_fight
+		FRA_the_free_french_navy
+		FRA_appeal_to_overseas_territories
+		FRA_intervention_in_north_africa
+
+	}
+
+	research = {
+		infantry_tech = 15.0
+		support_tech = 6.5
+	}
+
+	traits = {
+		silent_workhorse = 10
+	}
+
+}

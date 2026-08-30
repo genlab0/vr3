@@ -1,0 +1,34 @@
+on_actions = {
+
+
+	#FROM is war target
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							tag = GER
+							FROM = { tag = SOV }
+						}
+						AND = {
+							tag = SOV
+							FROM = { tag = GER }
+						}
+					}
+					GER = { has_completed_focus = GER_ussr_war_goal }
+				}
+				hidden_effect = {
+					GER = { 
+						add_timed_idea = { idea = GER_barbarossa days = 180 }
+						activate_mission = GER_barbarossa_mission
+					}
+					HUN = { add_timed_idea = { idea = GER_barbarossa days = 180 }}
+					ROM = { add_timed_idea = { idea = GER_barbarossa days = 180 }}
+					ITA = { add_timed_idea = { idea = GER_barbarossa days = 180 }}
+					SPR = { add_timed_idea = { idea = GER_barbarossa days = 180 }}
+				}
+			}
+		}
+	}
+}

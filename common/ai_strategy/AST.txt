@@ -1,0 +1,288 @@
+AST_train_production = {
+	allowed = {
+		original_tag = AST
+	}
+
+	enable = {
+		date<1950.1.1
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = train
+		value = 1  # Always have some production of trains
+	}
+}
+
+AST_bba_air_prod = {
+	# TODO BFW:
+	allowed = { original_tag = AST }
+	enable = {
+		date>1936.1.1
+	}
+
+	abort_when_not_enabled = yes
+
+	# Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = -5000
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -5000
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -5000
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -5000
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = large_plane_airframe
+		value = -5000
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = heavy_fighter
+		value = -5000
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = heavy_fighter
+		value = -5000
+	}
+}
+
+AST_civs = {
+	allowed = {
+		original_tag = AST 
+	}
+	enable = {
+		date<1938.1.1
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 22
+	}
+}
+AST_mills = {
+	allowed = {
+		original_tag = AST
+	}
+	enable = {
+		date>1938.1.1
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 2000
+	}
+}
+
+AST_unit_production_early = {
+	allowed = {
+		original_tag = AST
+	}
+	enable = {
+		date<1940.1.1
+	}
+	abort_when_not_enabled = yes 
+
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = 200
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 200
+	}
+	#Please don't do tanks ty
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = -10000
+	}
+}
+
+AST_unit_production_early = {
+	allowed = {
+		original_tag = AST
+	}
+	enable = {
+		date>1940.1.1
+	}
+	abort_when_not_enabled = yes 
+
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = 400
+	}
+	ai_strategy = {
+		type = build_army
+		id = marines
+		value = 300
+	}
+	#Please don't do tanks ty
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = -100
+	}
+}
+
+AST_try_to_hold_africa = {
+	allowed = {
+		original_tag = AST
+	}
+	enable = {
+		date<1940.10.1
+	}
+	abort_when_not_enabled = yes 
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = ENG
+		value = 300
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = FRA
+		value = 1000
+	}
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+}
+
+AST_go_home = {
+	allowed = {
+		original_tag = AST
+	}
+	enable = {
+		date>1940.10.1
+	}
+	abort_when_not_enabled = yes 
+
+	ai_strategy = {
+		type = garrison
+		value = 150
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = JAP
+		value = 200
+	}
+	#Just give up on that one mate
+	ai_strategy = {
+		type = front_unit_request
+		state = 336
+		value = -100
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.35
+		states = {
+			672
+			333
+			334
+			333
+		}
+		subtract_fronts_from_need = no
+	}
+	ai_strategy = {
+		type = front_control
+		tag = JAP
+		ratio = 0.25						# The strategy is enabled only if ratio of the front covered by this strategy's targets is greater than this ratio.
+		priority = 10						# Default 0, higher prio strats will override lower.
+		ordertype = front					# `front` or `invasion`. If set this strategy will only apply to that specific order type.
+		execution_type = careful
+		execute_order = no					# `yes` or `no`. If set will override execute or not decision of front.
+		manual_attack = yes					# Default `yes`. If `no` AI will not do manual pokes at enemy (only for front orders).
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 75
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 73
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 78
+		value = 100
+	}	
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 76
+		value = 100
+	}	
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 81
+		value = 70
+	}	
+}
+
+AST_ignore_this = {
+
+	allowed = {
+		original_tag = AST
+	}
+	enable = {
+		original_tag = AST
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = CHI
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = PER
+		value = -1000
+	}
+}
+
+AST_support_spain = {
+	allowed = {
+		original_tag = AST
+	}
+	enable = {
+		country_exists = SPD
+	}
+	abort = {
+		date>1940.1.1
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SPD"
+		value = 1000
+	}
+}

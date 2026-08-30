@@ -1,0 +1,140 @@
+technologies = {
+    hpspirit = {
+		research_cost = 1
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		medium_armor = {
+			max_strength = 3
+		}
+		light_armor = {
+			max_strength = 3
+		}
+		heavy_armor = {
+			max_strength = 3
+		}
+        heavy_tank_destroyer_brigade = {
+			max_strength = 3
+		}
+        medium_tank_destroyer_brigade = {
+			max_strength = 3
+		}
+        light_tank_destroyer_brigade = {
+			max_strength = 3
+		}
+        light_sp_artillery_brigade = {
+			max_strength = 3
+		}
+		medium_sp_artillery_brigade = {
+			max_strength = 3
+		}
+		heavy_sp_artillery_brigade = {
+			max_strength = 3
+		}
+		super_heavy_sp_artillery_brigade = {
+			max_strength = 3
+		}
+        motorized = {
+			max_strength = 12
+		}
+		mechanized = {
+			max_strength = 15
+		}
+		amphibious_mechanized = {
+			max_strength = 15
+		}
+	}
+
+    hpspirit_gone = {
+		research_cost = 1
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		medium_armor = {
+			max_strength = -3
+		}
+		light_armor = {
+			max_strength = -3
+		}
+		heavy_armor = {
+			max_strength = -3
+		}
+        heavy_tank_destroyer_brigade = {
+			max_strength = -3
+		}
+        medium_tank_destroyer_brigade = {
+			max_strength = -3
+		}
+        light_tank_destroyer_brigade = {
+			max_strength = -3
+		}
+        light_sp_artillery_brigade = {
+			max_strength = -3
+		}
+		medium_sp_artillery_brigade = {
+			max_strength = -3
+		}
+		heavy_sp_artillery_brigade = {
+			max_strength = -3
+		}
+		super_heavy_sp_artillery_brigade = {
+			max_strength = -3
+		}
+        motorized = {
+			max_strength = -12
+		}
+		mechanized = {
+			max_strength = -15
+		}
+		amphibious_mechanized = {
+			max_strength = -15
+		}
+	}
+
+	you_cant_build_this_tech = {
+		research_cost = 1
+		start_year = 1936
+		allow = {
+			always = no
+		}
+
+		enable_building = {
+			building = stronghold_network
+			level = 1
+		}
+		enable_building = {
+			building = air_facility
+			level = 1
+		}
+		enable_building = {
+			building = land_facility
+			level = 1
+		}
+		enable_building = {
+			building = naval_facility
+			level = 1
+		}
+		enable_building = {
+			building = mega_gun_emplacement
+			level = 1
+		}
+		enable_building = {
+			building = rocket_site
+			level = 1
+		}
+		enable_building = {
+			building = nuclear_reactor_heavy_water
+			level = 1
+		}
+		enable_building = {
+			building = nuclear_facility
+			level = 1
+		}
+		enable_building = {
+			building = commercial_nuclear_reactor
+			level = 1
+		}
+	}
+}

@@ -1,0 +1,26 @@
+################
+##### FRA ######
+################
+
+FRA_legitimacy_power_balance = {
+	icon = GFX_decision_category_power_struggle
+	
+	allowed = {
+		original_tag = FRA
+	}
+	
+	priority = 90
+	
+	visible = {
+		
+	}
+}
+
+
+
+FRA_civil_unrest_category = {
+	icon = power_struggle
+	allowed = {
+		original_tag = FRA
+	}
+}

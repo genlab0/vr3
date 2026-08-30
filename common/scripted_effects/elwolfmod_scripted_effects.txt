@@ -1,0 +1,1928 @@
+elwolfmod_vichy_france = {
+	set_global_flag = FRA_capitulated_flag
+	GER = { 
+		add_timed_idea = { idea = GER_france_reparations_idea days = 365 } 
+	}
+	if = {
+		limit = { GER = { is_ai = no } }
+		GER = { country_event = { hours = 36 id = germany.1002 } }
+	}
+	FRA = {
+		transfer_state = 713
+		set_capital = {
+			state = 539
+		}
+		set_cosmetic_tag = FRA_FREE
+		add_ideas = FRA_defeatism
+	}
+	
+
+	GER = { 
+		transfer_state = 28
+		transfer_state = 17
+		transfer_state = 27
+		transfer_state = 18
+		transfer_state = 24
+		transfer_state = 16
+		transfer_state = 785
+		transfer_state = 15
+		transfer_state = 30
+		transfer_state = 23
+		transfer_state = 14
+		transfer_state = 19
+		transfer_state = 29
+		transfer_state = 806	       
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 65000
+			producer = FRA 
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_2
+			amount = 15000
+			producer = FRA 
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 3000
+			producer = FRA 
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = 2500
+			producer = FRA 
+		}
+		add_equipment_to_stockpile = {
+			type = anti_tank_equipment_1
+			amount = 2000
+			producer = FRA 
+		}
+		add_equipment_to_stockpile = {
+			type = train_equipment_1
+			amount = 150
+			producer = FRA 
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 2500
+			producer = FRA 
+		}
+	}
+	remove_france_construction_restriction = yes
+	ITA = {
+		transfer_state = 1
+	}
+	VIC = {
+		if = {
+				limit = {
+					NOT = { has_government = fascism }
+				}
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+			}	
+		}
+		VIC = {
+		add_popularity = { ideology = fascism popularity = 0.25 }
+		}
+		VIC = {
+			if = {
+					limit = {
+						has_country_leader = { character = VIC_no_government }
+					}
+					hidden_effect = { 
+						retire_country_leader = yes 
+					}
+				}
+			}
+		VIC = {
+			add_country_leader_role = {
+			character = FRA_philippe_petain
+			country_leader = {
+				ideology = fascism_ideology 
+				expire = "1965.1.1.1"
+			id = -1
+			}
+			promote_leader = yes 
+		}
+		#Algeria/Morocco
+		transfer_state = 461
+		transfer_state = 462
+		transfer_state = 459
+		transfer_state = 513
+		transfer_state = 460
+		transfer_state = 458
+		transfer_state = 665
+		transfer_state = 514
+
+		#France:
+		transfer_state = 32
+		transfer_state = 20
+		transfer_state = 21
+		transfer_state = 22
+		transfer_state = 31
+		transfer_state = 25
+		transfer_state = 33
+		transfer_state = 26
+		transfer_state = 851
+		transfer_state = 735
+
+		give_resource_rights = { receiver = GER state = 20 }
+		give_resource_rights = { receiver = GER state = 22 }
+		give_resource_rights = { receiver = GER state = 32 }
+		give_resource_rights = { receiver = GER state = 21 }
+		set_technology = { }
+	}
+	FRA = {
+		transfer_units_fraction= {
+			target = WST
+			size = 1
+			navy_ratio = 0
+			keep_unit_leaders_trigger = { always = yes }
+		}
+		transfer_units_fraction= {
+			target = VIC
+			size = 0
+			navy_ratio = 0.8
+			keep_unit_leaders_trigger = { always = yes }
+		}
+		add_equipment_to_stockpile = {
+			type = convoy_1
+			amount = 500
+			producer = FRA
+		}
+		ENG = {
+			set_autonomy = {
+				target = FRA
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.4
+			}
+		}
+		retire_country_leader = yes
+		add_ideas = FRA_defeatism
+		remove_ideas = FRA_full_employment
+		remove_ideas = FRA_protected_by_the_maginot_line
+		remove_ideas = FRA_victors_of_wwi
+		FRA_initiate_legitimacy_power_balance = yes
+		transfer_state = 775
+		transfer_state = 774
+		transfer_state = 660
+		transfer_state = 773
+		transfer_state = 539
+		transfer_state = 772
+		transfer_state = 268
+		transfer_state = 320
+		transfer_state = 635
+		transfer_state = 730
+		create_country_leader = {
+			name = "Charles de Gaulle"
+			desc = "POLITICS_CHARLES_DE_GAULLE_DESC"
+			picture = "Portrait_France_Charles_De_Gaulle.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+		}
+	}
+	WST = {
+		every_state = {
+			limit = { is_owned_and_controlled_by = WST }
+			teleport_armies = { to_state = 967 }
+		}
+	}
+}
+
+elwolfmod_capitulations_on_actions = {
+	if = {
+		limit = {
+			original_tag = POL
+			POL = { has_war_with = GER }
+		}
+		ENG = {
+			country_event = { id = britain.9 days = 1 }
+		}
+		SOV = {
+			transfer_state = 784
+			transfer_state = 96
+			transfer_state = 95
+			transfer_state = 94
+			transfer_state = 93
+			transfer_state = 91
+			transfer_state = 89
+			transfer_state = 97
+		}
+	}
+	if = {
+		limit = {
+			original_tag = BEL
+			GER = { has_war_with = BEL }
+			NOT = {
+				361 = { is_owned_and_controlled_by = WST }
+			}
+		}
+		BEL = {
+			transfer_state = 889
+			transfer_state = 888
+			transfer_state = 295
+			transfer_state = 890
+			transfer_state = 538
+			transfer_state = 718
+			transfer_state = 768
+			transfer_state = 769
+		}
+	}
+	# Soviet Union
+	if = {
+		limit = { 
+			original_tag = SOV
+			GER = { has_war_with = SOV }
+		} 
+		GER = {
+			annex_country = {
+				target = SOV
+				transfer_troops = no
+			}
+		}
+	}
+
+}
+generic_bonus_1 = {
+	add_tech_bonus = { 
+	name = "Generic 100 Bonus" bonus = 1 uses = 1
+	category = air_equipment category = industry 
+	category = artillery category = naval_equipment	
+	category = motorized_equipment   category =	armor 
+	category = electronics	category = nuclear 
+	category = land_doctrine category = infantry_weapons 
+	category = air_doctrine category = naval_doctrine   
+	category = tp_tech   category = support_tech 
+	}
+}
+
+generic_bonus_3 = {
+	add_tech_bonus = { 
+	name = "Generic 300 Bonus"  bonus = 3 uses = 1
+	category = air_equipment category = industry 
+	category = artillery category = naval_equipment	
+	category = motorized_equipment   category =	armor 
+	category = electronics	category = nuclear 
+	category = land_doctrine category = infantry_weapons 
+	category = air_doctrine category = naval_doctrine   
+	category = tp_tech   category = support_tech 
+	}
+}
+generic_bonus_2y = {
+	add_tech_bonus = { 
+	name = "Generic 2y Bonus"  ahead_reduction = 2 bonus = 1 uses = 1
+	category = air_equipment category = industry 
+	category = artillery category = naval_equipment	
+	category = motorized_equipment   category =	armor 
+	category = electronics	category = nuclear 
+	category = land_doctrine category = infantry_weapons 
+	category = air_doctrine category = naval_doctrine   
+	category = tp_tech   category = support_tech 
+	}
+}
+
+generic_bonus_999 = {
+	add_tech_bonus = { 
+	name = "Generic 99999 Bonus"  bonus = 999.99 uses = 1 
+	category = air_equipment category = industry 
+	category = artillery category = naval_equipment	
+	category = motorized_equipment   category =	armor 
+	category = electronics	category = nuclear 
+	category = land_doctrine category = infantry_weapons 
+	category = air_doctrine category = naval_doctrine   
+	category = tp_tech   category = support_tech 
+	}
+}
+
+remove_france_construction_restriction = {
+	every_state = {
+		limit = {
+			OR = {
+				state = 28
+				state = 17
+				state = 18					
+				state = 29
+				state = 785
+				state = 15
+				state = 16
+				state = 27
+				state = 24
+				state = 30
+				state = 14
+				state = 20
+				state = 735
+				state = 851
+				state = 21
+				state = 32
+				state = 26
+				state = 31
+				state = 25
+				state = 33
+				state = 23
+				state = 19
+				state = 806
+				state = 22
+				state = 1
+			}
+		}
+		clr_state_flag = no_construction_flag
+		remove_dynamic_modifier = {
+			modifier = no_construction
+		}
+	}
+}
+
+dday_wall_setup = {
+	every_state = {
+		limit = {
+			OR = {
+				state = 806
+				state = 19
+				state = 23					
+				state = 30
+				state = 14
+				state = 15
+				state = 785
+				state = 29
+				state = 6
+				state = 35
+				state = 7
+				state = 36
+				state = 56
+				state = 59
+				state = 58
+				state = 909
+				state = 912
+				state = 99
+				state = 911
+				state = 37
+			}
+		}
+		set_state_flag = GER_dday_wall_3
+		add_dynamic_modifier = {
+			modifier = dday_wall_3
+		}
+	}
+}
+
+
+
+dday_wall_lower = {
+	if = {
+		limit = { 
+			15 = {
+				has_state_flag = GER_dday_wall_1
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 806
+					state = 19
+					state = 23					
+					state = 30
+					state = 14
+					state = 15
+					state = 785
+					state = 29
+					state = 6
+					state = 35
+					state = 7
+					state = 36
+					state = 56
+					state = 59
+					state = 58
+					state = 909
+					state = 912
+					state = 99
+					state = 911
+					state = 37
+				}
+			}
+			clr_state_flag = GER_dday_wall_1
+			remove_dynamic_modifier = {
+				modifier = dday_wall_1
+			}
+		}
+	}
+	else_if  = {
+		limit = { 
+			15 = {
+				has_state_flag = GER_dday_wall_2
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 806
+					state = 19
+					state = 23					
+					state = 30
+					state = 14
+					state = 15
+					state = 785
+					state = 29
+					state = 6
+					state = 35
+					state = 7
+					state = 36
+					state = 56
+					state = 59
+					state = 58
+					state = 909
+					state = 912
+					state = 99
+					state = 911
+					state = 37
+				}
+			}
+			clr_state_flag = GER_dday_wall_2
+			set_state_flag = GER_dday_wall_1
+			remove_dynamic_modifier = {
+				modifier = dday_wall_2
+			}
+			add_dynamic_modifier = {
+				modifier = dday_wall_1
+			}
+		}
+	}
+	else_if  = {
+		limit = { 
+			15 = {
+				has_state_flag = GER_dday_wall_3
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 806
+					state = 19
+					state = 23					
+					state = 30
+					state = 14
+					state = 15
+					state = 785
+					state = 29
+					state = 6
+					state = 35
+					state = 7
+					state = 36
+					state = 56
+					state = 59
+					state = 58
+					state = 909
+					state = 912
+					state = 99
+					state = 911
+					state = 37
+				}
+			}
+			clr_state_flag = GER_dday_wall_3
+			set_state_flag = GER_dday_wall_2
+			remove_dynamic_modifier = {
+				modifier = dday_wall_3
+			}
+			add_dynamic_modifier = {
+				modifier = dday_wall_2
+			}
+		}
+	}
+}
+dday_wall_higher = {
+	if = {
+		limit = { 
+			15 = {
+				NOT = {
+					OR = {
+						has_state_flag = GER_dday_wall_1
+						has_state_flag = GER_dday_wall_2
+						has_state_flag = GER_dday_wall_3
+					}
+					date>1942.1.1
+				}
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 806
+					state = 19
+					state = 23					
+					state = 30
+					state = 14
+					state = 15
+					state = 785
+					state = 29
+					state = 6
+					state = 35
+					state = 7
+					state = 36
+					state = 56
+					state = 59
+					state = 58
+					state = 909
+					state = 912
+					state = 99
+					state = 911
+					state = 37
+				}
+			}
+			set_state_flag = GER_dday_wall_1
+			add_dynamic_modifier = {
+				modifier = dday_wall_1
+			}
+		}
+	}
+	else_if  = {
+		limit = { 
+			15 = {
+				has_state_flag = GER_dday_wall_1
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 806
+					state = 19
+					state = 23					
+					state = 30
+					state = 14
+					state = 15
+					state = 785
+					state = 29
+					state = 6
+					state = 35
+					state = 7
+					state = 36
+					state = 56
+					state = 59
+					state = 58
+					state = 909
+					state = 912
+					state = 99
+					state = 911
+					state = 37
+				}
+			}
+			clr_state_flag = GER_dday_wall_1
+			set_state_flag = GER_dday_wall_2
+			remove_dynamic_modifier = {
+				modifier = dday_wall_1
+			}
+			add_dynamic_modifier = {
+				modifier = dday_wall_2
+			}
+		}
+	}
+	else_if  = {
+		limit = { 
+			15 = {
+				has_state_flag = GER_dday_wall_2
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 806
+					state = 19
+					state = 23					
+					state = 30
+					state = 14
+					state = 15
+					state = 785
+					state = 29
+					state = 6
+					state = 35
+					state = 7
+					state = 36
+					state = 56
+					state = 59
+					state = 58
+					state = 909
+					state = 912
+					state = 99
+					state = 911
+					state = 37
+				}
+			}
+			clr_state_flag = GER_dday_wall_2
+			set_state_flag = GER_dday_wall_3
+			remove_dynamic_modifier = {
+				modifier = dday_wall_2
+			}
+			add_dynamic_modifier = {
+				modifier = dday_wall_3
+			}
+		}
+	}
+}
+
+italy_output_up = {
+	if = {
+		limit = { 
+			ITA = { has_idea = ITA_output_0}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_output_0
+				add_idea = ITA_output_1
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			ITA = { has_idea = ITA_output_1}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_output_1
+				add_idea = ITA_output_2
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			ITA = { has_idea = ITA_output_2}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_output_2
+				add_idea = ITA_output_3
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			ITA = { has_idea = ITA_output_3}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_output_3
+				add_idea = ITA_output_4
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			ITA = { has_idea = ITA_output_4}
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_output_4
+				add_idea = ITA_output_5
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			ITA = { has_idea = ITA_output_5 }
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_output_5
+				add_idea = ITA_output_6
+			}
+		}
+	}
+}
+italy_output_down = {
+	if = {
+		limit = { 
+			ITA = { has_idea = ITA_output_6 }
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_output_6
+				add_idea = ITA_output_5
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			ITA = { has_idea = ITA_output_5 }
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_output_5
+				add_idea = ITA_output_4
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			ITA = { has_idea = ITA_output_4 }
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_output_4
+				add_idea = ITA_output_3
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			ITA = { has_idea = ITA_output_3 }
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_output_3
+				add_idea = ITA_output_2
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			ITA = { has_idea = ITA_output_2 }
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_output_2
+				add_idea = ITA_output_1
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			ITA = { has_idea = ITA_output_1 }
+		}
+		ITA = {
+			swap_ideas = {
+				remove_idea = ITA_output_1
+				add_idea = ITA_output_0
+			}
+		}
+	}
+}
+
+
+#This is removed at the moment
+hp_spirit_add = {
+	GER = { 
+		set_technology = {
+			hpspirit = 1
+		}
+		add_ideas = hp_spirit_cosmetical_idea
+	}
+
+	ITA = { 
+		set_technology = {
+			hpspirit = 1
+		}
+		add_ideas = hp_spirit_cosmetical_idea
+	}
+
+	SPR = { 
+		set_technology = {
+			hpspirit = 1
+		}
+		add_ideas = hp_spirit_cosmetical_idea
+	}
+
+	HUN = { 
+		set_technology = {
+			hpspirit = 1
+		}
+		add_ideas = hp_spirit_cosmetical_idea
+	}
+
+	ROM = { 
+		set_technology = {
+			hpspirit = 1
+		}
+		add_ideas = hp_spirit_cosmetical_idea
+	}
+
+
+
+	ENG = { 
+		set_technology = {
+			hpspirit = 1
+		}
+		add_ideas = hp_spirit_cosmetical_idea
+	}
+
+	FRA = { 
+		set_technology = {
+			hpspirit = 1
+		}
+		add_ideas = hp_spirit_cosmetical_idea
+	}
+
+	CAN = { 
+		set_technology = {
+			hpspirit = 1
+		}
+		add_ideas = hp_spirit_cosmetical_idea
+	}
+
+	SAF = { 
+		set_technology = {
+			hpspirit = 1
+		}
+		add_ideas = hp_spirit_cosmetical_idea
+	}
+
+	RAJ = { 
+		set_technology = {
+			hpspirit = 1
+		}
+		add_ideas = hp_spirit_cosmetical_idea
+	}
+}
+
+hp_spirit_remove = {
+	GER = { 
+		set_technology = {
+			hpspirit_gone = 1
+		}
+		remove_ideas = hp_spirit_cosmetical_idea
+	}
+
+	ITA = { 
+		set_technology = {
+			hpspirit_gone = 1
+		}
+		remove_ideas = hp_spirit_cosmetical_idea
+	}
+
+	SPR = { 
+		set_technology = {
+			hpspirit_gone = 1
+		}
+		remove_ideas = hp_spirit_cosmetical_idea
+	}
+
+	HUN = { 
+		set_technology = {
+			hpspirit_gone = 1
+		}
+		remove_ideas = hp_spirit_cosmetical_idea
+	}
+
+	ROM = { 
+		set_technology = {
+			hpspirit_gone = 1
+		}
+		remove_ideas = hp_spirit_cosmetical_idea
+	}
+
+
+
+	ENG = { 
+		set_technology = {
+			hpspirit_gone = 1
+		}
+		remove_ideas = hp_spirit_cosmetical_idea
+	}
+
+	FRA = { 
+		set_technology = {
+			hpspirit_gone = 1
+		}
+		remove_ideas = hp_spirit_cosmetical_idea
+	}
+
+	CAN = { 
+		set_technology = {
+			hpspirit_gone = 1
+		}
+		remove_ideas = hp_spirit_cosmetical_idea
+	}
+
+	SAF = { 
+		set_technology = {
+			hpspirit_gone = 1
+		}
+		remove_ideas = hp_spirit_cosmetical_idea
+	}
+
+	RAJ = { 
+		set_technology = {
+			hpspirit_gone = 1
+		}
+		remove_ideas = hp_spirit_cosmetical_idea
+	}
+}
+HMP_startup_on_actions = {
+	every_country = {
+		limit = { has_country_flag = small_fleets_enabled_flag }
+		add_dynamic_modifier = { modifier = fleet_overstack_dynamic_modifier  }
+	}
+}
+HMP_check_fleet_size = {
+
+	clear_array = battle_admirals
+	set_variable = { var = fleet_overstack_naval_damage_factor value = 0 }
+	every_navy_leader = {
+		limit = { check_variable = {  num_ships < 1 } } clear_variable = command_limit_used
+	}
+	every_navy_leader = {
+			clear_variable = destroyer_count 
+			add_to_variable = { 
+				var = destroyer_count
+				value = num_ships_with_type@destroyer
+			}
+			clear_variable = submarine_count 
+			add_to_variable = { 
+				var = submarine_count
+				value = num_ships_with_type@submarine
+			}			
+			clear_variable = light_cruiser_count 
+			add_to_variable = {  
+				var = light_cruiser_count
+				value = num_ships_with_type@light_cruiser
+			}		
+			clear_variable = heavy_cruiser_count 
+			add_to_variable = { 
+				var = heavy_cruiser_count
+				value = num_ships_with_type@heavy_cruiser
+			}				
+			clear_variable = battleship_count 
+			add_to_variable = { 
+				var = battleship_count
+				value = num_ships_with_type@battleship
+			}				
+			clear_variable = battlecruiser_count 
+			add_to_variable = { 
+				var = battlecruiser_count
+				value = num_ships_with_type@battle_cruiser
+			}										
+			clear_variable = carrier_count 
+			add_to_variable = { 
+				var = carrier_count
+				value = num_ships_with_type@carrier
+			}			
+			clear_variable = shbb_count 
+			add_to_variable = { 
+				var = shbb_count
+				value = num_ships_with_type@sh_battleship
+			}			
+			
+			set_temp_variable = {
+				var = command_limit_used_temp
+				value = 0
+			}
+			set_temp_variable = {
+				var = heavy_cruiser_count_temp
+				value = heavy_cruiser_count 
+			}
+			multiply_temp_variable  = { 
+				var =  heavy_cruiser_count_temp value = 2
+			}
+			add_to_temp_variable = {
+				var = command_limit_used_temp
+				value = heavy_cruiser_count_temp
+			}
+			set_temp_variable = {
+				var = light_cruiser_count_temp
+				value = light_cruiser_count 
+			}
+			multiply_temp_variable  = { 
+				var =  light_cruiser_count_temp value = 2
+			}
+			add_to_temp_variable = {
+				var = command_limit_used_temp
+				value = light_cruiser_count_temp
+			}
+			set_temp_variable = {
+			var = destroyer_count_temp
+			value = destroyer_count
+			}
+			add_to_temp_variable = {
+				var = command_limit_used_temp
+				value = destroyer_count_temp
+			}
+			set_temp_variable = {
+				var = battleship_count_temp
+				value = battleship_count 
+			}
+			multiply_temp_variable  = { 
+				var =  battleship_count_temp value = 4
+			}
+			add_to_temp_variable = {
+				var = command_limit_used_temp
+				value = battleship_count_temp
+			}
+			
+			set_temp_variable = {
+				var = battlecruiser_count_temp
+				value = battlecruiser_count 
+			}
+			multiply_temp_variable  = { 
+				var =  battlecruiser_count_temp value = 4
+			}
+			add_to_temp_variable = {
+				var = command_limit_used_temp
+				value = battlecruiser_count_temp
+			}
+				
+			set_temp_variable = {
+				var =carrier_count_temp
+				value = carrier_count 
+			}
+			multiply_temp_variable  = { 
+				var =  carrier_count_temp value = 6
+			}
+			add_to_temp_variable = {
+				var = command_limit_used_temp
+				value = carrier_count_temp
+			}		
+			set_temp_variable ={
+				var = shbb_count_temp
+				value = shbb_count
+			}
+			multiply_temp_variable = {
+				var = shbb_count_temp value = 6
+			}
+			add_to_temp_variable = {
+				var = command_limit_used_temp
+				value = shbb_count_temp
+			}
+			
+		clear_variable = capital_count 
+		add_to_variable = { 
+			var = capital_count
+			value = num_ships_with_type@heavy_cruiser
+		}
+		add_to_variable = { 
+			var = capital_count
+			value = num_ships_with_type@battleship
+		}
+		add_to_variable = { 
+			var = capital_count
+			value = num_ships_with_type@battle_cruiser
+		}
+		add_to_variable = { 
+			var = capital_count
+			value = num_ships_with_type@carrier
+		}
+		add_to_variable = { 
+			var = capital_count
+			value = num_ships_with_type@sh_battleship
+		}
+
+		clear_variable = screen_count
+		add_to_variable = { 
+			var = screen_count
+			value = num_ships_with_type@destroyer
+		}
+		add_to_variable = { 
+			var = screen_count
+			value = num_ships_with_type@light_cruiser
+		}
+
+		clear_variable = needed_screen_count 
+		add_to_variable = { 
+			var = needed_screen_count
+			value = capital_count
+		}
+		if= {
+			limit = { has_trait = fleet_protector }
+			multiply_variable = { 
+				var = needed_screen_count
+				value = 2.5
+			}
+		}
+		else = {
+			multiply_variable = { 
+				var = needed_screen_count
+				value = 3
+			}
+		}
+			
+			
+			
+			set_temp_variable = {
+				var =submarine_count_temp
+				value = submarine_count 
+			}
+			add_to_temp_variable = {
+				var = command_limit_used_temp
+				value = submarine_count_temp
+			}		
+			
+			
+			clear_variable = command_limit_used 
+			add_to_variable = { 
+				var = command_limit_used
+				value = command_limit_used_temp
+			}
+			if = {  limit = { check_variable = {  command_limit_used > 150 } }
+			add_to_temp_variable = { 
+				var = command_limit_penalty_calc
+				value = command_limit_used
+			}
+			subtract_from_temp_variable = {
+				var = command_limit_penalty_calc
+				value = 150
+			}
+			multiply_temp_variable = {
+				var = command_limit_penalty_calc
+				value = -0.02
+			}
+			add_to_variable ={
+				var = ROOT.fleet_overstack_naval_damage_factor
+				value =  command_limit_penalty_calc
+			}
+			
+			}
+	}
+	
+		every_navy_leader = {
+			limit = {	
+				NOT = { 
+					is_in_array = { array = ROOT.battle_admirals value = THIS.id } 
+				}		
+				custom_trigger_tooltip = {  
+					OR = { 
+						check_variable = { num_ships_with_type@carrier > 0 }
+						check_variable = { num_ships_with_type@sh_battleship > 1 } 
+						check_variable = { num_ships_with_type@light_cruiser > 1 } 
+						check_variable = {  num_ships_with_type@battleship > 0 } 
+						check_variable = { num_ships_with_type@battle_cruiser > 0 } 
+						check_variable = {  num_ships_with_type@heavy_cruiser > 0  }  
+					}
+				}	
+			}
+			add_to_array = { 
+				array = ROOT.battle_admirals
+				value = THIS.id
+			}
+			clear_variable = get_num_ships
+			add_to_variable = {
+				var = get_num_ships 
+				value = num_ships
+			}
+		}
+			
+	if = { 
+		limit = { check_variable = { fleet_overstack_naval_damage_factor < -1 } }
+		set_variable=  { var = fleet_overstack_naval_damage_factor value = -1 }
+	}
+	every_navy_leader = {
+		set_variable = { 
+			var = fleet_overstack_naval_damage_factor 
+			value = ROOT.fleet_overstack_naval_damage_factor 
+		}
+	}
+	
+}
+
+
+sealion_effect = {
+	set_global_flag = sealion_happened_flag
+	every_state = {
+		limit = {
+			OR = {
+				state = 123
+				state = 126
+				state = 127
+				state = 338
+				state = 125
+				state = 129
+				state = 128
+				state = 122
+				state = 132
+				state = 130
+				state = 131
+				state = 931
+				state = 121
+				state = 133
+				state = 136
+				state = 120
+				state = 932
+				state = 119
+			}
+		}
+		set_state_flag = ENG_sealion_happened
+		add_dynamic_modifier = {
+			modifier = sealion_modifier
+		}
+	}
+	if = {
+		limit = { USA = { is_in_faction = no } }
+		ENG = { add_to_faction = USA }
+	}
+	ENG = { 
+		activate_mission = ENG_division_spawns_1 
+		division_template = {
+			name = "Local Militia"		
+			division_names_group = ENG_INF_02
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+			}
+		}
+	}
+	if = {
+		limit = { country_exists = SAF }
+		SAF = {
+			division_template = {
+				name = "Converts"
+				priority = 1
+				template_counter = 0
+				regiments = {
+					convert_battalion = { x = 0 y = 0 }
+					convert_battalion = { x = 0 y = 1 }
+					convert_battalion = { x = 0 y = 2 }
+					convert_battalion = { x = 0 y = 3 }
+					convert_battalion = { x = 0 y = 4 }
+
+					convert_battalion = { x = 1 y = 0 }
+					convert_battalion = { x = 1 y = 1 }
+					convert_battalion = { x = 1 y = 2 }
+					convert_battalion = { x = 1 y = 3 }
+					convert_battalion = { x = 1 y = 4 }
+
+					convert_battalion = { x = 2 y = 0 }
+					convert_battalion = { x = 2 y = 1 }
+					convert_battalion = { x = 2 y = 2 }
+					convert_battalion = { x = 2 y = 3 }
+					convert_battalion = { x = 2 y = 4 }
+
+					convert_battalion = { x = 3 y = 0 }
+					convert_battalion = { x = 3 y = 1 }
+					convert_battalion = { x = 3 y = 2 }
+					convert_battalion = { x = 3 y = 3 }
+					convert_battalion = { x = 3 y = 4 }
+				}
+				support = {
+				}
+			}
+			119 = {
+				create_unit = {
+					division = "name = \"Converts\" division_template = \"Converts\" start_experience_factor = 0.5"
+					owner = SAF
+				}
+				create_unit = {
+					division = "name = \"Converts\" division_template = \"Converts\" start_experience_factor = 0.5"
+					owner = SAF
+				}
+				create_unit = {
+					division = "name = \"Converts\" division_template = \"Converts\" start_experience_factor = 0.5"
+					owner = SAF
+				}
+				create_unit = {
+					division = "name = \"Converts\" division_template = \"Converts\" start_experience_factor = 0.5"
+					owner = SAF
+				}
+			}
+		}
+	}
+	if = {
+		limit = { country_exists = CAN }
+		CAN = {
+			division_template = {
+				name = "Converts"
+				priority = 1
+				template_counter = 0
+				regiments = {
+					convert_battalion = { x = 0 y = 0 }
+					convert_battalion = { x = 0 y = 1 }
+					convert_battalion = { x = 0 y = 2 }
+					convert_battalion = { x = 0 y = 3 }
+					convert_battalion = { x = 0 y = 4 }
+
+					convert_battalion = { x = 1 y = 0 }
+					convert_battalion = { x = 1 y = 1 }
+					convert_battalion = { x = 1 y = 2 }
+					convert_battalion = { x = 1 y = 3 }
+					convert_battalion = { x = 1 y = 4 }
+
+					convert_battalion = { x = 2 y = 0 }
+					convert_battalion = { x = 2 y = 1 }
+					convert_battalion = { x = 2 y = 2 }
+					convert_battalion = { x = 2 y = 3 }
+					convert_battalion = { x = 2 y = 4 }
+
+					convert_battalion = { x = 3 y = 0 }
+					convert_battalion = { x = 3 y = 1 }
+					convert_battalion = { x = 3 y = 2 }
+					convert_battalion = { x = 3 y = 3 }
+					convert_battalion = { x = 3 y = 4 }
+				}
+				support = {
+				}
+			}
+			119 = {
+				create_unit = {
+					division = "name = \"Converts\" division_template = \"Converts\" start_experience_factor = 0.5"
+					owner = CAN
+				}
+				create_unit = {
+					division = "name = \"Converts\" division_template = \"Converts\" start_experience_factor = 0.5"
+					owner = CAN
+				}
+				create_unit = {
+					division = "name = \"Converts\" division_template = \"Converts\" start_experience_factor = 0.5"
+					owner = CAN
+				}
+				create_unit = {
+					division = "name = \"Converts\" division_template = \"Converts\" start_experience_factor = 0.5"
+					owner = CAN
+				}
+			}
+		}
+	}
+}
+
+ENG_capitulation_effect = {
+	set_global_flag = ENG_capitulated
+	every_state = {
+		limit = {
+			has_state_flag = ENG_sealion_happened
+		}
+		clr_state_flag = ENG_sealion_happened
+		remove_dynamic_modifier = {
+			modifier = sealion_modifier
+		}
+		set_state_flag = ENG_states_capitulated
+		add_dynamic_modifier = {
+			modifier = eng_resistance_modifier
+		}
+	}
+	ENG = { 		
+		#Dont Cap England!
+		transfer_state = 113
+		transfer_state = 134
+		transfer_state = 135
+		add_state_core = 113
+		add_state_core = 135
+		add_state_core = 135
+		set_capital = { state = 113 }
+		#Return the UK Factories (The downside of Sealion is the roach, not losing an eco)
+		add_ideas = tot_economic_mobilisation
+		add_manpower = 1500000
+		add_offsite_building = { 
+			type = arms_factory
+			level = ENG.total_constructed_military_factory
+		}
+		add_offsite_building = {  #Starting Eco + 13
+			type = arms_factory
+			level = 26
+		}
+		add_offsite_building = { 
+			type = industrial_complex 
+			level = ENG.total_constructed_civilian_factory
+		}
+		add_offsite_building = { #Starting Eco + 4
+			type = industrial_complex 
+			level = 33
+		}
+		add_offsite_building = { 
+			type = dockyard 
+			level = ENG.total_constructed_dockyard
+		}
+		add_offsite_building = { 
+			type = dockyard 
+			level = 20
+		}
+		add_ideas = ENG_capitulated_idea
+	}
+	USA = { add_ideas = war_economy }
+	#Transfer Everything else to Germany!
+	every_state = {
+		limit = {
+			OR = {
+				state = 123
+				state = 126
+				state = 127
+				state = 338
+				state = 125
+				state = 129
+				state = 128
+				state = 122
+				state = 132
+				state = 130
+				state = 131
+				state = 931
+				state = 121
+				state = 133
+				state = 136
+				state = 120
+				state = 932
+			}
+		}
+		teleport_armies = {
+			limit = {
+				OR = {
+					original_tag = ENG 
+					is_in_faction_with = ENG
+				}
+			}
+			to_state  = 119
+		}
+		transfer_state_to = GER
+	}
+
+	#Some Resource Compensation for England
+	135 = {
+		add_resource = {
+			type = aluminium
+			amount = 1000
+		}
+		add_resource = {
+			type = steel
+			amount = 1000
+		}
+		add_resource = {
+			type = tungsten
+			amount = 1000
+		}
+		add_resource = {
+			type = chromium
+			amount = 1000
+		}
+		add_resource = {
+			type = oil
+			amount = 1000
+		}
+	}
+
+	#Airport Compensation
+	134 = {
+		set_building_level = {
+			type = air_base
+			level = 20
+			instant_build = yes
+		}
+		add_extra_state_shared_building_slots = 15
+	}
+	135 = {
+		set_building_level = {
+			type = air_base
+			level = 20
+			instant_build = yes
+		}
+		add_extra_state_shared_building_slots = 20
+	}
+	113 = {
+		set_building_level = {
+			type = air_base
+			level = 20
+			instant_build = yes
+		}
+		add_extra_state_shared_building_slots = 20
+	}
+	119 = {
+		set_building_level = {
+			type = air_base
+			level = 20
+			instant_build = yes
+		}
+		add_extra_state_shared_building_slots = 20
+	}
+
+}
+
+ENG_liberation_effect = {
+	set_global_flag = ENG_liberated_flag
+	clr_global_flag = ENG_capitulated
+	every_state = {
+		limit = {
+			has_state_flag = ENG_states_capitulated
+		}
+		clr_state_flag = ENG_states_capitulated
+		remove_dynamic_modifier = {
+			modifier = eng_resistance_modifier
+		}
+	}
+	ENG = { 		
+		set_capital = { state = 126 }
+		add_offsite_building = { 
+			type = arms_factory
+			level = -ENG.total_constructed_military_factory
+		}
+		add_offsite_building = {  #Starting Eco + 13
+			type = arms_factory
+			level = -26
+		}
+		add_offsite_building = { 
+			type = industrial_complex 
+			level = -ENG.total_constructed_civilian_factory
+		}
+		add_offsite_building = { #Starting Eco + 4
+			type = industrial_complex 
+			level = -33
+		}
+		add_offsite_building = { 
+			type = dockyard 
+			level = -ENG.total_constructed_dockyard
+		}
+		add_offsite_building = { 
+			type = dockyard 
+			level = -20
+		}
+		remove_ideas = ENG_capitulated_idea
+		add_timed_idea = {
+			idea = ENG_recently_liberated_idea
+			days = 120
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 123
+				state = 126
+				state = 127
+				state = 338
+				state = 125
+				state = 129
+				state = 128
+				state = 122
+				state = 132
+				state = 130
+				state = 131
+				state = 931
+				state = 121
+				state = 133
+				state = 136
+				state = 120
+			}
+		}
+		transfer_state_to = ENG
+	}
+}
+VR_score_system_setup = {
+	set_variable = { var = global.axispointsgain value = 0 }
+	set_variable = { var = global.alliespointsgain value = 0 }
+	set_variable = { var = global.axispointsgain value = 0 }
+	set_variable = { var = global.alliespointscounter value = 0 }
+}
+
+VR_score_system_calculator = {
+	set_variable = { var = global.axispointsgain value = 0 }
+	set_variable = { var = global.alliespointsgain value = 0 }
+
+	if = {
+		limit = {
+			126 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 3 }
+	}
+	if = {
+		limit = {
+			126 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 3 }
+	}
+
+	if = {
+		limit = {
+			16 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 3 }
+	}
+	if = {
+		limit = {
+			16 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 3 }
+	}
+
+	if = {
+		limit = {
+			2 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 3 }
+	}
+	if = {
+		limit = {
+			2 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 3 }
+	}
+
+	if = {
+		limit = {
+			219 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 3 }
+	}
+	if = {
+		limit = {
+			219 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 3 }
+	}
+
+	if = {
+		limit = {
+			64 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 3 }
+	}
+	if = {
+		limit = {
+			64 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 3 }
+	}
+
+	if = {
+		limit = {
+			282 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 3 }
+	}
+	if = {
+		limit = {
+			282 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 3 }
+	}
+
+	if = {
+		limit = {
+			451 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 2 }
+	}
+	if = {
+		limit = {
+			451 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 2 }
+	}
+
+	if = {
+		limit = {
+			452 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 2 }
+	}
+	if = {
+		limit = {
+			452 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 2 }
+	}
+
+	if = {
+		limit = {
+			907 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 2 }
+	}
+	if = {
+		limit = {
+			907 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 2 }
+	}
+
+	if = {
+		limit = {
+			110 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 2 }
+	}
+	if = {
+		limit = {
+			110 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 2 }
+	}
+
+	if = {
+		limit = {
+			10 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 2 }
+	}
+	if = {
+		limit = {
+			10 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 2 }
+	}
+
+	if = {
+		limit = {
+			202 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 2 }
+	}
+	if = {
+		limit = {
+			202 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 2 }
+	}
+
+	if = {
+		limit = {
+			217 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 2 }
+	}
+	if = {
+		limit = {
+			217 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 2 }
+	}
+	if = {
+		limit = {
+			195 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 2 }
+	}
+	if = {
+		limit = {
+			195 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 2 }
+	}
+
+	if = {
+		limit = {
+			118 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 2 }
+	}
+	if = {
+		limit = {
+			118 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 2 }
+	}
+
+	if = {
+		limit = {
+			336 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 2 }
+	}
+	if = {
+		limit = {
+			336 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 2 }
+	}
+
+	if = {
+		limit = {
+			439 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 2 }
+	}
+	if = {
+		limit = {
+			439 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 2 }
+	}
+
+	if = {
+		limit = {
+			629 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 2 }
+	}
+	if = {
+		limit = {
+			629 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 2 }
+	}
+
+	if = {
+		limit = {
+			524 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		add_to_variable = { var =global.alliespointsgain value = 2 }
+	}
+	if = {
+		limit = {
+			524 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		add_to_variable = { var =global.axispointsgain value = 2 }
+	}
+
+	add_to_variable = { var = global.axispointscounter value =  global.axispointsgain }
+	add_to_variable = { var = global.alliespointscounter value = global.alliespointsgain }
+}
+
+check_ai_triggers = {
+	ENG = {
+		set_variable = { fighter_ratio_temp = num_deployed_planes }
+		set_variable = { ger_fighter_count = GER.num_deployed_planes }
+		divide_variable = {
+			var = fighter_ratio_temp
+			value = ger_fighter_count
+		}
+		set_variable = { fighter_ratio = fighter_ratio_temp }
+	}
+	USA = {
+		set_variable = { fighter_ratio_temp = num_deployed_planes }
+		set_variable = { jap_fighter_count = JAP.num_deployed_planes }
+		divide_variable = {
+			var = fighter_ratio_temp
+			value = jap_fighter_count
+		}
+		set_variable = { usa_fighter_ratio = fighter_ratio_temp }
+	}
+	GER = {
+		set_variable = { casualties_ratio_temp = SOV.casualties_k }
+		divide_variable = {
+			var = casualties_ratio_temp
+			value = GER.casualties_k
+		}
+		set_variable = { ger_vs_sov_casualties_ratio = casualties_ratio_temp}
+
+
+		set_variable = { fighter_ratio_temp = num_deployed_planes }
+		set_variable = { sov_fighter_count = SOV.num_deployed_planes }
+		divide_variable = {
+			var = fighter_ratio_temp
+			value = sov_fighter_count
+		}
+		set_variable = { ger_fighter_ratio = fighter_ratio_temp }
+	}
+}

@@ -1,0 +1,943 @@
+defined_text = { 
+	name = GetAdmiralPortrait
+
+    #JAP(
+        text = {
+            trigger = { 
+                ROOT = { tag = JAP }
+                is_character = JAP_isoroku_yamamoto 
+            }
+            localization_key = GFX_portrait_JAP_isoroku_yamamoto
+        }
+        text = {
+            trigger = {  
+                ROOT = { tag = JAP }
+                is_character = JAP_mineichi_koga 
+            }
+            localization_key = GFX_portrait_JAP_mineichi_koga
+        }
+        text = {
+            trigger = {  
+                ROOT = { tag = JAP }
+                is_character = JAP_soemu_toyoda 
+            }
+            localization_key = GFX_portrait_JAP_soemu_toyoda
+        }
+        text = {
+            trigger = {  
+                ROOT = { tag = JAP }
+                is_character = JAP_tadashige_daigo 
+            }
+            localization_key = GFX_portrait_JAP_tadashige_daigo
+        }
+        text = {
+            trigger = {  
+                ROOT = { tag = JAP }
+                is_character = JAP_nobutake_kondō 
+            }
+            localization_key = GFX_portrait_JAP_nobutake_kondo
+        }
+        text = {
+            trigger = {  
+                ROOT = { tag = JAP }
+                is_character = JAP_shigeyoshi_inoue 
+            }
+            localization_key = GFX_portrait_JAP_shigeyoshi_inoue
+        }
+        text = {
+            trigger = {  
+                ROOT = { tag = JAP }
+                is_character = JAP_zengo_yoshida 
+            }
+            localization_key = GFX_portrait_JAP_zengo_yoshida
+        }
+        text = {
+            trigger = {  
+                ROOT = { tag = JAP }
+                is_character = JAP_takeo_takagi 
+            }
+            localization_key = GFX_portrait_JAP_takeo_takagi
+        }
+        text = {
+            trigger = {  
+                ROOT = { tag = JAP }
+                is_character = JAP_jisaburo_ozawa 
+            }
+            localization_key = GFX_portrait_JAP_jisaburo_ozawa
+        }
+        text = {
+            trigger = {  
+                ROOT = { tag = JAP }
+                is_character = JAP_hiroaki_abe 
+            }
+            localization_key = GFX_portrait_JAP_hiroaki_abe
+        }
+        text = {
+            trigger = {  
+                ROOT = { tag = JAP }
+                is_character = JAP_gengo_hyakutake 
+            }
+            localization_key = GFX_portrait_JAP_gengo_hyakutake
+        }
+        text = {
+            trigger = {  
+                ROOT = { tag = JAP }
+                is_character = JAP_kiyoshi_hasegawa 
+            }
+            localization_key = GFX_portrait_JAP_kiyoshi_hasegawa
+        }
+    #)
+
+    #US(
+        text = {
+            trigger = {    
+                ROOT = { tag = USA }
+                is_character = USA_chester_w_nimitz
+            }
+            localization_key = GFX_portrait_USA_chester_w_nimitz
+        }
+        text = {
+            trigger = {     
+                ROOT = { tag = USA }
+                is_character = USA_arleigh_burke 
+            }
+            localization_key = GFX_portrait_USA_arleigh_burke
+        }
+        text = {
+            trigger = {     
+                ROOT = { tag = USA }
+                is_character = USA_harold_rainsford_stark 
+            }
+            localization_key = GFX_portrait_USA_harold_rainsford_stark
+        }
+        text = {
+            trigger = {     
+                ROOT = { tag = USA }
+                is_character = USA_william_halsey_jr
+            }
+            localization_key =  GFX_portrait_USA_william_halsey_jr
+        }
+        text = {
+            trigger = {     
+                ROOT = { tag = USA }
+                is_character = USA_frank_jack_fletcher 
+            }
+            localization_key = GFX_portrait_USA_frank_jack_fletcher
+        }
+        text = {
+            trigger = {     
+                ROOT = { tag = USA }
+                is_character = USA_raymond_a_spruance 
+            }
+            localization_key = GFX_portrait_USA_raymond_a_spruance
+        }
+        text = {
+            trigger = {     
+                ROOT = { tag = USA }
+                is_character =  USA_ernest_king 
+            }
+            localization_key =  GFX_portrait_USA_ernest_king
+        }
+        text = {
+            trigger = {     
+                ROOT = { tag = USA }
+                is_character =  USA_charles_m_cooke_jr 
+            }
+            localization_key = GFX_portrait_USA_charles_m_cooke_jr
+        }
+    #)
+
+    #AST(
+        text = {
+            trigger = {     
+                ROOT = { tag = AST }
+                is_character =  AST_harold_farncomb  
+            }
+            localization_key =  GFX_AST_harold_farncomb
+        }
+        text = {
+            trigger = {     
+                ROOT = { tag = AST }
+                is_character =  AST_victor_crutchley  
+            }
+            localization_key =  GFX_AST_victor_crutchley_real 
+        }
+    #)
+
+    #NZL(
+        text = {
+            trigger = {     
+                ROOT = { tag = NZL }
+                is_character =  NZL_edmund_rupert_drummond  
+            }
+            localization_key =  GFX_NZL_edmund_drummond
+        }
+        text = {
+            trigger = {     
+                ROOT = { tag = NZL }
+                is_character =  NZL_peter_phipps  
+            }
+            localization_key =  GFX_NZL_peter_phipps
+        }
+    #)
+}
+
+
+defined_text = { 
+	name = GetAdmiralNameTitle 
+	text = {
+		localization_key = GetAdmiralNameTitle_def
+	}
+}
+ 
+
+defined_text = { 
+	name = GetShipCount 
+	text = {
+		localization_key = GetShipCount_def
+	}
+}
+
+defined_text = { 
+	name = GetScreenCount 
+	text = {
+		trigger = { 
+			check_variable = { THIS.needed_screen_count < THIS.screen_count }
+		}
+		localization_key = GetScreens_under_def
+	}
+	text = {
+		trigger = { 
+			check_variable = { THIS.needed_screen_count = THIS.screen_count }
+		}
+		localization_key = GetScreens_equal_def
+	}
+	text = {
+		trigger = { 
+			check_variable = { THIS.needed_screen_count > THIS.screen_count }
+		}
+		localization_key = GetScreens_over_def
+	}	
+
+}
+
+defined_text = { 
+	name = GetScreensNeededCount 
+	# Green
+	text = {
+		trigger = { 
+			check_variable = { THIS.needed_screen_count < THIS.screen_count }
+		}
+		localization_key = GetScreensNeeded_under_def
+	}
+	# Yellow
+	text = {
+		trigger = { 
+			check_variable = { THIS.needed_screen_count = THIS.screen_count }
+		}
+		localization_key = GetScreensNeeded_equal_def
+	}
+	# Red
+	text = {
+		trigger = { 
+			check_variable = { THIS.needed_screen_count > THIS.screen_count }
+		}
+		localization_key = GetScreensNeeded_over_def
+	}	
+
+}
+
+defined_text = { 
+	name = GetCommandLimit 
+	text = {
+		trigger = { 
+			check_variable = { THIS.command_limit_used < 150 }
+		}
+		localization_key = GetCommandLimit_under_def
+	}
+	text = {
+		trigger = { 
+			check_variable = { THIS.command_limit_used = 150 }
+		}
+		localization_key = GetCommandLimit_equal_def
+	}
+	text = {
+		trigger = { 
+			check_variable = { THIS.command_limit_used > 150 }
+		}
+		localization_key = GetCommandLimit_over_def
+	}	
+
+}
+
+
+# defined_text = { 
+# 	name = GetCapPenalty 
+# 	text = {
+# 		localization_key = GetCommandLimit_2
+# 	}
+# }
+
+defined_text = {
+	name = GetVolunteersInChinaStatus
+	text = {
+		trigger = {
+			has_game_rule = {
+				rule = volunteers_in_china
+				option = BLOCKED
+			}
+		}
+		localization_key = check_gamerules_blocked
+	}
+	text = {
+		trigger = {
+			has_game_rule = {
+				rule = volunteers_in_china
+				option = ALLOWED
+			}
+		}
+		localization_key = check_gamerules_allowed
+	}
+}
+
+defined_text = {
+	name = GetFleetSizeLimitationsStatus
+	text = {
+		trigger = {
+			has_game_rule = {
+				rule = fleet_size_limitations
+				option = PACIFIC
+			}
+		}
+		localization_key = check_game_rules_pacific
+	}
+	text = {
+		trigger = {
+			has_game_rule = {
+				rule = fleet_size_limitations
+				option = ATLANTIC
+			}
+		}
+		localization_key = check_game_rules_atlantic
+	}
+    text = {
+		trigger = {
+			has_game_rule = {
+				rule = fleet_size_limitations
+				option = NO
+			}
+		}
+		localization_key = check_game_rules_never
+	}
+    text = {
+		trigger = {
+			has_game_rule = {
+				rule = fleet_size_limitations
+				option = YES
+			}
+		}
+		localization_key = check_game_rules_everywhere
+	}
+}
+
+defined_text = {
+	name = GetSeaLionStatus
+	text = {
+		trigger = {
+            AND = {
+                has_game_rule = {
+                    rule = sealion_rule
+                    option = ALLOWED
+			    }
+                384 = { is_owned_by = USA }
+            }
+		}
+		localization_key = check_gamerules_sealion_allowed
+	}
+	text = {
+		trigger = {
+            OR = {
+                has_game_rule = {
+                    rule = sealion_rule
+                    option = BANNED
+			    }
+                384 = { is_owned_by = WST }
+                GER = { has_war_with = SOV }
+            }
+		}
+		localization_key = check_gamerules_blocked
+	}
+}
+
+defined_text = {
+	name = GetLondonStatus
+	text = {
+		trigger = {
+            126 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetLondonStatusAxis
+	}
+	text = {
+		trigger = {
+            126 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetLondonStatusAllies
+	}
+    text = {
+		trigger = {
+            126 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetLondonStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetParisStatus
+	text = {
+		trigger = {
+            16 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetParisStatusAxis
+	}
+	text = {
+		trigger = {
+            16 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetParisStatusAllies
+	}
+    text = {
+		trigger = {
+            16 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetParisStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetRomeStatus
+	text = {
+		trigger = {
+            2 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetRomeStatusAxis
+	}
+	text = {
+		trigger = {
+            2 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetRomeStatusAllies
+	}
+    text = {
+		trigger = {
+            2 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetRomeStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetMoscowStatus
+	text = {
+		trigger = {
+            219 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetMoscowStatusAxis
+	}
+	text = {
+		trigger = {
+            219 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetMoscowStatusAllies
+	}
+    text = {
+		trigger = {
+            219 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetMoscowStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetBerlinStatus
+	text = {
+		trigger = {
+            64 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetBerlinStatusAxis
+	}
+	text = {
+		trigger = {
+            64 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetBerlinStatusAllies
+	}
+    text = {
+		trigger = {
+            64 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetBerlinStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetTokyoStatus
+	text = {
+		trigger = {
+            282 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetTokyoStatusAxis
+	}
+	text = {
+		trigger = {
+            282 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetTokyoStatusAllies
+	}
+    text = {
+		trigger = {
+            282 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetTokyoStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetTobrukStatus
+	text = {
+		trigger = {
+            451 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetTobrukStatusAxis
+	}
+	text = {
+		trigger = {
+            451 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetTobrukStatusAllies
+	}
+    text = {
+		trigger = {
+            451 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetTobrukStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetElAlameinStatus
+	text = {
+		trigger = {
+            452 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetElAlameinStatusAxis
+	}
+	text = {
+		trigger = {
+            452 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetElAlameinStatusAllies
+	}
+    text = {
+		trigger = {
+            452 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetElAlameinStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetCairoStatus
+	text = {
+		trigger = {
+            907 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetCairoStatusAxis
+	}
+	text = {
+		trigger = {
+            907 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetCairoStatusAllies
+	}
+    text = {
+		trigger = {
+            907 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetCairoStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetAthensStatus
+	text = {
+		trigger = {
+            47 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetAthensStatusAxis
+	}
+	text = {
+		trigger = {
+            47 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetAthensStatusAllies
+	}
+    text = {
+		trigger = {
+            47 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetAthensStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetOsloStatus
+	text = {
+		trigger = {
+            110 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetOsloStatusAxis
+	}
+	text = {
+		trigger = {
+            110 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetOsloStatusAllies
+	}
+    text = {
+		trigger = {
+            110 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetOsloStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetWarsawStatus
+	text = {
+		trigger = {
+            10 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetWarsawStatusAxis
+	}
+	text = {
+		trigger = {
+            10 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetWarsawStatusAllies
+	}
+    text = {
+		trigger = {
+            10 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetWarsawStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetKievStatus
+	text = {
+		trigger = {
+            202 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetKievStatusAxis
+	}
+	text = {
+		trigger = {
+            202 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetKievStatusAllies
+	}
+    text = {
+		trigger = {
+            202 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetKievStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetStalingradStatus
+	text = {
+		trigger = {
+            217 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetStalingradStatusAxis
+	}
+	text = {
+		trigger = {
+            217 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetStalingradStatusAllies
+	}
+    text = {
+		trigger = {
+            217 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetStalingradStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetLeningradStatus
+	text = {
+		trigger = {
+            195 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetLeningradStatusAxis
+	}
+	text = {
+		trigger = {
+            195 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetLeningradStatusAllies
+	}
+    text = {
+		trigger = {
+            195 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetLeningradStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetGibraltarStatus
+	text = {
+		trigger = {
+            118 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetGibraltarStatusAxis
+	}
+	text = {
+		trigger = {
+            118 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetGibraltarStatusAllies
+	}
+    text = {
+		trigger = {
+            118 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetGibraltarStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetSingaporeStatus
+	text = {
+		trigger = {
+            336 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetSingaporeStatusAxis
+	}
+	text = {
+		trigger = {
+            336 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetSingaporeStatusAllies
+	}
+    text = {
+		trigger = {
+            336 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetSingaporeStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetDelhiStatus
+	text = {
+		trigger = {
+            439 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetDelhiStatusAxis
+	}
+	text = {
+		trigger = {
+            439 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetDelhiStatusAllies
+	}
+    text = {
+		trigger = {
+            439 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetDelhiStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetHonoluluStatus
+	text = {
+		trigger = {
+            629 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetHonoluluStatusAxis
+	}
+	text = {
+		trigger = {
+            629 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetHonoluluStatusAllies
+	}
+    text = {
+		trigger = {
+            629 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetHonoluluStatusNeutral
+	}
+}
+
+defined_text = {
+	name = GetTaiwanStatus
+	text = {
+		trigger = {
+            524 = { 
+                OWNER = { is_axis = yes }
+            }
+		}
+		localization_key = GetTaiwanStatusAxis
+	}
+	text = {
+		trigger = {
+            524 = { 
+                OWNER = { is_allies = yes }
+            }
+		}
+		localization_key = GetTaiwanStatusAllies
+	}
+    text = {
+		trigger = {
+            524 = { 
+                OWNER = { is_neutral = yes }
+            }
+		}
+		localization_key = GetTaiwanStatusNeutral
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

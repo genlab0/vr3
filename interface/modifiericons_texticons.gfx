@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fleet_texticon"
+		texturefile = "gfx/texticons/fleet_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_command_power_texticon"
+		texturefile = "gfx/texticons/command_power_texticon.dds"
+		legacy_lazy_load = no
+	}
+}
