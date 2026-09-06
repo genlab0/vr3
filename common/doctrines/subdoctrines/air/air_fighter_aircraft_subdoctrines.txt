@@ -10,7 +10,14 @@ air_subdoctrine_fighter_homeland_defense = {
     available = {
         has_doctrine = new_strategic_destruction
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_fighter_homeland_defense
+        }
+    }
     ai_will_do = {
 
         base = 1
@@ -42,7 +49,14 @@ air_subdoctrine_tactical_flexibility = {
     available = {
         has_doctrine = new_operational_integrity
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_tactical_flexibility
+        }
+    }
     ai_will_do = {
 
         base = 1
@@ -78,7 +92,14 @@ air_subdoctrine_dogfighting_mastery = {
     available = {
         has_doctrine = new_battlefield_support
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_dogfighting_mastery
+        }
+    }
     ai_will_do = {
 
         base = 1
@@ -110,7 +131,14 @@ air_subdoctrine_escort_fighter = {
 
     xp_cost = 100
     xp_type = air
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_escort_fighter
+        }
+    }
     available = {
         OR = {
             has_doctrine = new_strategic_destruction

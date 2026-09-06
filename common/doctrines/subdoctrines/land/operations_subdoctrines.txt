@@ -27,7 +27,14 @@ mission_type_tactics = {
     }
     # EFFECTS
     command_power_gain = 0.25
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = mission_type_tactics
+        }
+    }
 
     
 
@@ -84,7 +91,14 @@ last_stand = {
     }
     # EFFECTS
     conscription = 0.05
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = last_stand
+        }
+    }
     ai_will_do = {
 
         base = 0
@@ -146,7 +160,14 @@ infiltration_tactics = {
     }
 
     max_planning = 0.05 
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = infiltration_tactics
+        }
+    }
     ai_will_do = { }
 
      rewards = {
@@ -207,7 +228,14 @@ grand_assault = {
         }
 
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = grand_assault
+        }
+    }
     # EFFECTS
     max_planning = 0.1
     category_army = {
@@ -301,7 +329,14 @@ deep_battle = {
         }
 
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = deep_battle
+        }
+    }
     # EFFECTS
     enable_tactic = tactic_backhand_blow
     category_army = {
@@ -378,7 +413,14 @@ deep_battle_no_lar = {
         }
 
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = deep_battle_no_lar
+        }
+    }
     # EFFECTS
     enable_tactic = tactic_backhand_blow
     category_tanks = {
@@ -488,7 +530,14 @@ guerilla_war = {
     visible = {
         has_dlc = "No Compromise, No Surrender"
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = guerilla_war
+        }
+    }
     ai_will_do = { 
         base = 1
         modifier = {
@@ -590,8 +639,14 @@ rapid_domination = {
         }
 
     }
-
-    ai_will_do = { }
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = rapid_domination
+        }
+    }
 
     rewards = {
         forward_observers = {
@@ -662,7 +717,14 @@ expeditionary_warfare = {
         max_organisation = 10
     }
 
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = expeditionary_warfare
+        }
+    }
     ai_will_do = { }
 
     rewards = {

@@ -2082,6 +2082,34 @@ technologies = {
 			}
 		}
 	}
+	special_forces_quality_tech = {
+		allow = {
+			always = no 
+		}
+		research_cost = 1
+		start_year = 1936 
+
+		marine = {
+			need = {
+				special_equipment = 10
+			}
+		}
+		mountaineers = {
+			need = {
+				special_equipment = 10
+			}
+		}
+		rangers = {
+			need = {
+				special_equipment = 10
+			}
+		}
+		paratrooper = {
+			need = {
+				special_equipment = 10
+			}
+		}
+	}
 
 	bul_urban_training = {
 		allow = {

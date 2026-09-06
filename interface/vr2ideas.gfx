@@ -15,6 +15,27 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_usa_navy_idea"
+		texturefile = "gfx/interface/ideas/usa_navy_idea.dds"
+	}	
+		spriteType = {
+		name = "GFX_idea_usa_wartime_eco_idea"
+		texturefile = "gfx/interface/ideas/usa_wartime_eco_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_usa_airforce_idea"
+		texturefile = "gfx/interface/ideas/usa_airforce_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_usa_army_idea"
+		texturefile = "gfx/interface/ideas/usa_army_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_usa_eco_idea"
+		texturefile = "gfx/interface/ideas/usa_eco_idea.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_eng_australian_control"
 		texturefile = "gfx/interface/ideas/eng_australian_control.dds"
 	}
@@ -1740,6 +1761,10 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_idea_standard_oil_california"
+		texturefile = "gfx/interface/ideas/idea_standard_oil_california.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_standard_oil_california_improved"
 		texturefile = "gfx/interface/ideas/idea_standard_oil_california.dds"
 	}
 	spriteType = {

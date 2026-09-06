@@ -544,7 +544,7 @@ focus_tree = {
 
 	focus = {
 		id = HUN_reaffirm_territorial_claims
-		icon = GFX_focus_hun_annex_shine
+		icon = GFX_focus_hun_annex
 		prerequisite = { focus = HUN_renounce_the_treaty_of_trianon }
 		x = -2
 		y = 1

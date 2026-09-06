@@ -24,7 +24,14 @@ armored_spearhead = {
             is_major = no
         }
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = armored_spearhead
+        }
+    }
     # EFFECTS
     enable_tactic = tactic_breakthrough
 
@@ -92,7 +99,14 @@ mobile_defense = {
         }
 
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = mobile_defense
+        }
+    }
     enable_tactic = tactic_elastic_defense
 
     rewards = {
@@ -157,7 +171,14 @@ armored_infantry_support = {
             is_major = no
         }
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = armored_infantry_support
+        }
+    }
     # EFFECTS
     enable_tactic = tactic_blitz
 
@@ -230,7 +251,14 @@ streamlined_deployment = {
 
     }
 
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = streamlined_deployment
+        }
+    }
 
     rewards = {
         flexible_armored_battalions = {
@@ -286,7 +314,14 @@ armored_cavalry = {
             has_dlc = "La Resistance"
         }
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = armored_cavalry
+        }
+    }
     ai_will_do = {
 
         base = 1
@@ -367,7 +402,14 @@ armored_cavalry_no_lar = {
             has_dlc = "La Resistance"
         }
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = armored_cavalry_no_lar
+        }
+    }
     ai_will_do = {
 
         base = 1
@@ -469,7 +511,14 @@ tank_destroyer_force = {
         hard_attack = 0.1
         ap_attack = 0.1
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = tank_destroyer_force
+        }
+    }
     rewards = {
 
         mobile_anti_tank = {

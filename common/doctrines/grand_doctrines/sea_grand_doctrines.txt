@@ -146,7 +146,6 @@ new_convoy_raiding = {
     milestones = {
         {
             #Capital Ships
-			convoy_escort_efficiency = 0.10
 
             effect = {
                 if = {
@@ -164,7 +163,7 @@ new_convoy_raiding = {
         }
         {
             #Carriers
-	        submarine_attack = 0.10
+	        navy_submarine_attack_factor  = 0.10
 			naval_torpedo_reveal_chance_factor = -0.10
 
             effect = {
@@ -183,7 +182,6 @@ new_convoy_raiding = {
         }
         {
             #Screens
-			strike_force_movement_org_loss = -0.15
 			naval_detection = 0.1
 
             effect = {
@@ -202,8 +200,6 @@ new_convoy_raiding = {
         }
         {
             #Submarines
-	        sortie_efficiency = 0.30
-			naval_strike_targetting_factor = 0.1
 			convoy_raiding_efficiency_factor = 0.1
 
             effect = {

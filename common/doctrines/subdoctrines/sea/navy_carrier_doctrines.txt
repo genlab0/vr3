@@ -16,9 +16,16 @@ carrier_battlegroups = {
     }
 
     available = {
-        always = yes
+        has_doctrine = new_base_strike
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = carrier_battlegroups
+        }
+    }
     ai_will_do = { }
 
     # EFFECTS
@@ -61,7 +68,14 @@ floating_airfields = {
     available = {
         always = yes
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = floating_airfields
+        }
+    }
     ai_will_do = { 
         base = 1
         modifier = {
@@ -121,7 +135,14 @@ escort_carrier_support = {
     visible = {
         has_dlc = "No Compromise, No Surrender"
     }
-    
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = escort_carrier_support
+        }
+    }
     convoy_escort_efficiency = 0.5
 
     rewards = {
@@ -169,9 +190,16 @@ massed_carrier_fleet = {
         }
     }
     available = {
-        always = yes
+        has_doctrine = new_base_strike
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = massed_carrier_fleet
+        }
+    }
     naval_morale_factor	= 0.05
 
     rewards = {
@@ -213,7 +241,14 @@ light_task_forces = {
 
     xp_cost = 100
     xp_type = navy
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = light_task_forces
+        }
+    }
     ai_will_do = { 
         base = 1
         modifier = {

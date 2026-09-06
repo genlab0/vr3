@@ -26,13 +26,10 @@ special_forces_quantity = {
     }
 
     # EFFECTS
-
-    special_forces_cap = 0.04
     special_forces_training_time_factor = -0.2
 
     milestones = {
         {
-        	special_forces_cap = 0.04
             category_special_forces = {
                 soft_attack = 0.05
             }
@@ -51,7 +48,6 @@ special_forces_quantity = {
             }            
         }
         {
-        	special_forces_cap = 0.04
             category_special_forces = {
                 max_organisation = 5
             }
@@ -100,10 +96,16 @@ special_forces_quality = {
     }
 
     # EFFECTS
-
     category_special_forces = {
-                max_organisation = 10
-
+        max_organisation = 10
+    }
+    effect = {
+        hidden_effect = {
+            set_technology = {
+                special_forces_quality_tech = 0
+            }
+        }
+        custom_effect_tooltip = special_forces_quality_tech_tt
     }
     special_forces_no_supply_grace = 24
 
@@ -115,7 +117,6 @@ special_forces_quality = {
                 soft_attack = 0.05
                 breakthrough = 0.05
             }
-            special_forces_cap = 0.02
             effect = {
                 if = {
                     limit = {
@@ -137,7 +138,6 @@ special_forces_quality = {
                 soft_attack = 0.05
                 defense = 0.05
             }
-            special_forces_cap = 0.02
             effect = {
                 if = {
                     limit = {

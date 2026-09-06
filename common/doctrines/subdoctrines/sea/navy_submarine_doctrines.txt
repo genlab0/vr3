@@ -8,9 +8,16 @@ wolfpacks = {
     xp_type = navy
 
     available = {
-        always = yes
+        has_doctrine = new_convoy_raiding
+    }   
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = wolfpacks
+        }
     }
-
     ai_will_do = { 
         base = 1
         modifier = {
@@ -71,7 +78,14 @@ submarine_fleet_operations = {
     available = {
         always = yes
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = submarine_fleet_operations
+        }
+    }
     ai_will_do = { 
         base = 1
         modifier = {
@@ -127,7 +141,14 @@ capital_hunters = {
     name = SUBDOCTRINE_SUBMARINE_CAPITAL_HUNTERS
     description = SUBDOCTRINE_SUBMARINE_CAPITAL_HUNTERS_DESC
     icon = GFX_doctrine_unrestricted_submarine_warfare_medium
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = capital_hunters
+        }
+    }
     xp_cost = 100
     xp_type = navy
 
@@ -175,64 +196,6 @@ capital_hunters = {
     	}
     }
 }
-
-coastal_minelaying = {
-	track = submarines
-    name = SUBDOCTRINE_SUBMARINE_COASTAL_MINELAYING
-    description = SUBDOCTRINE_SUBMARINE_COASTAL_MINELAYING_DESC
-    icon = GFX_doctrine_convoy_interdiction_medium
-
-    xp_cost = 100
-    xp_type = navy
-
-    available = {
-        always = yes
-    }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
-
-    naval_mines_effect_reduction = 0.1
-
-    rewards = {
-
-    	covert_buildup = {
-    		submarine = {
-    			naval_speed = 0.1
-    			mines_planting = 0.25
-    		}
-
-    	}
-
-    	placement_for_effect = {
-    		naval_mines_damage_factor = 0.25
-    	}
-
-
-    	minefield_patrols = {
-    		destroyer = {
-    			mines_planting = 0.25
-    			lg_attack = 0.1
-    		}
-
-    	}
-    	overhead_protection = {
-    		destroyer = {
-    			anti_air_attack = 0.1
-    		}
-
-    	}
-    	clearing_procedures = {
-    		submarine = {
-    			mines_sweeping = 0.2
-    		}
-    		destroyer = {
-    			mines_sweeping = 0.2
-    		}
-    	}
-    }
-}
-
 long_range_submarines = {
     track = submarines
     name = SUBDOCTRINE_SUBMARINE_LONG_RANGE_SUBMARINES
@@ -247,7 +210,14 @@ long_range_submarines = {
     }
 
     naval_torpedo_hit_chance_factor = 0.1
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = long_range_submarines
+        }
+    }
     rewards = {
 
         ocean_patrols = {

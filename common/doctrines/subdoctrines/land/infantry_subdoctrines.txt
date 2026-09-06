@@ -24,6 +24,14 @@ mobile_infantry = {
     
     }
 
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = mobile_infantry
+        }
+    }
     # EFFECTS
     enable_tactic = tactic_overwhelming_fire
 
@@ -89,7 +97,14 @@ defensive_postures = {
             }
         }
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = defensive_postures
+        }
+    }
     category_all_infantry = {
         entrenchment = 0.05
     }
@@ -158,7 +173,14 @@ large_unit_tactics = {
 
 
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = large_unit_tactics
+        }
+    }
     rewards = {
         wide_trench_networks = {
             dig_in_speed_factor = 0.10
@@ -209,7 +231,14 @@ assault_infantry = {
             has_doctrine = grand_battleplan
         }
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = assault_infantry
+        }
+    }
     ai_will_do = {
 
         base = 1
@@ -327,7 +356,14 @@ commandos = {
 
     ai_will_do = { base = 0 }
     enable_tactic = tactic_infantry_charge
-    
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = commandos
+        }
+    }
     logistics_company = {
         battalion_mult = {
             category = category_light_infantry
@@ -451,7 +487,14 @@ peoples_war = {
         }
 
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = peoples_war
+        }
+    }
 
 
     rewards = {
@@ -506,7 +549,14 @@ great_war_infantry = {
             original_tag = FRA
         }
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = great_war_infantry
+        }
+    }
     category_light_infantry = {
         defense = 0.05
     }

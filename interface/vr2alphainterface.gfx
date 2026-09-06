@@ -5,12 +5,6 @@ spriteTypes = {
 		name = "GFX_news_event_el_alamein"
 		texturefile = "gfx/event_pictures/news_event_el_alamein.dds"
 	}
-
-
-
-
-
-
 	spriteType = {
 		name = "GFX_decision_cat_picture_support_britain"
 		texturefile = "gfx/interface/decisions/decision_cat_picture_support_britain.dds"

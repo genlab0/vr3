@@ -10,7 +10,14 @@ air_subdoctrine_flying_artillery = {
     available = {
         has_doctrine = new_battlefield_support
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_flying_artillery
+        }
+    }
     ai_will_do = {
 
         base = 1
@@ -50,7 +57,14 @@ air_subdoctrine_dive_bombers = {
     available = {
         has_doctrine = new_strategic_destruction
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_dive_bombers
+        }
+    }
     ai_will_do = {
 
         base = 1
@@ -81,7 +95,14 @@ air_subdoctrine_flexible_fire_support = {
     available = {
         has_doctrine = new_battlefield_support
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_flexible_fire_support
+        }
+    }
     ai_will_do = { base = 0 }
 
     rewards = {
@@ -110,7 +131,14 @@ air_subdoctrine_naval_strike_tactics = {
     available = {
         always = yes
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_naval_strike_tactics
+        }
+    }
     ai_will_do = {
 
         base = 1

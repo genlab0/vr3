@@ -394,6 +394,9 @@ ideas = {
 		bureau_of_ordnance_spirit = {
 			ledger = navy
 			visible = { tag = USA }
+			allowed_to_remove = {
+				has_completed_focus = USA_improve_torpedoes
+			}
 			modifier = {
 				naval_torpedo_hit_chance_factor = -0.1
 			}

@@ -1,0 +1,756 @@
+ALLIES_buy_us_equipment = {
+    ALLIES_buy_guns_request = {
+        icon = generic_prepare_civil_war
+        allowed = {
+			OR = {
+                original_tag = ENG 
+                original_tag = AST 
+                original_tag = CAN 
+                original_tag = SAF 
+                original_tag = RAJ 
+            }
+		}
+        available = {
+            AND = {
+                has_war = yes 
+                USA = {
+                    has_equipment = {
+                        infantry_equipment > 4999
+                    }
+                }
+                NOT = { has_country_flag = ALLIES_market_cooldown_flag }
+                USA = { has_country_flag = ALLIES_selling_guns_enabled_flag }
+            }
+        }
+
+        days_re_enable = 60
+
+        complete_effect = {
+			FROM = { activate_mission = ALLIES_buy_guns_arriving }
+            FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
+            add_timed_idea = {
+                idea = ALLIES_consumer_penalty
+                days = 60
+            }
+		}
+    }
+
+    ALLIES_buy_guns_arriving = {
+        icon = generic_prepare_civil_war
+        allowed = {
+			always = no 
+		}
+        available = {
+            always = no 
+        }
+        days_mission_timeout = 60 
+        timeout_effect = {
+            USA = {
+                send_equipment = {
+                    equipment = infantry_equipment
+                    amount = 5000
+                    target = FROM
+                }
+                FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
+                add_to_variable = { USA_industrial_capacity_factory = 0.01 }
+                add_to_variable = { USA_consumer_goods_factor = -0.01 }
+                add_to_variable = { USA_production_factory_max_efficiency_factor = 0.004 }
+            }
+        }
+    }
+
+    ALLIES_buy_support_request = {
+        icon = generic_prepare_civil_war
+        allowed = {
+			OR = {
+                original_tag = ENG 
+                original_tag = AST 
+                original_tag = CAN 
+                original_tag = SAF 
+                original_tag = RAJ 
+            }
+		}
+        available = {
+            AND = {
+                has_war = yes 
+                USA = {
+                    has_equipment = {
+                        support_equipment > 749
+                    }
+                }
+                NOT = { has_country_flag = ALLIES_market_cooldown_flag }
+                USA = { has_country_flag = ALLIES_selling_support_equipment_enabled_flag }
+            }
+        }
+
+        days_re_enable = 60
+
+        complete_effect = {
+			FROM = { activate_mission = ALLIES_buy_support_arriving }
+            FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
+            add_timed_idea = {
+                idea = ALLIES_consumer_penalty
+                days = 60
+            }
+		}
+    }
+
+    ALLIES_buy_support_arriving = {
+        icon = generic_prepare_civil_war
+        allowed = {
+			always = no 
+		}
+        available = {
+            always = no 
+        }
+        modifier = {
+			civilian_factory_use = 8
+		}
+        days_mission_timeout = 60 
+        timeout_effect = {
+            USA = {
+                send_equipment = {
+                    equipment = support_equipment
+                    amount = 750
+                    target = FROM
+                }
+                FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
+                add_to_variable = { USA_industrial_capacity_factory = 0.01 }
+                add_to_variable = { USA_consumer_goods_factor = -0.01 }
+                add_to_variable = { USA_production_factory_max_efficiency_factor = 0.004 }
+            }
+        }
+    }
+
+    ALLIES_buy_special_request = {
+        icon = generic_prepare_civil_war
+        allowed = {
+			OR = {
+                original_tag = ENG 
+                original_tag = AST 
+                original_tag = CAN 
+                original_tag = SAF 
+                original_tag = RAJ 
+            }
+		}
+        available = {
+            AND = {
+                has_war = yes 
+                USA = {
+                    has_equipment = {
+                        special_equipment > 849
+                    }
+                }
+                NOT = { has_country_flag = ALLIES_market_cooldown_flag }
+                USA = { has_country_flag = ALLIES_selling_special_equipment_enabled_flag }
+            }
+        }
+
+        days_re_enable = 60
+
+        complete_effect = {
+			FROM = { activate_mission = ALLIES_buy_special_arriving }
+            FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
+            add_timed_idea = {
+                idea = ALLIES_consumer_penalty
+                days = 60
+            }
+		}
+    }
+
+    ALLIES_buy_special_arriving = {
+        icon = generic_prepare_civil_war
+        allowed = {
+			always = no 
+		}
+        available = {
+            always = no 
+        }
+        modifier = {
+			civilian_factory_use = 8
+		}
+        days_mission_timeout = 60 
+        timeout_effect = {
+            USA = {
+                send_equipment = {
+                    equipment = special_equipment
+                    amount = 850
+                    target = FROM
+                }
+                FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
+                add_to_variable = { USA_industrial_capacity_factory = 0.01 }
+                add_to_variable = { USA_consumer_goods_factor = -0.01 }
+                add_to_variable = { USA_production_factory_max_efficiency_factor = 0.004 }
+            }
+        }
+    }
+
+    ALLIES_buy_trains_request = {
+        icon = generic_train
+        allowed = {
+			OR = {
+                original_tag = ENG 
+                original_tag = AST 
+                original_tag = CAN 
+                original_tag = SAF 
+                original_tag = RAJ 
+            }
+		}
+        available = {
+            AND = {
+                has_war = yes 
+                USA = {
+                    has_equipment = {
+                        train_equipment > 44
+                    }
+                }
+                NOT = { has_country_flag = ALLIES_market_cooldown_flag }
+                USA = { has_country_flag = ALLIES_selling_trains_enabled_flag }
+            }
+        }
+
+        days_re_enable = 60
+
+        complete_effect = {
+			FROM = { activate_mission = ALLIES_buy_trains_arriving }
+            FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
+            add_timed_idea = {
+                idea = ALLIES_consumer_penalty
+                days = 60
+            }
+		}
+    }
+
+    ALLIES_buy_trains_arriving = {
+        icon = generic_train
+        allowed = {
+			always = no 
+		}
+        available = {
+            always = no 
+        }
+        modifier = {
+			civilian_factory_use = 8
+		}
+        days_mission_timeout = 60 
+        timeout_effect = {
+            USA = {
+                send_equipment = {
+                    equipment = train_equipment
+                    amount = 45
+                    target = FROM
+                }
+                FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
+                add_to_variable = { USA_industrial_capacity_factory = 0.01 }
+                add_to_variable = { USA_consumer_goods_factor = -0.01 }
+                add_to_variable = { USA_production_factory_max_efficiency_factor = 0.004 }
+            }
+        }
+    }
+
+    ALLIES_buy_trucks_request = {
+        icon = generic_trucks
+        allowed = {
+			OR = {
+                original_tag = ENG 
+                original_tag = AST 
+                original_tag = CAN 
+                original_tag = SAF 
+                original_tag = RAJ 
+            }
+		}
+        available = {
+            AND = {
+                has_war = yes 
+                USA = {
+                    has_equipment = {
+                        motorized_equipment > 1199
+                    }
+                }
+                NOT = { has_country_flag = ALLIES_market_cooldown_flag }
+                USA = { has_country_flag = ALLIES_selling_trucks_enabled_flag }
+            }
+        }
+
+        days_re_enable = 60
+
+        complete_effect = {
+			FROM = { activate_mission = ALLIES_buy_trucks_arriving }
+            FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
+            add_timed_idea = {
+                idea = ALLIES_consumer_penalty
+                days = 60
+            }
+		}
+    }
+
+    ALLIES_buy_trucks_arriving = {
+        icon = generic_trucks
+        allowed = {
+			always = no 
+		}
+        available = {
+            always = no 
+        }
+        modifier = {
+			civilian_factory_use = 8
+		}
+        days_mission_timeout = 60 
+        timeout_effect = {
+            USA = {
+                send_equipment = {
+                    equipment = motorized_equipment
+                    amount = 1200
+                    target = FROM
+                }
+                FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
+                add_to_variable = { USA_industrial_capacity_factory = 0.01 }
+                add_to_variable = { USA_consumer_goods_factor = -0.01 }
+                add_to_variable = { USA_production_factory_max_efficiency_factor = 0.004 }
+            }
+        }
+    }
+
+    ALLIES_buy_aa_request = {
+        icon = ger_military_buildup
+        allowed = {
+			OR = {
+                original_tag = ENG 
+                original_tag = AST 
+                original_tag = CAN 
+                original_tag = SAF 
+                original_tag = RAJ 
+            }
+		}
+        available = {
+            AND = {
+                has_war = yes 
+                USA = {
+                    has_equipment = {
+                        anti_air_equipment > 749
+                    }
+                }
+                NOT = { has_country_flag = ALLIES_market_cooldown_flag }
+                USA = { has_country_flag = ALLIES_selling_aa_enabled_flag }
+            }
+        }
+
+        days_re_enable = 60
+
+        complete_effect = {
+			FROM = { activate_mission = ALLIES_buy_aa_arriving }
+            FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
+            add_timed_idea = {
+                idea = ALLIES_consumer_penalty
+                days = 60
+            }
+		}
+    }
+
+    ALLIES_buy_aa_arriving = {
+        icon = ger_military_buildup
+        allowed = {
+			always = no 
+		}
+        available = {
+            always = no 
+        }
+        modifier = {
+			civilian_factory_use = 8
+		}
+        days_mission_timeout = 60 
+        timeout_effect = {
+            USA = {
+                send_equipment = {
+                    equipment = anti_air_equipment
+                    amount = 750
+                    target = FROM
+                }
+                FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
+                add_to_variable = { USA_industrial_capacity_factory = 0.01 }
+                add_to_variable = { USA_consumer_goods_factor = -0.01 }
+                add_to_variable = { USA_production_factory_max_efficiency_factor = 0.004 }
+            }
+        }
+    }
+
+    ALLIES_buy_arty_request = {
+        icon = ger_military_buildup
+        allowed = {
+			OR = {
+                original_tag = ENG 
+                original_tag = AST 
+                original_tag = CAN 
+                original_tag = SAF 
+                original_tag = RAJ 
+            }
+		}
+        available = {
+            AND = {
+                has_war = yes 
+                USA = {
+                    has_equipment = {
+                        artillery_equipment > 749
+                    }
+                }
+                NOT = { has_country_flag = ALLIES_market_cooldown_flag }
+                USA = { has_country_flag = ALLIES_selling_arty_enabled_flag }
+            }
+        }
+
+        days_re_enable = 60
+
+        complete_effect = {
+			FROM = { activate_mission = ALLIES_buy_arty_arriving }
+            FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
+            add_timed_idea = {
+                idea = ALLIES_consumer_penalty
+                days = 60
+            }
+		}
+    }
+
+    ALLIES_buy_arty_arriving = {
+        icon = ger_military_buildup
+        allowed = {
+			always = no 
+		}
+        available = {
+            always = no 
+        }
+        modifier = {
+			civilian_factory_use = 8
+		}
+        days_mission_timeout = 60 
+        timeout_effect = {
+            USA = {
+                send_equipment = {
+                    equipment = artillery_equipment
+                    amount = 750
+                    target = FROM
+                }
+                FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
+                add_to_variable = { USA_industrial_capacity_factory = 0.01 }
+                add_to_variable = { USA_consumer_goods_factor = -0.01 }
+                add_to_variable = { USA_production_factory_max_efficiency_factor = 0.004 }
+            }
+        }
+    }
+
+    ALLIES_buy_at_request = {
+        icon = ger_military_buildup
+        allowed = {
+			OR = {
+                original_tag = ENG 
+                original_tag = AST 
+                original_tag = CAN 
+                original_tag = SAF 
+                original_tag = RAJ 
+            }
+		}
+        available = {
+            AND = {
+                has_war = yes 
+                USA = {
+                    has_equipment = {
+                        anti_tank_equipment > 749
+                    }
+                }
+                NOT = { has_country_flag = ALLIES_market_cooldown_flag }
+                USA = { has_country_flag = ALLIES_selling_arty_enabled_flag }
+            }
+        }
+
+        days_re_enable = 60
+
+        complete_effect = {
+			FROM = { activate_mission = ALLIES_buy_at_arriving }
+            FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
+            add_timed_idea = {
+                idea = ALLIES_consumer_penalty
+                days = 60
+            }
+		}
+    }
+
+    ALLIES_buy_at_arriving = {
+        icon = ger_military_buildup
+        allowed = {
+			always = no 
+		}
+        available = {
+            always = no 
+        }
+        modifier = {
+			civilian_factory_use = 8
+		}
+        days_mission_timeout = 60 
+        timeout_effect = {
+            USA = {
+                send_equipment = {
+                    equipment = anti_tank_equipment
+                    amount = 750
+                    target = FROM
+                }
+                FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
+                add_to_variable = { USA_industrial_capacity_factory = 0.01 }
+                add_to_variable = { USA_consumer_goods_factor = -0.01 }
+                add_to_variable = { USA_production_factory_max_efficiency_factor = 0.004 }
+            }
+        }
+    }
+
+    ALLIES_buy_mech_request = {
+        icon = generic_trucks
+        allowed = {
+			OR = {
+                original_tag = ENG 
+                original_tag = AST 
+                original_tag = CAN 
+                original_tag = SAF 
+                original_tag = RAJ 
+            }
+		}
+        available = {
+            AND = {
+                has_war = yes 
+                USA = {
+                    has_equipment = {
+                        mechanized_equipment > 349
+                    }
+                }
+                NOT = { has_country_flag = ALLIES_market_cooldown_flag }
+                USA = { has_country_flag = ALLIES_selling_mech_enabled_flag }
+            }
+        }
+
+        days_re_enable = 60
+
+        complete_effect = {
+			FROM = { activate_mission = ALLIES_buy_mech_arriving }
+            FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
+            add_timed_idea = {
+                idea = ALLIES_consumer_penalty
+                days = 60
+            }
+		}
+    }
+
+    ALLIES_buy_mech_arriving = {
+        icon = generic_trucks
+        allowed = {
+			always = no 
+		}
+        available = {
+            always = no 
+        }
+        modifier = {
+			civilian_factory_use = 8
+		}
+        days_mission_timeout = 60 
+        timeout_effect = {
+            USA = {
+                send_equipment = {
+                    equipment = mechanized_equipment
+                    amount = 350
+                    target = FROM
+                }
+                FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
+                add_to_variable = { USA_industrial_capacity_factory = 0.01 }
+                add_to_variable = { USA_consumer_goods_factor = -0.01 }
+                add_to_variable = { USA_production_factory_max_efficiency_factor = 0.004 }
+            }
+        }
+    }
+
+    ALLIES_buy_light_tanks_request = {
+        icon = generic_tank
+        allowed = {
+			OR = {
+                original_tag = ENG 
+                original_tag = AST 
+                original_tag = CAN 
+                original_tag = SAF 
+                original_tag = RAJ 
+            }
+		}
+        available = {
+            AND = {
+                has_war = yes 
+                USA = {
+                    has_equipment = {
+                        light_tank_chassis > 229
+                    }
+                }
+                NOT = { has_country_flag = ALLIES_market_cooldown_flag }
+                USA = { has_country_flag = ALLIES_selling_light_tanks_enabled_flag }
+            }
+        }
+
+        days_re_enable = 60
+
+        complete_effect = {
+			FROM = { activate_mission = ALLIES_buy_light_tanks_arriving }
+            FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
+            add_timed_idea = {
+                idea = ALLIES_consumer_penalty
+                days = 60
+            }
+		}
+    }
+
+    ALLIES_buy_light_tanks_arriving = {
+        icon = generic_tank
+        allowed = {
+			always = no 
+		}
+        available = {
+            always = no 
+        }
+        modifier = {
+			civilian_factory_use = 8
+		}
+        days_mission_timeout = 60 
+        timeout_effect = {
+            USA = {
+                send_equipment = {
+                    equipment =light_tank_chassis
+                    amount = 230
+                    target = FROM
+                }
+                FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
+                add_to_variable = { USA_industrial_capacity_factory = 0.01 }
+                add_to_variable = { USA_consumer_goods_factor = -0.01 }
+                add_to_variable = { USA_production_factory_max_efficiency_factor = 0.004 }
+            }
+        }
+    }
+
+    ALLIES_buy_medium_tanks_request = {
+        icon = generic_tank
+        allowed = {
+			OR = {
+                original_tag = ENG 
+                original_tag = AST 
+                original_tag = CAN 
+                original_tag = SAF 
+                original_tag = RAJ 
+            }
+		}
+        available = {
+            AND = {
+                has_war = yes 
+                USA = {
+                    has_equipment = {
+                        medium_tank_chassis > 199
+                    }
+                }
+                NOT = { has_country_flag = ALLIES_market_cooldown_flag }
+                USA = { has_country_flag = ALLIES_selling_medium_tanks_enabled_flag }
+            }
+        }
+
+        days_re_enable = 60
+
+        complete_effect = {
+			FROM = { activate_mission = ALLIES_buy_medium_tanks_arriving }
+            FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
+            add_timed_idea = {
+                idea = ALLIES_consumer_penalty
+                days = 60
+            }
+		}
+    }
+
+    ALLIES_buy_medium_tanks_arriving = {
+        icon = generic_tank
+        allowed = {
+			always = no 
+		}
+        available = {
+            always = no 
+        }
+        modifier = {
+			civilian_factory_use = 8
+		}
+        days_mission_timeout = 60 
+        timeout_effect = {
+            USA = {
+                send_equipment = {
+                    equipment = medium_tank_chassis
+                    amount = 200
+                    target = FROM
+                }
+                FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
+                add_to_variable = { USA_industrial_capacity_factory = 0.01 }
+                add_to_variable = { USA_consumer_goods_factor = -0.01 }
+                add_to_variable = { USA_production_factory_max_efficiency_factor = 0.004 }
+            }
+        }
+    }
+
+    ALLIES_buy_heavy_tanks_request = {
+        icon = generic_tank
+        allowed = {
+			OR = {
+                original_tag = ENG 
+                original_tag = AST 
+                original_tag = CAN 
+                original_tag = SAF 
+                original_tag = RAJ 
+            }
+		}
+        available = {
+            AND = {
+                has_war = yes 
+                USA = {
+                    has_equipment = {
+                        heavy_tank_chassis > 119
+                    }
+                }
+                NOT = { has_country_flag = ALLIES_market_cooldown_flag }
+                USA = { has_country_flag = ALLIES_selling_heavy_tanks_enabled_flag }
+            }
+        }
+
+        days_re_enable = 60
+
+        complete_effect = {
+			FROM = { activate_mission = ALLIES_buy_heavy_tanks_arriving }
+            FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
+            add_timed_idea = {
+                idea = ALLIES_consumer_penalty
+                days = 60
+            }
+		}
+    }
+
+    ALLIES_buy_heavy_tanks_arriving = {
+        icon = generic_tank
+        allowed = {
+			always = no 
+		}
+        available = {
+            always = no 
+        }
+        modifier = {
+			civilian_factory_use = 8
+		}
+
+        days_mission_timeout = 60 
+        timeout_effect = {
+            USA = {
+                send_equipment = {
+                    equipment = heavy_tank_chassis
+                    amount = 120
+                    target = FROM
+                }
+                FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
+                add_to_variable = { USA_industrial_capacity_factory = 0.01 }
+                add_to_variable = { USA_consumer_goods_factor = -0.01 }
+                add_to_variable = { USA_production_factory_max_efficiency_factor = 0.004 }
+            }
+        }
+    }
+
+}

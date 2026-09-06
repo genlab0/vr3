@@ -20,9 +20,25 @@ set_technology = {
 	CAS1 = 1
 	early_bomber = 1
 }
+##############################
+###Economy Modifier##########
+##############################
+
+set_variable = { USA_industrial_capacity_factory = -0.6 }
+set_variable = { USA_industrial_capacity_dockyard = -0.6 }
+set_variable = { USA_political_power_cost = 1 }
+set_variable = { USA_consumer_goods_factor = 0.8}
+set_variable = { USA_production_speed_buildings_factor = -0.5}
+set_variable = { USA_production_speed_dockyard_factor = 0 }
+set_variable = { USA_stability_weekly = -0.005 }
+set_variable = { USA_local_resources_factor = -0.3}
+set_variable = { USA_production_speed_infrastructure_factor = 0}
+set_variable = { USA_production_factory_max_efficiency_factor = 0}
+
+add_dynamic_modifier = { modifier = USA_economy_dynamic_modifier }
 
 set_research_slots = 5
-set_stability = 0.75
+set_stability = 0.5
 set_war_support = 0
 add_command_power = 20
 set_convoys = 850
@@ -95,7 +111,6 @@ set_popularities = {
 
 add_ideas = {
 	undisturbed_isolation
-	great_depression
 	disarmed_nation
 	free_trade
 	home_of_the_free
