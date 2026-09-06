@@ -5,9 +5,9 @@ state=
 	manpower = 3548684
 	
 	state_category = town
-	history=
-{
+	history={
 		owner = USA
+		set_state_flag = USA_controls
 		buildings = {
 			infrastructure = 3 #was: 5
 			air_base = 6

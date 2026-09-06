@@ -10,7 +10,14 @@ fire_concentration = {
     available = {
         has_doctrine = superior_firepower
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = fire_concentration
+        }
+    }
     ai_will_do = {
 
         base = 1
@@ -91,7 +98,14 @@ anti_tank_frontline = {
 
      # EFFECTS
      
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = anti_tank_frontline
+        }
+    }
     engineer = {
         battalion_mult = {
             category = category_line_artillery
@@ -163,7 +177,14 @@ flying_batteries = {
             NOT = { has_tech = rocket_artillery } 
         }
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = flying_batteries
+        }
+    }
 
     category_line_artillery = {
         soft_attack = 0.05
@@ -231,7 +252,14 @@ mobile_recon_and_assault = {
     visible = {
         has_dlc = "La Resistance"
     }
-    
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = mobile_recon_and_assault
+        }
+    }
     ai_will_do = {
 
         base = 1
@@ -329,7 +357,14 @@ mobile_recon_and_assault_no_lar = {
             has_dlc = "La Resistance"
         }
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = mobile_recon_and_assault_no_lar
+        }
+    }
     
     ai_will_do = {
 
@@ -417,7 +452,14 @@ self_propelled_support = {
     available = {
        always = yes 
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = self_propelled_support
+        }
+    }
 
     ai_will_do = { base = 0 }
 
@@ -512,7 +554,14 @@ siege_artillery = {
             instant = yes
         }
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = siege_artillery
+        }
+    }
     rewards = {
 
         fortress_busters = {
@@ -567,7 +616,14 @@ field_engineering = {
             has_doctrine = grand_battleplan
         }
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = field_engineering
+        }
+    }
     ai_will_do = { 
         base = 1
         modifier = {

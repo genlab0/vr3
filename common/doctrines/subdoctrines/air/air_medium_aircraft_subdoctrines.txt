@@ -10,7 +10,14 @@ air_subdoctrine_operational_air_support = {
     available = {
         has_doctrine = new_battlefield_support
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_operational_air_support
+        }
+    }
     ai_will_do = {
 
         base = 1
@@ -68,7 +75,14 @@ air_subdoctrine_tactical_battlefield_support = {
             is_major = no 
         }
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_tactical_battlefield_support
+        }
+    }
     # EFFECTS
 	
     rewards = {
@@ -91,7 +105,14 @@ air_subdoctrine_theater_interdiction = {
     available = {
         has_doctrine = new_operational_integrity
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_theater_interdiction
+        }
+    }
     ai_will_do = {
 
         base = 1
@@ -127,7 +148,14 @@ air_subdoctrine_aerial_reconnaissance = {
     visible = {
     	has_dlc = "La Resistance"
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_aerial_reconnaissance
+        }
+    }
     available = {
         OR = {
             has_doctrine = new_operational_integrity

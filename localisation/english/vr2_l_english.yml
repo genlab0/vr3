@@ -24,6 +24,9 @@
  #Mio:
  GER_mio_dp_at:0"HE Shells Adoption"
  generic_mio_trait_destroyer_escort:0"Destroyer Escort Production"
+ USA_mio_trait_gato_class:0"Gato Class Design"
+ USA_mio_trait_german_designs:0"Diesel Submarine Designs"
+ USA_louisiana_maneuvers_mastery_bonus:0"Louisiana Maneuvers"
 
 
 
@@ -1005,7 +1008,395 @@
  SPR_negotiate_carlist_support_tt:0"§GSpawns in 10 Infantry Divisions§!"
  SPR_the_army_of_africa_tt:0"§GSpawns in 6 Elite Infantry Divisions§!"
  SPR_secure_the_northern_garrisons_tt:0"States §YAsturias§! and §YPais Vasco§! will not start with §R"Unplanned Offensive"§! at the start of the Spanish Civil War"
+ ###US Focuses (in no specific order cant be bothered):
+
+#USA SSA:
+USA_social_security_act:"Social Security Act"
+USA_social_security_act_desc:0"Despite being one of the wealthiest countries in the world, we still dont have a real, functioning Social Security System. The SSA is a first step"
+USA_social_security_act_tt:0"Daily Political Power Cost:§G -0.25§! "
+#USA SSA Wagetax:
+USA_ssa_funding_wagetax:0"Funding: Payroll tax"
+USA_ssa_funding_wagetax_desc:0"We can finance this project via new taxes on wages. This will avoid higher government spending"
+USA_ssa_funding_wagetax_tt:0"Construction Speed:§R -10%§!" 
+
+#Giant Warkes:
+USA_the_giant_wakes_tt:0"Factory Output:§G +20%§!" 
+
+#USA SSA Government paid:
+USA_ssa_funding_government:0"Funding: Higher government spending"
+USA_ssa_funding_government_desc:0"Higher taxes lead to even more economic contraction. While this might be unpopular in Washington, we have to increase government spending in the short term"
+USA_ssa_funding_government_tt:0"Consumer Goods Factor:§Y +20%§!" 
+
+#Finance Infra:
+USA_finance_infrastructure_tt:"\nConsumer Goods Factor:§Y +5.0%§!\n§YInfrastructure§! Construction Speed:§G +15.00%§!\n\n" 
+USA_finance_infrastructure:0"Infrastructure Investments"
+USA_finance_infrastructure_desc:0"Investing into our obsolete infrastructure will increase our domestic production a lot"
+
+#Rural Electrification Act:
+USA_rural_electrification_administration:0"Rural Electrification Administration"
+USA_rural_electrification_administration_desc:0"Electricity is the future. We should provide our citizens with it as soon as possible"
+USA_rural_electrification_administration_tt:"Consumer Goods Factor:§Y +10%§! \nWeekly Stability:§G +0.10%§!" 
+USA_rural_electrification_administration_2_tt:0"Allows Decisions to build §YHydro Power Plants§! and §YHigh Capacity Electrical Grids§!"
+
+#National Youth:
+USA_national_youth_administration:0"National Youth Administration"
+USA_national_youth_administration_desc:0"By improving education, we increase our talent pool and improve the Living Standard of millions of Americans"
+USA_national_youth_administration_tt:"Consumer Goods Factor:§Y +5.0%§! \nResearch Speed:§G +5.00%§! \n " 
+USA_great_depression_cooldown_days_remaining_tt:0"Legislation takes 300 days to be implemented."
+
+
+#Reopen Factories:
+USA_increase_industry_production:0"Reverse Economic Contraction"
+USA_increase_industry_production_desc:0"By reopening old factories and investing into new ones, America will once again become the economic superpower it is destined to be"
+USA_increase_industry_production_tt:0"Consumer Goods Factor:§Y -15.0%§!"
+
+#AAA:
+USA_agricultural_adjustment_act_tt:"Consumer Goods Factor:§Y -10%§! \nConstruction Speed:§R -5%§! \nDaily Political Power Cost:§G -0.25§! \n "
+
+#Fixed Prices:
+USA_fixed_agricultural_prices:0"Price Controls"
+USA_fixed_agricultural_prices_desc:0"By setting a price minimum on agricultural products, we are breaking the laws of capitalism. This is deeply unpopular, but necessary to break deflation"
+USA_fixed_agricultural_prices_tt:"Consumer Goods Factor:§Y -10%§!"
+
+#USA Burn Agricultural Products:
+USA_burn_agricultural_products:0"Burn Agricultural Products"
+USA_burn_agricultural_products_desc:0"By Burning farmland and agricultural products, we reduce supply, which leads to higher prices and higher profits for the struggling agricultural sector"
+USA_burn_agricultural_products_tt:0"Consumer Goods Factor:§Y -5.0%§!"
+
+#Fair Labor Standards Act:
+USA_fair_labour_standards_act_tt:0"Weekly Stability:§G +0.30%§! \nFactory Output:§G +10%§!"
+
+#Federal Housing Act:
+USA_federal_housing_act_tt:"Weekly Stability:§G +0.10%§! \nConstruction Speed:§G +10%§! \nConsumer Goods Factor:§Y +10%§!"
+
+#USA Old Age Insurance:
+USA_old_age_insurance:0"Pension Fund"
+USA_old_age_insurance_desc:0"By introducing a statutory pension fund, we can guarantee social security for elderly people"
+USA_old_age_insurance_tt:"Weekly Stability:§G +0.10%§!" 
+
+#USA Unemployment Insurance:
+USA_unemployment_insurance:0"Unemployment Insurance"
+USA_unemployment_insurance_desc:0"By introducing a Unemployment Insurance, we can guarantee social security for people looking for a job"
+USA_unemployment_insurance_tt:"Weekly Stability:§G +0.30%§!" 
+
+#GI BILL:
+USA_gi_bill:0"GI Bill"
+USA_gi_bill_desc:0"By promising our soldiers a home and a job after the war, we can motivate them to fight for our freedom even more"
+USA_gi_bill_tt:0"Consumer Goods Factor:§Y +15.0%§! \nFactory Output:§G +8.00%§! " 
+
+#Naval Act of 1936:
+USA_naval_act_1936:0"Naval Act of 1936"
+USA_naval_act_1936_desc:0"Even though congress and the people do not want to meddle in international affairs, there is consensus for a higher budget for the US Navy to protect the US from foreign invasions"
+USA_naval_act_effect_tt:0"Dockyard output: §G+15.00%§!" 
+
+#US Army Focus:
+USA_army_focus:0"United States Army"
+USA_army_focus_desc:0"We have to prepare for the upcoming war. The US Army will play a decisive role in beating back the fascist and authoritarian regimes around the world."
+
+#USA Pentagon:
+USA_build_the_pentagon_tt:0"Planning Speed:§G +10%§! \nIntel from Combat gain:§! §G +25%§!"
+
+USA_office_of_strategic_services:0"Office of Strategic Services"
+USA_office_of_strategic_services_desc:0"To protect out homeland and gain valueable intelligence, we need a Intelligence Service with funding"
+USA_office_of_strategic_services_tt:0"Decryption factor:§G +20§! \nExtra Operative Slots:§G +2§! \nPassive Defense:§G +5§!"
+
+#USA Bomber Focus:
+USA_bomber_program:0"XXI Bomber Command"
+USA_bomber_program_desc:0"Giving more resources to the 11th Bomber Command can prove useful when dealing with Japan. Destroying the Military Industrial Base will lead to Japanese surrender"
+
+#USA DOD:
+USA_department_of_defense_tt:0"Max Planning factor:§G10%§!"
+#USA xb28 Bomber:
+USA_xb28_bomber:0"XB28 Dragon"
+USA_xb28_bomber_desc:0"The XB28 is the latest design by North American Aviation. We should invest into it now"
+
+#USA Night Bombing:
+USA_night_bombing:0"Night Bombing Campaign"
+USA_night_bombing_desc:0"Focusing at Night Bombing will make us harder to detect."
+USA_night_bombing_tt:0"§YDecreases Strategic Bombing visibility by§! §G10%§!"
+
+#USA Dog Fighting Capabilities:
+USA_dogfighting_capabilities:0"Tactics for Dog Fights"
+USA_dogfighting_capabilities_desc:0"Close Air Combat Tacitcs are more important then we thought. We should catch up to the rest of the world"
+
+
+#USA Support Aviation Program:
+USA_support_aviation_program:0"Light Bomber Program"
+USA_support_aviation_program_desc:0"While the big, strategic bombers might have more bombs and a higher range, it is the light bombers that can prove decisive."
+
+#USA Land Based Navs:
+USA_land_based_navs:0"Maritime Patrol Aircraft"
+USA_land_based_navs_desc:0"Land Based Naval Aviation can lock down entire seazones from enemy surface combattants. We cant fall behind in that area"
+
+#USA Next Gen Navs:
+USA_next_gen_navs:0"Advanced Naval Bombers"
+USA_next_gen_navs_desc:0"Increased Range, better Armaments and a better protection will prove even more dangerous to the enemy in an environment hostile to battleships"
+
+#USA Fighter Program:
+USA_fighter_program:0"Fighter Program"
+USA_fighter_program_desc:0"Fighters are the workhorse of our airforce."
+
+#Naval Act of 1936:
+USA_1938_naval_act:0"Naval Expansion Act"
+USA_1938_naval_act_desc:0"The Naval Expansion Act, also called Second Vinson Act, will allow us to expand our navy to the goals set by congress."
+
+#US improved Bombing tactics:
+USA_improved_bombing_tactics:0"M34 2000lb"
+USA_improved_bombing_tactics_desc:0"The M34 bomb will prove to be a technical innovation worth its investment. We will be able to flatten entire cities"
+USA_improved_bombing_tactics_tt:0"§YIncreases Strategic Bombing by§! §G10%§!"
+
+#Mahanian Doctrine:
+USA_mahanian_doctrine:0"Mahanian Doctrine"
+USA_mahanian_doctrine_desc:0"In order to stay true to our roots, we have to invest into a big, concentrated, battleship focused navy. With the extended range of our Battleships, we will sail towards Japan and conquer everything in our way."
+USA_mahanian_doctrine_tt:0"§YIncreases Naval Range by§! §G10%§!"
+
+#Battlecruiser Focus:
+USA_battlecruiser_focus:0"Focus on Heavy Cruisers"
+USA_battlecruiser_focus_desc:0"We will focus on improving the speed and range of our Battlefleet. This will allow us to strike quickly and run when needed"
+USA_battlecruiser_focus_tt:0"§YIncreases naval speed by§! §G13%§! \n§YIncreases naval range by§! §G5%§!"
+
+#Battleship Focus:
+USA_battleship_focus:0"Focus on Battleships"
+USA_battleship_focus_desc:0"We will stay true to our roots. Mahan envisioned a massive battlefleet that will win one concentrated battle. If the enemy disperses, he will be defeated in Detail. Our battleships should get equipped with the armaments to destroy anything in their way"
+USA_battleship_focus_tt:0"§YIncreases Capital Ship Attack by§! §G10%§! \n§YIncreases Naval Speed by§! §G8%§!"
+
+#Iowa Class:
+USA_iowa_class:0"Iowa Class"
+USA_iowa_class_desc:0"We will order a new generation of Battleships. It will pave the way for an invasion of the Home Islands"
+USA_iowa_class_tt:0"Dockyard output: §G10.00%§! \n§YDockyard§! construction speed: §G10.00%§!"
+
+#Carrier Fleet:
+USA_carrier_fleets:0"US Navy Carrier Program"
+USA_carrier_fleets_desc:0"Its time to invest into a new generation of carriers, with extended range and a bigger strike potential"
+
+#Improve Sorties:
+USA_improve_sorties:0"Improve Sortie Efficiency"
+USA_improve_sorties_desc:0"By adding more organisation and testing out different tactics, we can increase the amount of sorties on our carriers"
+USA_improve_sorties_tt:0"§YImproves Sortie Efficiency by§! §G15%§!"
+
+
+#The Avenger:
+USA_avenger_nav:0"The Avenger"
+USA_avenger_nav_desc:0"Our experiences with carriers and carrier launched naval bombers will result in new requirements. Higher ranger, stronger armaments and better targetting systems will only be some of the advantages the new class of planes will have"
+
+#USA Essex Class:
+USA_essex_class:0"Essex Class"
+USA_essex_class_desc:0"In order to strike deep into enemy territory, we need power projection. Essex Class will provide us with extreme range, massive air power projection, and modern sensors. These carriers, if deployed correctly, will win us the war."
+USA_essex_class_tt:0"Dockyard output: §G10.00%§! \n§YDockyard§! construction speed: §G10.00%§!"
+
+#USA Improve Air Navy Coordination:
+USA_air_navy_coordination:0"Naval Aviation Exercises"
+USA_air_navy_coordination_desc:0"We will have to maximise the effectiveness of our carriers by increasing coordination between the surface combattants and the naval aviation"
+USA_air_navy_coordination_tt:0"§YIncreases carrier night traffic by§! §G15%§! \n§YIncreases carrier fighter sortie efficiency by§! §G10%§!"
+
+#USA Submarine Focus:
+USA_submarine_focus:0"Submarine Program"
+USA_submarine_focus_desc:0"Submarines can deliver a critical blow to enemy logistics, supply lines and reinforcment capabilities. We should invest now into R&D to stay competitive"
+
+
+#US Torpedo Improvements:
+USA_improve_torpedoes:0"Replace the Mark 14 Torpedo"
+USA_improve_torpedoes_desc:0"Our old torpedoes are terribly inaccurate and are holding our submarine fleet back. Getting new ones into service as fast as possible has to be a priority"
+USA_improve_torpedoes_tt:0"Allows you to replace the Bureau of Ordnance national spirit."
+
+#Charles Lockwood
+USA_charles_lockwood:0"Charles Lockwood"
+USA_charles_lockwood_desc:0"Vice Admiral Lockwood has plenty of experience with submarine combat, he can help us develop the necessary manuals to maximise the effectiveness of submarines"
+
+#Focus on Range:
+USA_focus_on_range:0"Gato Class"
+USA_focus_on_range_desc:0"The Gato Class is a revolutionary new type of submarines. While it might not be as slow and silent as its Axis counterparts, it has the necessary range to even reach the Japanese Home Islands"
+USA_focus_on_range_tt:0"Submarine Range:§G +35%§! \nSubmarine surface visibility:§R +10%§! \nSubmarine visibility:§R +10%§! \nSubmarine Speed:§R -5%§!"
+
+#Focus on Visibility:
+USA_focus_on_visibility:0"Imitate German Designs"
+USA_focus_on_visibility_desc:0"German Submarines have set a new Gold Standard. Low visibility and high speeds make them hard to find. We need to develop our own system with similar characteristics! "
+USA_focus_on_visibility_tt:0"Submarine Range:§R -15%§! \nSubmarine surface visibility:§G -5%§! \nSubmarine visibility:§G -10%§! \nSubmarine speed:§G +5%§!"
+
+#Scale Production:
+USA_focus_scale_up_production:0"Scale up naval production"
+USA_focus_scale_up_production_desc:0"War with Japan seemed inevitable, but the last Isolationists have been proven wrong. It is time to give our Navy the funding it needs"
+USA_scale_up_production_tt:0"Dockyard Output§G +15.00%§! \n§YDockyard§! construction speed:§G +15.00%§!"
+
+#USA Isolationism:
+USA_isolationism:0"Isolationism"
+USA_isolationism_desc:0"While our president is an Internationalist, the country isnt in ready for war, and congress is neither. If we want to keep support for our New Deal Policies, we will have to appease congress and the people"
+
+#USA Second Neutrality Act:
+USA_neutrality_act_of_1937:0"Second Neutrality Act"
+USA_neutrality_act_of_1937_desc:0"With the outbreak of the Spanish Civil War, the administration sees itself forced to sign a second Neutrality Act, forbidding arms shipments on American vessels"
+USA_neutrality_act_of_1937_tt:0"§YMilitary Factory§! Construction Speed:§R -15.00%§!"
+
+#Cash and Carry:
+USA_cash_and_carry_clause:"Cash and Carry Clause"
+USA_cash_and_carry_clause_desc:0"We can modifiy the Second Neutrality Act to exclude american resources and arms, shipped on non-american vessels. This can prove useful later"
+
+#Forbid Exports:
+USA_forbid_exports:0"Forbid all arms export"
+USA_forbid_exports_desc:0"By banning all arms exports to belligerent countries, we will make our position even clearer to Isolationists"
+
+#Internationalism
+USA_interventionism:0"Interventionism"
+USA_interventionism_desc:0"Our administration consists of Internationalists, many of whom experienced Theodore Roosevelt and Woodrow Wilson. Promoting it whenever possible is important to prepare this country for war"
+
+#Quarantine Speech:
+USA_quarantine_speech:0"Quarantine Speech"
+USA_quarantine_speech_desc:0"It seems to be unfortunately true that the epidemic of world lawlessness is spreading. When an epidemic of physical disease starts to spread, the community approves and joins in a quarantine of the patients in order to protect the health of the community against the spread of the disease."
+
+#Denounce Japan:
+USA_denounce_japanese_agression:0"Denounce Japanese Aggression"
+USA_denounce_japanese_agression_desc:0"We were right all along. Independant nations are getting attacked by bullies on the international stage. We will freeze certain Japanese assets in response to this invasion"
+
+#Denounce Germany:
+USA_denounce_german_agression:0"Denounce German Aggression"
+USA_denounce_german_agression_desc:0"Fascists in Germany and Italy are occupying freedom loving countries like Albania, Austria and Czechoslovakia. This will inevitably lead to war. Isolationists have once again been proven wrong."
+
+#2nd World War:
+USA_september_1939:0"1.September 1939"
+USA_september_1939_desc:0"Contrary to what the Isolationists suggested, the fascists in Europe dont just constrain themselves to bullying their small neighbors. They picked fights with our longterm allies, Britain and France. We will not stand still while the Free World is getting attacked"
+
+#Denounce Isolationism:
+USA_denounce_isolationism:0"Denounce Isolationism"
+USA_denounce_isolationism_desc:0"The Internationalist Coalition under Roosevelt has been proven right. Now its time to implement our policies to prepare the country for war"
+USA_denounce_isolationism_tt:0"Weekly War support:§G +0.50%§!"
+
+#Arsenal of Democracy:
+USA_arsenal_of_democracy_tt:0"Allows decisions to supply Allied nations with arms"
+
+#British Designs:
+USA_british_designs_tt:0"Research Speed:§G +5.00%§!"
+USA_british_designs:0"British Designs"
+USA_british_designs_desc:0"By sharing technologies with Britain, we can strenghthen our Military Industrial Base"
+
+#Long Term Contracting:
+USA_long_term_contracting:0"Long Term Contracting"
+USA_long_term_contracting_desc:0"Short term budgets have seriously constrained our Military Industry. Long Term contracts incentivize long term investments, sustainable growth and will result in Economies of Scale effects"
+USA_long_term_contracting_tt:"Military Factory Construction Speed:§G +20.00%§! \nProduction Efficiency Cap:§G +10.00%§!"
+
+#Replenish Stocks:
+USA_replenish_stocks_idea:0"Replenish Stocks"
+USA_replenish_stocks:0"Replenish our Stocks"
+USA_replenish_stocks_desc:0"In order to field a sizeable army, we need to produce the equipment for it. Now that we're in a hurry, we will try to simply production. This might reduce quality slightly, but it is necessary in these circumstances"
+
+#Scientist Haven:
+USA_scientist_haven_tt:0"Research Speed:§G +5.00%§!"
+
+#Start War Production:
+USA_start_war_production:0"Start War Production"
+USA_start_war_production_desc:0"Outside threats force our hand: An Economic Mobilisation is unavoidable."
+
+#WAr Production Board:
+USA_war_production_board:0"War Production Board"
+USA_war_production_board_desc:0"By creating a board that helps coordinate military production, we can react way faster to military needs"
+USA_war_production_board_tt:0"Production Efficiency Growth:§G +15.00%§!"
+
+#Resource Program:
+USA_resource_program:0"Resource Program"
+USA_resource_program_desc:0"We need to improve our Resource extraction to fuel our war machine"
+USA_resource_program_tt:0"Resource Gain Efficiency:§G +40.00%§!"
+
+#Price Controls:
+USA_price_controls_tt:0"Factory Output:§G +5.00%§!"
+USA_price_controls:0"Price Controls"
+USA_price_controls_desc:0"This deeply anticapitalistic war measure helps buy stuff at cheaper prices"
+
+#Mobilise Society:
+USA_mobilise_society:0"Mobilise Society"
+USA_mobilise_society_desc:0"The War Production Board will launch a massive propaganda campaign to mobilise the masses for the war"
+
+#Big Buisness
+USA_big_buisness:0"Cooperation with Big Buisness"
+USA_big_buisness_desc:0"By working with big manufacturers, we can convert our industrial capacity into military output extremely fast"
+USA_big_buisness_tt:0"Allows Decisions to Build Military Factories"
+
+#USA Willow Run Factory:
+USA_willow_run_idea:0"Willow Run Plant"
+USA_willow_run:0"Willow Run Aircraft Plant"
+USA_willow_run_desc:0"We were able to convince Ford to build a massive Aircraft Manufacturing Plant"
+
+#Cleveland Tank Plant:
+USA_cleveland_tank_plant:0"Cleveland Tank Plant"
+USA_cleveland_tank_plant_desc:0"We were able to convince GM to build a massive Tank Manufacturing Plant"
+
+#Boston Navy Yard:
+USA_boston_navy_yard_tt:0"Dockyard Output:§G +10.00%§!"
+USA_boston_navy_yard:0"Boston Naval Yard"
+USA_boston_navy_yard:0"We will expand our shipbuilding capacity with these massive dockyard facilities"
+
+#USA Rubber
+USA_rubber_reserve_focus:0"Rubber Reserve Company"
+USA_rubber_reserve_focus_desc:0"Japan threatens our supply to Rubber. We have big stockpiles, but they wont last forever. We should invest now"
+USA_rubber_reserve_focus_tt:0"Improves §YStandard Oil of California§! Industrial Concern"
+
+#American Marines:
+USA_american_marines:0"US Navy Marines"
+USA_american_marines_desc:0"The marines will play a crucial role in Island Hopping. They will have to grind through Japanese defences"
+USA_american_marines_tt:0"Special Forces Attack Factor:§G +5.00%§!"
+
+#Amphib Operations:
+USA_amphibious_operations_tt:0"Naval Invasion Defense:§G +10.00%§!"
+
+#Amtracs:
+USA_amtrac:0"Amtracs"
+USA_amtrac_desc:0"Amphibious Tractors (Amtracs) can give our marines more protection and mobility"
+
+#Red Army Won:
+USA_red_army_won_tt:0"Max Planning Factor:§G +12%§! \nRecovery Rate:§G +8%§! \nLand Night Attack:§G +8%§!"
+USA_red_army_won:0"Red Army Won!"
+USA_reD_army_won_desc:0"The Red Army, entrenching itself behind the Mississippi river, was able to fend off the enemy tanks"
+
+#Blue Army Won:
+USA_blue_army_won:0"Blue Army Won!"
+USA_blue_army_won_desc:0"Pattons Tanks have outmaneuvered the enemy defenses! They are victorious!"
+USA_blue_army_won_tt:0"Max Planning Factor:§G +8%§! \nRecovery Rate:§G +12%§! \nLand Night Attack:§G +14%§!"
+
+#Comm Devices:
+USA_communication_devices:0"Walkie Talkies"
+USA_communication_devices_desc:0"Walkie Talkies have been a huge factor in communications, we should start procurement immediatly"
+USA_communication_devices_tt:0"Reinforce Rate:§G +3%§!"
+
+#M1:
+USA_m1_garand:0"M1 Garand"
+USA_m1_garand_desc:0"The standard US army rifle"
+
+#AT:
+USA_anti_tank:0"Anti Tank Systems"
+USA_anti_tank_desc:0"In case we encounter armor, we should be ready to destroy it immediatly"
+
+#defend Philli:
+USA_defend_philippines:0"Defend Phillipines"
+USA_defend_philippines_desc:0"Lets focus on the defense of the Phillipines."
+
+#retreat Philli:
+USA_retreat_from_philippines:0"Retreat from Phillipines"
+USA_retreat_from_philippines_desc:0"Lets focus on the defense of Guam."
+
+USA_navy_dynamic_modifier:0"US Navy"
+USA_navy_dynamic_modifier_desc:0"The US Navy has always been influenced by famous Admirals and their manuals, doctrines and strategies. Changing those will be a long and hard process"
+USA_economy_dynamic_modifier:0"US Economy"
+USA_economy_dynamic_modifier_desc:0"The US Economy is in heavy turmoils during this period of hardships."
+USA_army_dynamic_modifier:0"US Army"
+USA_airforce_dynamic_modifier:0"USAAF"
+#Wake Island Midway Island
+USA_wake_island_base:0"Wake Island Naval Base"
+USA_wake_island_base_desc:0"Lets use Wake Island as our US Navy Base"
+USA_midway_island_base:0"Midway Naval Base"
+USA_midway_island_base_desc:0"Lets retreat the US navy to Midway"
+
+USA_day_in_infamy:0"A day in Infamy"
+USA_day_in_infamy_desc:0"Yesterday, December 7, 1941—a date which will live in infamy—the United States of America was suddenly and deliberately attacked by the naval and air forces of the Empire of Japan."
+
+#Accelerate Army Training:
+USA_accelerate_army_training:0"Accelerate Army Training"
+USA_accelerate_army_training_desc:0"Lets speed up our Army Training"
+USA_accelerate_army_training_tt:0"Army Training Time:§G -30%§!"
+
+#Accelerate Air Training:
+USA_accelerate_air_training:0"Accelerate Air Training"
+USA_accelerate_air_training_desc:0"Lets speed up our Air Training"
+USA_accelerate_air_training_tt:0"Air Training XP Gain Factor:§G +30%§!"
  ##Events:
+ USA_small_prod_boost_tt:0"Factory Output:§G +1.00%§!\n§YConsumer Goods§! Factor:§R -1.00%§!\n§YProduction Efficiency§! Cap:§G +0.40%§!"
  bftb_bulgaria_army_reforms.3.t:0"Army Doctrines 2"
  bftb_bulgaria_army_reforms.3.d:0"Nikola Hadzipetkov has come to us with a suggestion: Do we want to focus on the offensive, or do we want to improve our engineering corps and our defenses?"
  bftb_bulgaria_army_reforms.3.a:0"Offensive Doctrine"
@@ -1080,6 +1471,12 @@
  news.417.d:0"Reports have come in of Wehrmacht forces crossing the demarcation line at Vichy. French forces have been ordered to not resist the invasion force. \n The limited autonomy the Vichy regime had been granted was taken by Nazi Germany."
  news.417.a:0"What a time to be alive :("
  ##Ideas: 
+ GFX_idea_standard_oil_california_improved:0"Standard Oil of California"
+ GFX_idea_standard_oil_california_improved_desc:0""
+ USA_willow_run_idea:0"Willow Run Plant"
+ USA_willow_run_idea_desc:0""
+ USA_the_pentagon_improved:0"The Pentagon"
+ USA_the_pentagon_improved_desc:0""
  republican_offensive:0"Republican Offensive"
  republican_offensive_desc:0""
  BUL_offensive_idea:0"Offensive Doctrine"
@@ -1177,6 +1574,79 @@
  SOV_offensive_1941_idea_desc:0""
  SOV_offensive_later_idea:0"Winter Offensive"
  SOV_offensive_later_idea_desc:0""
+
+ #Island hopping names # 
+ jap_chinese_occupation:0 "Occupation of China"
+ jap_chinese_occupation_2:0 "Occupation of China"
+ JAP_island_hopping0:0 "§YThe Pacific War§!: §RLost§!!"
+ JAP_island_hopping1:0 "§YThe Pacific War§!: §RLosing§!!"
+ JAP_island_hopping2:0 "§YThe Pacific War§!: §RLosing§!!"
+ JAP_island_hopping3:0 "§YThe Pacific War§!: §RLosing§!!"
+ JAP_island_hopping4:0 "§YThe Pacific War§!: §RLosing§!!"
+ JAP_island_hopping5:0 "§YThe Pacific War§!: §OStill Undecided§!!"
+ JAP_island_hopping6:0 "§YThe Pacific War§!: §OStill Undecided§!!"
+ JAP_island_hopping7:0 "§YThe Pacific War§!: §OStill Undecided§!!"
+ JAP_island_hopping8:0 "§YThe Pacific War§!: Stable"
+ JAP_island_hopping9:0 "§YThe Pacific War§!: §OStill Undecided§!!"
+ JAP_island_hopping10:0 "§YThe Pacific War§!: §OStill Undecided§!!"
+ JAP_island_hopping11:0 "§YThe Pacific War§!: §OStill Undecided§!!"
+ JAP_island_hopping12:0 "§YThe Pacific War§!: §GWinning§!!"
+ JAP_island_hopping13:0 "§YThe Pacific War§!: §GWon§!!"
+ JAP_island_hopping14:0 "§YThe Pacific War§!: §GWon§!!"
+ JAP_island_hopping-1_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."  
+ JAP_island_hopping0_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."  
+ JAP_island_hopping1_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ JAP_island_hopping2_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ JAP_island_hopping3_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ JAP_island_hopping4_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."  
+ JAP_island_hopping5_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."  
+ JAP_island_hopping6_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."  
+ JAP_island_hopping7_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."  
+ JAP_island_hopping8_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."  
+ JAP_island_hopping9_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."  
+ JAP_island_hopping10_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ JAP_island_hopping11_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ JAP_island_hopping12_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ JAP_island_hopping13_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ JAP_island_hopping14_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ JAP_island_hopping15_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ JAP_island_hopping16_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ JAP_island_hopping17_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+
+ 
+
+ USA_island_hopping0:0 "§YThe Pacific War§!: §RLost§!!"
+ USA_island_hopping1:0 "§YThe Pacific War§!: §RLosing§!!"
+ USA_island_hopping2:0 "§YThe Pacific War§!: §RLosing§!!"
+ USA_island_hopping3:0 "§YThe Pacific War§!: §RLosing§!!"
+ USA_island_hopping4:0 "§YThe Pacific War§!: §RLosing§!!"
+ USA_island_hopping5:0 "§YThe Pacific War§!: §OStill Undecided§!!"
+ USA_island_hopping6:0 "§YThe Pacific War§!: §OStill Undecided§!!"
+ USA_island_hopping7:0 "§YThe Pacific War§!: §OStill Undecided§!!"
+ USA_island_hopping8:0 "§YThe Pacific War§!: Stable"
+ USA_island_hopping9:0 "§YThe Pacific War§!: §OStill Undecided§!!"
+ USA_island_hopping10:0 "§YThe Pacific War§!: §OStill Undecided§!!"
+ USA_island_hopping11:0 "§YThe Pacific War§!: §OStill Undecided§!!"
+ USA_island_hopping12:0 "§YThe Pacific War§!: §GWinning§!!"
+ USA_island_hopping13:0 "§YThe Pacific War§!: §GWon§!!""
+ USA_island_hopping_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping1_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping2_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping3_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping4_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping5_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping6_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping7_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping8_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping9_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping10_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping11_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping12_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping13_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping14_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping15_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping16_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
+ USA_island_hopping17_desc:0 "Island Hopping Mechanic: for every island we capture that is listed we will receive a bonus and the enemy a malus\n§YGuam\nMidway\nWake Island\nHawaiig\nIwo Jima\nSaipan\nOkinawa\nPalau\nTaiwan\nAttu Island\nManila§!."
 
  ##Research:
  special_equipment_desc:0 "Special purpose equipment includes all equipments needed for special operations."
@@ -1725,6 +2195,70 @@
 
 
  #Decisions:
+ USA_improve_electrical_grid_texas:0"Improve Electrical Grid in Texas"
+ USA_improve_electrical_grid_tennessee:0"Improve Electrical Grid in Tennessee"
+ USA_improve_electrical_grid_washington:0"Improve Electrical Grid in Washington"
+ USA_improve_electrical_grid_new_york:0"Improve Electrical Grid in New York"
+ USA_improve_electrical_grid_new_england:0"Improve Electrical Grid in New England"
+ USA_improve_electrical_grid_ohio:0"Improve Electrical Grid in Ohio"
+ USA_improve_electrical_grid_michigan:0"Improve Electrical Grid in Michigan"
+ USA_economic_decisions:0"Work Progress Administration Projects"
+ USA_build_hoover_dam:0"Start Construction of Hoover Dam"
+ USA_build_grand_coulee_dam:0"Start Construction of Grand Coulee Dam"
+ USA_build_fort_peck_dam:0"Start Construction of Fort Peck Dam"
+ USA_build_bonneville_dam:0"Start Construction of Bonneville Dam"
+ USA_build_wheeler_dam:0"Start Construction of Wheeler Dam"
+ USA_build_norris_dam:0"Start Construction of Norris Dam"
+ USA_economic_decisions_desc:0"The Work Progress Administration (WPA) was a New Deal agency that provided jobs and income to the unemployed during the Great Depression. The WPA funded a wide range of public works projects, including the construction of roads, bridges, schools, and other infrastructure. By investing in these projects, the government aimed to stimulate economic growth and reduce unemployment."
+ ALLIES_consumer_penalty:0"Arms Procurement"
+ ALLIES_consumer_penalty_desc:0""
+ ALLIES_buy_us_equipment:0"Buy US Equipment"
+ ALLIES_buy_us_equipment_desc:0"Franklin D. Roosevelt has offered to sell us equipment from the United States. We can buy it to help our war effort, while preparing US industry for its upcoming involvement in this great struggle. For §Yeach contract§! signed, the §BUS§! receives: \n\nFactory Output:§G +1.00%§!\nConsumer Goods Factor:§Y -1.00%§!\nProduction Efficiency Cap:§G +0.40%§!"
+ ALLIES_selling_guns_enabled_flag:0"Is actively selling guns"
+ ALLIES_selling_support_equipment_enabled_flag:0"Is actively selling support equipment"
+ ALLIES_selling_special_equipment_enabled_flag:0"Is actively selling special equipment"
+ ALLIES_selling_trucks_enabled_flag:0"Is actively selling trucks"
+ ALLIES_selling_trains_enabled_flag:0"Is actively selling trains"
+ ALLIES_selling_aa_enabled_flag:0"Is actively selling anti-air"
+ ALLIES_selling_arty_enabled_flag:0"Is actively selling artillery"
+ ALLIES_selling_at_enabled_flag:0"Is actively selling anti-tank"
+ ALLIES_selling_mech_enabled_flag:0"Is actively selling mechanized"
+ ALLIES_selling_light_tanks_enabled_flag:0"Is actively selling light tanks"
+ ALLIES_selling_medium_tanks_enabled_flag:0"Is actively selling medium tanks"
+ ALLIES_selling_heavy_tanks_enabled_flag:0"Is actively selling heavy tanks"
+ ALLIES_buy_guns_request:0"Request to buy guns"
+ ALLIES_buy_support_request:0"Request to buy support equipment"
+ ALLIES_buy_special_request:0"Request to buy special equipment"
+ ALLIES_buy_trucks_request:0"Request to buy trucks"
+ ALLIES_buy_trains_request:0"Request to buy trains"
+ ALLIES_buy_aa_request:0"Request to buy anti-air"
+ ALLIES_buy_arty_request:0"Request to buy artillery"
+ ALLIES_buy_at_request:0"Request to buy anti-tank"
+ ALLIES_buy_mech_request:0"Request to buy mechanized"
+ ALLIES_buy_light_tanks_request:0"Request to buy light tanks"
+ ALLIES_buy_medium_tanks_request:0"Request to buy medium tanks"
+ ALLIES_buy_heavy_tanks_request:0"Request to buy heavy tanks"
+ ALLIES_buy_guns_arriving:0"§YGuns§! are arriving from the US"
+ ALLIES_buy_support_arriving:0"§YSupport Equipment§! is arriving from the US"
+ ALLIES_buy_special_arriving:0"§YSpecial Equipment§! is arriving from the US"
+ ALLIES_buy_trucks_arriving:0"§YTrucks§! are arriving from the US"
+ ALLIES_buy_trains_arriving:0"§YTrains§! are arriving from the US"
+ ALLIES_buy_aa_arriving:0"§YAnti-Air§! is arriving from the US"
+ ALLIES_buy_arty_arriving:0"§YArtillery§! is arriving from the US"
+ ALLIES_buy_at_arriving:0"§YAnti-Tank§! is arriving from the US"
+ ALLIES_buy_mech_arriving:0"§YMechanized§! is arriving from the US"
+ ALLIES_buy_light_tanks_arriving:0"§YLight Tanks§! are arriving from the US"
+ ALLIES_buy_medium_tanks_arriving:0"§YMedium Tanks§! are arriving from the US"
+ ALLIES_buy_heavy_tanks_arriving:0"§YHeavy Tanks§! are arriving from the US"
+ ALLIES_market_cooldown_flag:0"Is already procuring equipment from the US"
+ USA_destroyers_for_bases_decision:0"Destroyers for Bases"
+ USA_destroyers_for_bases_decision_desc:0""
+ JAP_pacific_war_explanation_category:0 "Southern Expansion"
+ USA_pacific_war_dec:0"Pacific War"
+ JAP_pacific_war_dec:0"Pacific War"
+ JAP_pacific_war_explanation_category_desc:0 "\nThe National Spirit §YThe Island Hopping Campaign§! is modified by capturing the following islands:\n\n[ROOT.GetManilaController]\n[ROOT.GetAttuController]\n[ROOT.GetGuamController]\n[ROOT.GetMidwayController]\n[ROOT.GetWakeController]\n[ROOT.GetHawaiiController]\n[ROOT.GetIwoJimaController]\n[ROOT.GetSaipanController]\n[ROOT.GetOkinawaController]\n[ROOT.GetPalauController]\n[ROOT.GetTaiwanController]\n\n§L"
+ USA_pacific_war_category:0 "The Pacific War"
+ USA_pacific_war_category_desc:0 "\nThe National Spirit §YThe Island Hopping Campaign§! is modified by capturing the following islands:\n\n[ROOT.GetManilaController2]\n[ROOT.GetAttuController2]\n[ROOT.GetGuamController2]\n[ROOT.GetMidwayController2]\n[ROOT.GetWakeController2]\n[ROOT.GetHawaiiController2]\n[ROOT.GetIwoJimaController2]\n[ROOT.GetSaipanController2]\n[ROOT.GetOkinawaController2]\n[ROOT.GetPalauController2]\n[ROOT.GetTaiwanController2]\n\n§L"
  BUL_infantry_terrain_training:0"Start Army Reforms cycle."
  BUL_urban_training_tt:0"§YEngineer Company§!:\n   §YUrban§!: \n      Attack §G+10%§!\n      Defense §G+10%§! \n      §R+10§! Support Equipment"
  BUL_winter_training_tt:0"§YEngineer Company§!:\n   §YSnow§!: \n      Attack §G+10%§!\n      Defense §G+10%§! \n      §R+10§! Support Equipment"
@@ -1774,7 +2308,7 @@
  ENG_division_spawns_4_desc:0""
  ENG_desperate_defense:0"Desperate Defense"
  ENG_desperate_defense_desc:0"We have to throw everything into the fight to defend our homeland"
- USA_aid_britain_desc:0 "Monthly Fighter Lend Lease: [?USA.fighter_lend_lease_monthly]"
+ USA_aid_britain_desc:0 "Monthly Fighter Lend Lease: [?USA.fighter_lend_lease_monthly]\n\nWe can determine which types of equipment we are willing to sell to Allied nations. In order for an allied country to be able to buy said equipment, you need a big enough stockpile. For each sale, you get: \n\n Factory Output:§G +1.00%§!\nConsumer Goods Factor:§Y -1.00%§!\nProduction Efficiency Cap:§G +0.40%§!"
  USA.fighter_lend_lease_var_setup:0"§G1000§! fighters will be sent monthly"
  USA.fighter_lend_lease_var_set_to_0:0"§G0§! fighters will be sent monthly"
  USA.fighter_lend_lease_var_increase_small:0"§G100§! more fighters will be sent monthly"
@@ -1821,6 +2355,46 @@
  SPR_army_artillery_tt:0"§GBrigada Legionario: Receive Artillery Support§!"
  spr_civil_war_division_quality:0"Brigade Count per Division:"
  spr_civil_war_division_quantity:0"Division Count:"
+ JAP_CONTROLS_GUAM:0 "§OThe Empire of the Rising Sun§! currently controls §YGuam§!."
+ USA_CONTROLS_GUAM:0 "§2The United States§! currently controls §YGuam§!."
+ JAP_CONTROLS_MIDWAY:0 "§OThe Empire of the Rising Sun§! currently controls §YMidway§!."
+ USA_CONTROLS_MIDWAY:0 "§2The United States§! currently controls §YMidway§!."
+ JAP_CONTROLS_WAKE:0 "§OThe Empire of the Rising Sun§! currently controls §YWake Island§!."
+ USA_CONTROLS_WAKE:0 "§2The United States§! currently controls §YWake Island§!."
+ JAP_CONTROLS_HAWAII:0 "§OThe Empire of the Rising Sun§! currently controls §YHawaii§!."
+ USA_CONTROLS_HAWAII:0 "§2The United States§! currently controls §YHawaii§!."
+ JAP_CONTROLS_CAROLINE:0 "§OThe Empire of the Rising Sun§! currently controls §YTruk Atoll§!."
+ USA_CONTROLS_CAROLINE:0 "§2The United States§! currently controls §YTruk Atoll§!."
+ JAP_CONTROLS_IWOJIMA:0 "§OThe Empire of the Rising Sun§! currently controls §YIwo Jima§!."
+ USA_CONTROLS_IWOJIMA:0 "§2The United States§! currently controls §YIwo Jima§!."
+ JAP_CONTROLS_SAIPAN:0 "§OThe Empire of the Rising Sun§! currently controls §YSaipan§!."
+ USA_CONTROLS_SAIPAN:0 "§2The United States§! currently controls §YSaipan§!."
+ JAP_CONTROLS_OKINAWA:0 "§OThe Empire of the Rising Sun§! currently controls §YOkinawa§!."
+ USA_CONTROLS_OKINAWA:0 "§2The United States§! currently controls §YOkinawa§!."
+ JAP_CONTROLS_MARSHALL:0 "§OThe Empire of the Rising Sun§! currently controls §YChichijima§!."
+ USA_CONTROLS_MARSHALL:0 "§2The United States§! currently controls §YChichijima§!."
+ JAP_CONTROLS_GILBERT:0 "§OThe Empire of the Rising Sun§! currently controls §YHong Kong§!."
+ USA_CONTROLS_GILBERT:0 "§2The United States§! currently controls §YHong Kong§!."
+ JAP_CONTROLS_SOLOMON:0 "§OThe Empire of the Rising Sun§! currently controls §YThe Solomon Islands§!."
+ USA_CONTROLS_SOLOMON:0 "§2The United States§! currently controls §YThe Solomon Islands§!."
+ JAP_CONTROLS_PAPUA:0 "§OThe Empire of the Rising Sun§! currently controls §YPapua§!."
+ USA_CONTROLS_PAPUA:0 "§2The United States§! currently controls §YPapua§!."
+ JAP_CONTROLS_PALAU:0 "§OThe Empire of the Rising Sun§! currently controls §YPalau§!."
+ USA_CONTROLS_PALAU:0 "§2The United States§! currently controls §YPalau§!."
+ JAP_CONTROLS_TAIWAN:0 "§OThe Empire of the Rising Sun§! currently controls §YTaiwan§!."
+ USA_CONTROLS_TAIWAN:0 "§2The United States§! currently controls §YTaiwan§!."
+ JAP_CONTROLS_MANILA:0 "§OThe Empire of the Rising Sun§! currently controls §YManila§!."
+ USA_CONTROLS_MANILA:0 "§2The United States§! currently controls §YManila§!."
+ JAP_CONTROLS_ATTU:0 "§OThe Empire of the Rising Sun§! currently controls §YAttu Island§!."
+ USA_CONTROLS_ATTU:0 "§2The United States§! currently controls §YAttu Island§!."
+ JAP_CONTROLS_BURMA:0 "§OThe Empire of the Rising Sun§! currently controls §YBurma§!."
+ USA_CONTROLS_BURMA:0 "§2The United States§! currently controls §YBurma§!."
+ JAP_CONTROLS_SINGAPORE:0 "§OThe Empire of the Rising Sun§! currently controls §YSingapore§!."
+ USA_CONTROLS_SINGAPORE:0 "§2The United States§! currently controls §YSingapore§!."
+ JAP_CONTROLS_SIAM:0 "§OThe Empire of the Rising Sun§! currently controls §YSiam§!."
+ USA_CONTROLS_SIAM:0 "§2The United States§! currently controls §YSiam§!."
+ JAP_CONTROLS_CAMBODIA:0 "§OThe Empire of the Rising Sun§! currently controls §YCambodia§!."
+ USA_CONTROLS_CAMBODIA:0 "§2The United States§! currently controls §YCambodia§!."
  #Lend Lease:
  SOV_lend_lease_system:0"American Lend-Lease"
  SOV_lend_lease_increase_all_decision:0"Request more help in every sector!"
@@ -1865,6 +2439,7 @@
  ENG_capitulated:0"England has capitulated"
 
 #technologies:
+ special_forces_quality_tech_tt:0"All §YSpecial Forces§!: §R+10§! Special Equipment"
  RANGERS_DOCTRINE_LABEL:0"Rangers"
  RANGERS_DOCTRINE_DESC:0"Rangers are highly versatile special forces. They excel in forested areas, while also retaining the ability to defeat an enemy in urban engagements."
  RANGERS_DOCTRINE:0"Rangers"

@@ -6140,7 +6140,10 @@ focus_tree = {
 				target = FRA 
 				type = annex_everything
 			}
-
+			hidden_effect = {
+				JAP = { add_ideas = JAP_island_hopping7 }
+				USA = { add_ideas = USA_island_hopping8 }
+			}
 		}
 
 	}

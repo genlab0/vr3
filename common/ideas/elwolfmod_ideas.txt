@@ -26,77 +26,14 @@ ideas = {
 		}
 	}
 	country = {
-		ITA_output_0 = {
-			picture = ITA_papal_state_ns
-			allowed = {
-				always = no 
-			}
-			removal_cost = -1
-		}
-		ITA_output_1 = {
-			picture = ITA_papal_state_ns
+		ALLIES_consumer_penalty = {
+			picture = generic_infantry_bonus
 			allowed = {
 				always = no 
 			}
 			removal_cost = -1
 			modifier = {
-				industrial_capacity_factory = 0.04
-				industrial_capacity_dockyard = 0.04
-			}
-		}
-		ITA_output_2 = {
-			picture = ITA_papal_state_ns
-			allowed = {
-				always = no 
-			}
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_factory = 0.08
-				industrial_capacity_dockyard = 0.08
-			}
-		}
-		ITA_output_3 = {
-			picture = ITA_papal_state_ns
-			allowed = {
-				always = no 
-			}
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_factory = 0.12
-				industrial_capacity_dockyard = 0.12
-			}
-		}
-		ITA_output_4 = {
-			picture = ITA_papal_state_ns
-			allowed = {
-				always = no 
-			}
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_factory = 0.16
-				industrial_capacity_dockyard = 0.16
-			}
-		}
-		ITA_output_5 = {
-			picture = ITA_papal_state_ns
-			allowed = {
-				always = no 
-			}
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_factory = 0.20
-				industrial_capacity_dockyard = 0.20
-			}
-		}
-		ITA_output_6 = {
-			picture = ITA_papal_state_ns
-			allowed = {
-				always = no 
-			}
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_factory = 0.25
-				industrial_capacity_dockyard = 0.25
+				consumer_goods_factor = 0.10
 			}
 		}
 

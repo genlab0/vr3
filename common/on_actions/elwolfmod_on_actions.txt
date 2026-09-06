@@ -1368,6 +1368,74 @@ on_actions = {
 			WST = { HMP_startup_on_actions = yes }
 		}
 	}
+	##Island Hopping
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { 
+						OR = { 
+							is_in_faction_with = JAP  
+							tag = JAP
+						} 
+					}
+					ROOT = { 
+						OR = { 
+							is_in_faction_with = USA 
+							tag = USA
+						} 
+					}
+					FROM.FROM = {
+						has_state_flag = JAP_controls
+					}
+				}
+				FROM.FROM = {  
+				 	set_state_flag = USA_controls
+				 	clr_state_flag = JAP_controls
+				}
+			 	USA = { 
+			 		USA_island_hopping_level_up = yes
+			 	}
+		 		JAP = {
+		 			JAP_island_hopping_level_down = yes 
+		 		}
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { 
+						OR = { 
+							is_in_faction_with = USA 
+							tag = USA
+						}
+					}
+					ROOT = { 
+						OR = { 
+							tag = JAP 
+							is_in_faction_with = JAP
+						}	 
+					}
+					FROM.FROM = {
+						has_state_flag = USA_controls
+					}
+				}
+				FROM.FROM = { 
+				 	set_state_flag = JAP_controls 
+				 	clr_state_flag = USA_controls 
+				}
+		 		JAP = { 
+		 			JAP_island_hopping_level_up = yes 
+		 		}
+		 		USA = {
+					USA_island_hopping_level_down = yes
+		 		} 
+			}
+		}
+	}
+
 	on_weekly = {
 		effect = {
 			HMP_check_fleet_size = yes

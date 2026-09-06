@@ -1,5 +1,34 @@
 ###DEBUG STUFF
-
+JAP_pacific_war_explanation_category = {
+	JAP_pacific_war_dec = {
+		icon = generic_decision
+		name = JAP_pacific_war_dec 
+		fire_only_once = no
+		allowed = {
+			original_tag = JAP
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 526 #
+				state = 524 #
+				state = 645 #
+				state = 327 #
+				state = 647 #
+				state = 638 #
+				state = 632 #
+				state = 631 #
+				state = 629 #
+				state = 650 #
+			} 
+		}
+		available = {
+			always = no 
+		}
+		visible = {
+			original_tag = JAP
+		}
+	}
+}
 foreign_politics = {
 
 	# Sueing for peace from being nuked, only available for a non-hist Japan 

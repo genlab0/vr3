@@ -10,7 +10,14 @@ air_subdoctrine_night_bombing = {
     available = {
         has_doctrine = new_strategic_destruction
     }
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_night_bombing
+        }
+    }
     ai_will_do = {
 
         base = 1
@@ -40,7 +47,14 @@ air_subdoctrine_carpet_bombing = {
     name = SUBDOCTRINE_CARPET_BOMBING
     description = SUBDOCTRINE_CARPET_BOMBING_DESC
     icon = GFX_doctrine_mass_destruction_medium
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_carpet_bombing
+        }
+    }
     xp_cost = 100
     xp_type = air
 
@@ -79,7 +93,14 @@ air_subdoctrine_deep_air_raids = {
     name = SUBDOCTRINE_DEEP_AIR_RAIDS
     description = SUBDOCTRINE_DEEP_AIR_RAIDS_DESC
     icon = GFX_doctrine_offensive_formations_medium
-
+    effect = {
+        add_daily_mastery = {
+            amount = 0.4
+            days = 1500
+           name = doctrine_mastery_gain
+            sub_doctrine = air_subdoctrine_deep_air_raids
+        }
+    }
     xp_cost = 100
     xp_type = air
 
