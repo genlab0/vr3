@@ -337,45 +337,6 @@ JAP_kure_naval_arsenal_organization = {
 		}
 	}
 
-	add_trait = {
-		token = JAP_mio_trait_strength_in_numbers
-		name = JAP_mio_trait_strength_in_numbers
-		icon = GFX_generic_mio_department_icon_facilities
-		special_trait_background = yes
-
-		relative_position_id = generic_mio_trait_primary_battery_layout
-
-		position = { x = 1 y = 0 }  
-		
-		visible = {
-			FROM = { original_tag = JAP }
-		}
-
-		available = {
-			FROM = {
-				has_completed_focus = JAP_seek_strength_in_numbers
-				NOT = { has_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag
-			}
-		}
-
-		organization_modifier = {
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
 
 }
 
@@ -571,45 +532,6 @@ JAP_yokosuka_naval_arsenal_organization = {
 		}
 	}
 
-	add_trait = {
-		token = JAP_mio_trait_strength_in_numbers
-		name = JAP_mio_trait_strength_in_numbers
-		icon = GFX_generic_mio_department_icon_facilities
-		special_trait_background = yes
-
-		relative_position_id = generic_mio_trait_primary_fire_director_control
-
-		position = { x = 1 y = 0 }  
-		
-		visible = {
-			FROM = { original_tag = JAP }
-		}
-
-		available = {
-			FROM = {
-				has_completed_focus = JAP_seek_strength_in_numbers
-				NOT = { has_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag
-			}
-		}
-
-		organization_modifier = {
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
 }
 
 JAP_kawasaki_dockyards_organization = {
@@ -710,47 +632,6 @@ JAP_kawasaki_dockyards_organization = {
 			base = 2
 		}
 	}
-
-	add_trait = {
-		token = JAP_mio_trait_strength_in_numbers
-		name = JAP_mio_trait_strength_in_numbers
-		icon = GFX_generic_mio_department_icon_facilities
-		special_trait_background = yes
-	
-		relative_position_id = generic_mio_trait_high_speed_raiding
-	
-		position = { x = 2 y = 0 }  
-		
-		visible = {
-			FROM = { original_tag = JAP }
-		}
-	
-		available = {
-			FROM = {
-				has_completed_focus = JAP_seek_strength_in_numbers
-				NOT = { has_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag }
-			}
-		}
-	
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag
-			}
-		}
-	
-		organization_modifier = {
-		}
-	
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-	
-		ai_will_do = {
-			base = 2
-		}
-	}
-
 }
 
 JAP_maizuru_naval_arsenal_organization = {
@@ -874,84 +755,6 @@ JAP_maizuru_naval_arsenal_organization = {
 			base = 2
 		}
 	}
-
-	add_trait = {
-		token = JAP_mio_trait_naval_arsenal_trait
-		name = JAP_mio_trait_naval_arsenal_trait
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		relative_position_id = JAP_mio_trait_strength_in_numbers
-
-		position = { x = -1 y = 0 }  
-		
-		visible = {
-			FROM = { original_tag = JAP }
-		}
-
-		available = {
-			FROM = {
-				JAP_naval_faction_is_not_subdued = yes
-			}
-		}
-
-		on_complete = {
-			
-		}
-
-		organization_modifier = {
-		    
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
-		token = JAP_mio_trait_strength_in_numbers
-		name = JAP_mio_trait_strength_in_numbers
-		icon = GFX_generic_mio_department_icon_facilities
-		special_trait_background = yes
-
-		relative_position_id = generic_mio_trait_fleet_escorts
-
-		position = { x = 3 y = 0 }  
-		
-		visible = {
-			FROM = { original_tag = JAP }
-		}
-
-		available = {
-			FROM = {
-				has_completed_focus = JAP_seek_strength_in_numbers
-				NOT = { has_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag
-			}
-		}
-
-		organization_modifier = {
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
 }
 
 JAP_sasebo_naval_arsenal_organization = {
@@ -1021,82 +824,6 @@ JAP_sasebo_naval_arsenal_organization = {
 		}
 	}
 
-	add_trait = {
-		token = JAP_mio_trait_naval_arsenal_trait
-		name = JAP_mio_trait_naval_arsenal_trait
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		relative_position_id = JAP_mio_trait_strength_in_numbers
-
-		position = { x = -1 y = 0 }  
-		
-		visible = {
-			FROM = { original_tag = JAP }
-		}
-
-		available = {
-			FROM = {
-				JAP_naval_faction_is_not_subdued = yes
-			}
-		}
-
-		on_complete = {
-			
-		}
-
-		organization_modifier = {
-		    
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
-		token = JAP_mio_trait_strength_in_numbers
-		name = JAP_mio_trait_strength_in_numbers
-		icon = GFX_generic_mio_department_icon_facilities
-		special_trait_background = yes
-
-		relative_position_id = generic_mio_trait_high_speed_raiding
-
-		position = { x = 2 y = 0 }  
-		
-		visible = {
-			FROM = { original_tag = JAP }
-		}
-
-		available = {
-			FROM = {
-				has_completed_focus = JAP_seek_strength_in_numbers
-				NOT = { has_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag
-			}
-		}
-
-		organization_modifier = {
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
 
 }
 
@@ -1224,45 +951,6 @@ JAP_mitsubishi_kobe_shipyard_organization = {
 		}
 	}
 
-	add_trait = {
-		token = JAP_mio_trait_strength_in_numbers
-		name = JAP_mio_trait_strength_in_numbers
-		icon = GFX_generic_mio_department_icon_facilities
-		special_trait_background = yes
-
-		relative_position_id = generic_mio_trait_decalin_fueled_torpedo
-
-		position = { x = 4 y = 0 }  
-		
-		visible = {
-			FROM = { original_tag = JAP }
-		}
-
-		available = {
-			FROM = {
-				has_completed_focus = JAP_seek_strength_in_numbers
-				NOT = { has_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag
-			}
-		}
-
-		organization_modifier = {
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
 
 }
 

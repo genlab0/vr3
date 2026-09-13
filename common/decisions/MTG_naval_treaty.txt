@@ -16,9 +16,9 @@ MTG_naval_treaties = {
 	
 		visible = {
 			has_naval_treaty_trigger = yes
-			OR = {
-				has_government = democratic
-				has_government = neutrality
+			NOT = {
+				tag = JAP 
+				tag = ITA 
 			}
 		}
 	
@@ -106,8 +106,8 @@ MTG_naval_treaties = {
 		visible = {
 			has_naval_treaty_trigger = yes
 			OR = {
-				has_government = fascism
-				has_government = communism
+				tag = JAP 
+				tag = ITA
 			}
 		}
 	

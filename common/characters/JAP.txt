@@ -1,54 +1,18 @@
 characters = {
 
 	# Hirohito
-	JAP_emperor_hirohito = {
-		instance = {
-			allowed = {
-				has_dlc = "No Compromise, No Surrender"
+	JAP_emperor_hirohito={
+		name=JAP_emperor_hirohito
+		portraits={
+			civilian={
+				large=GFX_portrait_JAP_emperor_hirohito
 			}
-
-			name = JAP_emperor_hirohito
-
-			portraits = {
-				civilian = {
-					large = GFX_portrait_JAP_emperor_hirohito
-					small = GFX_portrait_JAP_emperor_hirohito_civilian_small
-				}
-				army = {
-					small = GFX_portrait_JAP_emperor_hirohito_military_small
-				}
-			}
-
-			#country_leader = {
-			#	ideology = emperor_fascism # was fascism_ideology
-			#	traits = { warrior_code emperor_showa imperial_sanction }
-			#	expire = "1989.1.1.1"
-			#	id = 700
-			#}
-
 		}
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-			}
-
-			name = JAP_emperor_hirohito
-
-			portraits = {
-				civilian = {
-					large = GFX_portrait_JAP_emperor_hirohito
-				}
-			}
-
-			country_leader = {
-				ideology = emperor_fascism # was fascism_ideology
-				traits = { warrior_code emperor_showa imperial_sanction }
-				expire = "1989.1.1.1"
-				id = 700
-			}
-
+		country_leader={
+			ideology=fascism_ideology
+			traits={ emperor_showa }
+			expire="1989.1.1.1"
+			id=700
 		}
 	}
 
@@ -445,26 +409,6 @@ characters = {
 		#	expire = "1989.1.1.1"
 		#	id = -1
 		#}
-
-	}
-
-	# Adachi Kenzō
-	JAP_adachi_kenzo = {
-		name = JAP_adachi_kenzo
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_JAP_adachi_kenzo
-				small = GFX_portrait_JAP_adachi_kenzo_small
-			}
-		}
-
-		country_leader = {
-			ideology = fascism_ideology
-			traits = {  }
-			expire = "1952.1.1.1"
-			id = -1
-		}
 
 	}
 

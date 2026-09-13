@@ -1021,3 +1021,189 @@ country_event = {
 		play_arsenal_of_democracy_effect = yes
 	}
 }
+
+
+
+
+#Defend Phillippines or give it up:
+country_event = {
+	id = usa.289
+	title = usa.289.t
+	desc = usa.289.d 
+	picture = report_event_usa_macarthur_speech
+	mean_time_to_happen = {days = 2}
+	fire_only_once = yes
+	trigger = {
+		AND = {
+			focus_progress = {
+				focus = USA_defense_of_the_pacific
+				progress > 0.2
+			}
+			NOT = {USA = { has_war = yes}}
+		}
+	}
+
+	#Defend
+	option = {
+		name = usa.289.a
+		unlock_national_focus = USA_defend_philippines
+		623 = {
+			add_building_construction = {
+				type = air_base 
+				level = 2
+			}
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				instant_build = yes
+				province = 12213
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				instant_build = yes
+				province = 4101
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				instant_build = yes
+				province = 10241
+			}
+		}
+		327 = {
+			add_building_construction = {
+				type = coastal_bunker
+				level = 3
+				instant_build = yes
+				province = 1415
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 3
+				instant_build = yes
+				province = 10265
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 3
+				instant_build = yes
+				province = 12253
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				instant_build = yes
+				province = 4288
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes
+				province = 10272
+			}
+		}
+	}
+
+	#Give it up
+	option = {
+		name = usa.289.b
+		unlock_national_focus = USA_retreat_from_philippines
+		638 = {
+			add_building_construction = {
+				type = coastal_bunker
+				level = 3
+				instant_build = yes
+				province = 12140
+			}
+			add_building_construction = {
+				type = air_base 
+				level = 1
+			}
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+			}
+		}
+	}
+}
+
+#Wake Island or Midway
+country_event = {
+	id = usa.290
+	title = usa.290.t 
+	desc = usa.290.d 
+	picture = news_event_usa_japan_at_war
+	mean_time_to_happen = {days = 2}
+	fire_only_once = yes
+	trigger = {
+		AND = {
+			focus_progress = {
+				focus = USA_defense_of_the_pacific
+				progress > 0.6
+			}
+			NOT = {USA = { has_war = yes}}
+		}
+	}
+
+	#Defend Wake
+	option = {
+		name = usa.290.a
+		unlock_national_focus = USA_wake_island_base
+		632 = {
+			add_building_construction = {
+				type = coastal_bunker
+				level = 3
+				instant_build = yes
+				province = 13047
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 4
+				instant_build = yes
+				province = 13047
+			}
+			add_building_construction = {
+				type = air_base 
+				level = 1
+			}
+			add_building_construction = {
+				type = anti_air_building
+				level = 3
+			}
+		}
+	}
+
+	#Defend Midway
+	option = {
+		name = usa.290.b
+		unlock_national_focus = USA_midway_island_base
+		631 = {
+			add_building_construction = {
+				type = coastal_bunker
+				level = 4
+				instant_build = yes
+				province = 13052
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 5
+				instant_build = yes
+				province = 13052
+			}
+			add_building_construction = {
+				type = air_base 
+				level = 2
+			}
+			add_building_construction = {
+				type = anti_air_building
+				level = 3
+			}
+		}
+	}
+
+}

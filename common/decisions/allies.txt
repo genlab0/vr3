@@ -1,5 +1,5 @@
 ALLIES_buy_us_equipment = {
-    ALLIES_buy_guns_request = {
+    ALLIES_buy_guns_old_request = {
         icon = generic_prepare_civil_war
         allowed = {
 			OR = {
@@ -10,6 +10,16 @@ ALLIES_buy_us_equipment = {
                 original_tag = RAJ 
             }
 		}
+        ai_will_do = {
+            base = 0 
+            modifier = {
+                add = 10
+                OR = {
+                    tag = RAJ 
+                    tag = ENG
+                }
+            }
+        }
         available = {
             AND = {
                 has_war = yes 
@@ -23,19 +33,32 @@ ALLIES_buy_us_equipment = {
             }
         }
 
+        
+
         days_re_enable = 60
 
+        visible = {
+            USA = { has_completed_focus = USA_arsenal_of_democracy }
+        }
+
         complete_effect = {
-			FROM = { activate_mission = ALLIES_buy_guns_arriving }
+			FROM = { activate_mission = ALLIES_buy_guns_old_arriving }
             FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
             add_timed_idea = {
                 idea = ALLIES_consumer_penalty
                 days = 60
             }
+            USA = {
+                send_equipment = {
+                    equipment = infantry_equipment
+                    amount = 5000
+                    target = FROM
+                }
+            }
 		}
     }
 
-    ALLIES_buy_guns_arriving = {
+    ALLIES_buy_guns_old_arriving = {
         icon = generic_prepare_civil_war
         allowed = {
 			always = no 
@@ -46,11 +69,161 @@ ALLIES_buy_us_equipment = {
         days_mission_timeout = 60 
         timeout_effect = {
             USA = {
+                FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
+                add_to_variable = { USA_industrial_capacity_factory = 0.01 }
+                add_to_variable = { USA_consumer_goods_factor = -0.01 }
+                add_to_variable = { USA_production_factory_max_efficiency_factor = 0.004 }
+            }
+        }
+    }
+
+    ALLIES_buy_guns_2_request = {
+        icon = generic_prepare_civil_war
+        allowed = {
+			OR = {
+                original_tag = ENG 
+                original_tag = AST 
+                original_tag = CAN 
+                original_tag = SAF 
+                original_tag = RAJ 
+            }
+		}
+        ai_will_do = {
+            base = 0 
+            modifier = {
+                add = 10
+                OR = {
+                    tag = AST 
+                    tag = CAN 
+                    tag = SAF 
+                }
+            }
+        }
+        available = {
+            AND = {
+                has_war = yes 
+                USA = {
+                    has_equipment = {
+                        infantry_equipment_2 > 4999
+                    }
+                }
+                NOT = { has_country_flag = ALLIES_market_cooldown_flag }
+                USA = { has_country_flag = ALLIES_selling_guns_2_enabled_flag }
+            }
+        }
+
+        days_re_enable = 60
+
+        visible = {
+            USA = { has_completed_focus = USA_arsenal_of_democracy }
+        }
+
+        complete_effect = {
+			FROM = { activate_mission = ALLIES_buy_guns_2_arriving }
+            FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
+            add_timed_idea = {
+                idea = ALLIES_consumer_penalty
+                days = 60
+            }
+            USA = {
                 send_equipment = {
-                    equipment = infantry_equipment
+                    equipment = infantry_equipment_2
                     amount = 5000
                     target = FROM
                 }
+            }
+		}
+    }
+
+    ALLIES_buy_guns_2_arriving = {
+        icon = generic_prepare_civil_war
+        allowed = {
+			always = no 
+		}
+        available = {
+            always = no 
+        }
+        days_mission_timeout = 60 
+        timeout_effect = {
+            USA = {
+                
+                FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
+                add_to_variable = { USA_industrial_capacity_factory = 0.01 }
+                add_to_variable = { USA_consumer_goods_factor = -0.01 }
+                add_to_variable = { USA_production_factory_max_efficiency_factor = 0.004 }
+            }
+        }
+    }
+
+    ALLIES_buy_guns_3_request = {
+        icon = generic_prepare_civil_war
+        allowed = {
+			OR = {
+                original_tag = ENG 
+                original_tag = AST 
+                original_tag = CAN 
+                original_tag = SAF 
+                original_tag = RAJ 
+            }
+		}
+        ai_will_do = {
+            base = 0 
+            modifier = {
+                add = 15
+                OR = {
+                    tag = AST 
+                    tag = CAN 
+                    tag = SAF 
+                }
+            }
+        }
+        available = {
+            AND = {
+                has_war = yes 
+                USA = {
+                    has_equipment = {
+                        infantry_equipment_3 > 4999
+                    }
+                }
+                NOT = { has_country_flag = ALLIES_market_cooldown_flag }
+                USA = { has_country_flag = ALLIES_selling_guns_3_enabled_flag }
+            }
+        }
+
+        days_re_enable = 60
+
+        visible = {
+            USA = { has_completed_focus = USA_arsenal_of_democracy }
+        }
+
+        complete_effect = {
+			FROM = { activate_mission = ALLIES_buy_guns_3_arriving }
+            FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
+            add_timed_idea = {
+                idea = ALLIES_consumer_penalty
+                days = 60
+            }
+            USA = {
+                send_equipment = {
+                    equipment = infantry_equipment_3
+                    amount = 5000
+                    target = FROM
+                }
+            }
+		}
+    }
+
+    ALLIES_buy_guns_3_arriving = {
+        icon = generic_prepare_civil_war
+        allowed = {
+			always = no 
+		}
+        available = {
+            always = no 
+        }
+        days_mission_timeout = 60 
+        timeout_effect = {
+            USA = {
                 FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
                 add_to_variable = { USA_industrial_capacity_factory = 0.01 }
                 add_to_variable = { USA_consumer_goods_factor = -0.01 }
@@ -85,12 +258,23 @@ ALLIES_buy_us_equipment = {
 
         days_re_enable = 60
 
+        visible = {
+            USA = { has_completed_focus = USA_arsenal_of_democracy }
+        }
+
         complete_effect = {
 			FROM = { activate_mission = ALLIES_buy_support_arriving }
             FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
             add_timed_idea = {
                 idea = ALLIES_consumer_penalty
                 days = 60
+            }
+            USA = {
+                send_equipment = {
+                    equipment = support_equipment
+                    amount = 750
+                    target = FROM
+                }
             }
 		}
     }
@@ -109,11 +293,6 @@ ALLIES_buy_us_equipment = {
         days_mission_timeout = 60 
         timeout_effect = {
             USA = {
-                send_equipment = {
-                    equipment = support_equipment
-                    amount = 750
-                    target = FROM
-                }
                 FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
                 add_to_variable = { USA_industrial_capacity_factory = 0.01 }
                 add_to_variable = { USA_consumer_goods_factor = -0.01 }
@@ -148,12 +327,23 @@ ALLIES_buy_us_equipment = {
 
         days_re_enable = 60
 
+        visible = {
+            USA = { has_completed_focus = USA_arsenal_of_democracy }
+        }
+
         complete_effect = {
 			FROM = { activate_mission = ALLIES_buy_special_arriving }
             FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
             add_timed_idea = {
                 idea = ALLIES_consumer_penalty
                 days = 60
+            }
+            USA = {
+                send_equipment = {
+                    equipment = special_equipment
+                    amount = 850
+                    target = FROM
+                }
             }
 		}
     }
@@ -172,11 +362,6 @@ ALLIES_buy_us_equipment = {
         days_mission_timeout = 60 
         timeout_effect = {
             USA = {
-                send_equipment = {
-                    equipment = special_equipment
-                    amount = 850
-                    target = FROM
-                }
                 FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
                 add_to_variable = { USA_industrial_capacity_factory = 0.01 }
                 add_to_variable = { USA_consumer_goods_factor = -0.01 }
@@ -211,12 +396,23 @@ ALLIES_buy_us_equipment = {
 
         days_re_enable = 60
 
+        visible = {
+            USA = { has_completed_focus = USA_arsenal_of_democracy }
+        }
+
         complete_effect = {
 			FROM = { activate_mission = ALLIES_buy_trains_arriving }
             FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
             add_timed_idea = {
                 idea = ALLIES_consumer_penalty
                 days = 60
+            }
+            USA = {
+                send_equipment = {
+                    equipment = train_equipment
+                    amount = 45
+                    target = FROM
+                }
             }
 		}
     }
@@ -235,11 +431,6 @@ ALLIES_buy_us_equipment = {
         days_mission_timeout = 60 
         timeout_effect = {
             USA = {
-                send_equipment = {
-                    equipment = train_equipment
-                    amount = 45
-                    target = FROM
-                }
                 FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
                 add_to_variable = { USA_industrial_capacity_factory = 0.01 }
                 add_to_variable = { USA_consumer_goods_factor = -0.01 }
@@ -274,12 +465,23 @@ ALLIES_buy_us_equipment = {
 
         days_re_enable = 60
 
+        visible = {
+            USA = { has_completed_focus = USA_arsenal_of_democracy }
+        }
+
         complete_effect = {
 			FROM = { activate_mission = ALLIES_buy_trucks_arriving }
             FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
             add_timed_idea = {
                 idea = ALLIES_consumer_penalty
                 days = 60
+            }
+            USA = {
+                send_equipment = {
+                    equipment = motorized_equipment
+                    amount = 1200
+                    target = FROM
+                }
             }
 		}
     }
@@ -298,11 +500,6 @@ ALLIES_buy_us_equipment = {
         days_mission_timeout = 60 
         timeout_effect = {
             USA = {
-                send_equipment = {
-                    equipment = motorized_equipment
-                    amount = 1200
-                    target = FROM
-                }
                 FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
                 add_to_variable = { USA_industrial_capacity_factory = 0.01 }
                 add_to_variable = { USA_consumer_goods_factor = -0.01 }
@@ -337,12 +534,23 @@ ALLIES_buy_us_equipment = {
 
         days_re_enable = 60
 
+        visible = {
+            USA = { has_completed_focus = USA_arsenal_of_democracy }
+        }
+
         complete_effect = {
 			FROM = { activate_mission = ALLIES_buy_aa_arriving }
             FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
             add_timed_idea = {
                 idea = ALLIES_consumer_penalty
                 days = 60
+            }
+            USA = {
+                send_equipment = {
+                    equipment = anti_air_equipment
+                    amount = 750
+                    target = FROM
+                }
             }
 		}
     }
@@ -361,11 +569,6 @@ ALLIES_buy_us_equipment = {
         days_mission_timeout = 60 
         timeout_effect = {
             USA = {
-                send_equipment = {
-                    equipment = anti_air_equipment
-                    amount = 750
-                    target = FROM
-                }
                 FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
                 add_to_variable = { USA_industrial_capacity_factory = 0.01 }
                 add_to_variable = { USA_consumer_goods_factor = -0.01 }
@@ -400,12 +603,23 @@ ALLIES_buy_us_equipment = {
 
         days_re_enable = 60
 
+        visible = {
+            USA = { has_completed_focus = USA_arsenal_of_democracy }
+        }
+
         complete_effect = {
 			FROM = { activate_mission = ALLIES_buy_arty_arriving }
             FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
             add_timed_idea = {
                 idea = ALLIES_consumer_penalty
                 days = 60
+            }
+            USA = {
+                send_equipment = {
+                    equipment = artillery_equipment
+                    amount = 750
+                    target = FROM
+                }
             }
 		}
     }
@@ -424,11 +638,6 @@ ALLIES_buy_us_equipment = {
         days_mission_timeout = 60 
         timeout_effect = {
             USA = {
-                send_equipment = {
-                    equipment = artillery_equipment
-                    amount = 750
-                    target = FROM
-                }
                 FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
                 add_to_variable = { USA_industrial_capacity_factory = 0.01 }
                 add_to_variable = { USA_consumer_goods_factor = -0.01 }
@@ -463,12 +672,23 @@ ALLIES_buy_us_equipment = {
 
         days_re_enable = 60
 
+        visible = {
+            USA = { has_completed_focus = USA_arsenal_of_democracy }
+        }
+
         complete_effect = {
 			FROM = { activate_mission = ALLIES_buy_at_arriving }
             FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
             add_timed_idea = {
                 idea = ALLIES_consumer_penalty
                 days = 60
+            }
+            USA = {
+                send_equipment = {
+                    equipment = anti_tank_equipment
+                    amount = 750
+                    target = FROM
+                }
             }
 		}
     }
@@ -487,11 +707,6 @@ ALLIES_buy_us_equipment = {
         days_mission_timeout = 60 
         timeout_effect = {
             USA = {
-                send_equipment = {
-                    equipment = anti_tank_equipment
-                    amount = 750
-                    target = FROM
-                }
                 FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
                 add_to_variable = { USA_industrial_capacity_factory = 0.01 }
                 add_to_variable = { USA_consumer_goods_factor = -0.01 }
@@ -526,12 +741,23 @@ ALLIES_buy_us_equipment = {
 
         days_re_enable = 60
 
+        visible = {
+            USA = { has_completed_focus = USA_arsenal_of_democracy }
+        }
+
         complete_effect = {
 			FROM = { activate_mission = ALLIES_buy_mech_arriving }
             FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
             add_timed_idea = {
                 idea = ALLIES_consumer_penalty
                 days = 60
+            }
+            USA = {
+                send_equipment = {
+                    equipment = mechanized_equipment
+                    amount = 350
+                    target = FROM
+                }
             }
 		}
     }
@@ -550,11 +776,6 @@ ALLIES_buy_us_equipment = {
         days_mission_timeout = 60 
         timeout_effect = {
             USA = {
-                send_equipment = {
-                    equipment = mechanized_equipment
-                    amount = 350
-                    target = FROM
-                }
                 FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
                 add_to_variable = { USA_industrial_capacity_factory = 0.01 }
                 add_to_variable = { USA_consumer_goods_factor = -0.01 }
@@ -589,12 +810,23 @@ ALLIES_buy_us_equipment = {
 
         days_re_enable = 60
 
+        visible = {
+            USA = { has_completed_focus = USA_arsenal_of_democracy }
+        }
+
         complete_effect = {
 			FROM = { activate_mission = ALLIES_buy_light_tanks_arriving }
             FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
             add_timed_idea = {
                 idea = ALLIES_consumer_penalty
                 days = 60
+            }
+            USA = {
+                send_equipment = {
+                    equipment =light_tank_chassis
+                    amount = 230
+                    target = FROM
+                }
             }
 		}
     }
@@ -613,11 +845,6 @@ ALLIES_buy_us_equipment = {
         days_mission_timeout = 60 
         timeout_effect = {
             USA = {
-                send_equipment = {
-                    equipment =light_tank_chassis
-                    amount = 230
-                    target = FROM
-                }
                 FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
                 add_to_variable = { USA_industrial_capacity_factory = 0.01 }
                 add_to_variable = { USA_consumer_goods_factor = -0.01 }
@@ -652,12 +879,23 @@ ALLIES_buy_us_equipment = {
 
         days_re_enable = 60
 
+        visible = {
+            USA = { has_completed_focus = USA_arsenal_of_democracy }
+        }
+
         complete_effect = {
 			FROM = { activate_mission = ALLIES_buy_medium_tanks_arriving }
             FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
             add_timed_idea = {
                 idea = ALLIES_consumer_penalty
                 days = 60
+            }
+            USA = {
+                send_equipment = {
+                    equipment = medium_tank_chassis
+                    amount = 200
+                    target = FROM
+                }
             }
 		}
     }
@@ -676,11 +914,6 @@ ALLIES_buy_us_equipment = {
         days_mission_timeout = 60 
         timeout_effect = {
             USA = {
-                send_equipment = {
-                    equipment = medium_tank_chassis
-                    amount = 200
-                    target = FROM
-                }
                 FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
                 add_to_variable = { USA_industrial_capacity_factory = 0.01 }
                 add_to_variable = { USA_consumer_goods_factor = -0.01 }
@@ -715,12 +948,23 @@ ALLIES_buy_us_equipment = {
 
         days_re_enable = 60
 
+        visible = {
+            USA = { has_completed_focus = USA_arsenal_of_democracy }
+        }
+
         complete_effect = {
 			FROM = { activate_mission = ALLIES_buy_heavy_tanks_arriving }
             FROM = { set_country_flag = ALLIES_market_cooldown_flag } 
             add_timed_idea = {
                 idea = ALLIES_consumer_penalty
                 days = 60
+            }
+            USA = {
+                send_equipment = {
+                    equipment = heavy_tank_chassis
+                    amount = 120
+                    target = FROM
+                }
             }
 		}
     }
@@ -740,11 +984,6 @@ ALLIES_buy_us_equipment = {
         days_mission_timeout = 60 
         timeout_effect = {
             USA = {
-                send_equipment = {
-                    equipment = heavy_tank_chassis
-                    amount = 120
-                    target = FROM
-                }
                 FROM = { clr_country_flag = ALLIES_market_cooldown_flag } 
                 add_to_variable = { USA_industrial_capacity_factory = 0.01 }
                 add_to_variable = { USA_consumer_goods_factor = -0.01 }
@@ -752,5 +991,4 @@ ALLIES_buy_us_equipment = {
             }
         }
     }
-
 }

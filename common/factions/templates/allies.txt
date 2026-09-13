@@ -18,8 +18,7 @@ faction_template_allies = {
 
 
 	default_rules = {
-		joining_rule_non_fascist
-		joining_rule_has_no_offensive_war
+		joining_rule_puppets_only
 		government_in_exile_allowed
 		change_leader_rule_manifest_below_35
 		dismissal_rule_ideology_not_democratic

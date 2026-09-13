@@ -2013,7 +2013,7 @@ ideas = {
 				original_tag = USA
 			}
 			available = {
-				has_completed_focus = USA_wartime_industry
+				has_completed_focus = USA_big_buisness
 			}
 			
 

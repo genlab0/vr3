@@ -614,9 +614,8 @@ USA_truck_export = { #GM
 		value = 40
 	}
 	ai_strategy = {
-		type = equipment_market_for_sale_factor
-		id = motorized
-		value = 100
+		type = equipment_stockpile_surplus_ratio
+		value = 50
 	}
 }
 

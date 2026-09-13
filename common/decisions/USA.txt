@@ -624,8 +624,8 @@ USA_aid_britain = {
 		}
 	}
 
-	"Allow sale of surplus guns" = {
-		icon = generic_operation
+	"Allow sale of surplus guns 0/1" = {
+		icon = GFX_decisions_generic_infiltration_1
 	
 		allowed = {
 			tag = USA
@@ -648,8 +648,8 @@ USA_aid_britain = {
 		}
 	}
 
-	"Disable sale of surplus guns" = {
-		icon = generic_operation
+	"Allow sale of surplus guns 0/1/2" = {
+		icon = GFX_decisions_generic_infiltration_2
 	
 		allowed = {
 			tag = USA
@@ -664,11 +664,72 @@ USA_aid_britain = {
 		} 
 		
 		visible = {
-			has_country_flag = ALLIES_selling_guns_enabled_flag
+			AND = {
+				NOT = { has_country_flag = ALLIES_selling_guns_2_enabled_flag }
+				has_country_flag = ALLIES_selling_guns_enabled_flag
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = ALLIES_selling_guns_2_enabled_flag
+		}
+	}
+
+	"Allow sale of surplus guns 0/1/2/3" = {
+		icon = GFX_decisions_generic_infiltration_3
+	
+		allowed = {
+			tag = USA
+		}
+		
+		available = {
+			has_completed_focus = USA_arsenal_of_democracy
+		}
+		cost = 0
+		ai_will_do = {
+			base = 10
+		} 
+		
+		visible = {
+			AND = {
+				NOT = { has_country_flag = ALLIES_selling_guns_3_enabled_flag }
+				has_country_flag = ALLIES_selling_guns_enabled_flag
+				has_country_flag = ALLIES_selling_guns_2_enabled_flag
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = ALLIES_selling_guns_3_enabled_flag
+		}
+	}
+
+	"Disable sale of surplus guns" = {
+		icon = GFX_decisions_generic_infiltration_0
+	
+		allowed = {
+			tag = USA
+		}
+		
+		available = {
+			has_completed_focus = USA_arsenal_of_democracy
+		}
+		cost = 0
+		ai_will_do = {
+			base = 0
+		} 
+		
+		visible = {
+			AND = {
+				has_country_flag = ALLIES_selling_guns_enabled_flag
+				has_country_flag = ALLIES_selling_guns_2_enabled_flag
+				has_country_flag = ALLIES_selling_guns_3_enabled_flag
+			}
 		}
 		
 		complete_effect = {
 			clr_country_flag = ALLIES_selling_guns_enabled_flag
+			clr_country_flag = ALLIES_selling_guns_2_enabled_flag
+			clr_country_flag = ALLIES_selling_guns_3_enabled_flag
 		}
 	}
 
@@ -708,7 +769,7 @@ USA_aid_britain = {
 		}
 		cost = 0
 		ai_will_do = {
-			base = 10
+			base = 0
 		} 
 		
 		visible = {
@@ -756,7 +817,7 @@ USA_aid_britain = {
 		}
 		cost = 0
 		ai_will_do = {
-			base = 10
+			base = 0
 		} 
 		
 		visible = {
@@ -788,7 +849,7 @@ USA_aid_britain = {
 		}
 		
 		complete_effect = {
-			clr_country_flag = ALLIES_selling_trains_enabled_flag
+			set_country_flag = ALLIES_selling_trains_enabled_flag
 		}
 	}
 
@@ -804,7 +865,7 @@ USA_aid_britain = {
 		}
 		cost = 0
 		ai_will_do = {
-			base = 10
+			base = 0
 		} 
 		
 		visible = {
@@ -836,7 +897,7 @@ USA_aid_britain = {
 		}
 		
 		complete_effect = {
-			clr_country_flag = ALLIES_selling_trucks_enabled_flag
+			set_country_flag = ALLIES_selling_trucks_enabled_flag
 		}
 	}
 
@@ -852,7 +913,7 @@ USA_aid_britain = {
 		}
 		cost = 0
 		ai_will_do = {
-			base = 10
+			base = 0
 		} 
 		
 		visible = {
@@ -884,7 +945,7 @@ USA_aid_britain = {
 		}
 		
 		complete_effect = {
-			clr_country_flag = ALLIES_selling_aa_enabled_flag
+			set_country_flag = ALLIES_selling_aa_enabled_flag
 		}
 	}
 
@@ -900,7 +961,7 @@ USA_aid_britain = {
 		}
 		cost = 0
 		ai_will_do = {
-			base = 10
+			base = 0
 		} 
 		
 		visible = {
@@ -932,7 +993,7 @@ USA_aid_britain = {
 		}
 		
 		complete_effect = {
-			clr_country_flag = ALLIES_selling_at_enabled_flag
+			set_country_flag = ALLIES_selling_at_enabled_flag
 		}
 	}
 
@@ -948,7 +1009,7 @@ USA_aid_britain = {
 		}
 		cost = 0
 		ai_will_do = {
-			base = 10
+			base = 0
 		} 
 		
 		visible = {
@@ -980,7 +1041,7 @@ USA_aid_britain = {
 		}
 		
 		complete_effect = {
-			clr_country_flag = ALLIES_selling_arty_enabled_flag
+			set_country_flag = ALLIES_selling_arty_enabled_flag
 		}
 	}
 
@@ -996,7 +1057,7 @@ USA_aid_britain = {
 		}
 		cost = 0
 		ai_will_do = {
-			base = 10
+			base = 0
 		} 
 		
 		visible = {
@@ -1028,7 +1089,7 @@ USA_aid_britain = {
 		}
 		
 		complete_effect = {
-			clr_country_flag = ALLIES_selling_mech_enabled_flag
+			set_country_flag = ALLIES_selling_mech_enabled_flag
 		}
 	}
 
@@ -1044,7 +1105,7 @@ USA_aid_britain = {
 		}
 		cost = 0
 		ai_will_do = {
-			base = 10
+			base = 0
 		} 
 		
 		visible = {
@@ -1076,7 +1137,7 @@ USA_aid_britain = {
 		}
 		
 		complete_effect = {
-			clr_country_flag = ALLIES_selling_light_tanks_enabled_flag
+			set_country_flag = ALLIES_selling_light_tanks_enabled_flag
 		}
 	}
 
@@ -1092,7 +1153,7 @@ USA_aid_britain = {
 		}
 		cost = 0
 		ai_will_do = {
-			base = 10
+			base = 0
 		} 
 		
 		visible = {
@@ -1124,7 +1185,7 @@ USA_aid_britain = {
 		}
 		
 		complete_effect = {
-			clr_country_flag = ALLIES_selling_medium_tanks_enabled_flag
+			set_country_flag = ALLIES_selling_medium_tanks_enabled_flag
 		}
 	}
 
@@ -1140,7 +1201,7 @@ USA_aid_britain = {
 		}
 		cost = 0
 		ai_will_do = {
-			base = 10
+			base = 0
 		} 
 		
 		visible = {
@@ -1172,7 +1233,7 @@ USA_aid_britain = {
 		}
 		
 		complete_effect = {
-			clr_country_flag = ALLIES_selling_heavy_tanks_enabled_flag
+			set_country_flag = ALLIES_selling_heavy_tanks_enabled_flag
 		}
 	}
 
@@ -1188,7 +1249,7 @@ USA_aid_britain = {
 		}
 		cost = 0
 		ai_will_do = {
-			base = 10
+			base = 0
 		} 
 		
 		visible = {
@@ -1210,7 +1271,12 @@ USA_economic_decisions = {
 		icon = generic_construction 
 		is_good = yes 
 		fire_only_once = yes
-		days_remove = 365
+		days_remove = 180
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 379
+			}
+    	}
 		modifier = {
 			civilian_factory_use = 14
 		}
@@ -1244,10 +1310,15 @@ USA_economic_decisions = {
 		icon = generic_construction 
 		is_good = yes 
 		fire_only_once = yes
-		days_remove = 365
+		days_remove = 180
 		modifier = {
 			civilian_factory_use = 8
 		}
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 386
+			}
+    	}
 		remove_effect = {
 			custom_effect_tooltip = USA_burn_agricultural_products_tt
 			add_to_variable = { USA_consumer_goods_factor = -0.05}
@@ -1271,10 +1342,15 @@ USA_economic_decisions = {
 		icon = generic_construction 
 		is_good = yes 
 		fire_only_once = yes
-		days_remove = 365
+		days_remove = 180
 		modifier = {
 			civilian_factory_use = 8
 		}
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 388
+			}
+    	}
 		remove_effect = {
 			custom_effect_tooltip = USA_burn_agricultural_products_tt
 			add_to_variable = { USA_consumer_goods_factor = -0.05}
@@ -1298,10 +1374,15 @@ USA_economic_decisions = {
 		icon = generic_construction 
 		is_good = yes 
 		fire_only_once = yes
-		days_remove = 365
+		days_remove = 180
 		modifier = {
 			civilian_factory_use = 10
 		}
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 385
+			}
+    	}
 		remove_effect = {
 			custom_effect_tooltip = USA_burn_agricultural_products_tt
 			add_to_variable = { USA_consumer_goods_factor = -0.05}
@@ -1330,10 +1411,15 @@ USA_economic_decisions = {
 		icon = generic_construction 
 		is_good = yes 
 		fire_only_once = yes
-		days_remove = 365
+		days_remove = 180
 		modifier = {
 			civilian_factory_use = 10
 		}
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 367
+			}
+    	}
 		remove_effect = {
 			custom_effect_tooltip = USA_burn_agricultural_products_tt
 			add_to_variable = { USA_consumer_goods_factor = -0.05}
@@ -1359,10 +1445,15 @@ USA_economic_decisions = {
 			has_completed_focus = USA_rural_electrification_administration 
 			num_of_civilian_factories_available_for_projects > 7
 		}
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 368
+			}
+    	}
 		icon = generic_construction 
 		is_good = yes 
 		fire_only_once = yes
-		days_remove = 365
+		days_remove = 180
 		modifier = {
 			civilian_factory_use = 8
 		}
@@ -1389,10 +1480,15 @@ USA_economic_decisions = {
 			has_completed_focus = USA_rural_electrification_administration 
 			num_of_civilian_factories_available_for_projects > 11
 		}
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 375
+			}
+    	}
 		icon = generic_electricity 
 		is_good = yes 
 		fire_only_once = yes
-		days_remove = 365
+		days_remove = 180
 		modifier = {
 			civilian_factory_use =12
 		}
@@ -1420,10 +1516,15 @@ USA_economic_decisions = {
 		icon = generic_electricity 
 		is_good = yes 
 		fire_only_once = yes
-		days_remove = 365
+		days_remove = 180
 		modifier = {
 			civilian_factory_use = 6
 		}
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 368
+			}
+    	}
 		remove_effect = {
 			custom_effect_tooltip = USA_burn_agricultural_products_tt
 			add_to_variable = { USA_consumer_goods_factor = -0.05}
@@ -1445,10 +1546,15 @@ USA_economic_decisions = {
 			has_completed_focus = USA_rural_electrification_administration 
 			num_of_civilian_factories_available_for_projects > 7
 		}
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 386
+			}
+    	}
 		icon = generic_electricity 
 		is_good = yes 
 		fire_only_once = yes
-		days_remove = 365
+		days_remove = 180
 		modifier = {
 			civilian_factory_use = 8
 		}
@@ -1473,10 +1579,15 @@ USA_economic_decisions = {
 			has_completed_focus = USA_rural_electrification_administration 
 			num_of_civilian_factories_available_for_projects > 11
 		}
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 358
+			}
+    	}
 		icon = generic_electricity 
 		is_good = yes 
 		fire_only_once = yes
-		days_remove = 365
+		days_remove = 180
 		modifier = {
 			civilian_factory_use = 12
 		}
@@ -1501,10 +1612,15 @@ USA_economic_decisions = {
 			has_completed_focus = USA_rural_electrification_administration 
 			num_of_civilian_factories_available_for_projects > 9
 		}
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 357
+			}
+    	}
 		icon = generic_electricity 
 		is_good = yes 
 		fire_only_once = yes
-		days_remove = 365
+		days_remove = 180
 		modifier = {
 			civilian_factory_use = 10
 		}
@@ -1529,10 +1645,15 @@ USA_economic_decisions = {
 			has_completed_focus = USA_rural_electrification_administration 
 			num_of_civilian_factories_available_for_projects > 9
 		}
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 261
+			}
+    	}
 		icon = generic_electricity 
 		is_good = yes 
 		fire_only_once = yes
-		days_remove = 365
+		days_remove = 180
 		modifier = {
 			civilian_factory_use = 10
 		}
@@ -1560,10 +1681,15 @@ USA_economic_decisions = {
 		icon = generic_electricity
 		is_good = yes 
 		fire_only_once = yes
-		days_remove = 365
+		days_remove = 180
 		modifier = {
 			civilian_factory_use = 10
 		}
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 393
+			}
+    	}
 		remove_effect = {
 			custom_effect_tooltip = USA_burn_agricultural_products_tt
 			add_to_variable = { USA_consumer_goods_factor = -0.05}

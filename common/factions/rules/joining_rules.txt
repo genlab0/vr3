@@ -213,9 +213,6 @@ joining_rule_puppets_only = {
 			has_government = FROM
 		}
 	}
-	modifier= {
-		subjects_autonomy_gain = -0.05
-	}
 }
 
 #######################################################

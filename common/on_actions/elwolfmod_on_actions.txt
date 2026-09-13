@@ -395,75 +395,6 @@ on_actions = {
 				}
 				dday_wall_lower = yes
 			}
-			every_country = {
-				limit = {
-					OR = {
-						tag = ITA
-						tag = GER 
-					}
-				}
-				if = {
-					limit = {
-						AND = {
-							GER = {
-							has_idea = axis_oil_high
-							}
-							448 = {
-								OR = {
-									is_controlled_by = ENG 
-									is_controlled_by = RAJ
-									is_controlled_by = FRA  
-									is_controlled_by = SAF 
-									is_controlled_by = CAN
-								}
-							}
-						}
-					}
-					GER = {
-						swap_ideas = {
-							remove_idea = axis_oil_high
-							add_idea = axis_oil_low
-						}
-					}
-					ITA = {
-						swap_ideas = {
-							remove_idea = axis_oil_high
-							add_idea = axis_oil_low
-						}
-					}
-				}
-				if = {
-					limit = {
-						AND = {
-							GER = {
-							has_idea = axis_oil_low
-							}
-							448 = {
-								OR = {
-									is_controlled_by = GER 
-									is_controlled_by = ITA 
-									is_controlled_by = SPR  
-									is_controlled_by = ROM 
-									is_controlled_by = BUL 
-									is_controlled_by = HUN
-								}
-							}
-						}
-					}
-					GER = {
-						swap_ideas = {
-							remove_idea = axis_oil_low
-							add_idea = axis_oil_high
-						}
-					}
-					ITA = {
-						swap_ideas = {
-							remove_idea = axis_oil_low
-							add_idea = axis_oil_high
-						}
-					}
-				}
-			}
 		}
 	}
 
@@ -627,15 +558,6 @@ on_actions = {
 			}
 			every_country = {
 				add_timed_idea = { idea = no_tradeback days = 1339 }
-			}
-			every_country = {
-				limit = {
-					OR = {
-						tag = GER
-						tag = ITA
-					}
-				}
-				add_ideas = axis_oil_low
 			}
 			every_country = {
 				limit = {

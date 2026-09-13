@@ -2343,9 +2343,7 @@ focus_tree = {
 				HUN = { remove_ideas = { spain_volunteers } }
 				ROM = { remove_ideas = { spain_volunteers } }
 				CAN = { remove_ideas = { spain_volunteers_allies } }
-				SAF = { remove_ideas = { spain_volunteers_allies } 
-						remove_ideas = { "Canadian Volunteers" }
-				}
+				SAF = { remove_ideas = { spain_volunteers_allies } }
 				RAJ = { remove_ideas = { spain_volunteers_allies } }
 				add_named_threat = { threat = 100 name = GER_danzig_or_war }
 				add_state_core = 85
