@@ -639,7 +639,7 @@ buildings = {
 	}
 
 	industrial_infrastructure = {
-		base_cost = 18000
+		base_cost = 14000
 		icon_frame = 31
 		value = 1
 
@@ -652,7 +652,7 @@ buildings = {
 		}
 		state_modifiers = {
 			local_resource_gain_efficiency_per_infrastructure = 0.05
-			state_production_speed_buildings_factor = 0.10
+			state_production_speed_buildings_factor = 0.05
 			local_building_slots_factor = 0.10
 		}
 	}

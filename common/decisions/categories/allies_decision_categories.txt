@@ -1,7 +1,7 @@
 ALLIES_buy_us_equipment = {
     
     picture = GFX_decision_cat_picture_NOR_preparedness
-
+    priority = 10
 	allowed = {
 		OR = {
             original_tag = ENG 
@@ -11,4 +11,10 @@ ALLIES_buy_us_equipment = {
             original_tag = RAJ 
         }
 	}
+
+    visible = {
+        USA = { controls_state = 361 }
+    }
+
+    visible_when_empty = yes 
 }

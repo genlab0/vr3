@@ -22,3 +22,96 @@ USA_economy_dynamic_modifier = {
 	production_factory_efficiency_gain_factor = USA_production_factory_efficiency_gain_factor
 
 }
+
+###################################
+
+##### ###### ###### ###### #    #
+	# #	   # #    # #	 # ##   #
+	# ###### ###### ###### # #  #
+#	# #	   # #		#	 # #  # #
+##### #	   # #		#	 # #    #
+
+###################################
+
+
+## Imperial Japanese Navy
+JAP_imperial_navy_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_jap_navy_idea
+
+	convoy_escort_efficiency = JAP_convoy_escort_efficiency
+	naval_morale_factor = JAP_naval_morale_factor 
+	naval_night_attack = JAP_naval_night_attack
+	navy_max_range_factor = JAP_navy_max_range_factor 
+	navy_capital_ship_attack_factor = JAP_navy_capital_ship_attack_factor 
+	sortie_efficiency = JAP_sortie_efficiency 
+	navy_carrier_air_targetting_factor = JAP_navy_carrier_air_targetting_factor 
+	naval_strike_targetting_factor = JAP_naval_strike_targetting_factor 
+	air_wing_xp_loss_when_killed_factor = JAP_air_wing_xp_loss_when_killed_factor
+	navy_anti_air_attack_factor  = JAP_navy_anti_air_attack_factor 
+	power_balance_daily = JAP_power_balance_daily
+
+}
+
+JAP_imperial_army_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_jap_army_idea
+
+	air_cas_present_factor = JAP_air_cas_present_factor
+	ground_attack_factor = JAP_ground_attack_factor
+	shore_bombardment_bonus = JAP_shore_bombardment_bonus
+	breakthrough_factor = JAP_breakthrough_factor
+	army_speed_factor = JAP_army_speed_factor
+	air_range_factor = JAP_air_range_factor
+	army_attack_factor = JAP_army_attack_factor 
+	army_defence_factor = JAP_army_defence_factor
+	army_morale_factor = JAP_army_morale_factor 
+	recruitable_population_factor = JAP_recruitable_population_factor 
+	planning_speed  = JAP_planning_speed
+	supply_consumption_factor = JAP_supply_consumption_factor 
+	no_supply_grace = JAP_no_supply_grace 
+	experience_gain_army = JAP_experience_gain_army
+}
+
+JAP_japanese_economy_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_jap_strengthen_yen
+	production_factory_efficiency_gain_factor = JAP_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = JAP_production_factory_max_efficiency_factor 
+	production_speed_industrial_complex_factor = JAP_production_speed_industrial_complex_factor 
+	production_speed_arms_factory_factor = JAP_production_speed_arms_factory_factor
+	industrial_capacity_factory = JAP_industrial_capacity_factory 
+	industrial_capacity_dockyard = JAP_industrial_capacity_dockyard 
+	industry_air_damage_factor = JAP_industry_air_damage_factor 
+	research_speed_factor = JAP_research_speed_factor 
+	line_change_production_efficiency_factor = JAP_line_change_production_efficiency_factor 	
+	consumer_goods_factor = JAP_consumer_goods_factor
+	trade_laws_cost_factor = JAP_trade_laws_cost_factor
+	economy_cost_factor = JAP_economy_cost_factor
+	political_power_cost = JAP_political_power_cost 
+	production_speed_dockyard_factor = JAP_production_speed_dockyard_factor
+	stability_weekly = JAP_stability_weekly 
+	war_support_weekly  = JAP_war_support_weekly 
+	local_resources_factor = JAP_local_resources_factor
+	resistance_growth = JAP_resistance_growth 
+	
+
+}
+
+JAP_tora_tora_tora_modifier = {
+	icon = GFX_idea_jap_tora_idea
+	naval_speed_factor = JAP_tora_naval_speed_factor 
+	naval_morale_factor = JAP_tora_naval_morale_factor 
+	sortie_efficiency = JAP_tora_sortie_efficiency 
+	convoy_raiding_efficiency_factor = JAP_tora_convoy_raiding_efficiency_factor
+
+
+	ground_attack_factor = JAP_tora_ground_attack_factor
+	air_superiority_bonus_in_combat = JAP_tora_air_superiority_bonus_in_combat
+
+	army_attack_factor = JAP_tora_army_attack_factor
+	army_speed_factor = JAP_tora_army_speed_factor 
+	army_morale_factor = JAP_tora_army_morale_factor 
+}

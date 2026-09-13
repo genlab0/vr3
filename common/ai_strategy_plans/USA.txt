@@ -14,34 +14,77 @@ usa_historical = {
 
 	ai_national_focuses = {
 		# grab as fast as you can if available
-		USA_arsenal_of_democracy
-		USA_the_giant_wakes
-		USA_military_construction
-		USA_USACE_projects
-		USA_wartime_industry
-		USA_scientist_haven
-		USA_manhattan_project
 
 		USA_continue_the_new_deal
-		USA_wpa
-		USA_agricultural_adjustment_act
-		USA_neutrality_act
+		USA_social_security_act
+
+		#300 days now:
+		USA_ssa_funding_wagetax
+		USA_unemployment_insurance
+		USA_old_age_insurance
 		USA_war_department
-		USA_selective_training_act
-		USA_fair_labour_standards_act
-		USA_office_of_scientific_research_and_development
-		USA_two_ocean_navy_act
-		USA_bureau_of_ships
-		USA_air_war_plans_division
-		USA_federal_housing_act
-		USA_air_support
-		USA_war_plans_division
+		USA_us_air_force
+		USA_fighter_program
+		USA_neutrality_act
+		USA_isolationism
+		USA_neutrality_act_of_1937
+		USA_mahanian_doctrine
+
+		USA_wpa 
+
+		#300 days now 
+		USA_finance_infrastructure
+		USA_rural_electrification_administration
+		USA_national_youth_administration
+		USA_increase_industry_production
+		USA_battlecruiser_focus
+		USA_louisiana_maneuvers
+		USA_blue_army_won
+		USA_carrier_fleets
+		USA_bomber_program
+		USA_support_rock_island
+		USA_m1_garand
 		USA_build_the_pentagon
-		USA_intervention_in_europe
-		USA_war_plan_black
-		USA_war_plan_silver
-		USA_intervention_in_asia
-		USA_war_plan_orange
+		USA_interventionism
+
+		USA_agricultural_adjustment_act
+		#ASAP THIS:
+		USA_federal_housing_act
+		USA_start_war_production
+		USA_two_ocean_navy_act
+		USA_focus_scale_up_production
+
+		#300 days now 
+		USA_price_controls
+		USA_burn_agricultural_products
+		USA_fair_labour_standards_act
+		USA_1938_naval_act
+		USA_quarantine_speech
+		USA_denounce_german_agression
+		USA_denounce_japanese_agression
+		USA_communication_devices
+		USA_submarine_focus
+		USA_improve_torpedoes
+		USA_iowa_class
+		USA_avenger_nav
+		USA_essex_class
+
+		USA_september_1939
+		USA_denounce_isolationism
+		USA_the_giant_wakes
+		USA_long_term_contracting
+		USA_USACE_projects
+		USA_arsenal_of_democracy
+		USA_scientist_haven
+		USA_big_buisness
+		USA_war_production_board
+		USA_mobilise_society
+		USA_price_controls
+		USA_resource_program
+		USA_rubber_reserve_focus
+		USA_war_plans_division
+		USA_defense_of_the_pacific
+		
 	}
 
 	traits = {

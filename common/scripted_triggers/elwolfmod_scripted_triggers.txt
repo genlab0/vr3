@@ -11,6 +11,10 @@ is_playable_country = {
 		original_tag = SAF
 		original_tag = RAJ
 		original_tag = SPR
+		original_tag = USA 
+		original_tag = AST 
+		original_tag = BUL 
+		original_tag = JAP 
 	}
 }
 
@@ -29,7 +33,6 @@ is_limited_country = {
 		original_tag = DEN 
 		original_tag = NOR 
 		original_tag = IRE
-		original_tag = BUL
 	}
 }
 

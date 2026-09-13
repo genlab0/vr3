@@ -125,3 +125,87 @@ country_event = {
 		}
 	}
 }
+
+
+#Invade Philippines or Bypass Philippines 
+country_event = {
+	id = japan.21
+	title = japan.21.t 
+	desc = japan.21.d 
+	picture = report_event_japanese_soldiers_01
+	mean_time_to_happen = {days = 2}
+	fire_only_once = yes
+	trigger = {
+		focus_progress = {
+			focus = JAP_strike_south_doctrine
+			progress > 0.2
+		}
+	}
+
+	#Bypass
+	option = {
+		name = japan.21.a
+		set_country_flag = JAP_bypass_philippines
+	}
+
+	#Invade
+	option = {
+		name = japan.21.b
+		set_country_flag = JAP_invade_philippines
+	}
+}
+
+#Focus is on:
+country_event = {
+	id = japan.19
+	title = japan.19.t 
+	desc = japan.19.d 
+	picture = report_event_japanese_soldiers_01
+	mean_time_to_happen = {days = 2}
+	fire_only_once = yes
+	trigger = {
+		focus_progress = {
+			focus = JAP_strike_south_doctrine
+			progress > 0.4
+		}
+	}
+
+	#SEA Bonus
+	option = {
+		name = japan.19.a
+		set_country_flag = JAP_south_east_asia_flag
+	}
+
+	#Pacific Bonus 
+	option = {
+		name = japan.19.b
+		set_country_flag = JAP_pacific_flag
+	}
+}
+
+#Air or Navy
+country_event = {
+	id = japan.20
+	title = japan.20.t 
+	desc = japan.20.d 
+	picture = report_event_japanese_soldiers_01
+	mean_time_to_happen = {days = 2}
+	trigger = {
+		focus_progress = {
+			focus = JAP_strike_south_doctrine
+			progress > 0.6
+		}
+	}
+	fire_only_once = yes
+	#Air Support
+	option = {
+		name = japan.20.a
+		set_country_flag = JAP_air_support_flag
+	}
+
+	#Naval Support
+	option = {
+		name = japan.20.b
+		set_country_flag = JAP_naval_support_flag
+	}
+}

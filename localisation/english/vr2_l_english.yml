@@ -21,6 +21,8 @@
  city:0 "Urban Region"
  metropolis:0 "Metropolis Region"
 
+
+
  #Mio:
  GER_mio_dp_at:0"HE Shells Adoption"
  generic_mio_trait_destroyer_escort:0"Destroyer Escort Production"
@@ -1010,391 +1012,769 @@
  SPR_secure_the_northern_garrisons_tt:0"States §YAsturias§! and §YPais Vasco§! will not start with §R"Unplanned Offensive"§! at the start of the Spanish Civil War"
  ###US Focuses (in no specific order cant be bothered):
 
-#USA SSA:
-USA_social_security_act:"Social Security Act"
-USA_social_security_act_desc:0"Despite being one of the wealthiest countries in the world, we still dont have a real, functioning Social Security System. The SSA is a first step"
-USA_social_security_act_tt:0"Daily Political Power Cost:§G -0.25§! "
-#USA SSA Wagetax:
-USA_ssa_funding_wagetax:0"Funding: Payroll tax"
-USA_ssa_funding_wagetax_desc:0"We can finance this project via new taxes on wages. This will avoid higher government spending"
-USA_ssa_funding_wagetax_tt:0"Construction Speed:§R -10%§!" 
+ #USA SSA:
+ USA_social_security_act:"Social Security Act"
+ USA_social_security_act_desc:0"Despite being one of the wealthiest countries in the world, we still dont have a real, functioning Social Security System. The SSA is a first step"
+ USA_social_security_act_tt:0"Daily Political Power Cost:§G -0.25§! "
+ #USA SSA Wagetax:
+ USA_ssa_funding_wagetax:0"Funding: Payroll tax"
+ USA_ssa_funding_wagetax_desc:0"We can finance this project via new taxes on wages. This will avoid higher government spending"
+ USA_ssa_funding_wagetax_tt:0"Construction Speed:§R -10%§!" 
+ 
+ #Giant Warkes:
+ USA_the_giant_wakes_tt:0"Factory Output:§G +20%§!" 
+ 
+ #USA SSA Government paid:
+ USA_ssa_funding_government:0"Funding: Higher government spending"
+ USA_ssa_funding_government_desc:0"Higher taxes lead to even more economic contraction. While this might be unpopular in Washington, we have to increase government spending in the short term"
+ USA_ssa_funding_government_tt:0"Consumer Goods Factor:§Y +20%§!" 
+ 
+ #Finance Infra:
+ USA_finance_infrastructure_tt:"\nConsumer Goods Factor:§Y +5.0%§!\n§YInfrastructure§! Construction Speed:§G +15.00%§!\n\n" 
+ USA_finance_infrastructure:0"Infrastructure Investments"
+ USA_finance_infrastructure_desc:0"Investing into our obsolete infrastructure will increase our domestic production a lot"
+ 
+ #Rural Electrification Act:
+ USA_rural_electrification_administration:0"Rural Electrification Administration"
+ USA_rural_electrification_administration_desc:0"Electricity is the future. We should provide our citizens with it as soon as possible"
+ USA_rural_electrification_administration_tt:"Consumer Goods Factor:§Y +10%§! \nWeekly Stability:§G +0.10%§!" 
+ USA_rural_electrification_administration_2_tt:0"Allows Decisions to build §YHydro Power Plants§! and §YHigh Capacity Electrical Grids§!"
+ 
+ #National Youth:
+ USA_national_youth_administration:0"National Youth Administration"
+ USA_national_youth_administration_desc:0"By improving education, we increase our talent pool and improve the Living Standard of millions of Americans"
+ USA_national_youth_administration_tt:"Consumer Goods Factor:§Y +5.0%§! \nResearch Speed:§G +5.00%§! \n " 
+ USA_great_depression_cooldown_days_remaining_tt:0"Legislation takes 300 days to be implemented."
+ 
+ 
+ #Reopen Factories:
+ USA_increase_industry_production:0"Reverse Economic Contraction"
+ USA_increase_industry_production_desc:0"By reopening old factories and investing into new ones, America will once again become the economic superpower it is destined to be"
+ USA_increase_industry_production_tt:0"Consumer Goods Factor:§Y -15.0%§!"
+ 
+ #AAA:
+ USA_agricultural_adjustment_act_tt:"Consumer Goods Factor:§Y -10%§! \nConstruction Speed:§R -5%§! \nDaily Political Power Cost:§G -0.25§! \n "
+ 
+ #Fixed Prices:
+ USA_fixed_agricultural_prices:0"Price Controls"
+ USA_fixed_agricultural_prices_desc:0"By setting a price minimum on agricultural products, we are breaking the laws of capitalism. This is deeply unpopular, but necessary to break deflation"
+ USA_fixed_agricultural_prices_tt:"Consumer Goods Factor:§Y -10%§!"
+ 
+ #USA Burn Agricultural Products:
+ USA_burn_agricultural_products:0"Burn Agricultural Products"
+ USA_burn_agricultural_products_desc:0"By Burning farmland and agricultural products, we reduce supply, which leads to higher prices and higher profits for the struggling agricultural sector"
+ USA_burn_agricultural_products_tt:0"Consumer Goods Factor:§Y -5.0%§!"
+ 
+ #Fair Labor Standards Act:
+ USA_fair_labour_standards_act_tt:0"Weekly Stability:§G +0.30%§! \nFactory Output:§G +10%§!"
+ 
+ #Federal Housing Act:
+ USA_federal_housing_act_tt:"Weekly Stability:§G +0.10%§! \nConstruction Speed:§G +10%§! \nConsumer Goods Factor:§Y +10%§!"
+ 
+ #USA Old Age Insurance:
+ USA_old_age_insurance:0"Pension Fund"
+ USA_old_age_insurance_desc:0"By introducing a statutory pension fund, we can guarantee social security for elderly people"
+ USA_old_age_insurance_tt:"Weekly Stability:§G +0.10%§!" 
+ 
+ #USA Unemployment Insurance:
+ USA_unemployment_insurance:0"Unemployment Insurance"
+ USA_unemployment_insurance_desc:0"By introducing a Unemployment Insurance, we can guarantee social security for people looking for a job"
+ USA_unemployment_insurance_tt:"Weekly Stability:§G +0.30%§!" 
+ 
+ #GI BILL:
+ USA_gi_bill:0"GI Bill"
+ USA_gi_bill_desc:0"By promising our soldiers a home and a job after the war, we can motivate them to fight for our freedom even more"
+ USA_gi_bill_tt:0"Consumer Goods Factor:§Y +15.0%§! \nFactory Output:§G +8.00%§! " 
+ 
+ #Naval Act of 1936:
+ USA_naval_act_1936:0"Naval Act of 1936"
+ USA_naval_act_1936_desc:0"Even though congress and the people do not want to meddle in international affairs, there is consensus for a higher budget for the US Navy to protect the US from foreign invasions"
+ USA_naval_act_effect_tt:0"Dockyard output: §G+15.00%§!" 
+ 
+ #US Army Focus:
+ USA_army_focus:0"United States Army"
+ USA_army_focus_desc:0"We have to prepare for the upcoming war. The US Army will play a decisive role in beating back the fascist and authoritarian regimes around the world."
+ 
+ #USA Pentagon:
+ USA_build_the_pentagon_tt:0"Planning Speed:§G +10%§! \nIntel from Combat gain:§! §G +25%§!"
+ 
+ USA_office_of_strategic_services:0"Office of Strategic Services"
+ USA_office_of_strategic_services_desc:0"To protect out homeland and gain valueable intelligence, we need a Intelligence Service with funding"
+ USA_office_of_strategic_services_tt:0"Decryption factor:§G +20§! \nExtra Operative Slots:§G +2§! \nPassive Defense:§G +5§!"
+ 
+ #USA Bomber Focus:
+ USA_bomber_program:0"XXI Bomber Command"
+ USA_bomber_program_desc:0"Giving more resources to the 11th Bomber Command can prove useful when dealing with Japan. Destroying the Military Industrial Base will lead to Japanese surrender"
+ 
+ #USA DOD:
+ USA_department_of_defense_tt:0"Max Planning factor:§G10%§!"
+ #USA xb28 Bomber:
+ USA_xb28_bomber:0"XB28 Dragon"
+ USA_xb28_bomber_desc:0"The XB28 is the latest design by North American Aviation. We should invest into it now"
+ 
+ #USA Night Bombing:
+ USA_night_bombing:0"Night Bombing Campaign"
+ USA_night_bombing_desc:0"Focusing at Night Bombing will make us harder to detect."
+ USA_night_bombing_tt:0"§YDecreases Strategic Bombing visibility by§! §G10%§!"
+ 
+ #USA Dog Fighting Capabilities:
+ USA_dogfighting_capabilities:0"Tactics for Dog Fights"
+ USA_dogfighting_capabilities_desc:0"Close Air Combat Tacitcs are more important then we thought. We should catch up to the rest of the world"
+ 
+ 
+ #USA Support Aviation Program:
+ USA_support_aviation_program:0"Light Bomber Program"
+ USA_support_aviation_program_desc:0"While the big, strategic bombers might have more bombs and a higher range, it is the light bombers that can prove decisive."
+ 
+ #USA Land Based Navs:
+ USA_land_based_navs:0"Maritime Patrol Aircraft"
+ USA_land_based_navs_desc:0"Land Based Naval Aviation can lock down entire seazones from enemy surface combattants. We cant fall behind in that area"
+ 
+ #USA Next Gen Navs:
+ USA_next_gen_navs:0"Advanced Naval Bombers"
+ USA_next_gen_navs_desc:0"Increased Range, better Armaments and a better protection will prove even more dangerous to the enemy in an environment hostile to battleships"
+ 
+ #USA Fighter Program:
+ USA_fighter_program:0"Fighter Program"
+ USA_fighter_program_desc:0"Fighters are the workhorse of our airforce."
+ 
+ #Naval Act of 1936:
+ USA_1938_naval_act:0"Naval Expansion Act"
+ USA_1938_naval_act_desc:0"The Naval Expansion Act, also called Second Vinson Act, will allow us to expand our navy to the goals set by congress."
+ 
+ #US improved Bombing tactics:
+ USA_improved_bombing_tactics:0"M34 2000lb"
+ USA_improved_bombing_tactics_desc:0"The M34 bomb will prove to be a technical innovation worth its investment. We will be able to flatten entire cities"
+ USA_improved_bombing_tactics_tt:0"§YIncreases Strategic Bombing by§! §G10%§!"
+ 
+ #Mahanian Doctrine:
+ USA_mahanian_doctrine:0"Mahanian Doctrine"
+ USA_mahanian_doctrine_desc:0"In order to stay true to our roots, we have to invest into a big, concentrated, battleship focused navy. With the extended range of our Battleships, we will sail towards Japan and conquer everything in our way."
+ USA_mahanian_doctrine_tt:0"§YIncreases Naval Range by§! §G10%§!"
+ 
+ #Battlecruiser Focus:
+ USA_battlecruiser_focus:0"Focus on Heavy Cruisers"
+ USA_battlecruiser_focus_desc:0"We will focus on improving the speed and range of our Battlefleet. This will allow us to strike quickly and run when needed"
+ USA_battlecruiser_focus_tt:0"§YIncreases naval speed by§! §G13%§! \n§YIncreases naval range by§! §G5%§!"
+ 
+ #Battleship Focus:
+ USA_battleship_focus:0"Focus on Battleships"
+ USA_battleship_focus_desc:0"We will stay true to our roots. Mahan envisioned a massive battlefleet that will win one concentrated battle. If the enemy disperses, he will be defeated in Detail. Our battleships should get equipped with the armaments to destroy anything in their way"
+ USA_battleship_focus_tt:0"§YIncreases Capital Ship Attack by§! §G10%§! \n§YIncreases Naval Speed by§! §G8%§!"
+ 
+ #Iowa Class:
+ USA_iowa_class:0"Iowa Class"
+ USA_iowa_class_desc:0"We will order a new generation of Battleships. It will pave the way for an invasion of the Home Islands"
+ USA_iowa_class_tt:0"Dockyard output: §G10.00%§!"
+ 
+ #Carrier Fleet:
+ USA_carrier_fleets:0"US Navy Carrier Program"
+ USA_carrier_fleets_desc:0"Its time to invest into a new generation of carriers, with extended range and a bigger strike potential"
+ 
+ #Improve Sorties:
+ USA_improve_sorties:0"Improve Sortie Efficiency"
+ USA_improve_sorties_desc:0"By adding more organisation and testing out different tactics, we can increase the amount of sorties on our carriers"
+ USA_improve_sorties_tt:0"§YImproves Sortie Efficiency by§! §G15%§!"
+ 
+ 
+ #The Avenger:
+ USA_avenger_nav:0"The Avenger"
+ USA_avenger_nav_desc:0"Our experiences with carriers and carrier launched naval bombers will result in new requirements. Higher ranger, stronger armaments and better targetting systems will only be some of the advantages the new class of planes will have"
+ 
+ #USA Essex Class:
+ USA_essex_class:0"Essex Class"
+ USA_essex_class_desc:0"In order to strike deep into enemy territory, we need power projection. Essex Class will provide us with extreme range, massive air power projection, and modern sensors. These carriers, if deployed correctly, will win us the war."
+ USA_essex_class_tt:0"Dockyard output: §G10.00%§!"
+ 
+ #USA Improve Air Navy Coordination:
+ USA_air_navy_coordination:0"Naval Aviation Exercises"
+ USA_air_navy_coordination_desc:0"We will have to maximise the effectiveness of our carriers by increasing coordination between the surface combattants and the naval aviation"
+ USA_air_navy_coordination_tt:0"§YIncreases carrier night traffic by§! §G15%§! \n§YIncreases carrier fighter sortie efficiency by§! §G10%§!"
+ 
+ #USA Submarine Focus:
+ USA_submarine_focus:0"Submarine Program"
+ USA_submarine_focus_desc:0"Submarines can deliver a critical blow to enemy logistics, supply lines and reinforcment capabilities. We should invest now into R&D to stay competitive"
+ 
+ 
+ #US Torpedo Improvements:
+ USA_improve_torpedoes:0"Replace the Mark 14 Torpedo"
+ USA_improve_torpedoes_desc:0"Our old torpedoes are terribly inaccurate and are holding our submarine fleet back. Getting new ones into service as fast as possible has to be a priority"
+ USA_improve_torpedoes_tt:0"Allows you to replace the Bureau of Ordnance national spirit."
+ 
+ #Charles Lockwood
+ USA_charles_lockwood:0"Charles Lockwood"
+ USA_charles_lockwood_desc:0"Vice Admiral Lockwood has plenty of experience with submarine combat, he can help us develop the necessary manuals to maximise the effectiveness of submarines"
+ 
+ #Focus on Range:
+ USA_focus_on_range:0"Gato Class"
+ USA_focus_on_range_desc:0"The Gato Class is a revolutionary new type of submarines. While it might not be as slow and silent as its Axis counterparts, it has the necessary range to even reach the Japanese Home Islands"
+ USA_focus_on_range_tt:0"Submarine Range:§G +35%§! \nSubmarine surface visibility:§R +10%§! \nSubmarine visibility:§R +10%§! \nSubmarine Speed:§R -5%§!"
+ 
+ #Focus on Visibility:
+ USA_focus_on_visibility:0"Imitate German Designs"
+ USA_focus_on_visibility_desc:0"German Submarines have set a new Gold Standard. Low visibility and high speeds make them hard to find. We need to develop our own system with similar characteristics! "
+ USA_focus_on_visibility_tt:0"Submarine Range:§R -15%§! \nSubmarine surface visibility:§G -5%§! \nSubmarine visibility:§G -10%§! \nSubmarine speed:§G +5%§!"
+ 
+ #Scale Production:
+ USA_focus_scale_up_production:0"Scale up naval production"
+ USA_focus_scale_up_production_desc:0"War with Japan seemed inevitable, but the last Isolationists have been proven wrong. It is time to give our Navy the funding it needs"
+ USA_scale_up_production_tt:0"Dockyard Output§G +15.00%§!"
+ 
+ #USA Isolationism:
+ USA_isolationism:0"Isolationism"
+ USA_isolationism_desc:0"While our president is an Internationalist, the country isnt in ready for war, and congress is neither. If we want to keep support for our New Deal Policies, we will have to appease congress and the people"
+ 
+ #USA Second Neutrality Act:
+ USA_neutrality_act_of_1937:0"Second Neutrality Act"
+ USA_neutrality_act_of_1937_desc:0"With the outbreak of the Spanish Civil War, the administration sees itself forced to sign a second Neutrality Act, forbidding arms shipments on American vessels"
+ USA_neutrality_act_of_1937_tt:0"§YMilitary Factory§! Construction Speed:§R -15.00%§!"
+ 
+ #Cash and Carry:
+ USA_cash_and_carry_clause:"Cash and Carry Clause"
+ USA_cash_and_carry_clause_desc:0"We can modifiy the Second Neutrality Act to exclude american resources and arms, shipped on non-american vessels. This can prove useful later"
+ 
+ #Forbid Exports:
+ USA_forbid_exports:0"Forbid all arms export"
+ USA_forbid_exports_desc:0"By banning all arms exports to belligerent countries, we will make our position even clearer to Isolationists"
+ 
+ #Internationalism
+ USA_interventionism:0"Interventionism"
+ USA_interventionism_desc:0"Our administration consists of Internationalists, many of whom experienced Theodore Roosevelt and Woodrow Wilson. Promoting it whenever possible is important to prepare this country for war"
+ 
+ #Quarantine Speech:
+ USA_quarantine_speech:0"Quarantine Speech"
+ USA_quarantine_speech_desc:0"It seems to be unfortunately true that the epidemic of world lawlessness is spreading. When an epidemic of physical disease starts to spread, the community approves and joins in a quarantine of the patients in order to protect the health of the community against the spread of the disease."
+ 
+ #Denounce Japan:
+ USA_denounce_japanese_agression:0"Denounce Japanese Aggression"
+ USA_denounce_japanese_agression_desc:0"We were right all along. Independant nations are getting attacked by bullies on the international stage. We will freeze certain Japanese assets in response to this invasion"
+ 
+ #Denounce Germany:
+ USA_denounce_german_agression:0"Denounce German Aggression"
+ USA_denounce_german_agression_desc:0"Fascists in Germany and Italy are occupying freedom loving countries like Albania, Austria and Czechoslovakia. This will inevitably lead to war. Isolationists have once again been proven wrong."
+ 
+ #2nd World War:
+ USA_september_1939:0"1.September 1939"
+ USA_september_1939_desc:0"Contrary to what the Isolationists suggested, the fascists in Europe dont just constrain themselves to bullying their small neighbors. They picked fights with our longterm allies, Britain and France. We will not stand still while the Free World is getting attacked"
+ 
+ #Denounce Isolationism:
+ USA_denounce_isolationism:0"Denounce Isolationism"
+ USA_denounce_isolationism_desc:0"The Internationalist Coalition under Roosevelt has been proven right. Now its time to implement our policies to prepare the country for war"
+ USA_denounce_isolationism_tt:0"Weekly War support:§G +0.50%§!"
+ 
+ #Arsenal of Democracy:
+ USA_arsenal_of_democracy_tt:0"Allows decisions to supply Allied nations with arms"
+ 
+ #British Designs:
+ USA_british_designs_tt:0"Research Speed:§G +5.00%§!"
+ USA_british_designs:0"British Designs"
+ USA_british_designs_desc:0"By sharing technologies with Britain, we can strenghthen our Military Industrial Base"
+ 
+ #Long Term Contracting:
+ USA_long_term_contracting:0"Long Term Contracting"
+ USA_long_term_contracting_desc:0"Short term budgets have seriously constrained our Military Industry. Long Term contracts incentivize long term investments, sustainable growth and will result in Economies of Scale effects"
+ USA_long_term_contracting_tt:"Military Factory Construction Speed:§G +20.00%§! \nProduction Efficiency Cap:§G +10.00%§!"
+ 
+ #Replenish Stocks:
+ USA_replenish_stocks_idea:0"Replenish Stocks"
+ USA_replenish_stocks:0"Replenish our Stocks"
+ USA_replenish_stocks_desc:0"In order to field a sizeable army, we need to produce the equipment for it. Now that we're in a hurry, we will try to simply production. This might reduce quality slightly, but it is necessary in these circumstances"
+ 
+ #Scientist Haven:
+ USA_scientist_haven_tt:0"Research Speed:§G +5.00%§!"
+ 
+ #Start War Production:
+ USA_start_war_production:0"Start War Production"
+ USA_start_war_production_desc:0"Outside threats force our hand: An Economic Mobilisation is unavoidable."
+ 
+ #WAr Production Board:
+ USA_war_production_board:0"War Production Board"
+ USA_war_production_board_desc:0"By creating a board that helps coordinate military production, we can react way faster to military needs"
+ USA_war_production_board_tt:0"Production Efficiency Growth:§G +15.00%§!"
+ 
+ #Resource Program:
+ USA_resource_program:0"Resource Program"
+ USA_resource_program_desc:0"We need to improve our Resource extraction to fuel our war machine"
+ USA_resource_program_tt:0"Resource Gain Efficiency:§G +40.00%§!"
+ 
+ #Price Controls:
+ USA_price_controls_tt:0"Factory Output:§G +5.00%§!"
+ USA_price_controls:0"Price Controls"
+ USA_price_controls_desc:0"This deeply anticapitalistic war measure helps buy stuff at cheaper prices"
+ 
+ #Mobilise Society:
+ USA_mobilise_society:0"Mobilise Society"
+ USA_mobilise_society_desc:0"The War Production Board will launch a massive propaganda campaign to mobilise the masses for the war"
+ 
+ #Big Buisness
+ USA_big_buisness:0"Cooperation with Big Buisness"
+ USA_big_buisness_desc:0"By working with big manufacturers, we can convert our industrial capacity into military output extremely fast"
+ USA_big_buisness_tt:0"Allows Decisions to Build Military Factories"
+ 
+ #USA Willow Run Factory:
+ USA_willow_run_idea:0"Willow Run Plant"
+ USA_willow_run:0"Willow Run Aircraft Plant"
+ USA_willow_run_desc:0"We were able to convince Ford to build a massive Aircraft Manufacturing Plant"
+ 
+ #Cleveland Tank Plant:
+ USA_cleveland_tank_plant:0"Cleveland Tank Plant"
+ USA_cleveland_tank_plant_desc:0"We were able to convince GM to build a massive Tank Manufacturing Plant"
+ 
+ #Boston Navy Yard:
+ USA_boston_navy_yard_tt:0"Dockyard Output:§G +10.00%§!"
+ USA_boston_navy_yard:0"Boston Naval Yard"
+ USA_boston_navy_yard:0"We will expand our shipbuilding capacity with these massive dockyard facilities"
+ 
+ #USA Rubber
+ USA_rubber_reserve_focus:0"Rubber Reserve Company"
+ USA_rubber_reserve_focus_desc:0"Japan threatens our supply to Rubber. We have big stockpiles, but they wont last forever. We should invest now"
+ USA_rubber_reserve_focus_tt:0"Improves §YStandard Oil of California§! Industrial Concern"
+ 
+ #American Marines:
+ USA_american_marines:0"US Navy Marines"
+ USA_american_marines_desc:0"The marines will play a crucial role in Island Hopping. They will have to grind through Japanese defences"
+ USA_american_marines_tt:0"Special Forces Attack Factor:§G +5.00%§!"
+ 
+ #Amphib Operations:
+ USA_amphibious_operations_tt:0"Naval Invasion Defense:§G +10.00%§!"
+ 
+ #Amtracs:
+ USA_amtrac:0"Amtracs"
+ USA_amtrac_desc:0"Amphibious Tractors (Amtracs) can give our marines more protection and mobility"
+ 
+ #Red Army Won:
+ USA_red_army_won_tt:0"Max Planning Factor:§G +12%§! \nRecovery Rate:§G +8%§! \nLand Night Attack:§G +8%§!"
+ USA_red_army_won:0"Red Army Won!"
+ USA_reD_army_won_desc:0"The Red Army, entrenching itself behind the Mississippi river, was able to fend off the enemy tanks"
+ 
+ #Blue Army Won:
+ USA_blue_army_won:0"Blue Army Won!"
+ USA_blue_army_won_desc:0"Pattons Tanks have outmaneuvered the enemy defenses! They are victorious!"
+ USA_blue_army_won_tt:0"Max Planning Factor:§G +8%§! \nRecovery Rate:§G +12%§! \nLand Night Attack:§G +14%§!"
+ 
+ #Comm Devices:
+ USA_communication_devices:0"Walkie Talkies"
+ USA_communication_devices_desc:0"Walkie Talkies have been a huge factor in communications, we should start procurement immediatly"
+ USA_communication_devices_tt:0"Reinforce Rate:§G +3%§!"
+ 
+ #M1:
+ USA_m1_garand:0"M1 Garand"
+ USA_m1_garand_desc:0"The standard US army rifle"
+ 
+ #AT:
+ USA_anti_tank:0"Anti Tank Systems"
+ USA_anti_tank_desc:0"In case we encounter armor, we should be ready to destroy it immediatly"
+ 
+ #defend Philli:
+ USA_defend_philippines:0"Defend Phillipines"
+ USA_defend_philippines_desc:0"Lets focus on the defense of the Phillipines."
+ 
+ #retreat Philli:
+ USA_retreat_from_philippines:0"Retreat from Phillipines"
+ USA_retreat_from_philippines_desc:0"Lets focus on the defense of Guam."
+ 
+ USA_navy_dynamic_modifier:0"US Navy"
+ USA_navy_dynamic_modifier_desc:0"The US Navy has always been influenced by famous Admirals and their manuals, doctrines and strategies. Changing those will be a long and hard process"
+ USA_economy_dynamic_modifier:0"US Economy"
+ USA_economy_dynamic_modifier_desc:0"The US Economy is in heavy turmoils during this period of hardships."
+ USA_army_dynamic_modifier:0"US Army"
+ USA_airforce_dynamic_modifier:0"USAAF"
+ #Wake Island Midway Island
+ USA_wake_island_base:0"Wake Island Naval Base"
+ USA_wake_island_base_desc:0"Lets use Wake Island as our US Navy Base"
+ USA_midway_island_base:0"Midway Naval Base"
+ USA_midway_island_base_desc:0"Lets retreat the US navy to Midway"
+ 
+ USA_day_in_infamy:0"A day in Infamy"
+ USA_day_in_infamy_desc:0"Yesterday, December 7, 1941—a date which will live in infamy—the United States of America was suddenly and deliberately attacked by the naval and air forces of the Empire of Japan."
+ 
+ #Accelerate Army Training:
+ USA_accelerate_army_training:0"Accelerate Army Training"
+ USA_accelerate_army_training_desc:0"Lets speed up our Army Training"
+ USA_accelerate_army_training_tt:0"Army Training Time:§G -30%§!"
+ 
+ #Accelerate Air Training:
+ USA_accelerate_air_training:0"Accelerate Air Training"
+ USA_accelerate_air_training_desc:0"Lets speed up our Air Training"
+ USA_accelerate_air_training_tt:0"Air Training XP Gain Factor:§G +30%§!"
+
+ #Japan Decisions:
+ JAP_slow_down_industry:0"Slow down Economy"
+ JAP_slow_down_industry_desc:0"By increasing interest rates we will try to improve our monetary problems. This will come at a short term economic contraction though"
+ JAP_inflation_increase_mission:0"Increasing Inflation"
+ JAP_inflation_increase_mission_desc:0"Every 200 days our Inflation will get worse. We should take measures to keep it under control"
+ JAP_civ_conversion_mission:0"Industrial Mobilisation"
+ JAP_civ_conversion_mission_desc:0"Our economy is actively preparing for war, even if that means a decrease in living standard"
+ #Japan Ideas:
+ JAP_tora_tora_tora_modifier:0"Tora Tora"
+ JAP_tora_tora_tora_modifier_desc:0"The decision has been made. Its war. Lets use the momentum to take as much land as possible"
+ JAP_remove_tora_tora_mission:0"Tora Tora Tora!"
+ collab_chi:0"Prepare Collaboration Government in China"
+ 
+ 
+ JAP_take_papua_mission:0"Tora Tora: Take Papua"
+ JAP_take_manila_mission:0"Tora Tora: Take Manila"
+ JAP_take_borneo_mission:0"Tora Tora: Take Borneo"
+ JAP_take_singapore_mission:0"Tora Tora: Take Singapore"
+ JAP_take_sumatra_mission:0"Tora Tora: Take Sumatra"
+ 
+ #Japanese Economy
+ JAP_japanese_economy_modifier:0"Imperial Japanese Economy"
+ JAP_japanese_economy_modifier_desc:0"The Japanese Economy is in unstable times after the 1920s boom. Our political decisions today can influence the next decades"
+ 
+ #Lunge Mines
+ JAP_lunge_mine_idea:0"Shitotsubakurai"
+ JAP_lunge_mine_idea_desc:0"Infantry Suicide Anti Tank Kit"
+ JAP_navy_idea:0"Imperial Japanese Navy"
+ JAP_navy_idea1:0"Imperial Japanese Navy"
+ JAP_navy_idea2:0"Imperial Japanese Navy"
+ JAP_icreduction_idea:0"Maru 4 Keikaku"
+ JAP_icreduction_idea_desc:0"The 4th Naval Armaments Supplement Programme was a reaction to the Second Vinson Act, a US Navy Buildup program, and extended to 80 warships and 75 Naval Air Groups"
+
+ japan.21.t:0"The Philipines"
+ japan.21.d:0""
+ japan.21.a:0"Bypass the Philipines"
+ japan.21.b:0"Invade the Philipines"
+ 
+ japan.19.t:0"Campaign Focus"
+ japan.19.d:0""
+ japan.19.a:0"Focus on Indonesia"
+ japan.19.b:0"Focus on the Pacific"
+ 
+ japan.20.t:0"Navy or Air Force?"
+ japan.20.d:0""
+ japan.20.a:0"Focus on the Air Force"
+ japan.20.b:0"Focus on the Navy"
+
+ #Economy Slowdown:
+ JAP_slowed_down_economy_idea:0"Interest Rate Hikes"
+ JAP_slowed_down_economy_idea_desc:0"Higher interest rates lead to a minor recession, but they can help fix inflation"
+ 
+ #Jap Army Expansion Law:
+ JAP_army_expansion_law_tt:0"Recruitable Population Factor:§G +15%§!"
+ 
+ 
+ #Japan Supremacy of Technology Choice IDeas:
+ JAP_light_artillery_tt:0"Artillery Equipment production cost:§G -15%§!" 
+ JAP_precision_strikes_tt:0"Artillery Equipment breakthrough:§G +10%§! \nArtillery Equipment soft attack:§G +10%§!" 
+ 
+ #Jap Imperial Navy Modifier:
+ JAP_imperial_navy_modifier:0"Imperial Japanese Navy"
+ 
+ #Jap Army Modifier:
+ JAP_imperial_army_modifier:0"Imperial Japanese Army"
+ 
+ #Japan Inflation:
+ 
+ JAP_inflation_1:0"Healthy Inflation"
+ JAP_inflation_1_desc:0"Low Inflation is benefitting our industried while not bringing too much instability into the society"
+ JAP_inflation_2:0"Controllable Inflation"
+ JAP_inflation_2_desc:0"Inflation is higher than anticipated, but controllable. We should act now"
+ JAP_inflation_3:0"Controllable Inflation"
+ JAP_inflation_3_desc:0"Inflation is higher than anticipated, but controllable. We should act now"
+ JAP_inflation_4:0"High Inflation"
+ JAP_inflation_4_desc:0"Inflation is clearly too high. We need to take measures before it is out of control"
+ JAP_inflation_5:0"Very High Inflation"
+ JAP_inflation_5_desc:0"Our economy is collapsing. 3 digit inflation rates are common and people cant buy even the most essential things anymore"
+ JAP_inflation_6:0"Hyperinflation"
+ JAP_inflation_6_desc:0"We are experiencing Hyperinflation. Our rearmament program, while giving us more guns, planes and artillery shells, has devastated our society and economy"
+ JAP_inflation_7:0"Hyperinflation"
+ JAP_inflation_7_desc:0"We are experiencing Hyperinflation. Our rearmament program, while giving us more guns, planes and artillery shells, has devastated our society and economy"
+ 
+ #Japan Focuses (in no specific order cant be bothered sry)
+ 
+ #Japan Supremacy of Will Focus:
+ JAP_supremacy_of_will_tt:0"Infantry HP:§R -3§!"
+ 
+ #Supremacy of tech:
+ JAP_supremacy_of_technology_tt:0"Research Speed:§G +10%§!"
+ 
+ #Japan Bypass Philippines
+ JAP_bypass_philippines_tt:0"Will gain §G+20%§! Convoy Raiding Efficiency during Tora Tora"
+ 
+ #Japan Invade Philippines:
+ JAP_invade_philippines_tt:0"All States in the Philipines gain a modifier that reduces entrenchment, increases speed and increases supply range"
+ JAP_invade_the_philippines:0"Invade the Philipines"
+ JAP_invade_the_philippines_desc:0"Invading the Philipines will give us airbases and secure our sealanes"
+ 
+ #Pacific Focused:
+ JAP_pacific_focussed_tt:0"All American Islands will gain a modifier that reduces entrenchment, increases speed and increases supply range"
+ JAP_pacific_focussed:0"Pacific Focus"
+ JAP_pacific_focussed_desc:0"In the Pacific waits the US Fleet. Taking its bases has priority"
+ 
+ #Rubber Islands Focussed:
+ JAP_rubber_islands_focussed:0"South East Asia Focus"
+ JAP_rubber_islands_focussed_desc:0"South East Asia is where the resources are. We should focus on them first"
+ JAP_rubber_islands_focussed_tt:0"All Indonesian States will gain a modifier that reduces entrenchment, increases speed and increases supply range"
+ 
+ #Air Support Buff
+ JAP_air_support_buff_tt:0"Air Superiority Bonus in Combat:§G +5%§! \nClose Air Support Ground Attack:§G +10%§!"
+ JAP_air_support_buff:0"Focus on the Air Force"
+ JAP_air_support_buff_desc:0"The Air Force, as a key enabler, can help us take ground quickly"
+ 
+ #Naval Support Buff:
+ JAP_naval_support_buff_tt:0"Naval Speed:§G +5%§! \nSortie Efficiency:§G +20%§!"
+ JAP_naval_support_buff_desc:0"The Navy has to hold our flanks while we're busy in India and Indonesia. We need to help it where we can"
+ JAP_naval_support_buff:0"Focus on the Navy"
+ 
+ #Navy Carrier Support:
+ JAP_carrier_support_tt:0"Navy Anti Air Attack Factor:§G +8%§!"
+ JAP_carrier_support:0"Carrier Support Focus"
+ JAP_carrier_support_desc:0"Our Heavy Cruiser fleet will support the carriers at all cost"
+ 
+ #Naval Estimates:
+ JAP_new_naval_estimates_tt:0"Dockyard Output:§G +10%§!"
+ 
+ #Supremacy of BB
+ JAP_supremacy_of_the_battlefleet_tt:0"Capital Ship Attack:§G +5%§! \nDockyard Output:§G +5%§! \nFactory Output:§R -3%§!"
+ 
+ #Night Fighting:
+ JAP_night_fighting_tt:0"Navy Night Attack:§G +5%§!"
+ JAP_night_fighting:0"Night Battles"
+ JAP_night_fighting_desc:0"Our gunners are specifically trained to fighting at night."
+ 
+ #Carriers:
+ JAP_carrier_warfare_experiments_tt:0"Sortie Efficiency:§G +15%§!"
+ 
+ #Improve Current Designs:
+ improve_current_designs:0"Improve Current Designs"
+ improve_current_designs_desc:0"Let us improve our current designs instead of swapping the lines"
+ 
+ #Convoy Sailing:
+ JAP_convoy_sailing_tt:0"Convoy Escort Efficiency:§G +15%§!"
+ JAP_convoy_sailing:0"Convoy Sailing"
+ JAP_convoy_sailing_desc:0"By combining big amounts of merchant ships with a few destroyers, they can serve as a force multiplier against submarines"
+ 
+ #Japan Radar Focus:
+ JAP_radar_focus:0"Improve Radars"
+ JAP_radar_focus_desc:0"Radars can help detect submarines faster than ever"
+ 
+ #Japan Sonar:
+ JAP_sonar_focus:0"Improve Sonars"
+ JAP_sonar_focus_desc:0"We have fallen behind in ASW warfare. Time to catch up"
+ 
+ #Jap Southern Resource Area TT:
+ JAP_strike_on_the_southern_resource_area_tt:0"This focus is autocompleted when finishing "Strike South Doctrine""
+ JAP_strike_south_doctrine_tt:0"§RBegins the Pacific War.§!"
+ #Jap Cruiser Subs
+ JAP_cruiser_subs_tt:"Submarine Range:§G +30%§! \nSubmarine Production Cost:§R +5%§!"
+ 
+ #Japan Taiwan Colony:
+ JAP_taiwan_colony:0"The unsinkable Aircraft Carrier"
+ JAP_taiwan_colony_desc:0"Defending Taiwan will make it exponentially harder to strike out Homeland"
+ JAP_defend_homeland:0"Defend the Homeland"
+ JAP_defend_homeland_desc:0"We should divert Resources to protect the Emperor and the Homeland"
+ 
+ #Jap Fighters:
+ JAP_fighter_focus:0"Fighter Focus"
+ JAP_fighter_focus_desc:0"Having a modern fighter will prove to be decisive"
+ 
+ #Japan Newer Cas Models
+ JAP_newer_cas_models:0"New Light Bombers"
+ JAP_newer_cas_models_desc:0"Close Air Support missions are extremely important, we should invest into new models to improve accuracy, speed and increase the maximum payload"
+ 
+ #Japan Air Support:
+ JAP_integrate_air_support:0"Integrated Air Support"
+ JAP_integrate_air_support_desc:0"By integrating our light bombers into the army, we can maximise their effect on enemy ground forces"
+ JAP_integrate_air_support_tt:0"Ground Support:§G +5%§! \nClose Air Support Ground Attack:§G +10%§!"
+ 
+ #Jap Vets:
+ JAP_deploy_veterans:0"Deploy Veterans to Combat"
+ JAP_deploy_veterans_tt:0"Gains 10 Support Genius Aces and 100 naval bombers"
+ JAP_deploy_veterans_desc:0"Our veteran Pilots can provide us with the striking potential we need early in the war"
+ 
+ #Jap Return Vets:
+ JAP_recall_veterans:0"Japanese Air Academy"
+ JAP_recall_veterans_desc:0"Lets use our Air Veterans from the Chinese campaign for good. They can train the next generations of fighter pilots"
+ JAP_recall_veterans_tt:0"Air Wing Training Experience Gain:§G +30%§!" 
+ 
+ #Japan Naval Support:
+ JAP_integrate_naval_support:0"Integrated Naval Support"
+ JAP_integrate_naval_support_desc:0"As big as our internal differences might be, we need to be able to work together with the navy."
+ JAP_integrate_naval_support_tt:0"Shore Bombardment:§G +20%§!"
+ 
+ #Japan Lessons from China:
+ JAP_lessons_from_china_tt:0"4 Veteran Divisions will return from the campaign in China"
+ JAP_lessons_from_china:0"Lessons from China"
+ JAP_lessons_from_china_desc:0"The wars we have fought in China gave us valueable experiences. We should start a program that converts those experiences into manuals, guides and a new doctrine"
+ 
+ #Jap Planning:
+ JAP_chi_planning_tt:0"Planning Speed Factor:§G +15%§!"
+ JAP_chi_planning:0"Improve Planning"
+ JAP_chi_planning_desc:0"Faster and more reliable plans can increase unit effectiveness"
+
+ no_supply_grace_tt: " $MODIFIER_NO_SUPPLY_GRACE$ $RIGHT|+=1$ Hour(s)"
+ naval_night_attack_tt: " $MODIFIER_NAVAL_NIGHT_ATTACK$: $RIGHT|+=%1$"
+ #Jap Supply:
+ JAP_chi_supply_tt:0"Supply Consumption Factor:§G -10%§! \nSupply Grace:§G +24h§!"
+ JAP_chi_supply:0"Improve Logistics"
+ JAP_chi_supply_desc:0"Logistics wins wars. Especially in the extremely harsh conditions of South East Asia"
+ 
+ 
+ 
+ 
+ #Replace Zero:
+ JAP_replace_the_zero_tt:"Factory Output:§G +5%§!"
+ JAP_replace_the_zero:0"Replace the Zero"
+ JAP_replace_the_zero_desc:0"It is time to replace the A6M Zero with a modern, longer range fighter that can not only provide for the navy but also for the army"
+ 
+ 
+ #Japan Zero Improved:
+ JAP_improve_the_zero:0"Improve the Zero"
+ JAP_improve_the_zero_desc:0"Improving our current Zero will not only make it better, it will also increase range and decrease costs"
+ JAP_improve_the_zero_tt:"Carrier Fighter cost:§G -15%§! \nCarrier Fighter Range:§G +10%§!"
+ 
+ #Japan Advanced Inf
+ JAP_advanced_infantry_technology:0"Advanced Infantry Combat"
+ JAP_advanced_infantry_technology_desc:0"With modern weapons, speed and quick and precise breakthrough supported by air and sea, we can punch through any line"
+ JAP_advanced_infantry_technology_tt:0"Army Speed Factor:§G 10%§! \nArmy Breakthrough:§G 5%§! "
+ 
+ #Japan Land Air:
+ JAP_land_air_focus_tt:0"Air Range Factor:§G 10%§! \nDockyard Output:§R -15%§! \nFactory Output:§G +5%§! "
+ JAP_land_air_focus:0"Army Air Force Expansion"
+ JAP_land_air_focus_desc:0"With the main focus of our campaign being in Singapore and India, we should equip our Air Force with the models it needs and redirect naval funding towards the army"
+ 
+ #Japan Naval Air:
+ JAP_naval_air_focus:0"Naval Air Force Expansion"
+ JAP_naval_air_focus_desc:0"Contrary to what the generals might believe, its the Navy that will have to bear the brunt of the allied war efforts. The US Navy is a worthy opponent, and we need to direct funding there"
+ JAP_naval_air_focus_tt:0"Naval Targetting Agility:§G 5%§! \nDockyard Output:§G 5%§! \nFactory Output:§R -2%§! "
+ 
+ #Jap First air Fleet:
+ JAP_first_air_fleet_tt:0"Will get 2 Carriers of the 1940 model with 75% progress"
+ 
+ #JAP Food Stamps:
+ JAP_food_stamps:0"Food Stamps"
+ JAP_food_stamps_desc:0"By decreasing the speed in which money circulates, we can decrease inflation short term. This might be unpopular at first, but it can prove helpful later"
+ JAP_food_stamps_tt:0"§RInflation§! is §Ylowered§! by §G2§! levels. \nDoes not decrease inflation below Healthy Inflation"
+ 
+ #Jap Mobilise Society:
+ JAP_mobilise_society:0"Mobilise Society"
+ JAP_mobilise_society_desc:0"All efforts have to go towards our war production. Sacrifices will have to be made."
+ JAP_mobilise_society_tt:0"§RInflation§! is §Yincreased§! by §R1§! level"
+ 
+ #JAP War Bonds:
+ JAP_issue_bonds:0"War Bonds"
+ JAP_issue_bonds_desc:0"By lending money from the public with high interest rates, we can benefit shortterm while moving the debt problem to the future"
+ JAP_issue_bonds_tt:0"§RInflation§! is §Yincreased§! by §R1§! level"
+ #JAP Accelerate Rearmament
+ JAP_accelerate_rearmament:0"Accelerate Rearmament Program"
+ JAP_accelerate_rearmament_desc:0"We have to keep preparing for the upcoming struggle, no matter what the costs."
+ JAP_accelerate_rearmament_tt:0"§YMilitary Factory§! construction speed:§G +15.00%§! \n§YCivilian Factory§! construction speed:§R -35.00%§! \n \nEvery 30 days, 1 Civilian factory will be converted into a Military Factory."
+ 
+ #JAP Continue Sustainable Path:
+ JAP_continue_sustainable_path:0"Continue Sustainable Path"
+ JAP_continue_sustainable_path_desc:0"While Rearmament continues to be our top priority, we will be focusing more on a long term, sustainable path"
+ #JAP Industrialise North:
+ JAP_industrialize_the_north:0"Industrialise the North"
+ JAP_industrialize_the_north_desc:0"We cant let single regions fall behind in our economic plans"
+ 
+ #JAP Industrialise East:
+ JAP_industrialize_the_east:0"Industrialise the East"
+ JAP_industrialize_the_east_desc:0"We cant let single regions fall behind in our economic plans"
+ 
+ #JAP Industrialise Center:
+ JAP_industrialize_the_center:0"Industrialise the Center"
+ JAP_industrialize_the_center_desc:0"We cant let single regions fall behind in our economic plans"
+ 
+ #JAP Industrialise South:
+ JAP_industrialize_the_south:0"Industrialise the South"
+ JAP_industrialize_the_south_desc:0"We cant let single regions fall behind in our economic plans"
+ 
+ #JAP Industrialise West:
+ JAP_industrialize_the_west:0"Industrialise the West"
+ JAP_industrialize_the_west_desc:0"We cant let single regions fall behind in our economic plans"
+ 
+ #JAP Setting Course:
+ JAP_setting_course:0"Setting course"
+ JAP_setting_course_desc:0"We need to make clear the path we're heading towards"
+ 
+ #Jap Support Tanks
+ JAP_support_tanks:0"Light Support Tanks"
+ JAP_support_tanks_desc:0"Investing into protective vehicles that can bring our infantry to the front could be a good investment"
+ 
+ #JAP Concentrate Industry:
+ JAP_concentrate_military_industry:0"Concentrate Military Industry"
+ JAP_concentrate_military_industry_desc:0"By merging multiple small arms producers into 1 big state controlled conglomerate, we can profit from Economy of Scale Effects. This might negatively affect economic growth though, as small companies will be pushed out of the market"
+ JAP_concentrate_military_industry_tt:0"§YProduction Efficiency Cap:§! §G+5%§! \n§YFactory Output:§! §G+5%§! \n§YFactory Bombing Vulnerability:§! §R+15%§!"
+ 
+ #JAP Increase Military Buildup:
+ JAP_increase_military_buildup:0"Shift focus on Military Production"
+ JAP_increase_military_buildup_desc:0"Now that our industrial base is established, we can shift our focus to what really matters. Guns, tanks and planes"
+ JAP_increase_military_buildup_tt:0"§YCivilian Factory§! construction speed:§R -50.00%§! \n§YMilitary Factory§! construction speed:§G +60.00%§!"
+ 
+ #Supremacy of Combined Arms
+ JAP_supremacy_of_combined_arms:0"Supremacy of Combined Arms"
+ JAP_supremacy_of_combined_arms_desc:0"With supreme tactics, we can outflank our enemies and destroy them rapidly"
+ 
+ #Diversify Production:
+ JAP_diversify_production:0"Diversify Production"
+ JAP_diversify_production_desc:0"With R&D constantly pushing for new innovations we should increase our ability to adapt to new weapon systems"
+ JAP_diversify_production_tt:0"Production Efficiency Retention:§G +15%§! \nProduction Efficiency Growth:§G +5%§! \nResearch Speed:§R -5%§!"
+ 
+ #Increase Production:
+ JAP_increase_output:0"Increase Output"
+ JAP_increase_output_desc:0"Increasing our own output should have maximum priority."
+ JAP_increase_output_tt:"Production Efficiency Cap:§G +5%§! \nResearch Speed:§R -5%§!"
+ 
+ #Jap Modern Anti Tank:
+ JAP_modern_anti_tank:"Modern Anti Tank Guns"
+ JAP_modern_anti_tank_desc:0"German tanks have proven deadly in Europe. We should avoid making the same mistakes as European countries"
+ 
+ #Jap Light Artillery:
+ JAP_light_artillery:0"Lighter Artillery"
+ JAP_light_artillery_desc:0"Lighter Artillery will be easier to produce and cheaper, but will come at a tradeoff in firepower"
+ 
+ #Jap Light BBs:
+ JAP_light_battleships:0"Lighter Battleships"
+ JAP_light_battleships_desc:0"Limited by the London Naval Treaty and our Limited Naval Industry, we can shift focus towards Lighter vessels like cruisers"
+ 
+ #CA Shipyards
+ JAP_heavy_cruiser_shipyards:0"Expand Cruiser Shipyards"
+ JAP_heavy_cruiser_shipyards_desc:0"By converting civilian shipyards into military ones, we can get some extra ships built right in time"
+ 
+ 
+ 
+ #JAP Soft Attack Arty:
+ JAP_precision_strikes:0"Precision Strikes"
+ JAP_precision_strikes_desc:0"By improving our counter battery fire and our artillery reconnaissance, we can increase the effectiveness of our guns"
+ 
+ #Jap Inf equipment:
+ JAP_infantry_equipment:0"Modernise Infantry Equipment"
+ JAP_infantry_equipment_desc:0"Modern Infantry Weapons will be the backbone of our army"
+ 
+ #Jap Artillery Equipment:
+ JAP_artillery_equipment:0"Artillery Support Guns"
+ JAP_artillery_equipment_desc:0"While our infantry will fight through even the toughest obstacles, our artillery can be a enabler and supporting element"
+ 
+ #Jap Infantry Doctrine:
+ JAP_advance_infantry_combat_techniques:0"Advanced Infantry Combat"
+ JAP_advance_infantry_combat_techniques_desc:0"With our focus on the infantry, we should work on our infantry doctrine"
+ 
+ #Jap Attack Focus:
+ JAP_focus_on_attack:0"Aggressive Focus"
+ JAP_focus_on_attack_desc:0"With pure will power, we will fight through the enemy lines"
+ 
+ #Jap Lunge Mines:
+ JAP_lunge_mines:0"Shitotsubakurai"
+ JAP_lunge_mines_desc:0"Infantry Anti Tank Combat is important to enable our brave men to counter even the biggest tanks."
+ 
+ #Jap Submarine Focus:
+ JAP_submarine_focus:0"Submarine Fleet Modernisation"
+ JAP_submarine_focus_desc:0"Since the Great War Submarines have not been a priority. We can change that"
+ 
+ #JAP Cruiser Subs:
+ JAP_cruiser_subs:0"Cruiser Submarines"
+ JAP_cruiser_subs_desc:0"Cruiser Submarines are larger submarines with extended Range"
+ 
+ #Jap Convoy Escort Focus:
+ JAP_convoy_escort_focus:0"Support Vessels"
+ JAP_convoy_escort_focus_desc:0"By modernising our fleet support, we can enable our big ships even more"
+ 
+ #Chinese Resources:
+ JAP_modify_japanese_economy_tt:0"Modify §YImperial Japanese Economy§! by:" 
+ JAP_modify_japanese_navy_tt:0"Modify §YImperial Japanese Navy§! by:"
+ JAP_modify_japanese_army_tt:0"Modify §YImperial Japanese Army§! by:"
 
-#Giant Warkes:
-USA_the_giant_wakes_tt:0"Factory Output:§G +20%§!" 
-
-#USA SSA Government paid:
-USA_ssa_funding_government:0"Funding: Higher government spending"
-USA_ssa_funding_government_desc:0"Higher taxes lead to even more economic contraction. While this might be unpopular in Washington, we have to increase government spending in the short term"
-USA_ssa_funding_government_tt:0"Consumer Goods Factor:§Y +20%§!" 
-
-#Finance Infra:
-USA_finance_infrastructure_tt:"\nConsumer Goods Factor:§Y +5.0%§!\n§YInfrastructure§! Construction Speed:§G +15.00%§!\n\n" 
-USA_finance_infrastructure:0"Infrastructure Investments"
-USA_finance_infrastructure_desc:0"Investing into our obsolete infrastructure will increase our domestic production a lot"
-
-#Rural Electrification Act:
-USA_rural_electrification_administration:0"Rural Electrification Administration"
-USA_rural_electrification_administration_desc:0"Electricity is the future. We should provide our citizens with it as soon as possible"
-USA_rural_electrification_administration_tt:"Consumer Goods Factor:§Y +10%§! \nWeekly Stability:§G +0.10%§!" 
-USA_rural_electrification_administration_2_tt:0"Allows Decisions to build §YHydro Power Plants§! and §YHigh Capacity Electrical Grids§!"
-
-#National Youth:
-USA_national_youth_administration:0"National Youth Administration"
-USA_national_youth_administration_desc:0"By improving education, we increase our talent pool and improve the Living Standard of millions of Americans"
-USA_national_youth_administration_tt:"Consumer Goods Factor:§Y +5.0%§! \nResearch Speed:§G +5.00%§! \n " 
-USA_great_depression_cooldown_days_remaining_tt:0"Legislation takes 300 days to be implemented."
-
-
-#Reopen Factories:
-USA_increase_industry_production:0"Reverse Economic Contraction"
-USA_increase_industry_production_desc:0"By reopening old factories and investing into new ones, America will once again become the economic superpower it is destined to be"
-USA_increase_industry_production_tt:0"Consumer Goods Factor:§Y -15.0%§!"
-
-#AAA:
-USA_agricultural_adjustment_act_tt:"Consumer Goods Factor:§Y -10%§! \nConstruction Speed:§R -5%§! \nDaily Political Power Cost:§G -0.25§! \n "
-
-#Fixed Prices:
-USA_fixed_agricultural_prices:0"Price Controls"
-USA_fixed_agricultural_prices_desc:0"By setting a price minimum on agricultural products, we are breaking the laws of capitalism. This is deeply unpopular, but necessary to break deflation"
-USA_fixed_agricultural_prices_tt:"Consumer Goods Factor:§Y -10%§!"
-
-#USA Burn Agricultural Products:
-USA_burn_agricultural_products:0"Burn Agricultural Products"
-USA_burn_agricultural_products_desc:0"By Burning farmland and agricultural products, we reduce supply, which leads to higher prices and higher profits for the struggling agricultural sector"
-USA_burn_agricultural_products_tt:0"Consumer Goods Factor:§Y -5.0%§!"
-
-#Fair Labor Standards Act:
-USA_fair_labour_standards_act_tt:0"Weekly Stability:§G +0.30%§! \nFactory Output:§G +10%§!"
-
-#Federal Housing Act:
-USA_federal_housing_act_tt:"Weekly Stability:§G +0.10%§! \nConstruction Speed:§G +10%§! \nConsumer Goods Factor:§Y +10%§!"
-
-#USA Old Age Insurance:
-USA_old_age_insurance:0"Pension Fund"
-USA_old_age_insurance_desc:0"By introducing a statutory pension fund, we can guarantee social security for elderly people"
-USA_old_age_insurance_tt:"Weekly Stability:§G +0.10%§!" 
-
-#USA Unemployment Insurance:
-USA_unemployment_insurance:0"Unemployment Insurance"
-USA_unemployment_insurance_desc:0"By introducing a Unemployment Insurance, we can guarantee social security for people looking for a job"
-USA_unemployment_insurance_tt:"Weekly Stability:§G +0.30%§!" 
-
-#GI BILL:
-USA_gi_bill:0"GI Bill"
-USA_gi_bill_desc:0"By promising our soldiers a home and a job after the war, we can motivate them to fight for our freedom even more"
-USA_gi_bill_tt:0"Consumer Goods Factor:§Y +15.0%§! \nFactory Output:§G +8.00%§! " 
-
-#Naval Act of 1936:
-USA_naval_act_1936:0"Naval Act of 1936"
-USA_naval_act_1936_desc:0"Even though congress and the people do not want to meddle in international affairs, there is consensus for a higher budget for the US Navy to protect the US from foreign invasions"
-USA_naval_act_effect_tt:0"Dockyard output: §G+15.00%§!" 
-
-#US Army Focus:
-USA_army_focus:0"United States Army"
-USA_army_focus_desc:0"We have to prepare for the upcoming war. The US Army will play a decisive role in beating back the fascist and authoritarian regimes around the world."
-
-#USA Pentagon:
-USA_build_the_pentagon_tt:0"Planning Speed:§G +10%§! \nIntel from Combat gain:§! §G +25%§!"
-
-USA_office_of_strategic_services:0"Office of Strategic Services"
-USA_office_of_strategic_services_desc:0"To protect out homeland and gain valueable intelligence, we need a Intelligence Service with funding"
-USA_office_of_strategic_services_tt:0"Decryption factor:§G +20§! \nExtra Operative Slots:§G +2§! \nPassive Defense:§G +5§!"
-
-#USA Bomber Focus:
-USA_bomber_program:0"XXI Bomber Command"
-USA_bomber_program_desc:0"Giving more resources to the 11th Bomber Command can prove useful when dealing with Japan. Destroying the Military Industrial Base will lead to Japanese surrender"
-
-#USA DOD:
-USA_department_of_defense_tt:0"Max Planning factor:§G10%§!"
-#USA xb28 Bomber:
-USA_xb28_bomber:0"XB28 Dragon"
-USA_xb28_bomber_desc:0"The XB28 is the latest design by North American Aviation. We should invest into it now"
-
-#USA Night Bombing:
-USA_night_bombing:0"Night Bombing Campaign"
-USA_night_bombing_desc:0"Focusing at Night Bombing will make us harder to detect."
-USA_night_bombing_tt:0"§YDecreases Strategic Bombing visibility by§! §G10%§!"
-
-#USA Dog Fighting Capabilities:
-USA_dogfighting_capabilities:0"Tactics for Dog Fights"
-USA_dogfighting_capabilities_desc:0"Close Air Combat Tacitcs are more important then we thought. We should catch up to the rest of the world"
-
-
-#USA Support Aviation Program:
-USA_support_aviation_program:0"Light Bomber Program"
-USA_support_aviation_program_desc:0"While the big, strategic bombers might have more bombs and a higher range, it is the light bombers that can prove decisive."
-
-#USA Land Based Navs:
-USA_land_based_navs:0"Maritime Patrol Aircraft"
-USA_land_based_navs_desc:0"Land Based Naval Aviation can lock down entire seazones from enemy surface combattants. We cant fall behind in that area"
-
-#USA Next Gen Navs:
-USA_next_gen_navs:0"Advanced Naval Bombers"
-USA_next_gen_navs_desc:0"Increased Range, better Armaments and a better protection will prove even more dangerous to the enemy in an environment hostile to battleships"
-
-#USA Fighter Program:
-USA_fighter_program:0"Fighter Program"
-USA_fighter_program_desc:0"Fighters are the workhorse of our airforce."
-
-#Naval Act of 1936:
-USA_1938_naval_act:0"Naval Expansion Act"
-USA_1938_naval_act_desc:0"The Naval Expansion Act, also called Second Vinson Act, will allow us to expand our navy to the goals set by congress."
-
-#US improved Bombing tactics:
-USA_improved_bombing_tactics:0"M34 2000lb"
-USA_improved_bombing_tactics_desc:0"The M34 bomb will prove to be a technical innovation worth its investment. We will be able to flatten entire cities"
-USA_improved_bombing_tactics_tt:0"§YIncreases Strategic Bombing by§! §G10%§!"
-
-#Mahanian Doctrine:
-USA_mahanian_doctrine:0"Mahanian Doctrine"
-USA_mahanian_doctrine_desc:0"In order to stay true to our roots, we have to invest into a big, concentrated, battleship focused navy. With the extended range of our Battleships, we will sail towards Japan and conquer everything in our way."
-USA_mahanian_doctrine_tt:0"§YIncreases Naval Range by§! §G10%§!"
-
-#Battlecruiser Focus:
-USA_battlecruiser_focus:0"Focus on Heavy Cruisers"
-USA_battlecruiser_focus_desc:0"We will focus on improving the speed and range of our Battlefleet. This will allow us to strike quickly and run when needed"
-USA_battlecruiser_focus_tt:0"§YIncreases naval speed by§! §G13%§! \n§YIncreases naval range by§! §G5%§!"
-
-#Battleship Focus:
-USA_battleship_focus:0"Focus on Battleships"
-USA_battleship_focus_desc:0"We will stay true to our roots. Mahan envisioned a massive battlefleet that will win one concentrated battle. If the enemy disperses, he will be defeated in Detail. Our battleships should get equipped with the armaments to destroy anything in their way"
-USA_battleship_focus_tt:0"§YIncreases Capital Ship Attack by§! §G10%§! \n§YIncreases Naval Speed by§! §G8%§!"
-
-#Iowa Class:
-USA_iowa_class:0"Iowa Class"
-USA_iowa_class_desc:0"We will order a new generation of Battleships. It will pave the way for an invasion of the Home Islands"
-USA_iowa_class_tt:0"Dockyard output: §G10.00%§! \n§YDockyard§! construction speed: §G10.00%§!"
-
-#Carrier Fleet:
-USA_carrier_fleets:0"US Navy Carrier Program"
-USA_carrier_fleets_desc:0"Its time to invest into a new generation of carriers, with extended range and a bigger strike potential"
-
-#Improve Sorties:
-USA_improve_sorties:0"Improve Sortie Efficiency"
-USA_improve_sorties_desc:0"By adding more organisation and testing out different tactics, we can increase the amount of sorties on our carriers"
-USA_improve_sorties_tt:0"§YImproves Sortie Efficiency by§! §G15%§!"
-
-
-#The Avenger:
-USA_avenger_nav:0"The Avenger"
-USA_avenger_nav_desc:0"Our experiences with carriers and carrier launched naval bombers will result in new requirements. Higher ranger, stronger armaments and better targetting systems will only be some of the advantages the new class of planes will have"
-
-#USA Essex Class:
-USA_essex_class:0"Essex Class"
-USA_essex_class_desc:0"In order to strike deep into enemy territory, we need power projection. Essex Class will provide us with extreme range, massive air power projection, and modern sensors. These carriers, if deployed correctly, will win us the war."
-USA_essex_class_tt:0"Dockyard output: §G10.00%§! \n§YDockyard§! construction speed: §G10.00%§!"
-
-#USA Improve Air Navy Coordination:
-USA_air_navy_coordination:0"Naval Aviation Exercises"
-USA_air_navy_coordination_desc:0"We will have to maximise the effectiveness of our carriers by increasing coordination between the surface combattants and the naval aviation"
-USA_air_navy_coordination_tt:0"§YIncreases carrier night traffic by§! §G15%§! \n§YIncreases carrier fighter sortie efficiency by§! §G10%§!"
-
-#USA Submarine Focus:
-USA_submarine_focus:0"Submarine Program"
-USA_submarine_focus_desc:0"Submarines can deliver a critical blow to enemy logistics, supply lines and reinforcment capabilities. We should invest now into R&D to stay competitive"
-
-
-#US Torpedo Improvements:
-USA_improve_torpedoes:0"Replace the Mark 14 Torpedo"
-USA_improve_torpedoes_desc:0"Our old torpedoes are terribly inaccurate and are holding our submarine fleet back. Getting new ones into service as fast as possible has to be a priority"
-USA_improve_torpedoes_tt:0"Allows you to replace the Bureau of Ordnance national spirit."
-
-#Charles Lockwood
-USA_charles_lockwood:0"Charles Lockwood"
-USA_charles_lockwood_desc:0"Vice Admiral Lockwood has plenty of experience with submarine combat, he can help us develop the necessary manuals to maximise the effectiveness of submarines"
-
-#Focus on Range:
-USA_focus_on_range:0"Gato Class"
-USA_focus_on_range_desc:0"The Gato Class is a revolutionary new type of submarines. While it might not be as slow and silent as its Axis counterparts, it has the necessary range to even reach the Japanese Home Islands"
-USA_focus_on_range_tt:0"Submarine Range:§G +35%§! \nSubmarine surface visibility:§R +10%§! \nSubmarine visibility:§R +10%§! \nSubmarine Speed:§R -5%§!"
-
-#Focus on Visibility:
-USA_focus_on_visibility:0"Imitate German Designs"
-USA_focus_on_visibility_desc:0"German Submarines have set a new Gold Standard. Low visibility and high speeds make them hard to find. We need to develop our own system with similar characteristics! "
-USA_focus_on_visibility_tt:0"Submarine Range:§R -15%§! \nSubmarine surface visibility:§G -5%§! \nSubmarine visibility:§G -10%§! \nSubmarine speed:§G +5%§!"
-
-#Scale Production:
-USA_focus_scale_up_production:0"Scale up naval production"
-USA_focus_scale_up_production_desc:0"War with Japan seemed inevitable, but the last Isolationists have been proven wrong. It is time to give our Navy the funding it needs"
-USA_scale_up_production_tt:0"Dockyard Output§G +15.00%§! \n§YDockyard§! construction speed:§G +15.00%§!"
-
-#USA Isolationism:
-USA_isolationism:0"Isolationism"
-USA_isolationism_desc:0"While our president is an Internationalist, the country isnt in ready for war, and congress is neither. If we want to keep support for our New Deal Policies, we will have to appease congress and the people"
-
-#USA Second Neutrality Act:
-USA_neutrality_act_of_1937:0"Second Neutrality Act"
-USA_neutrality_act_of_1937_desc:0"With the outbreak of the Spanish Civil War, the administration sees itself forced to sign a second Neutrality Act, forbidding arms shipments on American vessels"
-USA_neutrality_act_of_1937_tt:0"§YMilitary Factory§! Construction Speed:§R -15.00%§!"
-
-#Cash and Carry:
-USA_cash_and_carry_clause:"Cash and Carry Clause"
-USA_cash_and_carry_clause_desc:0"We can modifiy the Second Neutrality Act to exclude american resources and arms, shipped on non-american vessels. This can prove useful later"
-
-#Forbid Exports:
-USA_forbid_exports:0"Forbid all arms export"
-USA_forbid_exports_desc:0"By banning all arms exports to belligerent countries, we will make our position even clearer to Isolationists"
-
-#Internationalism
-USA_interventionism:0"Interventionism"
-USA_interventionism_desc:0"Our administration consists of Internationalists, many of whom experienced Theodore Roosevelt and Woodrow Wilson. Promoting it whenever possible is important to prepare this country for war"
-
-#Quarantine Speech:
-USA_quarantine_speech:0"Quarantine Speech"
-USA_quarantine_speech_desc:0"It seems to be unfortunately true that the epidemic of world lawlessness is spreading. When an epidemic of physical disease starts to spread, the community approves and joins in a quarantine of the patients in order to protect the health of the community against the spread of the disease."
-
-#Denounce Japan:
-USA_denounce_japanese_agression:0"Denounce Japanese Aggression"
-USA_denounce_japanese_agression_desc:0"We were right all along. Independant nations are getting attacked by bullies on the international stage. We will freeze certain Japanese assets in response to this invasion"
-
-#Denounce Germany:
-USA_denounce_german_agression:0"Denounce German Aggression"
-USA_denounce_german_agression_desc:0"Fascists in Germany and Italy are occupying freedom loving countries like Albania, Austria and Czechoslovakia. This will inevitably lead to war. Isolationists have once again been proven wrong."
-
-#2nd World War:
-USA_september_1939:0"1.September 1939"
-USA_september_1939_desc:0"Contrary to what the Isolationists suggested, the fascists in Europe dont just constrain themselves to bullying their small neighbors. They picked fights with our longterm allies, Britain and France. We will not stand still while the Free World is getting attacked"
-
-#Denounce Isolationism:
-USA_denounce_isolationism:0"Denounce Isolationism"
-USA_denounce_isolationism_desc:0"The Internationalist Coalition under Roosevelt has been proven right. Now its time to implement our policies to prepare the country for war"
-USA_denounce_isolationism_tt:0"Weekly War support:§G +0.50%§!"
-
-#Arsenal of Democracy:
-USA_arsenal_of_democracy_tt:0"Allows decisions to supply Allied nations with arms"
-
-#British Designs:
-USA_british_designs_tt:0"Research Speed:§G +5.00%§!"
-USA_british_designs:0"British Designs"
-USA_british_designs_desc:0"By sharing technologies with Britain, we can strenghthen our Military Industrial Base"
-
-#Long Term Contracting:
-USA_long_term_contracting:0"Long Term Contracting"
-USA_long_term_contracting_desc:0"Short term budgets have seriously constrained our Military Industry. Long Term contracts incentivize long term investments, sustainable growth and will result in Economies of Scale effects"
-USA_long_term_contracting_tt:"Military Factory Construction Speed:§G +20.00%§! \nProduction Efficiency Cap:§G +10.00%§!"
-
-#Replenish Stocks:
-USA_replenish_stocks_idea:0"Replenish Stocks"
-USA_replenish_stocks:0"Replenish our Stocks"
-USA_replenish_stocks_desc:0"In order to field a sizeable army, we need to produce the equipment for it. Now that we're in a hurry, we will try to simply production. This might reduce quality slightly, but it is necessary in these circumstances"
-
-#Scientist Haven:
-USA_scientist_haven_tt:0"Research Speed:§G +5.00%§!"
-
-#Start War Production:
-USA_start_war_production:0"Start War Production"
-USA_start_war_production_desc:0"Outside threats force our hand: An Economic Mobilisation is unavoidable."
-
-#WAr Production Board:
-USA_war_production_board:0"War Production Board"
-USA_war_production_board_desc:0"By creating a board that helps coordinate military production, we can react way faster to military needs"
-USA_war_production_board_tt:0"Production Efficiency Growth:§G +15.00%§!"
-
-#Resource Program:
-USA_resource_program:0"Resource Program"
-USA_resource_program_desc:0"We need to improve our Resource extraction to fuel our war machine"
-USA_resource_program_tt:0"Resource Gain Efficiency:§G +40.00%§!"
-
-#Price Controls:
-USA_price_controls_tt:0"Factory Output:§G +5.00%§!"
-USA_price_controls:0"Price Controls"
-USA_price_controls_desc:0"This deeply anticapitalistic war measure helps buy stuff at cheaper prices"
-
-#Mobilise Society:
-USA_mobilise_society:0"Mobilise Society"
-USA_mobilise_society_desc:0"The War Production Board will launch a massive propaganda campaign to mobilise the masses for the war"
-
-#Big Buisness
-USA_big_buisness:0"Cooperation with Big Buisness"
-USA_big_buisness_desc:0"By working with big manufacturers, we can convert our industrial capacity into military output extremely fast"
-USA_big_buisness_tt:0"Allows Decisions to Build Military Factories"
-
-#USA Willow Run Factory:
-USA_willow_run_idea:0"Willow Run Plant"
-USA_willow_run:0"Willow Run Aircraft Plant"
-USA_willow_run_desc:0"We were able to convince Ford to build a massive Aircraft Manufacturing Plant"
-
-#Cleveland Tank Plant:
-USA_cleveland_tank_plant:0"Cleveland Tank Plant"
-USA_cleveland_tank_plant_desc:0"We were able to convince GM to build a massive Tank Manufacturing Plant"
-
-#Boston Navy Yard:
-USA_boston_navy_yard_tt:0"Dockyard Output:§G +10.00%§!"
-USA_boston_navy_yard:0"Boston Naval Yard"
-USA_boston_navy_yard:0"We will expand our shipbuilding capacity with these massive dockyard facilities"
-
-#USA Rubber
-USA_rubber_reserve_focus:0"Rubber Reserve Company"
-USA_rubber_reserve_focus_desc:0"Japan threatens our supply to Rubber. We have big stockpiles, but they wont last forever. We should invest now"
-USA_rubber_reserve_focus_tt:0"Improves §YStandard Oil of California§! Industrial Concern"
-
-#American Marines:
-USA_american_marines:0"US Navy Marines"
-USA_american_marines_desc:0"The marines will play a crucial role in Island Hopping. They will have to grind through Japanese defences"
-USA_american_marines_tt:0"Special Forces Attack Factor:§G +5.00%§!"
-
-#Amphib Operations:
-USA_amphibious_operations_tt:0"Naval Invasion Defense:§G +10.00%§!"
-
-#Amtracs:
-USA_amtrac:0"Amtracs"
-USA_amtrac_desc:0"Amphibious Tractors (Amtracs) can give our marines more protection and mobility"
-
-#Red Army Won:
-USA_red_army_won_tt:0"Max Planning Factor:§G +12%§! \nRecovery Rate:§G +8%§! \nLand Night Attack:§G +8%§!"
-USA_red_army_won:0"Red Army Won!"
-USA_reD_army_won_desc:0"The Red Army, entrenching itself behind the Mississippi river, was able to fend off the enemy tanks"
-
-#Blue Army Won:
-USA_blue_army_won:0"Blue Army Won!"
-USA_blue_army_won_desc:0"Pattons Tanks have outmaneuvered the enemy defenses! They are victorious!"
-USA_blue_army_won_tt:0"Max Planning Factor:§G +8%§! \nRecovery Rate:§G +12%§! \nLand Night Attack:§G +14%§!"
-
-#Comm Devices:
-USA_communication_devices:0"Walkie Talkies"
-USA_communication_devices_desc:0"Walkie Talkies have been a huge factor in communications, we should start procurement immediatly"
-USA_communication_devices_tt:0"Reinforce Rate:§G +3%§!"
-
-#M1:
-USA_m1_garand:0"M1 Garand"
-USA_m1_garand_desc:0"The standard US army rifle"
-
-#AT:
-USA_anti_tank:0"Anti Tank Systems"
-USA_anti_tank_desc:0"In case we encounter armor, we should be ready to destroy it immediatly"
-
-#defend Philli:
-USA_defend_philippines:0"Defend Phillipines"
-USA_defend_philippines_desc:0"Lets focus on the defense of the Phillipines."
-
-#retreat Philli:
-USA_retreat_from_philippines:0"Retreat from Phillipines"
-USA_retreat_from_philippines_desc:0"Lets focus on the defense of Guam."
-
-USA_navy_dynamic_modifier:0"US Navy"
-USA_navy_dynamic_modifier_desc:0"The US Navy has always been influenced by famous Admirals and their manuals, doctrines and strategies. Changing those will be a long and hard process"
-USA_economy_dynamic_modifier:0"US Economy"
-USA_economy_dynamic_modifier_desc:0"The US Economy is in heavy turmoils during this period of hardships."
-USA_army_dynamic_modifier:0"US Army"
-USA_airforce_dynamic_modifier:0"USAAF"
-#Wake Island Midway Island
-USA_wake_island_base:0"Wake Island Naval Base"
-USA_wake_island_base_desc:0"Lets use Wake Island as our US Navy Base"
-USA_midway_island_base:0"Midway Naval Base"
-USA_midway_island_base_desc:0"Lets retreat the US navy to Midway"
-
-USA_day_in_infamy:0"A day in Infamy"
-USA_day_in_infamy_desc:0"Yesterday, December 7, 1941—a date which will live in infamy—the United States of America was suddenly and deliberately attacked by the naval and air forces of the Empire of Japan."
-
-#Accelerate Army Training:
-USA_accelerate_army_training:0"Accelerate Army Training"
-USA_accelerate_army_training_desc:0"Lets speed up our Army Training"
-USA_accelerate_army_training_tt:0"Army Training Time:§G -30%§!"
-
-#Accelerate Air Training:
-USA_accelerate_air_training:0"Accelerate Air Training"
-USA_accelerate_air_training_desc:0"Lets speed up our Air Training"
-USA_accelerate_air_training_tt:0"Air Training XP Gain Factor:§G +30%§!"
  ##Events:
  USA_small_prod_boost_tt:0"Factory Output:§G +1.00%§!\n§YConsumer Goods§! Factor:§R -1.00%§!\n§YProduction Efficiency§! Cap:§G +0.40%§!"
  bftb_bulgaria_army_reforms.3.t:0"Army Doctrines 2"
@@ -1471,8 +1851,8 @@ USA_accelerate_air_training_tt:0"Air Training XP Gain Factor:§G +30%§!"
  news.417.d:0"Reports have come in of Wehrmacht forces crossing the demarcation line at Vichy. French forces have been ordered to not resist the invasion force. \n The limited autonomy the Vichy regime had been granted was taken by Nazi Germany."
  news.417.a:0"What a time to be alive :("
  ##Ideas: 
- GFX_idea_standard_oil_california_improved:0"Standard Oil of California"
- GFX_idea_standard_oil_california_improved_desc:0""
+ standard_oil_california_improved:0"Standard Oil of California"
+ standard_oil_california_improved_desc:0""
  USA_willow_run_idea:0"Willow Run Plant"
  USA_willow_run_idea_desc:0""
  USA_the_pentagon_improved:0"The Pentagon"
