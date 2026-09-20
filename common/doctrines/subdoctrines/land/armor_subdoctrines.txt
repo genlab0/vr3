@@ -26,7 +26,7 @@ armored_spearhead = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = armored_spearhead
@@ -101,7 +101,7 @@ mobile_defense = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = mobile_defense
@@ -173,7 +173,7 @@ armored_infantry_support = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = armored_infantry_support
@@ -253,7 +253,7 @@ streamlined_deployment = {
 
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = streamlined_deployment
@@ -316,7 +316,7 @@ armored_cavalry = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = armored_cavalry
@@ -404,7 +404,7 @@ armored_cavalry_no_lar = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = armored_cavalry_no_lar
@@ -513,7 +513,7 @@ tank_destroyer_force = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = tank_destroyer_force

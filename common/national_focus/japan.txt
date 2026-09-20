@@ -161,6 +161,10 @@
 			transfer_state = 670
 			transfer_state = 286
 			transfer_state = 741
+			transfer_state = 869
+			transfer_state = 868
+			transfer_state = 724
+			transfer_state = 289
 		}
 	}
 
@@ -265,7 +269,6 @@
 		x = 0
 		y = 6
 		relative_position_id =  JAP_new_naval_estimates
-		prerequisite = { focus = JAP_replace_the_zero focus = JAP_improve_the_zero}
 		prerequisite = { focus = JAP_first_air_fleet focus = JAP_the_ultimate_battleship}
 
 		cost = 20
@@ -657,25 +660,6 @@ focus = {
 				activate_mission = JAP_remove_tora_tora_mission
 
 
-
-
-
-				###################################
-				#Dynamic Modifiers Refugee Crisis #
-				###################################
-
-				640 = { add_dynamic_modifier = { modifier = refugee_crisis_4 }}
-				288 = { add_dynamic_modifier = { modifier = refugee_crisis_4 }}
-				430 = { add_dynamic_modifier = { modifier = refugee_crisis_4 }}
-				432 = { add_dynamic_modifier = { modifier = refugee_crisis_4 }}
-
-
-				#Australia Resource Campaign:
-				AST = { add_ideas = AST_resource_campaign1 }
-
-				#Resource Buff initially
-				add_timed_idea = { idea = JAP_stockpiled_resources days = 90 }
-
 				#actual war declarations
 				JAP = {
 					declare_war_on = {
@@ -1033,7 +1017,6 @@ focus = {
 
 			add_ideas = JAP_inflation_1
 			activate_mission = JAP_inflation_increase_mission
-			hidden_effect = { activate_mission = JAP_civ_conversion_mission }
 		}
 	}
 
@@ -2009,6 +1992,9 @@ focus = {
 
 
 		completion_reward = {
+			army_experience = 50
+			navy_experience = 50
+			air_experience = 50
 		}
 	}
 
@@ -2820,7 +2806,7 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = JAP_land_air_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -2852,89 +2838,6 @@ focus = {
 	}
 
 	focus = {
-		id = JAP_improve_the_zero
-		icon =  GFX_focus_jap_zero
-		prerequisite = { focus = JAP_fighter_focus }
-		x = 1
-		y = 1
-		relative_position_id = JAP_fighter_focus
-		mutually_exclusive = { focus = JAP_replace_the_zero }
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_purge_the_kodoha_faction
-			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			custom_effect_tooltip = JAP_improve_the_zero_tt
-			hidden_effect = {
-				add_ideas = JAP_hidden_zero_bonus
-			}
-		}
-	}
-
-focus = {
-		id = JAP_replace_the_zero
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = JAP_fighter_focus }
-		x = -1
-		y = 1
-		relative_position_id = JAP_fighter_focus
-		mutually_exclusive = { focus = JAP_improve_the_zero }
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_purge_the_kodoha_faction
-			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			custom_effect_tooltip = JAP_modify_japanese_economy_tt
-			add_to_variable = { JAP_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_tech_bonus = {
-				bonus = 0.4
-				uses = 1
-				technology = fighter3
-			}
-		}
-	}
-
-focus = {
 		id = JAP_first_air_fleet
 		icon = GFX_goal_generic_navy_carrier
 		prerequisite = { focus = JAP_carrier_warfare_experiments }
@@ -2979,7 +2882,7 @@ focus = {
 						mid_2_custom_slot = ship_deck_space
 						fixed_ship_deck_slot_1 = ship_deck_space
 						fixed_ship_deck_slot_2 = ship_deck_space
-						fixed_ship_anti_air_slot = empty
+						fixed_ship_anti_air_slot = ship_anti_air_1
 						fixed_ship_radar_slot = empty
 						fixed_ship_engine_slot = carrier_ship_engine_4
 						fixed_ship_secondaries_slot = empty 
@@ -3046,7 +2949,7 @@ focus = {
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3311,7 +3214,9 @@ focus = {
 			factor = 1
 		}
 
-		available = {}
+		available = {
+			has_tech = ship_hull_super_heavy
+		}
 
 		bypass = {}
 

@@ -8,7 +8,46 @@
 #  #  #  #### 
 #  #   # #  # 
  ##  ##  #  # 
-
+# US Pursues Neutrality
+news_event = {
+	id = mtg_news.3
+	title = mtg_news.3.t
+	desc = mtg_news.3.desc
+	picture = GFX_news_event_generic_usa_treaty
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.3.a
+		trigger = {
+			original_tag = USA
+		}
+	}
+	option = {
+		name = mtg_news.3.b
+		trigger = { 
+			has_government = fascism
+		}
+	}
+	option = {
+		name = mtg_news.3.c
+		trigger = { 
+			has_government = communism
+		}
+	}
+	option = {
+		name = mtg_news.3.d
+		trigger = { 
+			NOT = { original_tag = USA }
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+	}
+}
 # UK Imperial Conference
 news_event = {
 	id = mtg_news.13

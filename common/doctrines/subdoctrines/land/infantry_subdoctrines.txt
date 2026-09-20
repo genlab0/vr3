@@ -26,7 +26,7 @@ mobile_infantry = {
 
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = mobile_infantry
@@ -99,7 +99,7 @@ defensive_postures = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = defensive_postures
@@ -175,7 +175,7 @@ large_unit_tactics = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = large_unit_tactics
@@ -233,7 +233,7 @@ assault_infantry = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = assault_infantry
@@ -358,7 +358,7 @@ commandos = {
     enable_tactic = tactic_infantry_charge
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = commandos
@@ -489,7 +489,7 @@ peoples_war = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = peoples_war
@@ -551,7 +551,7 @@ great_war_infantry = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = great_war_infantry

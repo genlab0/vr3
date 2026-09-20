@@ -20,7 +20,7 @@ carrier_battlegroups = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = carrier_battlegroups
@@ -70,7 +70,7 @@ floating_airfields = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = floating_airfields
@@ -137,7 +137,7 @@ escort_carrier_support = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = escort_carrier_support
@@ -194,7 +194,7 @@ massed_carrier_fleet = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = massed_carrier_fleet
@@ -243,7 +243,7 @@ light_task_forces = {
     xp_type = navy
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = light_task_forces

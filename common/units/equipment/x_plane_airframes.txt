@@ -509,7 +509,7 @@ equipments = {
 		air_superiority = 1
 		reliability = 0.8
 		manpower = 20
-		fuel_consumption = 0
+		fuel_consumption = 0.26
 	}
 
 	# Basic Carrier Fighter
@@ -542,7 +542,7 @@ equipments = {
 		air_superiority = 1
 		reliability = 0.8
 		manpower = 20
-		fuel_consumption = 0
+		fuel_consumption = 0.26
 	}
 
 	# Improved Carrier Fighter
@@ -574,7 +574,7 @@ equipments = {
 		air_superiority = 1
 		reliability = 0.8
 		manpower = 20
-		fuel_consumption = 0
+		fuel_consumption = 0.26
 	}
 
 	# Advanced Carrier Fighter
@@ -607,7 +607,7 @@ equipments = {
 		air_superiority = 1
 		reliability = 0.8
 		manpower = 20
-		fuel_consumption = 0
+		fuel_consumption = 0.26
 	}
 
 	 ##   ##   ## 

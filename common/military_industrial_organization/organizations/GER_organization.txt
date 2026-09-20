@@ -1478,12 +1478,6 @@ GER_deutsche_werke_organization = {
 		
 		position = { x=0 y=1 }
 	}
-
-	override_trait = {
-		token = generic_mio_trait_underway_replenishment_equipment
-
-		position = { x=0 y=2 }
-	}
 	
 	allowed = {	
 		original_tag = GER 

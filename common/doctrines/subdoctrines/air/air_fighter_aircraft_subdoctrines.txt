@@ -12,7 +12,7 @@ air_subdoctrine_fighter_homeland_defense = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = air_subdoctrine_fighter_homeland_defense
@@ -51,7 +51,7 @@ air_subdoctrine_tactical_flexibility = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = air_subdoctrine_tactical_flexibility
@@ -94,7 +94,7 @@ air_subdoctrine_dogfighting_mastery = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = air_subdoctrine_dogfighting_mastery
@@ -133,7 +133,7 @@ air_subdoctrine_escort_fighter = {
     xp_type = air
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = air_subdoctrine_escort_fighter

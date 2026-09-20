@@ -1,0 +1,22 @@
+state={
+	id=971
+	name="STATE_971"
+    state_category = wasteland
+	impassable = yes
+
+history={ 
+		add_core_of = WST
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+		}
+
+
+	}
+
+	provinces={
+		8250 10990 8235 7570 10436
+	}
+	manpower=250000
+	local_supplies=0.0 
+}

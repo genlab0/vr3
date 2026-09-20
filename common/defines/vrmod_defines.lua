@@ -259,6 +259,7 @@ NDefines.NIndustrialOrganisation.FUNDS_FOR_SIZE_UP_LEVEL_FACTOR = 150
 NDefines.NIndustrialOrganisation.FUNDS_FOR_SIZE_UP_LEVEL_POW = 2
 
 --Navy:
+NDefines.NNavy.NAVAL_INVASION_PLAN_CAP = 3
 NDefines.NNavy.COMBAT_BASE_HIT_CHANCE = 0.04									-- Reduced Base Hit Chance to slow down naval battles.
 NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.007                          --lower Navs Losses
 NDefines.NNavy.LEADER_EXPERIENCE_SCALE = 0.0
