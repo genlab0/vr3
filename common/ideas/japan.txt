@@ -395,7 +395,7 @@ ideas = {
 				political_power_cost = 0.12
 				stability_weekly = -0.002
 				production_speed_arms_factory_factor = -0.01
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.05
 			}
 		}
 
@@ -417,7 +417,7 @@ ideas = {
 				political_power_cost = 0.15
 				stability_weekly = -0.002
 				production_speed_arms_factory_factor = -0.03
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.08
 			}
 		}
 
@@ -440,7 +440,7 @@ ideas = {
 				stability_weekly = -0.002
 				production_speed_arms_factory_factor = -0.05
 				war_support_weekly = -0.001
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.12
 			}
 		}
 
@@ -6690,12 +6690,6 @@ ideas = {
 			}
 			
 			available = {
-				if = {
-					limit = {
-						original_tag = JAP
-					}
-					has_completed_focus = JAP_develop_new_fighters
-				}
 			}
 			
 			research_bonus = {
@@ -6815,21 +6809,9 @@ ideas = {
 				original_tag = JAP
 			}
 
-			available = {
-				has_completed_focus = JAP_approach_sumitomo
-			}
-						
-			research_bonus = {
-				excavation_tech = 0.05
-				cat_production = 0.05
-			}
-
 			ai_will_do = {
 				base = 1
-				modifier = {
-					factor = 15
-					has_active_mission = JAP_zaibatsu_faction_demands_industrial_company_employment
-				}
+
 			}
 			
 			traits = { mining_zaibatsu }
@@ -6842,20 +6824,13 @@ ideas = {
 			allowed = {
 				original_tag = JAP
 			}
-
-			available = {
-				has_completed_focus = JAP_approach_mitsubishi
-			}
 						
 			research_bonus = {
 			}
 
 			ai_will_do = {
 				base = 1
-				modifier = {
-					factor = 15
-					has_active_mission = JAP_zaibatsu_faction_demands_industrial_company_employment
-				}
+
 			}
 			
 			traits = { armament_zaibatsu }
@@ -6873,21 +6848,15 @@ ideas = {
 				
 			}
 
-			available = {
-				has_completed_focus = JAP_approach_mitsui
-			}
 
 			research_bonus = {	
 				electronics = 0.05
-				industry = 0.1
+				industry = 0.15
 			}
 
 			ai_will_do = {
 				base = 0.5
-				modifier = {
-					factor = 15
-					has_active_mission = JAP_zaibatsu_faction_demands_industrial_company_employment
-				}
+
 			}
 		
 			traits = { industrial_conglomerate } 
@@ -6909,19 +6878,13 @@ ideas = {
 				
 			}
 
-			available = {
-				has_completed_focus = JAP_approach_yasuda
-			}
 
 			research_bonus = {
 			}
 
 			ai_will_do = {
 				base = 0.5
-				modifier = {
-					factor = 15
-					has_active_mission = JAP_zaibatsu_faction_demands_industrial_company_employment
-				}
+
 			}
 		
 			traits = { zaibatsu_bank } 
@@ -6930,63 +6893,6 @@ ideas = {
 				political_power_factor = -0.1
 				consumer_goods_factor = -0.2
 			}
-		}
-
-		kawasaki = {
-			
-			allowed = {
-				original_tag = JAP
-			}
-			
-			research_bonus = {
-				industry = 0.15
-			}
-
-			ai_will_do = {
-				base = 2
-			}
-			
-			traits = { industrial_concern }
-		}
-
-		JAP_idemitsu_kosan = {
-						
-			picture = JAP_idemitsu_kosan
-			
-			allowed = {
-				original_tag = JAP
-			}
-						
-			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.1
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-			
-			traits = { refinery_concern }
-		}
-
-		hitachi_civilian = {
-
-			picture = JAP_hitachi
-			
-			allowed = {
-				original_tag = JAP
-			}
-			
-			research_bonus = {
-				electronics = 0.15
-				excavation_tech = 0.05
-			}
-
-			ai_will_do = {
-				base = 2
-			}
-			
-			traits = { electronics_concern }
 		}
 
 		imperial_japanese_airways = { 
@@ -6999,10 +6905,6 @@ ideas = {
 
 			visible = {
 				
-			}
-
-			available = {
-				has_completed_focus = JAP_establish_showa_aircraft_idnsutry
 			}
 
 			research_bonus = {
@@ -7048,41 +6950,6 @@ ideas = {
 			}
 		}
 
-		oriental_development_company = { 
-
-			picture = JAP_oriental_development_company
-
-			allowed = {
-				original_tag = JAP
-			}
-
-			visible = {
-				NOT = {
-					has_completed_focus = JAP_upgrade_the_oriental_development_company
-				}
-			}
-
-			available = {
-				has_completed_focus = JAP_ministry_of_colonial_affairs
-			}
-
-			research_bonus = {
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-		
-			traits = { colonial_investments_company } 
-
-			modifier = {
-				non_core_manpower = 0.01
-				local_resources_factor = 0.05
-				resistance_target = -0.05
-				production_speed_infrastructure_factor = 0.05
-			}
-		}
-
 		oriental_development_company_upgraded = { 
 
 			name = oriental_development_company
@@ -7093,14 +6960,6 @@ ideas = {
 				original_tag = JAP
 			}
 
-			visible = {
-				has_completed_focus = JAP_upgrade_the_oriental_development_company
-			}
-
-			available = {
-				has_completed_focus = JAP_upgrade_the_oriental_development_company
-			}
-
 			research_bonus = {
 			}
 
@@ -7111,91 +6970,11 @@ ideas = {
 			traits = { colonial_investments_company } 
 
 			modifier = {
-				non_core_manpower = 0.02
 				local_resources_factor = 0.1
-				resistance_target = -0.1
 				production_speed_infrastructure_factor = 0.2
 				consumer_goods_factor = -0.05
 			}
 		}
-
-		#nanyou_kouhatsu = { 
-#
-		#	picture = JAP_nanyo_kohatsu
-#
-		#	allowed = {
-		#		original_tag = JAP
-		#	}
-#
-		#	available = {
-#
-		#	}
-#
-		#	visible = {
-		#		
-		#	}
-#
-		#	research_bonus = {
-		#	}
-#
-		#	ai_will_do = {
-		#		base = 1
-		#	}
-		#
-		#	traits = { south_seas_development_company } 
-#
-		#	modifier = {
-		#		non_core_manpower = 0.01
-		#		local_resources_factor = 0.05
-		#		consumer_goods_factor = -0.05
-		#	}
-		#}
-
-		#japan_steel_works = {
-		#	
-		#	picture = JAP_japan_steel_works
-#
-		#	allowed = {
-		#		original_tag = JAP
-		#	}
-		#	
-		#	research_bonus = {
-		#		industry = 0.1
-		#	}
-#
-		#	ai_will_do = {
-		#		base = 1
-		#	}
-		#	
-		#	traits = { industrial_steel_mills_trait }
-		#}
-
-		doumei_tsushin = {
-			
-			picture = JAP_domei_tsushin
-
-			allowed = {
-				original_tag = JAP
-			}
-
-			available = {
-				OR = {
-					has_completed_focus = JAP_found_the_great_japan_press_association
-					has_completed_focus = JAP_propagandize_the_nihon_shoki
-					#has_completed_focus = JAP_reform_the_education_system
-				}
-			}
-			
-			research_bonus = {
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-			
-			traits = { national_news_agency }
-		}
-
 	}
 	
 	materiel_manufacturer = {

@@ -1069,7 +1069,7 @@
  USA_fair_labour_standards_act_tt:0"Weekly Stability:§G +0.30%§! \nFactory Output:§G +10%§!"
  
  #Federal Housing Act:
- USA_federal_housing_act_tt:"Weekly Stability:§G +0.10%§! \nConstruction Speed:§G +10%§! \nConsumer Goods Factor:§Y +10%§!"
+ USA_federal_housing_act_tt:" Weekly Stability:§G +0.10%§!"
  
  #USA Old Age Insurance:
  USA_old_age_insurance:0"Pension Fund"
@@ -1659,7 +1659,7 @@
  #JAP Accelerate Rearmament
  JAP_accelerate_rearmament:0"Accelerate Rearmament Program"
  JAP_accelerate_rearmament_desc:0"We have to keep preparing for the upcoming struggle, no matter what the costs."
- JAP_accelerate_rearmament_tt:0"§YMilitary Factory§! construction speed:§G +15.00%§! \n§YCivilian Factory§! construction speed:§R -35.00%§! \n \nEvery 30 days, 1 Civilian factory will be converted into a Military Factory."
+ JAP_accelerate_rearmament_tt:0"Every 30 days, 1 Civilian factory will be converted into a Military Factory."
  
  #JAP Continue Sustainable Path:
  JAP_continue_sustainable_path:0"Continue Sustainable Path"
@@ -1772,6 +1772,7 @@
  
  #Chinese Resources:
  JAP_modify_japanese_economy_tt:0"Modify §YImperial Japanese Economy§! by:" 
+ USA_modify_us_economy_tt:0"Modify §YUS Economy§! by:" 
  JAP_modify_japanese_navy_tt:0"Modify §YImperial Japanese Navy§! by:"
  JAP_modify_japanese_army_tt:0"Modify §YImperial Japanese Army§! by:"
 

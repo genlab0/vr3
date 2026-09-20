@@ -12,7 +12,7 @@ line_of_battle = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = line_of_battle
@@ -99,7 +99,7 @@ battlecruiser_supremacy = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = battlecruiser_supremacy
@@ -182,7 +182,7 @@ armored_raiders = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = armored_raiders
@@ -265,7 +265,7 @@ coastal_defence_fleet = {
     ai_will_do = { }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = coastal_defence_fleet
@@ -340,7 +340,7 @@ naval_gunfire_support = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = naval_gunfire_support
@@ -417,7 +417,7 @@ battleship_antiair_screen = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = battleship_antiair_screen

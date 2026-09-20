@@ -38,7 +38,7 @@ USA_economy_dynamic_modifier = {
 JAP_imperial_navy_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_jap_navy_idea
+	icon = GFX_idea_JAP_imperial_navy
 
 	convoy_escort_efficiency = JAP_convoy_escort_efficiency
 	naval_morale_factor = JAP_naval_morale_factor 
@@ -56,7 +56,7 @@ JAP_imperial_navy_modifier = {
 
 JAP_imperial_army_modifier = {
 	enable = { always = yes }
-	icon = GFX_idea_jap_army_idea
+	icon = GFX_idea_JAP_imperial_army
 
 	air_cas_present_factor = JAP_air_cas_present_factor
 	ground_attack_factor = JAP_ground_attack_factor
@@ -77,7 +77,7 @@ JAP_imperial_army_modifier = {
 JAP_japanese_economy_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_jap_strengthen_yen
+	icon = GFX_idea_JAP_japanese_economy
 	production_factory_efficiency_gain_factor = JAP_production_factory_efficiency_gain_factor
 	production_factory_max_efficiency_factor = JAP_production_factory_max_efficiency_factor 
 	production_speed_industrial_complex_factor = JAP_production_speed_industrial_complex_factor 
@@ -101,7 +101,7 @@ JAP_japanese_economy_modifier = {
 }
 
 JAP_tora_tora_tora_modifier = {
-	icon = GFX_idea_jap_tora_idea
+	icon = GFX_idea_JAP_air_services
 	naval_speed_factor = JAP_tora_naval_speed_factor 
 	naval_morale_factor = JAP_tora_naval_morale_factor 
 	sortie_efficiency = JAP_tora_sortie_efficiency 

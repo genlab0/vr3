@@ -5060,14 +5060,6 @@ faction_goal_control_gulf_of_aden_bases = {
 	ai_will_do = {
 		base = 0
 		modifier = {
-			factor = 2 # Target of opportunity - already at war anyway
-			992 = {
-				owner = {
-					has_war_with = ROOT
-				}
-			}
-		}
-		modifier = {
 			add = 2 # If convoys being threatened try to secure the suez supply lines better
 			convoy_threat > 0.5
 			collection_size = {
@@ -5151,7 +5143,6 @@ faction_goal_control_strait_of_hormuz = {
 			limit = {
 				OR = {
 					controls_state = 412
-					controls_state = 1013
 				}
 			}
 			add_faction_initiative = 1

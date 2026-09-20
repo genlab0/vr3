@@ -649,7 +649,7 @@ leader_traits = {
 		sprite = 13
 		fascism_drift = 0.1
 		stability_factor = 0.1
-		war_support_factor = 0.1
+		political_power_factor = 0.1
 	}
 
 	JAP_militarist = {
@@ -976,37 +976,13 @@ leader_traits = {
 		
 		political_power_factor = -0.1
 
-		equipment_bonus = {
-			small_plane_airframe = {
-				build_cost_ic = -0.15 instant = yes
-			}
-			medium_plane_airframe = {
-				build_cost_ic = -0.15 instant = yes
-			}
-			large_plane_airframe = {
-				build_cost_ic = -0.15 instant = yes
-			}
-		}
-
-	}
-
-	JAP_nakajima_president_2 = {
-		random = no
-		sprite = 13
-		
-		political_power_factor = -0.05
 
 		equipment_bonus = {
 			small_plane_airframe = {
-				build_cost_ic = -0.2 instant = yes
-			}
-			medium_plane_airframe = {
-				build_cost_ic = -0.2 instant = yes
-			}
-			large_plane_airframe = {
-				build_cost_ic = -0.2 instant = yes
+				build_cost_ic = -0.1 instant = yes
 			}
 		}
+		line_change_production_efficiency_factor = -0.1
 
 	}
 
@@ -1019,20 +995,6 @@ leader_traits = {
 		equipment_bonus = {
 			motorized_equipment = {
 				build_cost_ic = -0.1 instant = yes
-			}
-		}
-
-	}
-
-	JAP_nissan_president_2 = {
-		random = no
-		sprite = 13
-		
-		industrial_capacity_factory = 0.1
-
-		equipment_bonus = {
-			motorized_equipment = {
-				build_cost_ic = -0.15 instant = yes
 			}
 		}
 
@@ -1199,9 +1161,8 @@ leader_traits = {
 		random = no
 		sprite = 13
 
-		subjects_autonomy_gain = -0.1
 		non_core_manpower = 0.02
-		local_resources_factor = 0.05
+		local_resources_factor = 0.06
 
 	}
 
@@ -5597,6 +5558,21 @@ leader_traits = {
 				factor = 1.8
 				date < 1939.1.1
 			}
+		}
+	}
+	
+	naval_architect = {
+		sprite = 10
+		random = no
+		
+		production_speed_dockyard_factor = 0.15
+		production_speed_fuel_silo_factor = 0.1
+		production_speed_naval_base_factor = 0.1
+		production_speed_naval_headquarters_factor = 0.1
+		production_speed_naval_supply_hub_factor = 0.1
+
+		ai_will_do = {
+			factor = 2
 		}
 	}
 

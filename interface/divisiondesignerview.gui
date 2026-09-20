@@ -552,6 +552,14 @@ guiTypes = {
 				slotsize = { width = 102 height = 53 }
 				format = "UPPER_LEFT"
 			}
+
+			gridboxtype = {
+				name = "regiment_support_grid"
+				position = { x = 54 y = 542 }
+				size = { width = 445 height = 100%% }
+				slotsize = { width = 102 height = 36 }
+				format = "UPPER_LEFT"
+			}
 		}
 
 		# Sibling of "subunits"; toggled visible in C++ for Army HQ templates only.

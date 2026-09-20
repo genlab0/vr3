@@ -218,4 +218,17 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 13312;7982;sea;2919;-1;-1;-1;-1;;South Iran
 761;13315;sea;9092;-1;-1;-1;-1;;Ontario
 13196;13314;sea;9092;-1;-1;-1;-1;;Northern Quebec
+4318;12789;impassable;-1;-1;-1;-1;-1;;Himalayas
+12789;4996;impassable;-1;-1;-1;-1;-1;;Himalayas
+12898;4996;impassable;-1;-1;-1;-1;-1;;Himalayas
+10863;4996;impassable;-1;-1;-1;-1;-1;;Himalayas
+10863;4425;impassable;-1;-1;-1;-1;-1;;Himalayas
+10863;10920;impassable;-1;-1;-1;-1;-1;;Himalayas
+10863;12363;impassable;-1;-1;-1;-1;-1;;Himalayas
+10863;4210;impassable;-1;-1;-1;-1;-1;;Himalayas
+7976;4210;impassable;-1;-1;-1;-1;-1;;Himalayas
+5009;4210;impassable;-1;-1;-1;-1;-1;;Himalayas
+10413;4210;impassable;-1;-1;-1;-1;-1;;Himalayas
+10413;7400;impassable;-1;-1;-1;-1;-1;;Himalayas
+10413;7909;impassable;-1;-1;-1;-1;-1;;Himalayas
 -1;-1;;-1;-1;-1;-1;-1;-1 

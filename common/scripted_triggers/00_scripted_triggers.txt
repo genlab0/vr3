@@ -148,20 +148,6 @@ is_free_or_subject_of_root = {
 	}
 }
 
-#State scope
-is_controlled_by_ROOT_or_ally = {
-	custom_trigger_tooltip = {
-		tooltip = is_controlled_by_ROOT_or_ally
-		CONTROLLER = {
-			OR = {
-				tag = ROOT
-				is_subject_of = ROOT
-				is_in_faction_with = ROOT
-			}
-		}
-	}
-}
-
 is_csa_state = {
 	OR = {
 		state = 366

@@ -1363,9 +1363,4 @@ on_actions = {
 			HMP_check_fleet_size = yes
 		}
 	}
-	on_weekly_WST = {
-		effect = {
-			VR_score_system_calculator = yes
-		}
-	}
 }

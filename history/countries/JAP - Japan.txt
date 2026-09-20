@@ -4,7 +4,7 @@
 set_stability = 0.2 # Was one of the countries in roughest internal shape at this point in time, coup happens not even 2 months into the game
 set_war_support = 0.6 # Was 0.8, but will make you have to scale up with Militarism a bit
 
-set_research_slots = 4 # Was 4
+set_research_slots = 5 # Was 4
 set_fuel_ratio = 1.0
 
 # This can't be used in a civil war duh
@@ -53,7 +53,7 @@ add_ideas = {
 	# Laws
 	limited_exports
 	limited_conscription
-	partial_economic_mobilisation
+	low_economic_mobilisation
 
 	# National Spirits
 	#JAP_zaibatsus
@@ -301,8 +301,6 @@ recruit_character = JAP_hino_kumazo
 recruit_character = JAP_mitsumasa_yonai
 recruit_character = JAP_takuo_godo
 recruit_character = JAP_chiune_sugihara
-recruit_character = JAP_kingoro_hashimoto
-recruit_character = JAP_hiroshi_oshima
 recruit_character = JAP_kijiro_nambu
 recruit_character = JAP_keiji_fukuda
 recruit_character = JAP_jiro_horikoshi
@@ -327,28 +325,16 @@ recruit_character = JAP_hayao_tada
 recruit_character = JAP_nashimoto_morimasa
 recruit_character = JAP_michitaro_komatsubara
 recruit_character = JAP_takahashi_korekiyo
-recruit_character = JAP_naoki_hoshino
-recruit_character = JAP_koichi_kido
 recruit_character = JAP_shigenori_togo
-recruit_character = JAP_heisuke_yanagawa
 recruit_character = JAP_yosuke_matsuoka
-recruit_character = JAP_genki_abe
-recruit_character = JAP_nobusuke_kishi
-recruit_character = JAP_masatoshi_okochi
 recruit_character = JAP_okinori_kaya
-recruit_character = JAP_koyata_iwasaki
 recruit_character = JAP_chikuhei_nakajima
 recruit_character = JAP_yoshisuke_aikawa
 recruit_character = JAP_kenjiro_matsumoto
-recruit_character = JAP_uzo_nishiyama
-recruit_character = JAP_gotaro_ogawa
-recruit_character = JAP_kiichiro_hiranuma
 recruit_character = JAP_yamauchi_sachiko
 recruit_character = JAP_wakatsuki_reijiro
-recruit_character = JAP_shinji_sogo
 recruit_character = JAP_jotaro_watanabe
 recruit_character = JAP_masakazu_kawabe
-recruit_character = JAP_harukichi_shimoi
 recruit_character = JAP_teijiro_toyoda
 recruit_character = JAP_chuuichi_nagumo
 recruit_character = JAP_tamon_yamaguchi

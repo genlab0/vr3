@@ -12,7 +12,7 @@ air_subdoctrine_operational_air_support = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = air_subdoctrine_operational_air_support
@@ -77,7 +77,7 @@ air_subdoctrine_tactical_battlefield_support = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = air_subdoctrine_tactical_battlefield_support
@@ -107,7 +107,7 @@ air_subdoctrine_theater_interdiction = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = air_subdoctrine_theater_interdiction
@@ -150,7 +150,7 @@ air_subdoctrine_aerial_reconnaissance = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = air_subdoctrine_aerial_reconnaissance

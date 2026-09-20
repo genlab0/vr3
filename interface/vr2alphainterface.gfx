@@ -1,5 +1,13 @@
 spriteTypes = {
 
+
+
+	SpriteType = {
+		name = "GFX_unit_convert_battalion_icon_small"
+		texturefile = "gfx/texticons/unit_convert_battalion_icon_small.dds"
+		legacy_lazy_load = no
+	}
+
 	#Event Pictures:
 	spriteType = {
 		name = "GFX_news_event_el_alamein"

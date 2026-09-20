@@ -12,7 +12,7 @@ fire_concentration = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = fire_concentration
@@ -100,7 +100,7 @@ anti_tank_frontline = {
      
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = anti_tank_frontline
@@ -179,7 +179,7 @@ flying_batteries = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = flying_batteries
@@ -254,7 +254,7 @@ mobile_recon_and_assault = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = mobile_recon_and_assault
@@ -359,7 +359,7 @@ mobile_recon_and_assault_no_lar = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = mobile_recon_and_assault_no_lar
@@ -454,7 +454,7 @@ self_propelled_support = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = self_propelled_support
@@ -556,7 +556,7 @@ siege_artillery = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = siege_artillery
@@ -618,7 +618,7 @@ field_engineering = {
     }
     effect = {
         add_daily_mastery = {
-            amount = 0.4
+            amount = 0.6
             days = 1500
            name = doctrine_mastery_gain
             sub_doctrine = field_engineering

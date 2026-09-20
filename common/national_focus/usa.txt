@@ -145,8 +145,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			
-			custom_effect_tooltip = USA_ssa_funding_wagetax_tt
-			add_to_variable = { USA_production_speed_buildings_factor = -0.1 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_production_speed_buildings_factor = -0.1 tooltip = production_speed_buildings_factor_tt}
 			add_stability = -0.1
 		}
 	}
@@ -166,8 +166,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			custom_effect_tooltip = USA_ssa_funding_government_tt
-			add_to_variable = { USA_consumer_goods_factor = 0.2 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_consumer_goods_factor = 0.2 tooltip = consumer_goods_factor_tt}
 			
 		}
 	}
@@ -186,6 +186,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			custom_effect_tooltip = USA_modify_us_economy_tt
 			custom_effect_tooltip = USA_old_age_insurance_tt
 			add_to_variable = { USA_stability_weekly = 0.001 }
 		}
@@ -205,6 +206,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			custom_effect_tooltip = USA_modify_us_economy_tt
 			custom_effect_tooltip = USA_unemployment_insurance_tt
 			add_to_variable = { USA_stability_weekly = 0.003}
 		}
@@ -224,9 +226,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			custom_effect_tooltip = USA_gi_bill_tt
-			add_to_variable = { USA_consumer_goods_factor = 0.15 }
-			add_to_variable = { USA_industrial_capacity_factory = 0.08}
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_consumer_goods_factor = 0.15 tooltip = consumer_goods_factor_tt}
+			add_to_variable = { USA_industrial_capacity_factory = 0.08 tooltip = industrial_capacity_factory_tt }
 		}
 	}
 
@@ -249,8 +251,10 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = USA_great_depression_cooldown_tt
 			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 300 }
-			custom_effect_tooltip = USA_social_security_act_tt
-			add_to_variable = { USA_political_power_cost = -0.25}
+
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_political_power_cost = -0.25 tooltip = political_power_cost_tt}
+
 			add_political_power = 150
 			add_war_support = 0.03
 			add_stability = 0.05
@@ -271,9 +275,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			custom_effect_tooltip = USA_finance_infrastructure_tt
-			add_to_variable = { USA_production_speed_infrastructure_factor = 0.15}
-			add_to_variable = { USA_consumer_goods_factor = 0.05}
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_production_speed_infrastructure_factor = 0.15 tooltip = production_speed_infrastructure_factor_tt }
+			add_to_variable = { USA_consumer_goods_factor = 0.05 tooltip = consumer_goods_factor_tt }
 		}
 	}
 	focus = {
@@ -291,6 +295,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			custom_effect_tooltip = USA_modify_us_economy_tt
 			custom_effect_tooltip = USA_rural_electrification_administration_tt
 			add_to_variable = { USA_consumer_goods_factor = 0.1 }
 			add_to_variable = { USA_stability_weekly = 0.001}
@@ -313,10 +318,11 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			custom_effect_tooltip = USA_national_youth_administration_tt
 			add_political_power = 100
-			add_to_variable = { USA_research_speed_factor = 0.05 }
-			add_to_variable = { USA_consumer_goods_factor = 0.05 }
+
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_research_speed_factor = 0.05 tooltip = research_speed_factor_tt }
+			add_to_variable = { USA_consumer_goods_factor = 0.05 tooltip = consumer_goods_factor_tt }
 		}
 	}
 
@@ -337,8 +343,44 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_to_variable = { USA_consumer_goods_factor = -0.15 }
-			custom_effect_tooltip = USA_increase_industry_production_tt
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_consumer_goods_factor = -0.15 tooltip = consumer_goods_factor_tt}
+
+			393 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			261 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			396 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			395 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			394 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
 		}
 	}
 
@@ -360,7 +402,6 @@ focus_tree = {
 		}
 		available = {
 			not = { has_country_flag = USA_great_depression_cooldown }
-			custom_effect_tooltip = USA_great_depression_cooldown_days_remaining_tt
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -369,16 +410,16 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = USA_great_depression_cooldown_tt
 			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 300 }
-			custom_effect_tooltip = USA_agricultural_adjustment_act_tt
-			add_to_variable = { USA_consumer_goods_factor = -0.1 }
-			add_to_variable = { USA_production_speed_buildings_factor = -0.05 }
-			add_to_variable = { USA_political_power_cost = -0.25}
+
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_consumer_goods_factor = -0.1 tooltip = consumer_goods_factor_tt}
+			add_to_variable = { USA_production_speed_buildings_factor = -0.05 tooltip = production_speed_buildings_factor_tt}
+			add_to_variable = { USA_political_power_cost = -0.25 tooltip = political_power_cost_tt }
 			add_stability = -0.1
 		}
 	}
 
-	focus = {
-		
+	focus = {	
 		id = USA_fixed_agricultural_prices
 		icon = GFX_goal_generic_consumer_goods
 		x = -1
@@ -402,14 +443,13 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			custom_effect_tooltip = USA_fixed_agricultural_prices_tt
-			add_to_variable = { USA_consumer_goods_factor = -0.1 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_consumer_goods_factor = -0.1 tooltip = consumer_goods_factor_tt }
 			add_stability = -0.05
 
 		}
 	}
-	focus = {
-		
+	focus = {		
 		id = USA_burn_agricultural_products
 		icon = GFX_focus_fire
 		x = 1
@@ -433,8 +473,8 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			custom_effect_tooltip = USA_burn_agricultural_products_tt
-			add_to_variable = { USA_consumer_goods_factor = -0.05 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_consumer_goods_factor = -0.05 tooltip = consumer_goods_factor_tt }
 			add_stability = -0.05
 
 		}
@@ -467,10 +507,48 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			custom_effect_tooltip = USA_modify_us_economy_tt
 			custom_effect_tooltip = USA_fair_labour_standards_act_tt
 			add_to_variable = { USA_stability_weekly = 0.003 }
 			add_stability = 0.1
 			add_to_variable = { USA_industrial_capacity_factory = 0.1}
+
+
+			375 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			371 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			370 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			367 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			366 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
 		}
 	}
 
@@ -530,8 +608,8 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			custom_effect_tooltip = USA_war_production_board_tt
-			add_to_variable = { USA_production_factory_efficiency_gain_factor = 0.15}
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_production_factory_efficiency_gain_factor = 0.15 tooltip = production_factory_efficiency_gain_factor_tt}
 		}
 	}
 
@@ -560,8 +638,8 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			custom_effect_tooltip = USA_resource_program_tt
-			add_to_variable = { USA_local_resources_factor = 0.40 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_local_resources_factor = 0.40 tooltip = local_resources_factor_tt }
 		}
 	}
 	focus = {
@@ -629,8 +707,8 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			custom_effect_tooltip = USA_price_controls_tt
-			add_to_variable = { USA_industrial_capacity_factory = 0.05 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt}
 
 		}
 	}
@@ -686,8 +764,8 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			add_to_variable = { USA_consumer_goods_factor = -0.15 }
-			custom_effect_tooltip = USA_increase_industry_production_tt
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_consumer_goods_factor = -0.15 tooltip = consumer_goods_factor_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = USA_general_motors
@@ -861,12 +939,50 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = USA_great_depression_cooldown_tt
 			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 300 }
-			custom_effect_tooltip = USA_social_security_act_tt
-			add_to_variable = { USA_political_power_cost = -0.25}
+
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_political_power_cost = -0.25 tooltip = political_power_cost_tt}
 			custom_effect_tooltip = USA_federal_housing_act_tt
-			add_to_variable = { USA_consumer_goods_factor = 0.1 }
-			add_to_variable = { USA_production_speed_buildings_factor = 0.1 }
+			add_to_variable = { USA_consumer_goods_factor = 0.1 tooltip = consumer_goods_factor_tt}
+			add_to_variable = { USA_production_speed_buildings_factor = 0.1 tooltip = production_speed_buildings_factor_tt}
 			add_to_variable = { USA_stability_weekly = 0.001 }
+
+
+			357 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			358 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			360 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			359 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			361 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
 		}
 	}
 
@@ -955,9 +1071,9 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			custom_effect_tooltip = USA_neutrality_act_of_1937_tt
+			custom_effect_tooltip = USA_modify_us_economy_tt
 			add_war_support = -0.05
-			add_to_variable = { USA_production_speed_arms_factory_factor = -0.15 }
+			add_to_variable = { USA_production_speed_arms_factory_factor = -0.15 tooltip = production_speed_arms_factory_factor_tt }
 		}
 	}
 	focus = {
@@ -1204,6 +1320,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			custom_effect_tooltip = USA_modify_us_economy_tt
 			custom_effect_tooltip = USA_denounce_isolationism_tt
 			add_to_variable = { USA_war_support_weekly = 0.005 }
 		}
@@ -1227,8 +1344,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_research_slot = 2
-			custom_effect_tooltip = USA_scientist_haven_tt
-			add_to_variable = { research_speed_factor = 0.05 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { research_speed_factor = 0.05 tooltip = research_speed_factor_tt }
 		}
 	}
 	focus = {
@@ -1305,8 +1422,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = USA_british_designs_tt
-			add_to_variable = { USA_research_speed_factor = 0.05 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_research_speed_factor = 0.05 tooltip = research_speed_factor_tt }
 			add_tech_bonus = {
 				bonus = 0.6
 				uses = 1
@@ -1340,8 +1457,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = partial_economic_mobilisation 
-			custom_effect_tooltip = USA_the_giant_wakes_tt
-			add_to_variable = { USA_industrial_capacity_factory = 0.2 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_industrial_capacity_factory = 0.2 tooltip = industrial_capacity_factory_tt }
 		}
 	}
 	focus = {
@@ -1367,9 +1484,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = USA_long_term_contracting_tt
-			add_to_variable = { USA_production_speed_arms_factory_factor = 0.2 }
-			add_to_variable = { USA_production_factory_max_efficiency_factor = 0.1 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_production_speed_arms_factory_factor = 0.2 tooltip = production_speed_arms_factory_factor_tt}
+			add_to_variable = { USA_production_factory_max_efficiency_factor = 0.1 tooltip = production_factory_max_efficiency_factor_tt }
 		}
 	}
 
@@ -2726,8 +2843,8 @@ focus = {
 		available_if_capitulated = no 
 
 		completion_reward = {
-			custom_effect_tooltip = USA_naval_act_effect_tt
-			add_to_variable = { USA_industrial_capacity_dockyard = 0.15 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_industrial_capacity_dockyard = 0.15 tooltip = industrial_capacity_dockyard_tt}
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
@@ -2944,8 +3061,8 @@ focus = {
 		available_if_capitulated = no 
 
 		completion_reward = {
-			custom_effect_tooltip = USA_iowa_class_tt
-			add_to_variable = { USA_industrial_capacity_dockyard = 0.1 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_industrial_capacity_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt}
 			
 			add_tech_bonus = {
 				bonus = 0.75
@@ -2972,8 +3089,8 @@ focus = {
 		available_if_capitulated = no 
 
 		completion_reward = {
-			custom_effect_tooltip = USA_iowa_class_tt
-			add_to_variable = { USA_industrial_capacity_dockyard = 0.1 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_industrial_capacity_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt}
 			
 			371 = {
 				add_extra_state_shared_building_slots = 5
@@ -3068,8 +3185,8 @@ focus = {
 		available_if_capitulated = no 
 
 		completion_reward = {
-			custom_effect_tooltip = USA_essex_class_tt
-			add_to_variable = { USA_industrial_capacity_dockyard = 0.1 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_industrial_capacity_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt }
 			
 			add_tech_bonus = {
 				bonus = 0.75
@@ -3113,8 +3230,8 @@ focus = {
 
 		
 		completion_reward = {
-			custom_effect_tooltip = USA_essex_class_tt
-			add_to_variable = { USA_industrial_capacity_dockyard = 0.1 }
+			custom_effect_tooltip = USA_modify_us_economy_tt
+			add_to_variable = { USA_industrial_capacity_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt}
 			
 			366 = {
 				add_extra_state_shared_building_slots = 5
@@ -3196,7 +3313,6 @@ focus = {
 		available_if_capitulated = no 
 
 		completion_reward = {
-			add_to_variable = { USA_navy_naval_torpedo_hit_chance_factor = 0.1 }
 			add_doctrine_cost_reduction = {
 				name = submarine_doc_bonus
 				cost_reduction = 0.5

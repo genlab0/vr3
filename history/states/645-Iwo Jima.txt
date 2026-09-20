@@ -1,35 +1,27 @@
-state=
-{
+state={
 	id=645
 	name="STATE_645"
 	manpower=1018
 	state_category = small_island
-	history=
-{
+	history = {
 		owner = JAP
 		add_core_of = JAP
-		set_state_flag = JAP_controls
 		buildings = {
 			infrastructure = 2
 			air_base = 1
 			13025 = {
 				naval_base = 1
-
 			}
 		}
 		victory_points = {
 			13025 5
 		}
-		1936.1.2 = {
-			remove_core_of = JAP 
-			add_core_of = WST
-			owner = WST
+		strategic_province_location = {
+			defensible_coastline = 13025
 		}
-
 	}
 	provinces={
 		13025
 	}
-
 	local_supplies=0.0 
 }

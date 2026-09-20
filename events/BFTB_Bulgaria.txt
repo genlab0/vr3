@@ -2259,12 +2259,6 @@ country_event = {
 				add_country_leader_trait = no_designated_regency
 			}		
 		}
-
-		hidden_effect = {
-			every_other_country = {
-				news_event = { id = bftb_news.3 hours = 4 }
-			}
-		}
 	}
 }
 
