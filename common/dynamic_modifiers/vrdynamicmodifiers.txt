@@ -109,9 +109,17 @@ JAP_tora_tora_tora_modifier = {
 
 
 	ground_attack_factor = JAP_tora_ground_attack_factor
-	air_superiority_bonus_in_combat = JAP_tora_air_superiority_bonus_in_combat
+	air_mission_efficiency = JAP_tora_air_mission_efficiency
 
 	army_attack_factor = JAP_tora_army_attack_factor
 	army_speed_factor = JAP_tora_army_speed_factor 
 	army_morale_factor = JAP_tora_army_morale_factor 
+}
+
+JAP_extensive_planning = {
+	icon = GFX_unplanned_offensive
+	attacker_modifier = yes
+	army_speed_factor = 0.2
+	max_dig_in_factor = -0.3
+	supply_node_range = 0.15
 }

@@ -609,29 +609,44 @@ focus_tree = {
 					priority = 2
 					division_names_group = RAJ_INF_01
 					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
+						mountaineers = { x = 0 y = 0 }
+						mountaineers = { x = 0 y = 1 }
+						mountaineers = { x = 0 y = 2 }
+						mountaineers = { x = 0 y = 3 }
+						mountaineers = { x = 0 y = 4 }
 			
-	    	   		 	infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
+	    	   		 	mountaineers = { x = 1 y = 0 }
+						mountaineers = { x = 1 y = 1 }
+						mountaineers = { x = 1 y = 2 }
+						mountaineers = { x = 1 y = 3 }
+						mountaineers = { x = 1 y = 4 }
 
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-						infantry = { x = 2 y = 2 }
+						mountaineers = { x = 2 y = 0 }
+						mountaineers = { x = 2 y = 1 }
+						mountaineers = { x = 2 y = 2 }
+						mountaineers = { x = 2 y = 3 }
+						mountaineers = { x = 2 y = 4 }
+
+						artillery_brigade = { x = 3 y = 0 }
+						artillery_brigade = { x = 3 y = 1 }
+						artillery_brigade = { x = 3 y = 2 }
+						anti_tank_brigade = { x = 3 y = 3 }
 					}
 
 					support = {
         				artillery = { x = 0 y = 0 }
-        				engineer = { x = 0 y = 1 }
+						anti_tank = { x = 0 y = 1 }
+						anti_air = { x = 0 y = 2 }
+        				engineer = { x = 0 y = 3 }
+						logistics_company = { x = 0 y = 4 }
+						signal_company = { x = 0 y = 5 }
 					}
 				}
 	
 				random_owned_controlled_state = {
 					prioritize = { 439 }
 					create_unit = {
-						division = "name = \"Red Eagles Division\" division_template = \"Red Eagles Division\" start_experience_factor = 0.75" 
+						division = "name = \"Red Eagles Division\" division_template = \"Red Eagles Division\" start_experience_factor = 1" 
 						owner = RAJ
 					}	
 				}
@@ -672,15 +687,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 		custom_effect_tooltip = RAJ_orde_wingate_tt
-		hidden_effect = {
-			add_corps_commander_role = {
-				character = RAJ_orde_wingate
-				traits = { jungle_rat commando }
-				skill = 4
-				attack_skill = 3
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 5
+			hidden_effect = {
+				add_corps_commander_role = {
+					character = RAJ_orde_wingate
+					traits = { jungle_rat commando trickster }
+					skill = 4
+					attack_skill = 4
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 6
 				}
 			}
 			add_tech_bonus = {
@@ -1718,32 +1733,11 @@ focus_tree = {
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_industrial_expansion_IC
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = RAJ_industrial_expansion_tt
 			add_to_variable = { RAJ_production_speed_buildings_factor = 0.1 }
-			random_owned_controlled_state = {
-				prioritize = { 437 438 433 439 }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
+			437 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -2445,7 +2439,7 @@ focus_tree = {
 
 
 		completion_reward = {
-			430 = {
+			428 = {
 				add_building_construction = {
 				type = infrastructure 
 				level = 2
@@ -2710,7 +2704,7 @@ focus_tree = {
 				localization = RAJ_strengthen_ties_with_british_investors
 			}
 			random_owned_controlled_state = {
-				prioritize = {  }
+				prioritize = { 433  }
 				limit = {
 					free_building_slots = {
 						building = arms_factory
@@ -2727,7 +2721,7 @@ focus_tree = {
 				set_state_flag = RAJ_strengthen_ties_with_british_investors_AF1
 			}
 			random_owned_controlled_state = {
-				prioritize = {  }
+				prioritize = { 437 }
 				limit = {
 					free_building_slots = {
 						building = arms_factory
@@ -2790,7 +2784,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = RAJ_british_rail_investors
 			random_owned_controlled_state = {
-				prioritize = {  }
+				prioritize = { 425 }
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
@@ -2807,7 +2801,7 @@ focus_tree = {
 				set_state_flag = RAJ_british_rail_investors_IC1
 			}
 			random_owned_controlled_state = {
-				prioritize = {  }
+				prioritize = { 424 }
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
@@ -2879,7 +2873,7 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
-				prioritize = {  }
+				prioritize = { 425 }
 				limit = {
 					free_building_slots = {
 						building = arms_factory
@@ -2896,7 +2890,7 @@ focus_tree = {
 				set_state_flag = RAJ_british_arms_investors_AF1
 			}
 			random_owned_controlled_state = {
-				prioritize = {  }
+				prioritize = { 424 }
 				limit = {
 					free_building_slots = {
 						building = arms_factory

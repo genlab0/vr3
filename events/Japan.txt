@@ -132,7 +132,7 @@ country_event = {
 	id = japan.21
 	title = japan.21.t 
 	desc = japan.21.d 
-	picture = report_event_japanese_soldiers_01
+	picture = GFX_report_event_japanese_army_parade
 	mean_time_to_happen = {days = 2}
 	fire_only_once = yes
 	trigger = {
@@ -160,7 +160,7 @@ country_event = {
 	id = japan.19
 	title = japan.19.t 
 	desc = japan.19.d 
-	picture = report_event_japanese_soldiers_01
+	picture = GFX_report_event_japanese_soldiers_01
 	mean_time_to_happen = {days = 2}
 	fire_only_once = yes
 	trigger = {
@@ -174,12 +174,14 @@ country_event = {
 	option = {
 		name = japan.19.a
 		set_country_flag = JAP_south_east_asia_flag
+		custom_effect_tooltip = JAP_rubber_islands_focussed_tt
 	}
 
 	#Pacific Bonus 
 	option = {
 		name = japan.19.b
 		set_country_flag = JAP_pacific_flag
+		custom_effect_tooltip = JAP_pacific_focussed_tt
 	}
 }
 
@@ -188,7 +190,7 @@ country_event = {
 	id = japan.20
 	title = japan.20.t 
 	desc = japan.20.d 
-	picture = report_event_japanese_soldiers_01
+	picture = GFX_report_event_SOV_purge_navy
 	mean_time_to_happen = {days = 2}
 	trigger = {
 		focus_progress = {
@@ -200,12 +202,14 @@ country_event = {
 	#Air Support
 	option = {
 		name = japan.20.a
+		custom_effect_tooltip = japan_20_a_tt
 		set_country_flag = JAP_air_support_flag
 	}
 
 	#Naval Support
 	option = {
 		name = japan.20.b
+		custom_effect_tooltip = japan_20_b_tt
 		set_country_flag = JAP_naval_support_flag
 	}
 }
