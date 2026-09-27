@@ -2031,9 +2031,9 @@ ideas = {
 			}
 		}
 
-		JAP_japanese_influence_growing_tibet = {
+		JAP_pan_asian_union_tibet = {
 
-			picture = JAP_japanese_influence_growing
+			picture = JAP_pan_asian_union
 
 			allowed = {
 				original_tag = TIB
@@ -2058,7 +2058,7 @@ ideas = {
 
 		JAP_smaller_japanese_influence_growing_tibet = {
 
-			picture = JAP_japanese_influence_growing
+			picture = JAP_pan_asian_union
 
 			allowed = {
 				original_tag = TIB
@@ -2077,11 +2077,11 @@ ideas = {
 
 		}
 
-		JAP_japanese_influence_growing_tibet_2 = {
+		JAP_pan_asian_union_tibet_2 = {
 
-			name = JAP_japanese_influence_growing_tibet
+			name = JAP_pan_asian_union_tibet
 
-			picture = JAP_japanese_influence_growing
+			picture = JAP_pan_asian_union
 
 			allowed = {
 				original_tag = TIB
@@ -2895,11 +2895,11 @@ ideas = {
 			}
 		}
 
-		JAP_japanese_influence_growing_mongolia = {
+		JAP_pan_asian_union_mongolia = {
 
-			name = JAP_japanese_influence_growing_tibet
+			name = JAP_pan_asian_union_tibet
 
-			picture = JAP_japanese_influence_growing
+			picture = JAP_pan_asian_union
 
 			allowed = {
 				original_tag = MON
@@ -4725,7 +4725,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = jap_island_hopping
+			picture =JAP_pan_asian_union 
 			removal_cost = -1
 
 			modifier = {		
@@ -4745,7 +4745,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = jap_island_hopping
+			picture =JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {	
@@ -4765,7 +4765,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = jap_island_hopping
+			picture =JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -4787,7 +4787,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = jap_island_hopping
+			picture =JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -4810,7 +4810,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = jap_island_hopping
+			picture =JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -4833,7 +4833,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = jap_island_hopping
+			picture =JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -4854,7 +4854,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = jap_island_hopping
+			picture =JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -4874,7 +4874,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = jap_island_hopping
+			picture =JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -4892,7 +4892,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = jap_island_hopping
+			picture =JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -4910,7 +4910,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = jap_island_hopping
+			picture =JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -4928,7 +4928,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = jap_island_hopping
+			picture =JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -4946,7 +4946,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = jap_island_hopping
+			picture =JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {

@@ -9,7 +9,6 @@ history={
 		owner = RAJ
 		buildings = {
 			infrastructure = 2
-			arms_factory = 2
 		}
 
 	}

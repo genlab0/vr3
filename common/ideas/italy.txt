@@ -67,7 +67,7 @@ ideas = {
 				light_tank_chassis = {
 					instant = yes
 					build_cost_ic = -0.05
-					reliability = 0.05
+					breakthrough = 0.05
 				}
 			}
 		}

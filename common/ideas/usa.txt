@@ -1326,7 +1326,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -1342,7 +1342,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -1358,7 +1358,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -1374,7 +1374,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -1389,7 +1389,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -1404,7 +1404,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -1419,7 +1419,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {	
@@ -1429,7 +1429,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -1440,7 +1440,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -1451,7 +1451,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {		
@@ -1462,7 +1462,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -1473,7 +1473,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {		
@@ -1484,7 +1484,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -1495,7 +1495,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {		
@@ -1506,7 +1506,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {
@@ -1519,7 +1519,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = usa_island_hopping
+			picture = JAP_pan_asian_union
 			removal_cost = -1
 
 			modifier = {

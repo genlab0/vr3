@@ -1432,19 +1432,18 @@
  JAP_icreduction_idea_desc:0"The 4th Naval Armaments Supplement Programme was a reaction to the Second Vinson Act, a US Navy Buildup program, and extended to 80 warships and 75 Naval Air Groups"
 
  japan.21.t:0"The Philipines"
- japan.21.d:0""
  japan.21.a:0"Bypass the Philipines"
  japan.21.b:0"Invade the Philipines"
  
  japan.19.t:0"Campaign Focus"
- japan.19.d:0""
  japan.19.a:0"Focus on Indonesia"
  japan.19.b:0"Focus on the Pacific"
  
- japan.20.t:0"Navy or Air Force?"
- japan.20.d:0""
+ japan.20.t:0"Autonomy for the Air Force."
  japan.20.a:0"Focus on the Air Force"
  japan.20.b:0"Focus on the Navy"
+ japan_20_b_tt:0"Grants the following buffs during Tora Tora: \n\n§YNaval Speed:§! §G+5%§! \n§YSortie Efficiency:§! §G+20%§!"
+ japan_20_a_tt:0"Grants the following buffs during Tora Tora: \n\n§YAir Efficiency:§! §G+10%§! \n§YGround Attack Factor:§! §G+10%§!"
 
  #Economy Slowdown:
  JAP_slowed_down_economy_idea:0"Interest Rate Hikes"
@@ -1501,14 +1500,14 @@
  JAP_pacific_focussed_tt:0"All American Islands will gain a modifier that reduces entrenchment, increases speed and increases supply range"
  JAP_pacific_focussed:0"Pacific Focus"
  JAP_pacific_focussed_desc:0"In the Pacific waits the US Fleet. Taking its bases has priority"
- 
+ JAP_extensive_planning:0"Extensive Japanese planning"
  #Rubber Islands Focussed:
  JAP_rubber_islands_focussed:0"South East Asia Focus"
  JAP_rubber_islands_focussed_desc:0"South East Asia is where the resources are. We should focus on them first"
  JAP_rubber_islands_focussed_tt:0"All Indonesian States will gain a modifier that reduces entrenchment, increases speed and increases supply range"
  
  #Air Support Buff
- JAP_air_support_buff_tt:0"Air Superiority Bonus in Combat:§G +5%§! \nClose Air Support Ground Attack:§G +10%§!"
+ JAP_air_support_buff_tt:0"Air Efficiency:§G +10%§! \nGround Attack Factor:§G +10%§!"
  JAP_air_support_buff:0"Focus on the Air Force"
  JAP_air_support_buff_desc:0"The Air Force, as a key enabler, can help us take ground quickly"
  
@@ -1777,6 +1776,15 @@
  JAP_modify_japanese_army_tt:0"Modify §YImperial Japanese Army§! by:"
 
  ##Events:
+ SEA_japan_foreign_policy.237.t:0"Succesful Raid on Pearl Harbor"
+ SEA_japan_foreign_policy.237.desc:0"Our Imperial Navy, under the command of Admiral Isoroku Yamamoto, has successfully conducted a surprise attack on the American naval base at Pearl Harbor, significantly weakening the U.S. Pacific Fleet. Now is it time to take the resources and lands we deserve."
+ SEA_japan_foreign_policy.237.a:0"Banzai!"
+ SEA_japan_foreign_policy.238.a:0"Interesting."
+ SEA_japan_foreign_policy.238.t:0"Japanese Attack on Pearl Harbor"
+ SEA_japan_foreign_policy.238.desc:0"The Japanese have launched a surprise attack on the American naval base at Pearl Harbor, significantly weakening the U.S. Pacific Fleet."
+ japan.20.d:0"Victory across the Pacific will depend not only upon the courage of our soldiers and sailors, but upon which arm of the Imperial forces receives priority in the struggle ahead. The Imperial Japanese Navy remains the foundation of our strategy, ready to confront the growing fleets of the United States and Britain. \n\nAt the same time, recent operations have demonstrated the growing importance of air power. Land-based aviation and carrier aircraft can strike far beyond the range of our surface forces. \n\n\nResources are limited, and one branch must receive priority."
+ japan.19.d:0"The opening blows against the Western powers will grant us only a brief period in which the initiative is entirely ours. How that advantage is used may determine the course of the entire Pacific War. To the south lie Malaya, the Dutch East Indies, and the vast natural resources upon which Japan’s war effort depends. \n\nOthers within the naval command instead look eastward. Guam, Midway, and even Hawaii form the chain of American positions from which the United States may eventually launch its counteroffensive. \n\nThe Empire must decide where its main effort will fall."
+ japan.21.d:0"With war against the Western powers now inevitable, the Philippines stand directly across Japan’s intended lines of advance into Southeast Asia. American airfields, naval bases, and ground forces stationed throughout the islands could threaten our communications with the resource-rich territories farther south and provide the United States with a powerful forward base close to our homeland. Yet an invasion would demand substantial forces, shipping, and time at the very moment when speed may prove decisive. \n\nThe Imperial General Headquarters must decide whether the islands are an obstacle to be destroyed or one that can simply be left behind."
  USA_small_prod_boost_tt:0"Factory Output:§G +1.00%§!\n§YConsumer Goods§! Factor:§R -1.00%§!\n§YProduction Efficiency§! Cap:§G +0.40%§!"
  bftb_bulgaria_army_reforms.3.t:0"Army Doctrines 2"
  bftb_bulgaria_army_reforms.3.d:0"Nikola Hadzipetkov has come to us with a suggestion: Do we want to focus on the offensive, or do we want to improve our engineering corps and our defenses?"

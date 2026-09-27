@@ -625,7 +625,7 @@ USA_aid_britain = {
 	}
 
 	"Allow sale of surplus guns 0/1" = {
-		icon = GFX_decisions_generic_infiltration_1
+		icon = GFX_decisions_generic_infiltration_0
 	
 		allowed = {
 			tag = USA
@@ -649,7 +649,7 @@ USA_aid_britain = {
 	}
 
 	"Allow sale of surplus guns 0/1/2" = {
-		icon = GFX_decisions_generic_infiltration_2
+		icon = GFX_decisions_generic_infiltration_1
 	
 		allowed = {
 			tag = USA
@@ -676,7 +676,7 @@ USA_aid_britain = {
 	}
 
 	"Allow sale of surplus guns 0/1/2/3" = {
-		icon = GFX_decisions_generic_infiltration_3
+		icon = GFX_decisions_generic_infiltration_2
 	
 		allowed = {
 			tag = USA
@@ -704,7 +704,7 @@ USA_aid_britain = {
 	}
 
 	"Disable sale of surplus guns" = {
-		icon = GFX_decisions_generic_infiltration_0
+		icon = GFX_decisions_generic_infiltration_3
 	
 		allowed = {
 			tag = USA

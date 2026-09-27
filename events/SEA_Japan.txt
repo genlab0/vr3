@@ -11,3 +11,89 @@ add_namespace = SEA_japan_hidden_events
 add_namespace = SEA_japan_air_accidents_events
 
 add_namespace = SEA_imperial_influence_events
+
+# News event for Formation of the Greater East Asia Co-Prosperity Sphere
+news_event = {
+	id = SEA_japan_news_events.02
+	title = SEA_japan_news_events.02.t
+	desc = SEA_japan_news_events.02.desc
+	picture = GFX_news_event_JAP_greater_east_asia_conference
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = SEA_japan_news_events.02.a
+		trigger = {
+			original_tag = JAP
+		}
+	}
+	option = {
+		name = SEA_japan_news_events.02.b
+		trigger = {
+			NOT = {
+				original_tag = JAP
+			}
+		}
+	}
+	
+}
+
+# An Attack on Pearl Harbor - event for USA 
+country_event = {
+	id = SEA_japan_foreign_policy.136
+	title = SEA_japan_foreign_policy.136.t
+	desc = SEA_japan_foreign_policy.136.desc
+	picture = GFX_report_event_usa_pearl_harbor_airphoto
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	# This day will live on in infamy!
+	option = {
+		name = SEA_japan_foreign_policy.136.a
+
+		add_war_support = 0.05
+        complete_national_focus = USA_day_in_infamy
+        
+	}
+
+}
+
+# An Attack on Pearl Harbor - event for Japan
+country_event = {
+	id = SEA_japan_foreign_policy.237
+	title = SEA_japan_foreign_policy.237.t
+	desc = SEA_japan_foreign_policy.237.desc
+	picture = GFX_report_event_usa_pearl_harbor_airphoto
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	# Brilliant LADS
+	option = {
+		name = SEA_japan_foreign_policy.237.a        
+	}
+
+}
+
+# An Attack on Pearl Harbor - event for everyone else
+country_event = {
+	id = SEA_japan_foreign_policy.238
+	title = SEA_japan_foreign_policy.238.t
+	desc = SEA_japan_foreign_policy.238.desc
+	picture = GFX_report_event_usa_pearl_harbor_airphoto
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	# Brilliant LADS
+	option = {
+		name = SEA_japan_foreign_policy.238.a        
+	}
+
+}

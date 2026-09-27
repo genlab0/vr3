@@ -34,6 +34,37 @@ news_event = {
 	}
 }
 
+# Marco Polo Bridge II
+news_event = {
+	id = news.2
+	title = news.1.t
+	desc = news.2.d
+	picture = GFX_news_event_018
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.2.a
+		trigger = {
+			NOT = {
+				TAG = JAP
+				TAG = CHI
+			}
+		}
+	}
+	option = {
+		name = news.2.b
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = news.2.c
+		trigger = { TAG = CHI }
+	}
+}
+
+
 # French Indochina I
 news_event = {
 	id = news.5
