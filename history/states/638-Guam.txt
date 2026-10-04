@@ -7,7 +7,6 @@ state=
 	history= { 
 		owner = USA
 		add_core_of = USA
-		set_state_flag = USA_controls
 		buildings = {
 			infrastructure = 3 #was: 5
 			12140 = {
