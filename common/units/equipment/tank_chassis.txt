@@ -237,6 +237,13 @@ equipments = {
 					tank_secondary_turret
 				}
 			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+				}
+			}
 		}
 		maximum_speed = 6
 		build_cost_ic = 4
@@ -303,6 +310,13 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					tank_secondary_turret
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
 				}
 			}
 		}
@@ -375,6 +389,13 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					tank_secondary_turret
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
 				}
 			}
 		}
@@ -450,6 +471,13 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					tank_secondary_turret
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
 				}
 			}
 		}
@@ -619,6 +647,13 @@ equipments = {
 					tank_secondary_turret
 				}
 			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+				}
+			}
 		}
 		maximum_speed = 7
 		build_cost_ic = 6
@@ -695,6 +730,13 @@ equipments = {
 					tank_secondary_turret
 				}
 			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+				}
+			}
 		}
 		resources = {
 			steel = 4
@@ -762,6 +804,13 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					tank_secondary_turret
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
 				}
 			}
 		}
@@ -919,6 +968,13 @@ equipments = {
 					tank_secondary_turret
 				}
 			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+				}
+			}
 		}
 	}
 
@@ -982,6 +1038,13 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					tank_secondary_turret
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
 				}
 			}
 		}
@@ -1056,6 +1119,13 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					tank_secondary_turret
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
 				}
 			}
 		}

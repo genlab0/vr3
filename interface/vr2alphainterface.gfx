@@ -202,7 +202,7 @@ spriteTypes = {
 	}
 
 
-		SpriteType = {
+	SpriteType = {
 		name = "GFX_AST_fighter1_medium"
 		texturefile = "gfx/interface/technologies/ENG_fighter1.dds"
 	}
@@ -367,6 +367,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/ENG_naval_bomber1.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_tank_night_vision_medium"
+		texturefile = "gfx/interface/technologies/tank_night_vision.png"
+	}
+
+	spriteType = {
+		name = "GFX_subtech_nv"
+		textureFile = "gfx//interface//technologies//subtech_nv.dds"
+	}
 
 
 }
