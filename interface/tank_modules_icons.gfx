@@ -1,5 +1,9 @@
 spriteTypes = {
-
+	spriteType = {
+		name = "GFX_EMI_early_night_vision"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/early_night_vision.dds"
+		legacy_lazy_load = no
+	}
 
 	spriteType = {
 		name = "GFX_EMI_tank_anti_air_cannon"
