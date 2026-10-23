@@ -77,6 +77,12 @@ FRA_eco_build = {
 	abort_when_not_enabled = yes 
 	ai_strategy = {
 		type = build_building
+		id = industrial_complex
+		target = 539
+		value = 6
+	}
+	ai_strategy = {
+		type = build_building
 		id = arms_factory
 		target = 677
 		value = 10
@@ -125,24 +131,67 @@ FRA_eco_build = {
 	}
 }
 
-FRA_unit_production = {
+FRA_unit_production_pre_cap = {
 	allowed = {
 		original_tag = FRA
 	}
 	enable = {
-		date>1936.1.1
+		date<1939.7.7 	#This is to make AI be able to fill up lacking strength and get a little bit of stockpile, feels more useful than having 50% strength shitters
 	}
 	abort_when_not_enabled = yes 
 
 	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = rangers
+		value = 10
+	}
+	ai_strategy = {
 		type = build_army
 		id = infantry
-		value = 2000
+		value = 72
 	}
 	ai_strategy = {
 		type = build_army
 		id = rangers
-		value = 600
+		value = 36
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 200
+	}
+	#Please don't do tanks ty
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = -100
+	}
+}
+FRA_unit_production_post_cap = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		NOT = { controls_state = 16  }
+	}
+	abort_when_not_enabled = yes 
+
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 100
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 48
 	}
 	ai_strategy = {
 		type = force_build_armies
@@ -155,7 +204,6 @@ FRA_unit_production = {
 		value = -10000
 	}
 }
-
 FRA_ignore_these_countries = {
 	allowed = {
 		original_tag = FRA
@@ -213,7 +261,7 @@ FRA_war_starts_prepare_for_benelux = {
 			785
 			18
 		}
-		ratio = 0.5
+		ratio = 0.6
 		area = europe
 		subtract_invasions_from_need = no
 		subtract_fronts_from_need = yes
@@ -221,5 +269,42 @@ FRA_war_starts_prepare_for_benelux = {
 	ai_strategy = {
 		type = naval_invasion_focus
 		value = -150
+	}
+}
+
+FRA_try_to_hold_africa = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		has_completed_focus = FRA_refus_absurde
+	}
+	abort_when_not_enabled = yes 
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = ENG
+		value = 300
+	}
+	ai_strategy = {
+		type = garrison
+		value = -1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = 100
+	}
+	ai_strategy = {
+		type = front_control
+		tag = ITA
+		tag = GER
+		area = africa						# Target a specific ai area. Can specify multiple.
+		ratio = 10					# The strategy is enabled only if ratio of the front covered by this strategy's targets is greater than this ratio.
+		priority = 100						# Default 0, higher prio strats will override lower.
+		ordertype = front					# `front` or `invasion`. If set this strategy will only apply to that specific order type.
+		execution_type = careful
+		execute_order = no					# `yes` or `no`. If set will override execute or not decision of front.
+		manual_attack = yes					# Default `yes`. If `no` AI will not do manual pokes at enemy (only for front orders).
 	}
 }

@@ -251,8 +251,9 @@ mountaineers_GER = {
 			}
 			
 			regiments = {
-				mountaineers = 17
-				artillery_brigade = 2
+				mountaineers = 18
+				artillery_brigade = 1
+				anti_tank_brigade = 1
 			}
 		}
 	}

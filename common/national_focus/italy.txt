@@ -4397,8 +4397,8 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_pact_of_steel
-		cost = 0
-
+		cost = 10
+		will_lead_to_war_with = ENG
 		bypass = {
 		}
 

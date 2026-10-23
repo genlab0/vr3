@@ -22,71 +22,86 @@ JAP_stock_up_on_trains_before_china = {
 
 	ai_strategy = {
 		type = min_wanted_supply_trains
-		value = 100
+		value = 200
 	}
 }
 
-less_trucks_4_u_JAP = {
+
+
+
+#CONSTRUCTION
+JAP_factories_early = {
 	allowed = {
 		original_tag = JAP
 	}
 	enable = {
-		date < 1939.1.1
-	}
-	abort = {
-		date > 1939.1.1
-	}
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = cas 
-		value = 3
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = infantry
-		value = 5 #10 to 5
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = artillery
-		value = 20 #From 40 to 20
-	}
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = artillery
-		value = 5
-	}
-	ai_strategy = {
-		type = build_army
-		id = infantry
-		value = 175
-	}
-	ai_strategy = {
-		type = build_army
-		id = garrison
-		value = 100
-	}
-}
-
-JAP_build_some_factories_jeez = {
-	allowed = {
-		original_tag = JAP
-	}
-	enable = {
-		date > 1937.5.1
+		date < 1936.8.8
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
-		type = equipment_production_min_factories
-		id = cv_naval_bomber
-		value = 2
+		type = building_target
+		id = infrastructure
+		value = 250
 	}
+}
+JAP_factories_mid = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		AND = {
+			date < 1938.3.3
+			date > 1936.8.8
+		}
+	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
-		type = added_military_to_civilian_factory_ratio
-		value = 5000
+		type = building_target
+		id = dockyard
+		value = 2000
+	}
+}
+JAP_factories_late = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		date > 1938.3.3
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 2000
 	}
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#JAP PRODUCTION
 JAP_late_production = {
 	allowed = {
 		original_tag = JAP
@@ -154,46 +169,6 @@ JAP_late_production = {
 	}
 }
 
-chinese_war = {
-	allowed = {
-		original_tag = JAP
-	}
-	enable = {
-		country_exists = CHI
-	}
-	abort = {
-		NOT = {
-			country_exists = CHI
-		}
-	}
-
-	ai_strategy = {
-		type = antagonize
-		id = "CHI"
-		value = 200
-	}
-}
-
-strike_usa = {
-	allowed = {
-		original_tag = JAP
-	}
-	enable = {
-		has_completed_focus = JAP_strike_the_southern_road
-		country_exists = USA
-	}
-	abort = {
-		NOT = {
-			country_exists = USA
-		}
-	}
-
-	ai_strategy = {
-		type = antagonize
-		id = "USA"
-		value = 200
-	}
-}
 
 # "I can run wild for six months… after that, I have no expectation of success"
 jap_hush_yamamoto_its_gonna_be_ok = {
@@ -201,17 +176,11 @@ jap_hush_yamamoto_its_gonna_be_ok = {
 		original_tag = JAP
 	}
 	enable = {
-		has_completed_focus = JAP_strike_the_southern_road
 		has_war_with = USA
 	}
 
 	abort = {
-		OR = {
-			has_war_with = USA
-			NOT = {
-				country_exists = USA
-			}
-		}
+		date>1941.8.8
 	}
 
 	ai_strategy = {
@@ -237,9 +206,6 @@ JAP_philippines_and_garrison = {
 
 		# ratio of total armeis in country to be buffered
 		ratio = 0.1
-
-		# you can specify an order id. ratio of same orders ids will be share same ratio
-		#order_id = 2
 
 		# states to put garrison orders (if no state is friendly, strat is invalid)
 		states = {
@@ -283,15 +249,10 @@ JAP_philippines_and_garrison_prio = {
 
 JAP_leave_raj_a_bit = {
 	allowed = {
-		OR = {
-			original_tag = JAP
-			original_tag = SIA
-		}
+		original_tag = JAP
 	}
 	enable = {
-		is_historical_focus_on = yes
-		has_war_with = CHI
-		CHI = { has_capitulated = no }
+		date<1941.6.6
 	}
 	abort_when_not_enabled = yes
 
@@ -307,9 +268,8 @@ JAP_dei = {
 		original_tag = JAP
 	}
 	enable = {
-		is_historical_focus_on = yes
 		OR = {
-			controls_state = 623
+			controls_state = 327
 			date > 1942.3.1
 		}
 		date > 1941.1.1
@@ -568,47 +528,6 @@ JAP_naval_role_ratios_historical_late = {
 	}
 }
 
-jap_early_invasions_are_risky_and_best_wait_for_later = {
-	allowed = {
-		original_tag = JAP
-	}
-	enable = {
-		date < 1938.1.1
-		CHI = { is_ai = yes }
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = invade
-		id = "CHI"
-		value = -500
-	}
-}
-
-jap_doesnt_care_about_relation = {
-	allowed = {
-		original_tag = JAP
-	}
-	enable = {
-		OR = {
-			has_war = yes
-			date < 1940.1.1
-		}
-	}
-
-	abort = {
-		has_war = no
-		date > 1940.1.1
-	}
-
-	ai_strategy = {
-		type = pp_spend_priority
-		id = relation
-		value = -99
-	}
-}
-
 # if china has fallen and we are going for USA we will end up at war with allies suddenly while maybe bordering them,
 # but thats hard to guess for AI considering all the steps. So we warn it so it can prep vs the allies
 jap_early_part_beware_allies = {
@@ -737,7 +656,6 @@ JAP_USA_we_love_islands = {
 	enable = {
 		OR = {
 			JAP = { has_war_with = USA }
-			CHI = { is_subject_of = JAP }
 		}
 	}
 
@@ -764,7 +682,7 @@ JAP_unit_buffer_for_home_islands_invasion_force = {
 		type = put_unit_buffers
 
 		# ratio of total armeis in country to be buffered
-		ratio = 0.15
+		ratio = 0.1
 
 		# you can specify an order id. ratio of same orders ids will be share same ratio
 		#order_id = 2
@@ -804,6 +722,11 @@ JAP_ignore_these_countries = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = SOV
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = WST
 		value = -1000
 	}
 }

@@ -25,13 +25,7 @@ joining_rule_non_fascist = {
 		}
 	}
 	trigger = {
-		NOT = {
-			has_government = fascism
-		}
-		IF = {
-			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
-		}
+		date>1960.1.1
 	}
 }
 
@@ -52,13 +46,7 @@ joining_rule_non_democratic = {
 		}
 	}
 	trigger = {
-		NOT = {
-			has_government = democratic 
-		}
-		IF = {
-			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
-		}
+		date>1960.1.1
 	}
 }
 
@@ -104,13 +92,7 @@ joining_rule_non_communist = {
 		
 	}
 	trigger = {
-		NOT = {
-			has_government = communism 
-		}
-		IF = {
-			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
-		}
+		date>1960.1.1
 	}
 }
 
@@ -123,11 +105,7 @@ joining_rule_fascist_only = {
 		has_government = fascism
 	}
 	trigger = {
-		has_government = fascism
-		IF = {
-			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
-		}
+		date>1960.1.1
 	}
 }
 
@@ -140,14 +118,7 @@ joining_rule_democratic_non_aligned = {
 		has_government = democratic
 	}
 	trigger = {
-		OR = {
-			has_government = democratic
-			has_government = neutrality
-		}
-		IF = {
-			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
-		}
+		date>1960.1.1
 	}
 }
 
@@ -170,11 +141,7 @@ joining_rule_communist_only = {
 		has_government = communism
 	}
 	trigger = {
-		has_government = communism
-		IF = {
-			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
-		}
+		date>1960.1.1
 	}
 }
 
@@ -187,14 +154,7 @@ joining_rule_support_percentage = {
 
 	}
 	trigger = {
-		compare_ideology_with_faction = {
-			value > 0.3
-			leader = FROM
-		}
-		IF = {
-			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
-		}
+		date>1960.1.1
 	}
 }
 
@@ -207,11 +167,7 @@ joining_rule_puppets_only = {
 		base = 0
 	}
 	trigger = {
-		ROOT = { is_subject_of = FROM }
-		IF = {
-			limit = { NOT = { has_rule = can_join_opposite_factions } }
-			has_government = FROM
-		}
+		date>1960.1.1
 	}
 }
 
@@ -259,7 +215,7 @@ joining_rule_has_no_offensive_war = {
 		}
 	}
 	trigger = {
-		has_offensive_war = no
+		date>1960.1.1
 	}
 	modifier = {
 		defensive_war_stability_factor = 0.15

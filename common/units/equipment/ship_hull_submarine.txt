@@ -133,7 +133,7 @@ equipments = {
 		max_strength = 20
 		
 
-		
+		naval_dominance_factor = 9
 		build_cost_ic = 470
 		resources = {
 			#oil = 1
@@ -182,7 +182,7 @@ equipments = {
 		
 		max_strength = 30
 
-
+naval_dominance_factor = 9
 		
 		build_cost_ic = 520
 		resources = {
@@ -231,7 +231,7 @@ equipments = {
 		max_strength = 35
 		
 
-		
+		naval_dominance_factor = 9
 		build_cost_ic = 600
 		resources = {
 			steel = 3
@@ -280,7 +280,7 @@ equipments = {
 			mid_1_custom_slot = empty
 			rear_1_custom_slot = empty
 		}
-		
+		naval_dominance_factor = 9
 		sub_visibility = 20
 		naval_speed = 16
 		reliability = 0.75
@@ -291,7 +291,7 @@ equipments = {
 
 
 		
-		build_cost_ic = 490
+		build_cost_ic = 830
 		resources = {
 			steel = 2
 		}
@@ -330,7 +330,7 @@ equipments = {
 
 		manpower = 100
 
-		
+		naval_dominance_factor = 9
 		build_cost_ic = 150
 		resources = {
 			steel = 1

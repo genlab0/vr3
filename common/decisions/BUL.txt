@@ -164,22 +164,6 @@ BUL_internal_factions = {
 
 		ai_will_do = {
 			base = 2
-			modifier = {
-				factor = 0.1
-				has_country_flag = BUL_bzns_joint_act_flag
-			}
-			modifier = {
-				factor = 0
-				BUL_is_fascist_axis_ai = yes
-			}
-			modifier = {
-				factor = 1.5
-				OR = {
-					BUL_is_communist_stalinist_ai = yes
-					BUL_is_communist_balkan_ai = yes
-					BUL_is_democratic_socialist_ai = yes
-				}
-			}
 		}
 
 		allowed = { 
@@ -646,10 +630,6 @@ BUL_internal_factions = {
 
 		ai_will_do = {
 			base = 10
-			modifier = {
-				factor = 0
-				BUL_is_fascist_axis_ai = yes
-			}
 		}
 
 		allowed = { 
@@ -1516,19 +1496,7 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_discredit_bs
 
 		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 2
-				OR = {
-					BUL_is_fascist_axis_ai = yes
-					BUL_is_monarchist_ferdinand_ai = yes
-					BUL_is_democratic_liberal_ai = yes
-					#AND = { #MM: Check how the AI performs without this. Might be necessary to not add it to help the FF coup.
-					#	BUL_is_historical_ai = yes
-					#	date > 1940.6.1
-					#}
-				}
-			}
+			base = 2
 		}
 
 		allowed = { 
@@ -1585,11 +1553,7 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_discredit_bzns
 
 		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 2
-				BUL_is_fascist_axis_ai = yes
-			}
+			base = 10
 		}
 
 		allowed = { 
@@ -1646,11 +1610,7 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_discredit_nsm
 
 		ai_will_do = {
-			base = 2
-			modifier = {
-				factor = 0
-				BUL_is_fascist_axis_ai = yes
-			}
+			base = 0
 		}
 
 		allowed = { 
@@ -1796,15 +1756,7 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_ban_media_bs
 
 		ai_will_do = {
-			base = 0.5
-			modifier = {
-				add = 2
-				OR = {
-					BUL_is_fascist_axis_ai = yes
-					BUL_is_monarchist_ferdinand_ai = yes
-					BUL_is_democratic_liberal_ai = yes
-				}
-			}
+			base = 2
 		}
 
 		allowed = { 
@@ -1904,11 +1856,7 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_ban_media_bzns
 
 		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 2.5
-				BUL_is_fascist_axis_ai = yes
-			}
+			base = 10
 		}
 
 		allowed = { 
@@ -2013,15 +1961,7 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_ban_media_nsm
 
 		ai_will_do = {
-			base = 2.5
-			modifier = {
-				factor = 0
-				OR = {
-					BUL_is_fascist_axis_ai = yes
-					BUL_is_monarchist_ferdinand_ai = yes
-					BUL_is_democratic_liberal_ai = yes
-				}
-			}
+			base = 0
 		}
 
 		allowed = { 
@@ -2248,8 +2188,8 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_against_bzns
 
 		ai_will_do = {
-			base = 3
-		}
+			base = 10
+		} 
 
 		allowed = { 
 			original_tag = BUL
@@ -3288,11 +3228,7 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_repress_nsm
 
 		ai_will_do = {
-			base = 10
-			modifier = {
-				factor = 0
-				BUL_is_fascist_axis_ai = yes
-			}
+			base = 0
 		}
 
 		allowed = { 
@@ -3651,7 +3587,7 @@ BUL_macedonian_revolutionary_organizations = {
 		icon = GFX_decision_eng_propaganda_campaigns
 
 		ai_will_do = {
-			base = 10
+			base = 0
 		}
 
 		allowed = { 
@@ -3694,7 +3630,7 @@ BUL_macedonian_revolutionary_organizations = {
 		icon = GFX_decision_generic_police_action
 
 		ai_will_do = {
-			base = 10
+			base = 0
 		}
 
 		allowed = { 
@@ -3750,18 +3686,7 @@ BUL_macedonian_revolutionary_organizations = {
 		icon = GFX_decision_oppression
 
 		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 0
-				BUL_is_historical_ai = yes
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					has_government = communism
-					has_government = democratic
-				}
-			}
+			base = 0
 		}
 
 		allowed = { 
@@ -3871,7 +3796,7 @@ BUL_macedonian_revolutionary_organizations = {
 		icon = GFX_decision_generic_political_discourse
 
 		ai_will_do = {
-			base = 10
+			base = 100000
 		}
 
 		allowed = { 
@@ -4155,7 +4080,7 @@ BUL_macedonian_revolutionary_organizations = {
 		icon = GFX_decision_generic_prepare_civil_war
 
 		ai_will_do = {
-			base = 1
+			base = 10
 		}
 
 		allowed = { 
@@ -5825,7 +5750,7 @@ BUL_foreign_agreements = {
 		icon = generic_factory
 
 		ai_will_do = {
-			base = 10
+			base = 2000
 		}
 
 		allowed = { always = no } #Activated from effect
@@ -5921,7 +5846,7 @@ BUL_foreign_agreements = {
 		allowed = { always = no } #Activated from effect
 
 		ai_will_do = {
-			base = 10
+			base = 2000
 		}
 
 		available = {
@@ -6012,7 +5937,7 @@ BUL_foreign_agreements = {
 		icon = generic_factory
 
 		ai_will_do = {
-			base = 10
+			base = 2000
 		}
 
 		allowed = { always = no } #Activated from effect
@@ -7609,7 +7534,7 @@ BUL_military_reforms = {
 		icon = GFX_decision_generic_speech
 
 		ai_will_do = {
-			base = 0
+			base = 10
 		}
 
 		allowed = {

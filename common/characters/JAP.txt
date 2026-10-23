@@ -2346,7 +2346,7 @@ characters = {
 			}
 			cost = 200
 			ai_will_do = {
-				base = 2
+				base = 0
 			}
 		}
 

@@ -72,7 +72,7 @@ AST_civs = {
 		original_tag = AST 
 	}
 	enable = {
-		date<1938.1.1
+		date<1937.6.6
 	}
 	abort_when_not_enabled = yes 
 	ai_strategy = {
@@ -86,7 +86,7 @@ AST_mills = {
 		original_tag = AST
 	}
 	enable = {
-		date>1938.1.1
+		date>1937.6.6
 	}
 	abort_when_not_enabled = yes 
 	ai_strategy = {
@@ -106,6 +106,10 @@ AST_unit_production_early = {
 	abort_when_not_enabled = yes 
 
 	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 100
+	}
+	ai_strategy = {
 		type = build_army
 		id = garrison
 		value = 200
@@ -123,7 +127,7 @@ AST_unit_production_early = {
 	}
 }
 
-AST_unit_production_early = {
+AST_unit_production_late = {
 	allowed = {
 		original_tag = AST
 	}
@@ -132,6 +136,10 @@ AST_unit_production_early = {
 	}
 	abort_when_not_enabled = yes 
 
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 100
+	}
 	ai_strategy = {
 		type = build_army
 		id = garrison
@@ -155,23 +163,35 @@ AST_try_to_hold_africa = {
 		original_tag = AST
 	}
 	enable = {
-		date<1940.10.1
+		date<1940.10.10
 	}
 	abort_when_not_enabled = yes 
 
 	ai_strategy = {
 		type = force_defend_ally_borders
 		id = ENG
-		value = 300
+		value = 100
 	}
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = FRA
-		value = 1000
+		value = 100
 	}
 	ai_strategy = {
 		type = garrison
 		value = -100
+	}
+	ai_strategy = {
+		type = front_control
+		tag = ITA
+		tag = GER
+		area = africa						# Target a specific ai area. Can specify multiple.
+		ratio = 10					# The strategy is enabled only if ratio of the front covered by this strategy's targets is greater than this ratio.
+		priority = 100						# Default 0, higher prio strats will override lower.
+		ordertype = front					# `front` or `invasion`. If set this strategy will only apply to that specific order type.
+		execution_type = careful
+		execute_order = no					# `yes` or `no`. If set will override execute or not decision of front.
+		manual_attack = yes					# Default `yes`. If `no` AI will not do manual pokes at enemy (only for front orders).
 	}
 }
 
@@ -267,22 +287,5 @@ AST_ignore_this = {
 		type = front_unit_request
 		tag = PER
 		value = -1000
-	}
-}
-
-AST_support_spain = {
-	allowed = {
-		original_tag = AST
-	}
-	enable = {
-		country_exists = SPD
-	}
-	abort = {
-		date>1940.1.1
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "SPD"
-		value = 1000
 	}
 }

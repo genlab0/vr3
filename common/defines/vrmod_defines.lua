@@ -132,6 +132,8 @@ NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 4.9
 
 
 --NMilitary:
+NDefines.NMilitary.PLANNING_CAP_NO_HQ_SCALING = 1
+NDefines.NMilitary.PLANNING_SPEED_NO_HQ_SCALING = 1
 NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1	-- If using the 'immobile' cohesion setting, factor ALL planning speed growth by this
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1.0
 NDefines.NMilitary.ENCIRCLED_PENALTY = 0.1
@@ -252,9 +254,9 @@ NDefines.NDiplomacy.AIR_VOLUNTEER_PLANES_RATIO = 0				-- Ratio for volunteer pla
 NDefines.NDiplomacy.AIR_VOLUNTEER_BASES_CAPACITY_LIMIT = 0		-- Ratio for volunteer planes available for sending in relation to receiver air base capacity
 
 --Mio:
-NDefines.NIndustrialOrganisation.DESIGN_TEAM_RESEARCH_BONUS = 0.15						-- Research bonus for applying a Design Team that matches the technology
+NDefines.NIndustrialOrganisation.DESIGN_TEAM_RESEARCH_BONUS = 0.10						-- Research bonus for applying a Design Team that matches the technology
 NDefines.NIndustrialOrganisation.FUNDS_FROM_MANUFACTURER_PER_IC_PER_DAY = 0.1
-NDefines.NIndustrialOrganisation.FUNDS_FOR_SIZE_UP = 1000
+NDefines.NIndustrialOrganisation.FUNDS_FOR_SIZE_UP = 750
 NDefines.NIndustrialOrganisation.FUNDS_FOR_SIZE_UP_LEVEL_FACTOR = 150
 NDefines.NIndustrialOrganisation.FUNDS_FOR_SIZE_UP_LEVEL_POW = 2
 
@@ -343,3 +345,6 @@ NDefines.NAI.SUB_TASKFORCE_MAX_SHIP_COUNT = 16 				-- optimum sub count for sub 
 NDefines.NAI.MIN_CAPITALS_FOR_CARRIER_TASKFORCE = 8		-- carrier fleets will at least have this amount of capitals
 NDefines.NAI.CAPITALS_TO_CARRIER_RATIO = 2.5				-- capital to carrier count in carrier taskfoces
 NDefines.NAI.SCREENS_TO_CAPITAL_RATIO = 5.0					-- screens to capital/carrier count in carrier & capital taskforces
+NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_NAVAL_DOCTRINE = 0.1 -- how much the AI wants to use XP to upgrade naval equipment, 0 = never, 1 = always
+NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_NAVY = 5
+NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_LAND = 5

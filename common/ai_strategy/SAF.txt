@@ -1,7 +1,10 @@
 
 SAF_unit_production = {
 	allowed = {
-		original_tag = SAF
+		OR = {
+			original_tag = SAF
+        	original_tag = CAN
+		}
 	}
 	enable = {
 		always = yes
@@ -71,7 +74,10 @@ SAF_unit_production = {
 
 SAF_support_spain = {
 	allowed = {
-		original_tag = SAF
+		OR = {
+			original_tag = SAF
+        	original_tag = CAN
+		}
 	}
 	enable = {
 		country_exists = SPD
@@ -89,7 +95,10 @@ SAF_support_spain = {
 #Where to put units
 SAF_try_to_hold_africa = {
 	allowed = {
-		original_tag = SAF
+		OR = {
+			original_tag = SAF
+        	original_tag = CAN
+		}
 	}
 	enable = {
 		date>1936.1.1
@@ -122,8 +131,8 @@ SAF_try_to_hold_africa = {
 		tag = ITA
 		tag = GER
 		area = africa						# Target a specific ai area. Can specify multiple.
-		ratio = 0.9						# The strategy is enabled only if ratio of the front covered by this strategy's targets is greater than this ratio.
-		priority = 10						# Default 0, higher prio strats will override lower.
+		ratio = 10					# The strategy is enabled only if ratio of the front covered by this strategy's targets is greater than this ratio.
+		priority = 100						# Default 0, higher prio strats will override lower.
 		ordertype = front					# `front` or `invasion`. If set this strategy will only apply to that specific order type.
 		execution_type = careful
 		execute_order = no					# `yes` or `no`. If set will override execute or not decision of front.
@@ -134,7 +143,10 @@ SAF_try_to_hold_africa = {
 #Where to put units
 SAF_push_back = {
 	allowed = {
-		original_tag = SAF
+		OR = {
+			original_tag = SAF
+        	original_tag = CAN
+		}
 	}
 	enable = {
 		GER = { has_war_with = SOV }
@@ -163,7 +175,10 @@ SAF_push_back = {
 #Where to put units
 SAF_support_dday_and_husky = {
 	allowed = {
-		original_tag = SAF
+		OR = {
+			original_tag = SAF
+        	original_tag = CAN
+		}
 	}
 	enable = {
 		GER = { has_war_with = SOV }
@@ -187,7 +202,10 @@ SAF_support_dday_and_husky = {
 #Mills after April 1937
 SAF_industry_we_are_the_baddies = {
 	allowed = {
-		original_tag = SAF
+		OR = {
+			original_tag = SAF
+        	original_tag = CAN
+		}
 	}
 	enable = {
 		date > 1937.5.1
@@ -212,7 +230,10 @@ SAF_industry_we_are_the_baddies = {
 
 SAF_wants_civ = {
 	allowed = {
-		original_tag = SAF
+		OR = {
+			original_tag = SAF
+        	original_tag = CAN
+		}
 	}
 	enable = {
 		date < 1937.5.1
@@ -261,7 +282,10 @@ SAF_wants_civ = {
 
 SAF_trade_with_britain = {
 	allowed = {
-		original_tag = SAF
+		OR = {
+			original_tag = SAF
+        	original_tag = CAN
+		}
 	}
 	enable = {
 		ENG = { has_government = democratic }
@@ -277,7 +301,10 @@ SAF_trade_with_britain = {
 
 SAF_have_some_train_production = {
 	allowed = {
-		original_tag = SAF
+		OR = {
+			original_tag = SAF
+        	original_tag = CAN
+		}
 	}
 
 	enable = {
@@ -294,10 +321,13 @@ SAF_have_some_train_production = {
 
 saf_ignore_usa = {
 	allowed = {
-		original_tag = SAF 
+		OR = {
+			original_tag = SAF
+        	original_tag = CAN
+		}
 	}
 	enable = {
-		original_tag = SAF
+		always = yes
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
