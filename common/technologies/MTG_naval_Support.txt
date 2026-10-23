@@ -772,6 +772,10 @@ technologies = {
 				factor = 20
 			}
 			modifier = {
+				has_tech = improved_ship_hull_heavy
+				factor = 500
+			}
+			modifier = {
 				is_major = no 
 				factor = 0 
 			}
@@ -823,6 +827,10 @@ technologies = {
 					tag = JAP
 				}
 				factor = 20
+			}
+			modifier = {
+				has_tech = advanced_ship_hull_heavy
+				factor = 500
 			}
 			modifier = {
 				is_major = no 
@@ -1574,10 +1582,6 @@ technologies = {
 					date>1939.1.1 
 				}
 				add = 100
-			}
-			modifier = {
-				is_major = no 
-				factor = 0 
 			}
 		}
 

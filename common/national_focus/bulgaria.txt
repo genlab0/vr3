@@ -2210,6 +2210,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = BUL_guardians_of_the_balkans
+			GER = { add_to_faction = BUL}
 		}
 	}
 

@@ -13,6 +13,64 @@ japan_historical = {
 	}
 
 	ai_national_focuses = {
+		JAP_intervene_in_china
+		
+		JAP_new_naval_estimates
+		JAP_carrier_warfare_experiments
+		JAP_naval_air_focus
+		JAP_fighter_focus
+		JAP_purge_the_kodoha_faction	#210
+		JAP_guide_the_zaibatsus			
+		JAP_industrialize_the_north		
+		JAP_industrialize_the_east
+		JAP_industrialize_the_center	#350
+
+		JAP_industrialize_the_west
+		JAP_industrialize_the_south
+		JAP_setting_course
+		JAP_accelerate_rearmament
+		JAP_mobilise_society
+		JAP_light_battleships	#210
+		JAP_heavy_cruiser_shipyards
+		JAP_army_expansion_law	#280
+		JAP_supremacy_of_will
+		JAP_advance_infantry_combat_techniques #350
+
+		JAP_infantry_equipment
+		JAP_focus_on_attack
+		JAP_artillery_equipment
+		JAP_food_stamps	#140
+		JAP_liaison_conference
+		JAP_greater_east_asian_co_prosperity_sphere #210
+		 #280
+		JAP_lessons_from_china
+		JAP_develop_chinese_resources #350
+
+		JAP_national_defense_state
+		JAP_issue_bonds
+		JAP_lunge_mines	#140
+		JAP_supremacy_of_the_battlefleet
+		JAP_the_ultimate_battleship
+		JAP_convoy_escort_focus		#210
+		JAP_convoy_sailing
+		JAP_expand_the_snlf #280 
+		JAP_cruiser_subs
+		JAP_night_fighting	#350 
+
+		JAP_strike_south_doctrine
+		JAP_exploit_the_southern_resource_area
+
+		JAP_chi_supply
+		JAP_taiwan_colony	#70 
+		JAP_spiritual_mobilization
+		JAP_deploy_veterans	#140
+		JAP_radar_focus
+		JAP_sonar_focus
+
+
+
+
+
 
 	}
 

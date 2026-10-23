@@ -11,190 +11,54 @@
 #   #  #  ##   #  ###  ##  #  #     ##  #    ###  ##  ### #   ###  ##  
 
 ######################################################################
-
-
- ##  #   # ###  ## 
-#  #  # #   #  #   
-####   #    #   #  
-#  #  # #   #    # 
-#  # #   # ### ##  
-
-
-faction_goal_resource_control = {
-	name = resource_control_goal_name
-	description = resource_control_goal_desc
+faction_goal_industrial_domination = {
+	name = industrial_domination_goal_name
+	description = industrial_domination_goal_desc
 	category = long_term
-	group = resources_to_market_icon
+	group = FOCUS_FILTER_INDUSTRY
 	visible = {
-
-	}
-	available = {
-		
-	}
-	completed = {
-		has_resources_in_collection = {
+		count_in_collection = {
 			collection = {
-					input = game:scope
-					operators =  { faction_members }
-					name = FACTION
-			}
-			resource = oil
-			amount > 499
-			extracted = yes # (optional, default: no) checks extracted amount instead of country balance
-		}
-		has_resources_in_collection = {
-			collection = {
-					input = game:scope
-					operators =  { faction_members }
-					name = FACTION
-			}
-			resource = rubber
-			amount > 199
-			extracted = yes # (optional, default: no) checks extracted amount instead of country balance
-		}
-		has_resources_in_collection = {
-			collection = {
-					input = game:scope
-					operators =  { faction_members }
-					name = FACTION
-			}
-			resource = aluminium
-			amount > 199
-			extracted = yes # (optional, default: no) checks extracted amount instead of country balance
-		}
-		has_resources_in_collection = {
-			collection = {
-					input = game:scope
-					operators =  { faction_members }
-					name = FACTION
-			}
-			resource = chromium
-			amount > 199
-			extracted = yes # (optional, default: no) checks extracted amount instead of country balance
-		}
-		has_resources_in_collection = {
-			collection = {
-					input = game:scope
-					operators =  { faction_members }
-					name = FACTION
-			}
-			resource = tungsten
-			amount > 199
-			extracted = yes # (optional, default: no) checks extracted amount instead of country balance
-		}
-	
-
-	}
-	complete_effect = {
-		add_faction_power_projection = 500
-		custom_effect_tooltip = generic_skip_one_line_tt
-		custom_effect_tooltip = THE_FACTION_LEADER
-		add_faction_initiative = 1
-		custom_effect_tooltip = generic_skip_one_line_tt
-		every_faction_member = { 
-			tooltip = INFLUENCE_TOP_THREE
-			visible_when_empty = yes
-			limit = {
-				faction_influence_rank < 4
-			}
-			add_political_power = 100
-		}
-	}
-	ai_will_do = {
-		base = 1
-	}
-}
-
-
-#  #  ##  ##  
-#  # #   #  # 
-#  #  #  #### 
-#  #   # #  # 
- ##  ##  #  # 
-
-
-faction_goal_contain_japanese_expansion_asia = {
-	name = contain_japanese_expansion_asia_goal_name
-	description = contain_japanese_expansion_asia_goal_desc
-	category = long_term
-	group = FOCUS_FILTER_ANNEXATION
-	allowed = {
-		
-	}
-	visible = {
-		FROM = {
-			original_tag = USA
-			has_country_flag = USA_unlock_contain_japanese_goal
-		}
-		date > 1940.1.1
-		collection_size = {
-			input = {
-				input = collection:country_and_all_subjects_controlled_non_core_states
-				name = COLLECTION_OCCUPIED_STATES_BY_JAPAN_OR_FACTION_MEMBERS
-			}
-			value > 29
-		}
-	}
-	completed = {
-		JAP = {
-			IF = {
-				limit = {
-					is_in_faction = no
-				}
-				collection_size = {
-					input = {
-						input = collection:country_and_all_subjects_controlled_non_core_states
-						name = COLLECTION_OCCUPIED_STATES_BY_JAPAN_OR_FACTION_MEMBERS
-					}
-					value < 20
-				}
-			}
-			ELSE = {
-				collection_size = {
-					input = {
-						input = collection:faction_controlled_non_core_states
-						name = COLLECTION_OCCUPIED_STATES_BY_JAPAN_OR_FACTION_MEMBERS
-					}
-					value < 20
-				}
-			}
-		}		
-	}
-	complete_effect = {
-		add_faction_power_projection = 100
-		every_collection_element = {
-			input = {
 				input = game:scope
-				operators =  { 
-					faction_members 
-					limit = {
-						faction_influence_ratio > 0.3
-					}
-				}
-				
-				name = INFLUENCE_ABOVE_30_PERCENT
+				operators = { faction_members }
+				name = FACTION_NAME
 			}
-			custom_effect_tooltip = INFLUENCE_ABOVE_30_PERCENT
+			buildings = { industrial_complex arms_factory dockyard }
+			size > 100
+		}
+	}
+	completed = {
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION_NAME
+			}
+			buildings = {  industrial_complex arms_factory dockyard }
+			size > 1000
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 200
+		custom_effect_tooltip = generic_skip_one_line_tt
+		every_faction_member = {
+			tooltip = AT_LEAST_500_FACTORIES
+			visible_when_empty = yes 
+			limit = {
+				num_of_controlled_factories > 500
+			}
 			add_faction_initiative = 1
 		}
 	}
 	ai_will_do = {
-		base = 0
+		base = 1
 		modifier = {
-			add = 1 # Start considering it when Japan is growing a lot
-			collection_size = {
-				input = {
-					input = collection:country_and_all_subjects_controlled_non_core_states
-					name = COLLECTION_OCCUPIED_STATES_BY_JAPAN_OR_FACTION_MEMBERS
-				}
-				value > 49
-			}
+			add = 1 # If already big it's easy to grow
+			is_major = yes
 		}
 		modifier = {
-			add = 10 # Really do it when at war
-			any_enemy_country = {
-				original_tag = JAP
-			}
+			add = 1 # If we are already on the way
+			num_of_controlled_factories > 200
 		}
 	}
 }

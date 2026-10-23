@@ -7423,6 +7423,11 @@ country_event = {
 
 	option = { #Urban
 		name =  bftb_bulgaria_army_reforms.1.a
+
+		ai_chance = {
+			base = 10
+		}
+
 		if = {
 			limit = { has_country_flag = BUL_georgi_popov_available }
 			BUL_georgi_popov = {
@@ -7455,6 +7460,12 @@ country_event = {
 	}
 	option = { #Winter
 		name =  bftb_bulgaria_army_reforms.1.b
+
+		ai_chance = {
+			base = 0
+		}
+
+
 		if = {
 			limit = { has_country_flag = BUL_georgi_popov_available }
 			BUL_georgi_popov = {
@@ -7487,6 +7498,12 @@ country_event = {
 	}
 	option = { #Forts
 		name =  bftb_bulgaria_army_reforms.1.c
+
+		ai_chance = {
+			base = 10
+		}
+
+		
 		if = {
 			limit = { has_country_flag = BUL_georgi_popov_available }
 			BUL_georgi_popov = {
@@ -7532,6 +7549,11 @@ country_event = {
 		name =  bftb_bulgaria_army_reforms.2.a
 		set_country_flag = BUL_georgi_popov_available
 		show_unit_leaders_tooltip = BUL_georgi_popov
+
+		ai_chance = {
+			base = 0
+		}
+
 		hidden_effect = {
 			country_event = {
 				id = bftb_bulgaria_army_reforms.1
@@ -7543,6 +7565,11 @@ country_event = {
 		name =  bftb_bulgaria_army_reforms.2.b
 		set_country_flag = BUL_angel_dotsev_available
 		show_unit_leaders_tooltip = BUL_angel_dotsev
+
+		ai_chance = {
+			base = 0
+		}
+
 		hidden_effect = {
 			country_event = {
 				id = bftb_bulgaria_army_reforms.1
@@ -7554,6 +7581,11 @@ country_event = {
 		name =  bftb_bulgaria_army_reforms.2.c
 		set_country_flag = BUL_asen_nikolov_available
 		show_unit_leaders_tooltip = BUL_asen_nikolov
+
+		ai_chance = {
+			base = 10
+		}
+
 		hidden_effect = {
 			country_event = {
 				id = bftb_bulgaria_army_reforms.1
@@ -7574,10 +7606,20 @@ country_event = {
 
 	option = { #Offensive
 		name =  bftb_bulgaria_army_reforms.3.a
+
+		ai_chance = {
+			base = 0
+		}
+
 		add_ideas = BUL_offensive_idea
 	}
 	option = { #Defensive
 		name =  bftb_bulgaria_army_reforms.3.b
+
+		ai_chance = {
+			base = 10
+		}
+
 		add_ideas = BUL_defensive_idea
 	}
 }

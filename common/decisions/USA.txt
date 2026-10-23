@@ -1272,6 +1272,9 @@ USA_economic_decisions = {
 		is_good = yes 
 		fire_only_once = yes
 		days_remove = 180
+		ai_will_do = {
+			base = 10
+		}
 		highlight_states = {
 			highlight_states_trigger = {
 				state = 379
@@ -1311,6 +1314,9 @@ USA_economic_decisions = {
 		is_good = yes 
 		fire_only_once = yes
 		days_remove = 180
+		ai_will_do = {
+			base = 10
+		}
 		modifier = {
 			civilian_factory_use = 8
 		}
@@ -1343,6 +1349,9 @@ USA_economic_decisions = {
 		is_good = yes 
 		fire_only_once = yes
 		days_remove = 180
+		ai_will_do = {
+			base = 10
+		}
 		modifier = {
 			civilian_factory_use = 8
 		}
@@ -1375,6 +1384,9 @@ USA_economic_decisions = {
 		is_good = yes 
 		fire_only_once = yes
 		days_remove = 180
+		ai_will_do = {
+			base = 10
+		}
 		modifier = {
 			civilian_factory_use = 10
 		}
@@ -1412,6 +1424,9 @@ USA_economic_decisions = {
 		is_good = yes 
 		fire_only_once = yes
 		days_remove = 180
+		ai_will_do = {
+			base = 10
+		}
 		modifier = {
 			civilian_factory_use = 10
 		}
@@ -1444,6 +1459,9 @@ USA_economic_decisions = {
 		available = {
 			has_completed_focus = USA_rural_electrification_administration 
 			num_of_civilian_factories_available_for_projects > 7
+		}
+		ai_will_do = {
+			base = 10
 		}
 		highlight_states = {
 			highlight_states_trigger = {
@@ -1480,6 +1498,9 @@ USA_economic_decisions = {
 			has_completed_focus = USA_rural_electrification_administration 
 			num_of_civilian_factories_available_for_projects > 11
 		}
+		ai_will_do = {
+			base = 10
+		}
 		highlight_states = {
 			highlight_states_trigger = {
 				state = 375
@@ -1512,6 +1533,9 @@ USA_economic_decisions = {
 		available = {
 			has_completed_focus = USA_rural_electrification_administration 
 			num_of_civilian_factories_available_for_projects > 5
+		}
+		ai_will_do = {
+			base = 10
 		}
 		icon = generic_electricity 
 		is_good = yes 
@@ -1551,6 +1575,9 @@ USA_economic_decisions = {
 				state = 386
 			}
     	}
+		ai_will_do = {
+			base = 10
+		}
 		icon = generic_electricity 
 		is_good = yes 
 		fire_only_once = yes
@@ -1584,6 +1611,9 @@ USA_economic_decisions = {
 				state = 358
 			}
     	}
+		ai_will_do = {
+			base = 10
+		}
 		icon = generic_electricity 
 		is_good = yes 
 		fire_only_once = yes
@@ -1617,6 +1647,9 @@ USA_economic_decisions = {
 				state = 357
 			}
     	}
+		ai_will_do = {
+			base = 10
+		}
 		icon = generic_electricity 
 		is_good = yes 
 		fire_only_once = yes
@@ -1650,6 +1683,9 @@ USA_economic_decisions = {
 				state = 261
 			}
     	}
+		ai_will_do = {
+			base = 10
+		}
 		icon = generic_electricity 
 		is_good = yes 
 		fire_only_once = yes
@@ -1684,6 +1720,9 @@ USA_economic_decisions = {
 		days_remove = 180
 		modifier = {
 			civilian_factory_use = 10
+		}
+		ai_will_do = {
+			base = 10
 		}
 		highlight_states = {
 			highlight_states_trigger = {

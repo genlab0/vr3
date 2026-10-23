@@ -148,7 +148,12 @@ technologies = {
 				factor = 2
 				date > "1938.1.9"
 			}
-
+			
+			modifier = {
+				factor = 2
+				tag = USA
+			}
+			
 			modifier = {
 				factor = 2
 				date > "1939.1.1"
@@ -213,6 +218,11 @@ technologies = {
 			modifier = {
 				factor = 5
 				date > "1942.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				tag = USA
 			}
 		}
 	}
@@ -406,8 +416,8 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 2
-				tag = SOV
+				factor = 35
+				tag = USA
 			}
 		}
 
@@ -450,8 +460,8 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 2
-				tag = SOV
+				factor = 35
+				tag = USA
 			}
 		}
 
@@ -494,8 +504,8 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 2
-				tag = SOV
+				factor = 35
+				tag = USA
 			}
 		}
 
@@ -526,8 +536,8 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 2
-				tag = SOV
+				factor = 35
+				tag = USA
 			}
 		}
 

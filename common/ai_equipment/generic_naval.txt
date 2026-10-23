@@ -6,7 +6,6 @@ destroyers = {
 	blocked_for = {
 		WST
 		ENG
-		USA
 	}
 	
 	available_for = {
@@ -21,6 +20,7 @@ destroyers = {
 		HUN 
 		SPR 
 		FRA
+		USA
 	}
 	
 	roles = {
@@ -80,7 +80,6 @@ generic_escorts = {
 	blocked_for = {
 		WST
 		ENG
-		USA
 	}
 	
 	available_for = {
@@ -95,6 +94,7 @@ generic_escorts = {
 		HUN 
 		SPR 
 		FRA
+		USA
 	}
 	
 	roles = {
@@ -127,7 +127,7 @@ generic_escorts = {
 			type = ship_hull_light_1
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_1
-				fixed_ship_anti_air_slot = ship_light_anti_air
+				fixed_ship_anti_air_slot = ship_anti_air_1
 				fixed_ship_fire_control_system_slot = empty
 				fixed_ship_radar_slot = ship_sonar
 				fixed_ship_engine_slot = light_ship_engine_1
@@ -173,7 +173,7 @@ generic_escorts = {
 			type = ship_hull_light_1
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_1
-				fixed_ship_anti_air_slot = ship_light_anti_air
+				fixed_ship_anti_air_slot = ship_anti_air_1
 				fixed_ship_fire_control_system_slot = ship_radar
 				fixed_ship_radar_slot = ship_sonar
 				fixed_ship_engine_slot = light_ship_engine_1
@@ -202,7 +202,6 @@ naval_light_cruiser = {
 	blocked_for = {
 		WST
 		ENG
-		USA
 	}
 	
 	available_for = {
@@ -217,6 +216,7 @@ naval_light_cruiser = {
 		HUN 
 		SPR 
 		FRA
+		USA
 	}
 	
 	roles = {
@@ -294,7 +294,7 @@ naval_light_cruiser = {
 			type = ship_hull_cruiser_2
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_2
-				fixed_ship_anti_air_slot = ship_light_anti_air
+				fixed_ship_anti_air_slot = ship_anti_air_1
 				fixed_ship_engine_slot = cruiser_ship_engine
 				fixed_ship_fire_control_system_slot = ship_fire_control_system
 				fixed_ship_armor_slot = ship_cruiser_armor
@@ -339,10 +339,10 @@ naval_light_cruiser = {
 		target_variant = {
 			match_value = 1500.0
 			
-			type = ship_hull_cruiser
+			type = ship_hull_cruiser_3
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery
-				fixed_ship_anti_air_slot = ship_light_anti_air
+				fixed_ship_anti_air_slot = ship_anti_air_1
 				fixed_ship_engine_slot = cruiser_ship_engine
 				fixed_ship_fire_control_system_slot = ship_fire_control_system
 				fixed_ship_armor_slot = ship_cruiser_armor
@@ -388,10 +388,10 @@ naval_light_cruiser = {
 		target_variant = {
 			match_value = 1750.0
 			
-			type = ship_hull_cruiser
+			type = ship_hull_cruiser_4
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery
-				fixed_ship_anti_air_slot = ship_light_anti_air
+				fixed_ship_anti_air_slot = ship_anti_air_1
 				fixed_ship_engine_slot = cruiser_ship_engine
 				fixed_ship_fire_control_system_slot = { 
 					any_of = { ship_fire_control_system ship_radar } 
@@ -433,7 +433,6 @@ naval_cruiser_heavy = {
 	blocked_for = {
 		WST
 		ENG
-		USA
 	}
 	
 	available_for = {
@@ -448,6 +447,7 @@ naval_cruiser_heavy = {
 		HUN 
 		SPR 
 		FRA
+		USA
 	}
 	
 	roles = {
@@ -628,13 +628,12 @@ naval_capital_battleship = {
 	blocked_for = {
 		WST
 		ENG
-		USA
+		ITA
 	}
 	
 	available_for = {
 		JAP 
 		GER 
-		ITA 
 		SAF 
 		AST 
 		AUS 
@@ -643,6 +642,7 @@ naval_capital_battleship = {
 		HUN 
 		SPR 
 		FRA
+		USA
 	}
 	
 	roles = {
@@ -696,48 +696,6 @@ naval_capital_battleship = {
 			ship_airplane_launcher
 		}
 	}
-	capital_battleship_early_aa_upgrade = {
-	
-		priority = {
-			factor = 100
-			modifier = {
-				factor = 100
-				has_war = yes
-			}
-		}
-
-		role_icon_index = 1
-		
-		target_variant = {
-			match_value = 1250.0
-			
-			type = ship_hull_heavy_1
-			modules = {
-				fixed_ship_battery_slot = ship_heavy_battery_1
-				fixed_ship_fire_control_system_slot = ship_fire_control_system
-				fixed_ship_engine_slot = heavy_ship_engine_1
-				fixed_ship_armor_slot = ship_heavy_armor
-				fixed_ship_secondaries_slot = ship_secondaries
-				front_1_custom_slot = ship_anti_air
-				mid_1_custom_slot = { 
-					any_of = { ship_secondaries ship_anti_air ship_airplane_launcher }
-					upgrade > current
-				}
-				mid_2_custom_slot = ship_anti_air
-				rear_1_custom_slot = ship_heavy_battery_1
-			}
-		}
-		
-		allowed_modules = {
-			ship_anti_air
-			ship_heavy_battery
-			ship_radar
-			ship_fire_control_system
-			ship_heavy_armor
-			ship_secondaries
-			ship_airplane_launcher
-		}
-	}
 
 	capital_battleship_basic = {
 	
@@ -764,46 +722,6 @@ naval_capital_battleship = {
 				front_1_custom_slot = empty
 				mid_1_custom_slot = ship_secondaries
 				mid_2_custom_slot = ship_anti_air
-				rear_1_custom_slot = ship_heavy_battery
-			}
-		}
-		
-		allowed_modules = {
-			ship_anti_air
-			ship_heavy_battery
-			ship_radar
-			ship_fire_control_system
-			ship_heavy_armor
-			ship_secondaries
-			ship_airplane_launcher
-		}
-	}
-
-	capital_battleship_basic_aa_upgrade = {
-	
-		priority = {
-			factor = 100
-			modifier = {
-				factor = 100
-				has_war = yes
-			}
-		}
-		
-		role_icon_index = 1
-
-		target_variant = {
-			match_value = 1750.0
-			
-			type = ship_hull_heavy_2
-			modules = {
-				fixed_ship_battery_slot = ship_heavy_battery
-				fixed_ship_fire_control_system_slot = ship_fire_control_system
-				fixed_ship_engine_slot = heavy_ship_engine
-				fixed_ship_armor_slot = ship_heavy_armor
-				fixed_ship_secondaries_slot = ship_secondaries
-				front_1_custom_slot = ship_heavy_battery
-				mid_1_custom_slot = ship_secondaries
-				mid_2_custom_slot = ship_secondaries
 				rear_1_custom_slot = ship_heavy_battery
 			}
 		}
@@ -868,7 +786,7 @@ naval_capital_battleship = {
 		role_icon_index = 1
 		
 		target_variant = {
-			match_value = 2250.0
+			match_value = 1500
 			
 			type = ship_hull_heavy_3
 			modules = {
@@ -905,7 +823,6 @@ naval_capital_bc = {
 	blocked_for = {
 		WST
 		ENG
-		USA
 	}
 	
 	available_for = {
@@ -920,6 +837,7 @@ naval_capital_bc = {
 		HUN 
 		SPR 
 		FRA
+		USA
 	}
 	
 	roles = {
@@ -965,57 +883,10 @@ naval_capital_bc = {
 			ship_heavy_armor
 		}
 	}
-	battlecruiser_early_aa_upgrade = {
-	
-		priority = {
-			factor = 1
-			modifier = {
-				factor = 100
-				has_war = yes
-				has_navy_size = {
-					unit = battle_cruiser 
-					size > 0 # at least one BC built
-				}
-			}
-		}
-
-		role_icon_index = 1
-		
-		target_variant = {
-			match_value = 1250.0
-			
-			type = ship_hull_heavy_1
-			modules = {
-				fixed_ship_battery_slot = ship_heavy_battery_1
-				fixed_ship_fire_control_system_slot = ship_fire_control_system
-				fixed_ship_engine_slot = heavy_ship_engine_1
-				fixed_ship_armor_slot = ship_armor_bc_1
-				fixed_ship_secondaries_slot = ship_secondaries
-				front_1_custom_slot = ship_anti_air
-				mid_1_custom_slot = ship_secondaries
-				mid_2_custom_slot = ship_anti_air
-				rear_1_custom_slot = ship_heavy_battery_1
-			}
-		}
-		
-		allowed_modules = {
-			ship_anti_air
-			ship_secondaries
-			ship_airplane_launcher
-			ship_heavy_battery
-			ship_radar
-			ship_fire_control_system
-			ship_heavy_armor
-		}
-	}
 	battlecruiser_improved = {
 	
 		priority = {
-			factor = 1
-			modifier = {
-				factor = 0
-				is_major = yes #we don't deal with such nonsense
-			}
+			factor = 2
 		}
 
 		role_icon_index = 1
@@ -1026,13 +897,16 @@ naval_capital_bc = {
 			type = ship_hull_heavy
 			modules = {
 				fixed_ship_battery_slot > ship_heavy_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_1
 				fixed_ship_fire_control_system_slot = ship_fire_control_system
+				fixed_ship_radar_slot = ship_radar
 				fixed_ship_engine_slot > heavy_ship_engine_1
 				fixed_ship_armor_slot > ship_armor_bc_1
-				fixed_ship_secondaries_slot = ship_secondaries
-				front_1_custom_slot = ship_anti_air
-				mid_1_custom_slot = ship_secondaries
-				mid_2_custom_slot = ship_anti_air
+				fixed_ship_secondaries_slot = ship_dp_secondaries
+				front_1_custom_slot = ship_anti_air 
+				mid_1_custom_slot = ship_dp_secondaries
+				mid_2_custom_slot = ship_dp_secondaries
+				mid_3_custom_slot = ship_dp_secondaries
 				rear_1_custom_slot = ship_airplane_launcher
 			}
 		}
@@ -1055,7 +929,6 @@ naval_carrier = {
 	blocked_for = {
 		WST
 		ENG
-		USA
 	}
 	
 	available_for = {
@@ -1070,6 +943,7 @@ naval_carrier = {
 		HUN 
 		SPR 
 		FRA
+		USA
 	}
 	
 	roles = {
@@ -1107,7 +981,7 @@ naval_carrier = {
 			modules = {
 				fixed_ship_deck_slot_1 = ship_deck_space
 				fixed_ship_deck_slot_2 = ship_deck_space
-				fixed_ship_anti_air_slot = ship_light_anti_air
+				fixed_ship_anti_air_slot = ship_anti_air_1
 				fixed_ship_engine_slot = carrier_ship_engine_1
 				fixed_ship_secondaries_slot = empty
 				front_1_custom_slot = ship_deck_space
@@ -1146,7 +1020,7 @@ naval_carrier = {
 			modules = {
 				fixed_ship_deck_slot_1 = ship_deck_space
 				fixed_ship_deck_slot_2 = ship_deck_space
-				fixed_ship_anti_air_slot = ship_light_anti_air
+				fixed_ship_anti_air_slot = ship_anti_air_1
 				fixed_ship_engine_slot = carrier_ship_engine
 				fixed_ship_secondaries_slot > empty
 				front_1_custom_slot = ship_deck_space
@@ -1184,7 +1058,7 @@ naval_carrier = {
 			modules = {
 				fixed_ship_deck_slot_1 = ship_deck_space
 				fixed_ship_deck_slot_2 = ship_deck_space
-				fixed_ship_anti_air_slot = ship_light_anti_air
+				fixed_ship_anti_air_slot = ship_anti_air_1
 				fixed_ship_engine_slot = carrier_ship_engine
 				fixed_ship_secondaries_slot = ship_secondaries
 				front_1_custom_slot = ship_deck_space
@@ -1226,6 +1100,7 @@ naval_submarine = {
 		HUN 
 		SPR 
 		FRA
+		USA
 	}
 	
 	roles = {

@@ -143,11 +143,6 @@ garrison_generic = {
 	
 	upgrade_prio = {
 		factor = 80
-
-		modifier = {
-			factor = 0
-			ai_has_role_template = garrison
-		}
 	}
 	
 
@@ -157,26 +152,18 @@ garrison_generic = {
 		custom_icon = 7
 	
 		upgrade_prio = {
-			factor = 2
-
-			modifier = {
-				factor = 1
-			}
-		}
-		
-
-		
+			factor = 4
+		}		
 		target_template = {
 			
 			support = { 
 				engineer = 1
 				artillery = 1
 				anti_air = 1
-				anti_tank = 1
 			}
 			
 			regiments = {
-				infantry = 20
+				infantry = 10
 			}
 		}
 	}
@@ -240,6 +227,11 @@ suppression_generic = {
 
 infantry_generic = {
 
+	blocked_for = {
+		GER
+		JAP
+	}
+
 	role = infantry
 	
 	upgrade_prio = {
@@ -285,6 +277,12 @@ mountaineers_generic = {
 
 	role = mountaineers
 	
+	blocked_for = {
+		GER
+		JAP
+		FRA
+	}
+
 	upgrade_prio = {
 		factor = 2
 
@@ -327,6 +325,12 @@ mountaineers_generic = {
 }
 
 marines_generic = {
+
+	blocked_for = {
+		GER
+		JAP
+		USA
+	}
 
 	role = marines
 	
@@ -378,13 +382,6 @@ rangers_generic = {
 	
 	upgrade_prio = {
 		factor = 2
-
-		modifier = {
-			factor = 0
-			NOT = {
-				has_tech = tech_rangers
-			}
-		}
 	}
 	
 

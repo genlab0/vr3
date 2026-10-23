@@ -28,6 +28,13 @@ FRA_legitimacy_power_balance = {
 
 		ai_will_do = {
 			base = 0
+			modifier = {
+				add = 5
+				power_balance_value = {
+					id = FRA_legitimacy_power_balance
+					value > 0.9
+				}
+			}
 		}
 	}
 
@@ -58,6 +65,10 @@ FRA_legitimacy_power_balance = {
 
 		ai_will_do = {
 			base = 0
+			modifier = {
+				add = 50
+				date<1941.1.1
+			}
 		}
 	}
 	FRA_seek_us_support = {
@@ -94,7 +105,7 @@ FRA_legitimacy_power_balance = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 100
 		}
 	}
 
@@ -122,6 +133,16 @@ FRA_legitimacy_power_balance = {
 
 		ai_will_do = {
 			base = 0
+			modifier = {
+				add = 5
+				AND = {
+					has_manpower < 150000
+					power_balance_value = {
+						id = FRA_legitimacy_power_balance
+						value > 0.9
+					}
+				}
+			}
 		}
 	}
 

@@ -61,7 +61,7 @@ if = {
 		disarmed_nation
 		HUN_treaty_of_triannon
 		spain_volunteers
-		SOV_collectivized_society
+		free_trade
 		low_economic_mobilisation
 	}
 }

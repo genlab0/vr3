@@ -121,6 +121,17 @@ RAJ_unit_production = {
 		id = armor
 		value = -10000
 	}
+
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 300
+	}
+
+	ai_strategy = {
+		type = force_build_armies
+		value = 100
+	}
 }
 
 RAJ_try_to_hold_africa = {
@@ -138,18 +149,25 @@ RAJ_try_to_hold_africa = {
 		value = 300
 	}
 	ai_strategy = {
-		type = front_control
-		tag = ITA
-		tag = GER
-		area = north_africa
-		priority = 100
-		ratio = 0.5
-		ordertype = front 
+		type = garrison
+		value = -1000
 	}
 	ai_strategy = {
 		type = area_priority
 		id = africa
 		value = 100
+	}
+	ai_strategy = {
+		type = front_control
+		tag = ITA
+		tag = GER
+		area = africa						# Target a specific ai area. Can specify multiple.
+		ratio = 10					# The strategy is enabled only if ratio of the front covered by this strategy's targets is greater than this ratio.
+		priority = 100						# Default 0, higher prio strats will override lower.
+		ordertype = front					# `front` or `invasion`. If set this strategy will only apply to that specific order type.
+		execution_type = careful
+		execute_order = no					# `yes` or `no`. If set will override execute or not decision of front.
+		manual_attack = yes					# Default `yes`. If `no` AI will not do manual pokes at enemy (only for front orders).
 	}
 }
 

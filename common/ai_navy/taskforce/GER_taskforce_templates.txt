@@ -123,7 +123,7 @@ GER_ConvoyRaiding_1 = {
 
 	optimal_composition = {
 		submarine = {
-			amount = 12
+			amount = 8
 		}
 	}
 }
@@ -137,14 +137,14 @@ GER_ConvoySurfaceRaiding_1 = {
 	}	
 	mission = { convoy_raiding}
 	min_composition = {
-		battle_cruiser = {
+		heavy_cruiser = {
 			amount = 1
 		}
 	}
 
 	optimal_composition = {
-		battle_cruiser = {
-			amount = 2
+		heavy_cruiser = {
+			amount = 1
 		}
 	}
 }
@@ -166,34 +166,6 @@ GER_ConvoyEscort_1 = {
 	optimal_composition = {
 		destroyer = {
 			amount = 10
-		}
-	}
-}
-
-GER_MineLaying_1 = {
-	allowed = {
-		original_tag = GER
-	}
-	ai_will_do = {
-		factor = 1
-	}	
-	mission = { mines_planting }
-	min_composition = {
-		destroyer = {
-			amount = 1
-			role = 4
-		}
-	}
-	
-	optimal_composition = {
-		destroyer = {
-			amount = 4
-			role = 4
-		}
-		
-		light_cruiser = {
-			amount = 1
-			role = 4
 		}
 	}
 }

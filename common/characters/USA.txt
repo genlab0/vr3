@@ -154,7 +154,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 10
 			}
 		}
 		
@@ -229,7 +229,7 @@ characters={
 				}
 				cost = 100
 				ai_will_do = {
-					factor = 1.000
+					factor = 3
 				}
 		}
 		
@@ -541,7 +541,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 3
 			}
 		}
 		
@@ -1057,7 +1057,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 0
 			}
 		}
 	}
@@ -1090,7 +1090,7 @@ characters={
 			}
 			cost = 200
 			ai_will_do = {
-				factor = 1.000
+				factor = 0
 			}
 		}
 	}
@@ -1113,7 +1113,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 5
 			}
 		}
 	}
@@ -1136,7 +1136,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 0
 			}
 		}
 	}
@@ -1306,6 +1306,9 @@ characters={
 			traits  = {
 				silent_workhorse 
 			}
+			ai_will_do  = {
+				factor  = 1000
+			}
 		}
 	}
 
@@ -1362,6 +1365,9 @@ characters={
 			}
 			traits  = {
 				financial_expert 
+			}
+			ai_will_do  = {
+				factor  = 100
 			}
 		}
 	}

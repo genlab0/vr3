@@ -99,7 +99,7 @@ MTG_naval_treaties = {
 			}
 			modifier = {
 				tag = JAP  
-				factor = 20
+				factor = 2000
 			}
 		}
 	
