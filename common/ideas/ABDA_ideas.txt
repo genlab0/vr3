@@ -1,0 +1,10 @@
+ideas = {
+	country = {
+		ABDA_maintain_strategic_flexibility_spirit = {
+			picture = generic_navy
+			allowed = { original_tag = USA }
+			removal_cost = -1
+			modifier = { naval_speed_factor = 0.05 }
+		}
+	}
+}

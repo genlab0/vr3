@@ -1,0 +1,5 @@
+ABDA_command_category = {
+	icon = generic_naval
+	allowed = { OR = { original_tag = AST original_tag = ENG original_tag = USA original_tag = HOL } }
+	visible = { any_country = { has_country_flag = abdacom_member } }
+}

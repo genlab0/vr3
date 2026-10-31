@@ -49,6 +49,11 @@ technologies = {
 			universal_radios
 			signal_flags
 			commander_radio
+			stabilizer
+			smoke_launchers
+			extra_ammo_storage
+			armor_skirts
+			auto_loader
 			
 		}
 		enable_subunits = {
