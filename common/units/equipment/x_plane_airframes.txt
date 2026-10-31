@@ -988,7 +988,7 @@ equipments = {
 			naval_patrol
 		}
 
-		air_range = 680
+		air_range = 1100
 		maximum_speed =	207
 		air_agility = 30
 		air_attack = 6
@@ -1025,7 +1025,7 @@ equipments = {
 		carrier_capable = yes
 		priority = 70
 
-		air_range = 744
+		air_range = 1300
 		maximum_speed =	270
 		air_agility = 35
 		air_attack = 10
@@ -1055,7 +1055,7 @@ equipments = {
 		carrier_capable = yes
 		priority = 70
 
-		air_range = 880
+		air_range = 1650
 		maximum_speed =	360
 		air_agility = 40
 		air_attack = 14

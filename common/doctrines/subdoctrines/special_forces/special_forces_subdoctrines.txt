@@ -480,7 +480,7 @@ paratroopers_1 = {
 		reward_1 = {
 
 			category_paratroopers = {
-				max_organisation = 10
+				max_organisation = 5
 			}
 
 			paratrooper = {

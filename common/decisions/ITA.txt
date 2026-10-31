@@ -1467,7 +1467,7 @@ political_actions = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 10
 		}
 	}
 
@@ -1507,7 +1507,7 @@ political_actions = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 10
 		}
 	}
 	ITA_transfer_state_106 = {
@@ -1546,7 +1546,7 @@ political_actions = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 10
 		}
 	}
 	ITA_transfer_state_803 = {
@@ -1585,7 +1585,7 @@ political_actions = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 10
 		}
 	}
 	ITA_transfer_state_802 = {
@@ -1624,7 +1624,7 @@ political_actions = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 10
 		}
 	}
 	ITA_transfer_state_108 = {
@@ -1663,7 +1663,7 @@ political_actions = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 10
 		}
 	}
 	ITA_transfer_state_107 = {
@@ -1703,6 +1703,6 @@ political_actions = {
 
 		ai_will_do = {
 			base = 0
-		}
+		} 
 	}
 }

@@ -1162,6 +1162,17 @@ focus = {
 		}
 		completion_reward = {
 			add_ideas = ENG_regroup_army
+			every_country = {
+				limit = {
+					OR = {
+						tag = CAN 
+						tag = SAF 
+						tag = RAJ 
+						tag = AST 
+					}
+				}
+				add_ideas = ENG_regroup_army
+			}
 		}
 	}
 

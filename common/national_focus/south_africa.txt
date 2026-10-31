@@ -899,9 +899,6 @@
 		available_if_capitulated = no
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		complete_tooltip = {
-		}
-
 		completion_reward = {
 			893 = {
 				add_extra_state_shared_building_slots = 2

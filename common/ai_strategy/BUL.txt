@@ -1,0 +1,215 @@
+
+BUL_unit_production = {
+	allowed = {
+		original_tag = BUL
+	}
+	enable = {
+		date<1960.1.1
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratrooper
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = mountaineers
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mobile
+		value = 72
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = mobile
+		value = 72
+	}
+}
+
+
+
+
+#Mills after 37
+BUL_industry_we_are_the_baddies = {
+	allowed = {
+		original_tag = BUL
+	}
+	enable = {
+		date > 1938.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = -1000
+	}
+}
+
+BUL_wants_civ = {
+	allowed = {
+		original_tag = BUL
+	}
+	enable = {
+		date < 1938.1.1
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 20
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = naval_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = -1000
+	}
+}
+
+
+BUL_trade_with_germany = {
+	allowed = {
+		original_tag = BUL
+	}
+	enable = {
+		GER = { has_government = fascism }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = GER
+		value = 50
+	}
+}
+
+BUL_have_some_train_production = {
+	allowed = {
+		original_tag = BUL
+	}
+
+	enable = {
+		date < 1945.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = train
+		value = 1  # Always have some production of trains
+	}
+}
+
+BUL_hold_dday_wall = {
+	allowed = {
+		original_tag = BUL
+	}
+	enable = {
+		date>1940.1.1
+	}
+	abort_when_not_enabled = yes  
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 1
+		states = {				
+			14
+			15
+			29
+		}
+		subtract_fronts_from_need = no
+	}
+}

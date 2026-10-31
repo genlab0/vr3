@@ -15,8 +15,8 @@ new_mobile_warfare = {
         base = 1
 
         modifier = {
-            factor = 0
-            is_major = no
+            factor = 100
+            mw_doctrine = yes 
         }
     }
 
@@ -130,8 +130,8 @@ superior_firepower = {
         base = 1
 
         modifier = {
-            factor = 0
-            is_major = no
+            factor = 100
+            sf_doctrine = yes
         }
     }
 
@@ -257,7 +257,11 @@ grand_battleplan = {
     xp_type = army
 
     ai_will_do = {
-        base = 2
+        base = 1
+        modifier = {
+            factor = 100
+            gbp_doctrine = yes
+        }
     }
 
     tracks = {
@@ -367,6 +371,10 @@ mass_assault = {
 
     ai_will_do = {
         base = 1
+        modifier = {
+            factor = 100
+            mass_assault_doctrine = yes
+        }
     }
 
     tracks = {

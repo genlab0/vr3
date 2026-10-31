@@ -566,6 +566,13 @@ technologies = {
 					has_tech = improved_light_tank_chassis
 				}
 			}
+			modifier = {
+				factor = 0
+				AND = {
+					original_tag = FRA 
+					date<1940.1.1
+				}
+			}
 		}
 
 		categories = {

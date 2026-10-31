@@ -61,7 +61,7 @@ political_actions = {
 		cost = 25
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		complete_effect = {
@@ -107,7 +107,7 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_sea_exploit_southern_resource_area
+				has_completed_focus = JAP_exploit_the_southern_resource_area
 			}
 			623 = {
 				NOT = {
@@ -164,7 +164,7 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_sea_exploit_southern_resource_area
+				has_completed_focus = JAP_exploit_the_southern_resource_area
 			}
 			627 = {
 				NOT = {
@@ -221,7 +221,7 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_sea_exploit_southern_resource_area
+				has_completed_focus = JAP_exploit_the_southern_resource_area
 			}
 			625 = {
 				NOT = {
@@ -278,7 +278,7 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_sea_exploit_southern_resource_area
+				has_completed_focus = JAP_exploit_the_southern_resource_area
 			}
 			725 = {
 				NOT = {
@@ -335,7 +335,7 @@ prospect_for_resources = {
 #
 	#	visible = {
 	#		OR = {
-	#			has_completed_focus = JAP_sea_exploit_southern_resource_area
+	#			has_completed_focus = JAP_exploit_the_southern_resource_area
 	#			has_completed_focus = JAP_exploit_the_southern_resource_area
 	#		}
 	#		671 = {
@@ -393,7 +393,7 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_sea_exploit_southern_resource_area
+				has_completed_focus = JAP_exploit_the_southern_resource_area
 			}
 			336 = {
 				NOT = {
@@ -450,7 +450,7 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_sea_exploit_southern_resource_area
+				has_completed_focus = JAP_exploit_the_southern_resource_area
 			}
 			672 = {
 				NOT = {
@@ -507,7 +507,7 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_sea_exploit_southern_resource_area
+				has_completed_focus = JAP_exploit_the_southern_resource_area
 			}
 			334 = {
 				NOT = {
@@ -564,7 +564,7 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_sea_exploit_southern_resource_area
+				has_completed_focus = JAP_exploit_the_southern_resource_area
 			}
 			669 = {
 				NOT = {
@@ -621,7 +621,7 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_sea_exploit_southern_resource_area
+				has_completed_focus = JAP_exploit_the_southern_resource_area
 			}
 			335 = {
 				NOT = {
@@ -716,7 +716,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 25
 		}
 
 		complete_effect = {
@@ -775,7 +775,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 10
+			base = 25
 		}
 
 		complete_effect = {
@@ -828,7 +828,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 25
 		}
 
 		complete_effect = {
@@ -881,7 +881,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 25
 		}
 
 		complete_effect = {
@@ -938,7 +938,7 @@ JAP_southern_expansion = {
 		fire_only_once = yes
 		icon = mission_icon 
 		is_good = yes 
-		days_mission_timeout = 21
+		days_mission_timeout = 30
 		complete_effect = {
 			add_days_mission_timeout = {
 				mission = JAP_remove_tora_tora_mission
@@ -955,7 +955,7 @@ JAP_southern_expansion = {
 		fire_only_once = yes
 		icon = mission_icon 
 		is_good = yes 
-		days_mission_timeout = 28
+		days_mission_timeout = 60
 		complete_effect = {
 			add_days_mission_timeout = {
 				mission = JAP_remove_tora_tora_mission
@@ -981,7 +981,7 @@ JAP_southern_expansion = {
 		fire_only_once = yes
 		icon = mission_icon 
 		is_good = yes 
-		days_mission_timeout = 40
+		days_mission_timeout = 60
 		complete_effect = {
 			add_days_mission_timeout = {
 				mission = JAP_remove_tora_tora_mission
@@ -1005,7 +1005,7 @@ JAP_southern_expansion = {
 		fire_only_once = yes
 		icon = mission_icon 
 		is_good = yes 
-		days_mission_timeout = 60
+		days_mission_timeout = 90
 		complete_effect = {
 			add_days_mission_timeout = {
 				mission = JAP_remove_tora_tora_mission
@@ -1061,6 +1061,20 @@ political_actions = {
         allowed = {
 
         }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					has_idea = JAP_inflation_3 
+					has_idea = JAP_inflation_4
+					has_idea = JAP_inflation_5
+					has_idea = JAP_inflation_6
+					has_idea = JAP_inflation_7
+				}
+				factor = 50
+			}
+		}
+
         visible = {
             	OR = {
 					has_idea = JAP_inflation_1

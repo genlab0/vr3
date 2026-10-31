@@ -308,7 +308,8 @@
 		completion_reward = {
 			custom_effect_tooltip = JAP_strike_south_doctrine_tt
 			hidden_effect = {
-					if = {
+
+				if = {
 					limit = { has_country_flag = JAP_bypass_philippines}
 					unlock_national_focus = JAP_bypass_the_philippines
 				}
@@ -333,6 +334,7 @@
 					unlock_national_focus = JAP_naval_support_buff
 				}
 				complete_national_focus = JAP_strike_on_the_southern_resource_area
+				ENG = { add_to_faction = USA }
 			}
 		}
 	}
@@ -799,24 +801,7 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_equipment_to_stockpile = {					#####ADDED GUNS FOR ROACH
-			type = infantry_equipment_1
-
-			amount = 120000
-
-			}
-		add_equipment_to_stockpile = {					#######Added AT for Roach
-		type = artillery_equipment_1
-
-		amount = 4000
-
-		}
-		add_equipment_to_stockpile = {					#######Added SE for Roach
-		type = support_equipment_1
-
-		amount = 6000
-
-		}
+			unlock_decision_category_tooltip = prospect_for_resources
 		}
 	}
 

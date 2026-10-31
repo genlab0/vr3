@@ -46,6 +46,11 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+
+			modifier = {
+				add = 20
+				offensive_infantry_nation = yes 
+			}
 		}
 	}
 	
@@ -75,13 +80,12 @@ technologies = {
 			base = 2
 
 			modifier = {
-				factor = 2
-				is_major = yes
+				add = 30
+				offensive_infantry_nation = yes 
 			}
-			
 			modifier = {
-				factor = 10
-				date > 1936.1.3
+				add = 10
+				defensive_infantry_nation = yes 
 			}
 		}
 	}	
@@ -119,16 +123,13 @@ technologies = {
 		ai_will_do = {
 			base = 2
 
-
 			modifier = {
-				factor = 5
-				is_major = yes
-				date > "1938.1.1"
+				add = 30
+				offensive_infantry_nation = yes 
 			}
-
 			modifier = {
-				factor = 5
-				date > "1939.1.1"
+				add = 10
+				defensive_infantry_nation = yes 
 			}
 		}
 	}
@@ -160,32 +161,16 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 3
+			base = 2
 
 			modifier = {
-				factor = 2
-				is_major = yes
-			}
-						
-			modifier = {
-				factor = 10
-				date > "1939.1.1"
+				add = 30
+				offensive_infantry_nation = yes 
 			}
 			modifier = {
-				num_of_military_factories < 50
-				factor = 0.5
+				add = 10
+				defensive_infantry_nation = yes 
 			}
-			#modifier = {
-			#	factor = 0
-			#	tag = SOV
-			#	OR = {
-			#		date < "1944.1.1" # stock up on lots of rifles, we got the manpower
-			#		AND = {
-			#			date > "1943.1.1"
-			#			surrender_progress < 0.1 # if we arent losing badly its ok
-			#		}
-			#	}
-			#}
 		}
 	}
 	improved_infantry_weapons_2 = {
@@ -219,21 +204,15 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
-			
+			base = 2
+
 			modifier = {
-				factor = 2
-				date > "1940.1.1"
+				add = 30
+				offensive_infantry_nation = yes 
 			}
-			
 			modifier = {
-				factor = 2
-				date > "1941.1.1"
-			}
-			
-			modifier = {
-				factor = 5
-				date > "1942.1.1"
+				add = 10
+				defensive_infantry_nation = yes 
 			}
 		}
 	}
@@ -262,21 +241,15 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			
+			base = 2
+
 			modifier = {
-				factor = 2
-				date > "1942.1.6"
+				add = 30
+				offensive_infantry_nation = yes 
 			}
-			
 			modifier = {
-				factor = 2
-				date > "1943.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
+				add = 10
+				defensive_infantry_nation = yes 
 			}
 		}
 	}
@@ -300,21 +273,15 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			
+			base = 2
+
 			modifier = {
-				factor = 2
-				date > "1943.1.6"
+				add = 30
+				offensive_infantry_nation = yes 
 			}
-			
 			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1945.1.1"
+				add = 10
+				defensive_infantry_nation = yes 
 			}
 		}
 	}
@@ -346,32 +313,15 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
-			
-			
-			modifier = {
-				tag = GER
-				factor = 2.5
-			}
+			base = 2
 
 			modifier = {
-				factor = 2
-				date > "1942.1.1"
+				add = 30
+				offensive_infantry_nation = yes 
 			}
-
 			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				num_of_military_factories > 150
-				factor = 2.5
-			}
-			
-			modifier = {
-				num_of_military_factories < 50
-				factor = 0.5
+				add = 10
+				defensive_infantry_nation = yes 
 			}
 		}
 	}
@@ -402,21 +352,15 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			
+			base = 2
+
 			modifier = {
-				factor = 2
-				date > "1944.1.6"
+				add = 30
+				offensive_infantry_nation = yes 
 			}
-			
 			modifier = {
-				factor = 2
-				date > "1945.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1946.1.1"
+				add = 10
+				defensive_infantry_nation = yes 
 			}
 		}
 	}
@@ -457,16 +401,15 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.5
-			
+			factor = 0
+
 			modifier = {
-				factor = 2
+				add = 5
 				tag = GER
 			}
-			
 			modifier = {
-				factor = 5
-				tag = ENG
+				add = 100
+				tag = HOL 
 			}
 		}
 	}
@@ -496,16 +439,15 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.5
-			
+			factor = 0
+
 			modifier = {
-				factor = 2
+				add = 5
 				tag = GER
 			}
-			
 			modifier = {
-				factor = 2
-				tag = ENG
+				add = 100
+				tag = HOL 
 			}
 		}
 	}
@@ -530,16 +472,15 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.5
-			
+			factor = 0
+
 			modifier = {
-				factor = 2
+				add = 5
 				tag = GER
 			}
-			
 			modifier = {
-				factor = 2
-				tag = ENG
+				add = 100
+				tag = HOL 
 			}
 		}
 	}
@@ -580,10 +521,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.7
-			
+			factor = 0
+
 			modifier = {
-				factor = 5
+				add = 30
+				tag = USA
+			}
+
+			modifier = {
+				add = 30
+				tag = JAP
+			}
+
+			modifier = {
+				add = 30
 				tag = ENG
 			}
 		}
@@ -613,7 +564,22 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.7
+			factor = 0
+
+			modifier = {
+				add = 30
+				tag = USA
+			}
+
+			modifier = {
+				add = 30
+				tag = JAP
+			}
+
+			modifier = {
+				add = 30
+				tag = ENG
+			}
 		}
 	}
 	
@@ -636,7 +602,22 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.7
+			factor = 0
+
+			modifier = {
+				add = 30
+				tag = USA
+			}
+
+			modifier = {
+				add = 30
+				tag = JAP
+			}
+
+			modifier = {
+				add = 30
+				tag = ENG
+			}
 		}
 	}	
 
@@ -678,6 +659,13 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 0.7
+			modifier = {
+				factor = 5
+				OR = {
+					tag = USA 
+					tag = FRA
+				}
+			}
 		}
 	}
 	
@@ -707,6 +695,13 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 0.7
+			modifier = {
+				factor = 5
+				OR = {
+					tag = USA 
+					tag = FRA
+				}
+			}
 		}
 	}
 	
@@ -730,6 +725,13 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 0.7
+			modifier = {
+				factor = 5
+				OR = {
+					tag = USA 
+					tag = FRA
+				}
+			}
 		}
 	}
 	
@@ -770,7 +772,26 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.7
+			factor = 0
+			modifier = {
+				add = 30
+				tag = ENG
+				date>1939.1.1
+			}
+			modifier = {
+				add = 30
+				tag = ITA
+			}
+			modifier = {
+				add = 30
+				tag = JAP 
+				date>1939.1.1
+			}
+			modifier = {
+				add = 30
+				tag = ROM 
+				has_completed_focus = ROM_support_italy
+			}
 		}
 	}
 	
@@ -799,7 +820,26 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.7
+			factor = 0
+			modifier = {
+				add = 30
+				tag = ENG
+				date>1939.1.1
+			}
+			modifier = {
+				add = 30
+				tag = ITA
+			}
+			modifier = {
+				add = 30
+				tag = JAP 
+				date>1939.1.1
+			}
+			modifier = {
+				add = 30
+				tag = ROM 
+				has_completed_focus = ROM_support_italy
+			}
 		}
 	}
 	
@@ -822,7 +862,26 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.7
+			factor = 0
+			modifier = {
+				add = 30
+				tag = ENG
+				date>1939.1.1
+			}
+			modifier = {
+				add = 30
+				tag = ITA
+			}
+			modifier = {
+				add = 30
+				tag = JAP 
+				date>1939.1.1
+			}
+			modifier = {
+				add = 30
+				tag = ROM 
+				has_completed_focus = ROM_support_italy
+			}
 		}
 	}
 
@@ -876,7 +935,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.7
+			factor = 20
 		}
 	}
 
@@ -1611,26 +1670,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1938.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
+			factor = 0
 		}
 	}
 
@@ -1659,26 +1699,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				date > "1940.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1941.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
+			factor = 0
 		}
 	}
 
@@ -1706,26 +1727,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1943.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
+			factor = 0
 		}
 	}
 
@@ -1746,26 +1748,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1943.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
+			factor = 0
 		}
 	}
 
@@ -1882,6 +1865,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 2
+			modifier = {
+				factor = 50
+				has_mech_focus = yes
+			}
 		}
 	}
 
@@ -1927,7 +1914,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			modifier = {
+				add = 35
+				tag = USA 
+			}
 		}
 	}
 
@@ -1955,7 +1946,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			modifier = {
+				add = 50
+				tag = USA 
+			}
 		}
 	}
 	
@@ -1985,7 +1980,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 2
+			modifier = {
+				factor = 50
+				has_mech_focus = yes
+			}
 		}
 	}
 	

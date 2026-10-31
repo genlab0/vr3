@@ -13,77 +13,86 @@ usa_historical = {
 	}
 
 	ai_national_focuses = {
-		# grab as fast as you can if available
 
+		#ASAP 
+		USA_war_production_board
+		USA_mobilise_society
+		USA_cleveland_tank_plant
+		USA_willow_run
+		USA_boston_navy_yard
+		USA_resource_program
+		USA_gi_bill
+		USA_price_controls
+		
 		USA_continue_the_new_deal
+
 		USA_social_security_act
 
-		#300 days now:
-		USA_ssa_funding_wagetax
+		#300 days now
+		USA_ssa_funding_government
 		USA_unemployment_insurance
 		USA_old_age_insurance
 		USA_war_department
 		USA_us_air_force
 		USA_fighter_program
+		USA_naval_act_1936
+		USA_mahanian_doctrine
+		USA_battleship_focus
+		USA_army_focus
+
+		USA_wpa
+
+		#300 days now 
+		USA_rural_electrification_administration
+		USA_national_youth_administration
+		USA_finance_infrastructure
+		USA_increase_industry_production
+		USA_support_rock_island
+		USA_m1_garand
+		USA_armored_infantry
+		USA_1938_naval_act
+		USA_iowa_class
+
+		USA_agricultural_adjustment_act
+
+		#300 days now 
+		USA_fixed_agricultural_prices
+		USA_burn_agricultural_products
+		USA_fair_labour_standards_act
+		USA_carrier_fleets
+		USA_avenger_nav
+		USA_bomber_program
+		USA_essex_class
 		USA_neutrality_act
 		USA_isolationism
 		USA_neutrality_act_of_1937
-		USA_mahanian_doctrine
+		USA_cash_and_carry_clause
 
-		USA_wpa 
-
-		#300 days now 
-		USA_finance_infrastructure
-		USA_rural_electrification_administration
-		USA_national_youth_administration
-		USA_increase_industry_production
-		USA_battlecruiser_focus
-		USA_louisiana_maneuvers
-		USA_blue_army_won
-		USA_carrier_fleets
-		USA_bomber_program
-		USA_support_rock_island
-		USA_m1_garand
-		USA_build_the_pentagon
-		USA_interventionism
-
-		USA_agricultural_adjustment_act
-		#ASAP THIS:
 		USA_federal_housing_act
 		USA_start_war_production
-		USA_two_ocean_navy_act
-		USA_focus_scale_up_production
-
-		#300 days now 
-		USA_price_controls
-		USA_burn_agricultural_products
-		USA_fair_labour_standards_act
-		USA_1938_naval_act
+		USA_big_buisness
+		USA_interventionism
 		USA_quarantine_speech
 		USA_denounce_german_agression
-		USA_denounce_japanese_agression
-		USA_communication_devices
-		USA_submarine_focus
-		USA_improve_torpedoes
-		USA_iowa_class
-		USA_avenger_nav
-		USA_essex_class
-
 		USA_september_1939
 		USA_denounce_isolationism
+		USA_scientist_haven
 		USA_the_giant_wakes
 		USA_long_term_contracting
 		USA_USACE_projects
 		USA_arsenal_of_democracy
-		USA_scientist_haven
-		USA_big_buisness
-		USA_war_production_board
-		USA_mobilise_society
-		USA_price_controls
-		USA_resource_program
-		USA_rubber_reserve_focus
+		USA_two_ocean_navy_act
+		USA_build_the_pentagon
 		USA_war_plans_division
 		USA_defense_of_the_pacific
+
+
+
+
+
+
+
+
 		
 	}
 

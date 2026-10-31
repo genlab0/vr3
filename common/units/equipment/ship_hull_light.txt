@@ -102,7 +102,7 @@ equipments = {
 		naval_range = 1500
 		
 		max_strength = 25
-		
+		naval_dominance_factor = 20
 
 
 		
@@ -163,7 +163,7 @@ equipments = {
 			fixed_ship_engine_slot = light_ship_engine_2
 		}
 
-
+		naval_dominance_factor = 20
 		reliability = 0.85
 		naval_range = 1800
 		max_strength = 40
@@ -230,7 +230,7 @@ equipments = {
 		resources = {
 			steel = 3
 		}
-
+		naval_dominance_factor = 20
 		surface_detection = 20
 		surface_visibility = 10
 		reliability = 0.90
@@ -298,7 +298,7 @@ equipments = {
 			}
 		}
 
-
+		naval_dominance_factor = 20
 		surface_detection = 20
 		reliability = 0.92
 		naval_range = 2500

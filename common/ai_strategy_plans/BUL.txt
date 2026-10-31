@@ -1,0 +1,81 @@
+bulgaria_historical = {
+	name = "bul historical plan"
+	desc = "Essentially historical behaviour for bul"
+
+	allowed = {
+		original_tag = BUL
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		date>1960.1.1
+	}
+
+	ai_national_focuses = {
+
+		#ASAP
+		BUL_the_path_towards_a_greater_bulgaria
+		BUL_bulgarian_irredentism
+
+
+		BUL_power_to_the_tsar
+		BUL_appoint_right_wing_ministers
+		BUL_allow_far_right_organizations
+		BUL_integrate_the_ratniks
+		BUL_crush_the_communists
+		BUL_promote_bulgarian_nationalism
+
+		#Mech "Rush"
+		BUL_acquire_modern_tools
+		BUL_negotiate_bulgarian_rearmament
+		BUL_national_military_academy
+		BUL_war_logistics
+
+		BUL_improve_the_road_system
+		BUL_attract_foreign_capitals
+		BUL_expand_sofia_university
+		BUL_expand_the_tobacco_industry
+		BUL_economic_protectionism
+		BUL_industrial_autarky
+		BUL_corporatism
+		BUL_support_macedonian_organizations
+		BUL_cooperate_with_the_zveno
+		BUL_crush_the_communists
+		BUL_found_the_brannik
+		BUL_war_industry
+
+		BUL_depose_the_tsar
+		BUL_approach_germany
+		BUL_nationalization
+
+		BUL_join_the_tripartite_pact
+		BUL_peaceful_development
+		BUL_restore_the_bulgarian_patriarchate
+		BUL_bulgarian_administration_of_the_balkans
+		BUL_the_third_bulgarian_empire
+
+		BUL_national_railway_lines
+		BUL_all_that_glitters
+		BUL_steel_plant_in_pernik
+		BUL_mineral_extraction_in_the_rhodopes
+		BUL_georgi_benkovski_aircraft_repair_facilities
+		BUL_reorganize_the_military_industry
+		BUL_darzhavna_voenna_fabrika
+		BUL_found_dvf_sopot
+		BUL_rebuild_the_army
+		BUL_vasil_levsky_national_military_university
+		BUL_prussia_of_the_balkans
+	}
+
+	traits = {
+		silent_workhorse = 1000
+	}
+	weight = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}
+	}
+
+}

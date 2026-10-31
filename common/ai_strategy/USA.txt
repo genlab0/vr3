@@ -1,3 +1,78 @@
+USA_unit_production_early = {
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		date<1941.1.1
+	}
+	abort_when_not_enabled = yes 
+
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 100
+	}
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = 72
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 24
+	}
+	ai_strategy = {
+		type = build_army
+		id = marines
+		value = 8
+	}
+	#Please don't do tanks ty
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = -10000
+	}
+}
+
+USA_unit_production_late = {
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		date>1941.1.1
+	}
+	abort_when_not_enabled = yes 
+
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 100
+	}
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = 120 
+	}
+	ai_strategy = {
+		type = build_army
+		id = rangers
+		value = 96
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 120
+	}
+	ai_strategy = {
+		type = build_army
+		id = armor 
+		value = 24
+	}
+	ai_strategy = {
+		type = build_army
+		id = marines
+		value = 74
+	}
+}
 # USA should put some buffer units in africa and ENG to help with invasions
 USA_unit_buffer_for_europe = {
 	allowed = {
@@ -37,61 +112,22 @@ USA_unit_buffer_for_europe = {
 	ai_strategy = {
 		type = put_unit_buffers
 
-		order_id = 2
-
-		# spain
-		states = {
-			171
-			180
-			112
-			179
-			795
-			169
-			173
-			167
-		}
-
-		ratio = 0.1
-		area = europe
-
-		subtract_invasions_from_need = no
-	}
-
-	ai_strategy = {
-		type = put_unit_buffers
-
 		order_id = 1
-
-		# north africa
-		states = {
-			290
-			461
-			459
-			460
-			458
-			665
-			448
-			449
-			450
-			451
-			452
-			447
-		}
 
 		ratio = 0.15
 
-		area = europe
+		area = africa
 
 		subtract_invasions_from_need = yes
 	}
 }
+
 USA_gang_up_GER_with_ENG = {
 	allowed = {
 		tag = USA
 	}
 	enable = {
 		tag = USA
-		date > 1940.6.6
 		is_in_faction_with = ENG
 	}
 	abort_when_not_enabled = yes
@@ -107,28 +143,24 @@ USA_gang_up_GER_with_ENG = {
 		value = 100
 		target = africa
 	}
-
 }
 
-build_patrol_bombers = {
+
+build_tacs = {
 	allowed = {
 		tag = USA
 	}
 	enable = {
-		has_dlc = "By Blood Alone"
 		has_navy_size = {
 			size > 1
 		}
-		tag = USA
-		date > 1940.6.6
-		is_in_faction_with = ENG
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = unit_ratio
-		id = naval_bomber
-		value = 5
+		id = tactical_bomber
+		value = 10
 	}
 }
 
@@ -171,7 +203,7 @@ USA_save_the_aussies = {
 		JAP = {	has_war_with = AST }
 		AST = {
 			has_government = democratic
-			surrender_progress > 0.15
+			surrender_progress > 0.05
 		}
 	}
 	abort = {
@@ -213,9 +245,7 @@ USA_save_india = { # in the case where japan has beaten china and is moving on i
 	enable = {
 		has_war_with = JAP
 	}
-	abort = {
-		has_war_with = JAP
-	}
+	abort_when_not_enabled = yes 
 	ai_strategy = {
 		type = strategic_air_importance
 		id = 189  # Strategic Region ID - Southern England
@@ -296,19 +326,34 @@ USA_naval_role_ratios_historical_post_iowa = {
 		original_tag = USA
 	}
 	enable = {
-		has_tech = improved_heavy_battery
+		has_tech = improved_ship_hull_heavy
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = unit_ratio
 		id = capital_ship
-		value = 10
+		value = 80
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 5
 	}
 	ai_strategy = {
 		type = role_ratio
-		id = capital_ship
-		value = 10
+		id = naval_cruiser_light
+		value = 70 
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bb
+		value = 60
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = naval_screen
+		value = 60
 	}
 }
 
@@ -325,42 +370,20 @@ USA_naval_role_ratios_historical_essex = {
 	ai_strategy = {
 		type = unit_ratio
 		id = carrier
-		value = 4
+		value = 10
 	}
 	ai_strategy = {
 		type = role_ratio
-		id = carrier
-		value = 4
+		id = naval_carrier
+		value = 35
 	}
 }
 
-
-USA_semper_fi = {
-	allowed = { original_tag = USA }
-	enable = {
-		has_war_with = JAP
-	}
-	abort = {
-		JAP = {
-			has_capitulated = yes
-		}
-	}
-	ai_strategy = {
-		type = unit_ratio
-		id = marines
-		value = 5
-	}
-}
 
 USA_home_land_is_safe = {
 	allowed = { original_tag = USA }
 	enable = {
-		NOT = {
-			OR = {
-				has_civil_war = yes
-				has_war_with = CAN
-			}
-		}
+		date<1960.1.1
 	}
 	abort_when_not_enabled = yes
 
@@ -429,12 +452,14 @@ USA_onto_the_beaches = {
 }
 
 USA_convoy_hungry = {
+	allowed = {
+		original_tag = USA
+	}
+ 
 	enable = {
-		date > 1940.1.1
 		has_equipment = {
-  			convoy < 600
+  			convoy < 1000
   		}
-		convoy_threat < 0.2 # there are other strategies for this, so we dont want to double up
 	}
 	abort_when_not_enabled = yes
 
@@ -451,18 +476,9 @@ GER_is_bad = {
 	}
 
 	enable = {
-		GER = {
-			exists = yes
-		}
-		NOT = { is_ally_with = GER }
 		ENG = {
 			has_war_with = GER
 		}
-		has_government = democratic
-		ENG = {
-			has_government = democratic
-		}
-		date > 1939.1.1
 	}
 
 	abort_when_not_enabled = yes
@@ -627,11 +643,7 @@ USA_fighter_production = { #GM
 		has_tech = fighter2
 	}
 	abort = {
-		AND = {
-			date>1941.1.1
-			check_variable = { ENG.fighter_ratio > 1.7 }
-			check_variable = { USA.usa_fighter_ratio > 1.7 }
-		}
+		date> 1942.6.6
 	}
 	
 	ai_strategy = {
@@ -654,6 +666,11 @@ USA_fighter_production = { #GM
 		id = fighter
 		value = 45
 	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = tactical_bomber
+		value = 7
+	}
 
 	ai_strategy = {
 		type = equipment_production_min_factories
@@ -667,11 +684,7 @@ USA_fighter_production_later = { #GM
 		original_tag = USA
 	}
 	enable = {
-		AND = {
-			date>1941.1.1
-			check_variable = { ENG.fighter_ratio > 1.7 }
-			check_variable = { USA.usa_fighter_ratio > 1.7 }
-		}
+		date>1942.6.6
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -679,21 +692,17 @@ USA_fighter_production_later = { #GM
 		id = cv_naval_bomber
 		value = 2
 	}
+
 	ai_strategy = {
-		type = air_factory_balance
-		value = 80
+		type = equipment_production_min_factories
+		id = tactical_bomber
+		value = 15
 	}
 
 	ai_strategy = {
-		type = unit_ratio
-		id = fighter
-		value = 50
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = fighter
-		value = 20
+		type = equipment_production_min_factories
+		id = strategic_bomber
+		value = 15
 	}
 
 	ai_strategy = {

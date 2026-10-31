@@ -1,88 +1,68 @@
 
 ROM_unit_production = {
 	allowed = {
-		OR = {
-			original_tag = ROM
-			original_tag = HUN
-		}
+		original_tag = ROM
 	}
 	enable = {
-		inf_nation = yes
+		date<1960.1.1
 	}
 	abort = {
 		always = no
 	}
 
 	ai_strategy = {
-		type = template_prio
-		id = paratrooper
-		value = -1000
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = mountaineers
-		value = -1000
-	}
-
-	ai_strategy = {
 		type = role_ratio
 		id = garrison
-		value = 1000
+		value = -10
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
-		value = -1000
+		value = -10
 	}
 
-	ai_strategy = {
-		type = role_ratio
-		id = mountaineers
-		value = -1000
-	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = marines
-		value = -1000
+		value = -10
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = cavalry
-		value = -1000
+		value = -10
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = motorized
-		value = -1000
+		value = -10
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = mechanized
-		value = -1000
+		value = -10
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = -1000
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = 5000
+		value = -10
 	}
 
 	ai_strategy = {
 		type = build_army
-		id = garrison
-		value = 5000
+		id = mountaineers
+		value = 12
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 72
 	}
 }
 
@@ -92,7 +72,7 @@ HUN_unit_production = {
 		original_tag = HUN
 	}
 	enable = {
-		heavy_tank_nation = yes 
+		date<1960.1.1
 	}
 	abort = {
 		always = no
@@ -159,15 +139,9 @@ HUN_unit_production = {
 	}
 
 	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -1000
-	}
-
-	ai_strategy = {
 		type = build_army
-		id = armor
-		value = 100
+		id = rangers
+		value = 72
 	}
 }
 
