@@ -742,4 +742,19 @@ spriteTypes = {
 		name = "GFX_focus_jap_zero"
 		texturefile = "gfx/interface/goals/focus_jap_zero.dds"
 	}
+
+	SpriteType = { 
+		name = "GFX_focus_abdacom_four_allies"
+		texturefile = "gfx/interface/goals/abdacom_four_allies.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_abdacom_australia"
+		texturefile = "gfx/interface/goals/abdacom_australia.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_abdacom_netherlands"
+		texturefile = "gfx/interface/goals/abdacom_netherlands.png"
+	}
 }

@@ -1,0 +1,38 @@
+# Permits the USA (or another founding partner) to enter after the initial invitations.
+ABDA_command_category = {
+	ABDA_join_the_command = {
+		icon = generic_prepare_civil_war
+		visible = {
+			OR = { original_tag = AST original_tag = ENG original_tag = USA original_tag = HOL }
+			NOT = { has_country_flag = abdacom_member }
+			any_country = { has_country_flag = abdacom_member is_in_faction_with = ROOT }
+		}
+		available = { has_war_with = JAP }
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = { base = 100 }
+		complete_effect = {
+			random_country = {
+				limit = { has_country_flag = abdacom_member is_in_faction_with = ROOT }
+				ROOT = {
+
+					set_variable = { ABDA_repair_speed_factor = PREV.ABDA_repair_speed_factor }
+					set_variable = { ABDA_convoy_escort_efficiency = PREV.ABDA_convoy_escort_efficiency }
+					set_variable = { ABDA_submarine_attack_factor = PREV.ABDA_submarine_attack_factor }
+					set_variable = { ABDA_submarine_defence_factor = PREV.ABDA_submarine_defence_factor }
+					set_variable = { ABDA_screening_efficiency = PREV.ABDA_screening_efficiency }
+					set_variable = { ABDA_screen_defence_factor = PREV.ABDA_screen_defence_factor }
+					set_variable = { ABDA_experience_gain_navy_unit_factor = PREV.ABDA_experience_gain_navy_unit_factor }
+					set_variable = { ABDA_planning_speed = PREV.ABDA_planning_speed }
+					set_variable = { ABDA_supply_consumption_factor = PREV.ABDA_supply_consumption_factor }
+					set_variable = { ABDA_army_org_factor = PREV.ABDA_army_org_factor }
+					set_variable = { ABDA_air_mission_efficiency = PREV.ABDA_air_mission_efficiency }
+					set_variable = { ABDA_amphibious_invasion = PREV.ABDA_amphibious_invasion }
+					set_country_flag = abdacom_member
+					clr_country_flag = abdacom_declined
+					add_dynamic_modifier = { modifier = ABDA_supreme_command }
+				}
+			}
+		}
+	}
+}
