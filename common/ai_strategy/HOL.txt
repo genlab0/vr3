@@ -1,0 +1,350 @@
+#Paratrooper defense
+HOL_base_unit_production = {
+	# HOL is not excluded from the default strats, this just adds on top
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		NOT = { has_capitulated = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 100
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value =  1000
+	}
+
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = -100
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		country_trigger = {
+			original_tag = GER
+		}
+		value = 100
+	}
+	ai_strategy = {
+		type = front_control
+		tag = GER
+		ratio = 0.6
+		ordertype = front
+		execution_type = careful
+		manual_attack = no
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.4
+		states = {
+			7
+			35
+		}
+	}
+}
+
+#after cap
+HOL_base_unit_production_after_cap = {
+	# HOL is not excluded from the default strats, this just adds on top
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		has_capitulated = yes 
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value =  1000
+	}
+}
+
+#No air please
+HOL_base_airplane_production = {
+	# HOL is not excluded from the default strats, this just adds on top
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = air_factory_balance
+		value = -200  
+	}
+}
+
+#genlab build
+HOL_dockyard_gamer = {
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		always = yes 
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = dockyard 
+		value = 100		#YEAH
+	}
+
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 7
+		value = -100
+	}
+
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 36
+		value = -100
+	}
+
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 35
+		value = -100
+	}
+}
+
+
+#Naval Production
+HOL_naval_production_roles = {
+	allowed = {
+		original_tag = HOL
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	# Naval unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 15
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 200
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = -10
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = -20
+	}
+	
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bb
+		value = -20
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bc
+		value = -100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = -50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_submarine
+		value = 200
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = submarine
+		value = 200
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_screen
+		value = -50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_light
+		value = -50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_heavy
+		value = -50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_sweeper
+		value = -100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_layer
+		value = -100
+	}
+}
+
+
+#Naval Missions
+HOL_naval_zones_early = {
+	allowed = {
+		original_tag = HOL
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		NOT = { has_war_with = JAP }
+	}
+	abort_when_not_enabled = yes
+
+	#Raid norwegian stuff
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 174
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 46
+		value = 100
+	}
+
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 16
+		value = 50
+	}
+	ai_strategy = {
+		type = convoy_raiding_target
+		id = GER
+		value = 40 # Percentage between 0 and 100
+	}
+
+
+
+
+	#Avoid Italian controlled zones because why bounce there
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 29
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 69
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 169
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 168
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 202
+		value = 100
+	}
+}
+
+#Naval Missions
+HOL_naval_zones_later = {
+	allowed = {
+		original_tag = HOL
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		has_war_with = JAP
+	}
+	abort_when_not_enabled = yes
+
+	#Raid norwegian stuff
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 97
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 84
+		value = 100
+	}
+
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 158
+		value = 50
+	}
+	ai_strategy = {
+		type = convoy_raiding_target
+		id = GER
+		value = 40 # Percentage between 0 and 100
+	}
+
+
+
+
+	#Avoid Italian controlled zones because why bounce there
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 29
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 69
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 169
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 168
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 202
+		value = 100
+	}
+}

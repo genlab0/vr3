@@ -49,12 +49,10 @@ technologies = {
 			universal_radios
 			signal_flags
 			commander_radio
-			stabilizer
+			amphibious_drive
 			smoke_launchers
 			extra_ammo_storage
 			armor_skirts
-			auto_loader
-			
 		}
 		enable_subunits = {
 			light_armor
@@ -99,6 +97,11 @@ technologies = {
 
 		path = {
 			leads_to_tech = basic_medium_tank_chassis
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = tank_night_vision 
 			research_cost_coeff = 1
 		}
 
@@ -287,6 +290,8 @@ technologies = {
 			tank_light_howitzer_2
 			tank_anti_air_cannon_2
 			light_tank_welded_armor
+			stabilizer
+			auto_loader
 		}
 
 		path = {
@@ -608,6 +613,8 @@ technologies = {
 			tank_medium_howitzer_2
 			medium_tank_welded_armor
 			tank_medium_two_man_tank_turret
+			stabilizer
+			auto_loader
 		}
 
 		research_cost = 2
@@ -848,7 +855,9 @@ technologies = {
 			tank_heavy_cannon_2
 			tank_heavy_howitzer_2
 			heavy_tank_welded_armor
+			stabilizer
 			tank_heavy_three_man_tank_turret
+			auto_loader
 		}
 
 

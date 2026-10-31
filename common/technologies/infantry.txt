@@ -303,10 +303,6 @@ technologies = {
 			name = infantry_folder
 			position = { x = 0 y = @1942 }
 		}
-
-		sub_technologies = {
-			tank_night_vision
-		}
 		
 		categories = {
 			infantry_weapons
@@ -1085,6 +1081,10 @@ technologies = {
 			name = infantry_folder
 			position = { x = 0 y = @1943 }
 		}
+
+		sub_technologies = {
+			tank_night_vision
+		}
 		
 		categories = {
 			night_vision
@@ -1592,6 +1592,10 @@ technologies = {
 		enable_equipment_modules = {
 			early_night_vision
 		}
+
+		dependencies = {
+			night_vision = 1
+		}
 	
 		research_cost = 1.5
 		start_year = 1943
@@ -1599,6 +1603,11 @@ technologies = {
 		
 		categories = {
 			night_vision
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 8 y = 10 }
 		}
 		
 		ai_will_do = {

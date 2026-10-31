@@ -12,7 +12,7 @@ state={
 	}
 
 history={ 
-		owner = ENG
+		owner = HOL
 		add_core_of = WST
 		victory_points = {
 			7381 5

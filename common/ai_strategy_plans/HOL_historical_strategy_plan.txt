@@ -1,0 +1,90 @@
+HOL_historical_plan = {
+	name = "Netherlands historical plan"
+	desc = "Historical behavior for Netherlands"
+
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		always = yes 
+	}
+	abort_when_not_enabled = yes 
+
+	ai_national_focuses = {
+
+		HOL_obtain_foreign_colonial_investments
+		HOL_the_western_possessions
+
+		HOL_form_new_government
+		HOL_gateway_to_europe
+		HOL_maintain_trade_neutrality
+		HOL_unity_through_democracy
+
+		HOL_abandon_the_gold_standard
+		HOL_overturn_military_budget_cuts
+		HOL_prepare_the_inundation_lines
+		HOL_germany_is_the_greater_threat
+		HOL_war_on_pacifism
+
+		HOL_appoint_new_supreme_commander
+		HOL_continue_the_public_works
+		HOL_finish_the_noordoostpolder
+		HOL_the_maastunnel
+		HOL_expand_the_artillerieinrichtingen
+		HOL_continental_shipbuilding
+		HOL_philips_focus
+		HOL_expand_RD_facilities
+		HOL_de_vaarplicht
+
+		HOL_modernize_our_infantry_equipment
+		HOL_secret_staff_talks
+		HOL_fortress_holland
+		HOL_modernize_the_grebbeline
+		HOL_the_crown_jewel_colony
+		HOL_java 
+		HOL_sumatra
+		HOL_borneo_and_the_grote_oost
+		HOL_continue_the_war_in_batavia
+		HOL_a_western_capital
+		HOL_reinforce_java
+		HOL_the_foundations_of_defense
+		HOL_colonial_shipbuilding
+
+		HOL_open_second_paranam_bauxite_mine
+		HOL_make_use_of_our_riches
+		HOL_go_with_britain
+		HOL_zandery_military_airport
+		HOL_ship_a_day_sinking_quotas
+		HOL_request_allied_favors
+		HOL_cornerstone_of_colonial_defense
+		HOL_rely_on_submarines
+		HOL_the_battlecruiser_plan
+		HOL_escorts_for_the_new_fleet
+		HOL_naval_heritage
+		HOL_expand_the_colonial_army
+		HOL_the_east_indies_war_machine
+		HOL_prepare_for_our_return
+		HOL_liberation
+		HOL_combined_chiefs_of_staff_representation
+		HOL_the_fourth_ally
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		war_industrialist = 20
+		air_chief = 15
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
