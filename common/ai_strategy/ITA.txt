@@ -557,7 +557,7 @@ ITA_hold_africa = {
 
 	ai_strategy = {
 		type = strategic_air_importance
-		id = 29  # Strategic Region ID - Southern England
+		id = 29  
 		value = 10000  # Value of stocked main front in active combat is usually around 35,000
 	}
 	ai_strategy = {
@@ -650,8 +650,10 @@ ITA_invasion_buffer = {
 		original_tag = ITA
 	}
 	enable = {
-		is_historical_focus_on = yes
-		date > 1943.1.1
+		OR = {
+			date>1942.1.1
+			has_global_flag = ENG_victory_in_africa
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -708,32 +710,5 @@ GER_ignore_vichy_we_will_annex_them_later = {
 		id = "VIC"
 		value = 100
 	}
-}
-
-ITA_other_priorities = {
-	allowed = { original_tag = ITA }
-	enable = { 
-		is_historical_focus_on = yes
-		date > 1941.4.6
-		date < 1943.6.6
-		ENG = {
-			is_ai = yes
-		}
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = area_priority
-		id = north_africa
-		value = -30
-	}
-	
-	ai_strategy = {
-		type = front_unit_request
-		area = north_africa
-		value = -60 
-	}
-	
 }
 

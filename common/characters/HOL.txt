@@ -183,12 +183,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ organizer skilled_staffer }
+			traits={ organizer skilled_staffer infantry_leader }
 			skill=3
-			attack_skill=2
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=3
+			attack_skill=3
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=2
 			legacy_id=-1
 		}
 		advisor={
@@ -313,16 +313,13 @@ characters={
 			}
 		}
 		corps_commander = {
-			traits = { brilliant_strategist trickster commando }
-			skill = 3
-			attack_skill = 3
+			traits = { brilliant_strategist trickster commando invader }
+			skill = 4
+			attack_skill = 4
 			defense_skill = 2
 			planning_skill = 3
 			logistics_skill = 2
 			legacy_id = -1
-			visible = {
-				has_government = communism
-			}
 		}
 	}
 
@@ -483,7 +480,12 @@ characters={
 					has_dlc = "Man the Guns"
 				}
 				available = {
-					has_government = fascism
+					if = {
+						limit = {
+							has_dlc = "Man the Guns"
+						}
+						has_completed_focus = HOL_appoint_new_supreme_commander
+					}
 				}
 				traits = {
 					army_chief_offensive_2

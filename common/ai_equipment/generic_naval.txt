@@ -21,6 +21,7 @@ destroyers = {
 		SPR 
 		FRA
 		USA
+		HOL
 	}
 	
 	roles = {
@@ -95,6 +96,7 @@ generic_escorts = {
 		SPR 
 		FRA
 		USA
+		HOL
 	}
 	
 	roles = {
@@ -217,6 +219,7 @@ naval_light_cruiser = {
 		SPR 
 		FRA
 		USA
+		HOL
 	}
 	
 	roles = {
@@ -448,6 +451,7 @@ naval_cruiser_heavy = {
 		SPR 
 		FRA
 		USA
+		HOL
 	}
 	
 	roles = {
@@ -643,6 +647,7 @@ naval_capital_battleship = {
 		SPR 
 		FRA
 		USA
+		HOL
 	}
 	
 	roles = {
@@ -838,6 +843,7 @@ naval_capital_bc = {
 		SPR 
 		FRA
 		USA
+		HOL
 	}
 	
 	roles = {
@@ -944,6 +950,7 @@ naval_carrier = {
 		SPR 
 		FRA
 		USA
+		HOL
 	}
 	
 	roles = {
@@ -1101,6 +1108,7 @@ naval_submarine = {
 		SPR 
 		FRA
 		USA
+		HOL
 	}
 	
 	roles = {

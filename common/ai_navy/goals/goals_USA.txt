@@ -27,8 +27,8 @@ USA_invasion_defense = {
         USA
     }
 
-    min_priority = 15
-    max_priority = 25
+    min_priority = 5
+    max_priority = 15
 }
 
 USA_coast_defense = {
@@ -83,7 +83,7 @@ USA_mine_laying = {
     }
 
     min_priority = 1
-    max_priority = 5
+    max_priority = 2
 }
 
 USA_training = {

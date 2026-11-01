@@ -977,7 +977,6 @@ HOL_request_allied_favors = {
 
 		modifier = {
 			war_support_weekly = 0.01
-			resistance_growth_on_our_occupied_states = 0.5 
 		}
 
 		complete_effect = {
@@ -1034,72 +1033,6 @@ HOL_request_allied_favors = {
 
 	}
 
-	HOL_assemble_air_squadron = {
-
-		icon = generic_air
-
-		allowed = {
-			tag = HOL
-		}
-
-		available = {
-			has_war = yes
-			has_capitulated = yes
-			has_legitimacy > 40
-		}
-
-		days_remove = 45
-
-		cost = 50
-
-		fire_only_once = no
-
-		visible = {
-			tag = HOL
-			has_completed_focus = HOL_request_allied_favors
-		}
-
-		modifier = {
-		}
-
-		complete_effect = {
-		}
-
-		remove_effect = {
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "By Blood Alone"
-					}
-				}
-				add_equipment_to_stockpile = {
-				    type = fighter_equipment_1
-				    amount = 50
-				    producer = ENG
-				}
-			}
-			else = {
-				add_equipment_to_stockpile = {
-				    type = small_plane_airframe_0
-				    amount = 50
-				    producer = ENG
-				    variant_name = "Gloster Gladiator"
-				}	
-			}
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				add_equipment_subsidy = {
-					cic = 1000
-					equipment_type = small_plane_airframe
-					seller_tags = { ENG } 
-				}
-			}
-		}
-
-	}
-
 	HOL_request_infantry_equipment = {
 
 		icon = generic_prepare_civil_war
@@ -1134,7 +1067,7 @@ HOL_request_allied_favors = {
 		remove_effect = {
 			add_equipment_to_stockpile = {
 			    type = infantry_equipment
-			    amount = 3000
+			    amount = 4000
 			    producer = ENG
 			}
 			add_equipment_to_stockpile = {
@@ -1144,18 +1077,8 @@ HOL_request_allied_favors = {
 			}
 			add_equipment_to_stockpile = {
 			    type = artillery_equipment
-			    amount = 100
+			    amount = 300
 			    producer = ENG
-			}
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				add_equipment_subsidy = {
-					cic = 250
-					equipment_type = artillery_equipment
-					seller_tags = { ENG } 
-				}
 			}
 		}
 	}
@@ -1232,7 +1155,7 @@ HOL_request_allied_favors = {
 		}
 
 		modifier = {
-			weekly_manpower = 500
+			weekly_manpower = 2000
 		}
 
 		complete_effect = {
@@ -1243,68 +1166,5 @@ HOL_request_allied_favors = {
 
 	}
 
-}
-
-political_actions = {
-	HOL_relocate_government_to_batavia = {
-
-		icon = eng_trade_unions_support
-
-		allowed = {
-			original_tag = HOL
-		}
-
-		available = {
-			has_capitulated = yes
-			has_completed_focus = HOL_continue_the_war_in_batavia
-			OR = {
-				has_government = democratic
-				has_government = fascism
-			}
-			OR = {
-				INS = {
-					is_subject_of = HOL
-					has_autonomy_state = autonomy_integrated_puppet
-					compare_autonomy_progress_ratio < 0.6
-					has_full_control_of_state = 335
-				}
-				has_full_control_of_state = 335
-			}
-		}
-
-		cost = 0
-
-		fire_only_once = yes
-
-		visible = {
-			original_tag = HOL
-		}
-
-		complete_effect = {
-			remove_ideas = HOL_curtail_colonial_autonomy_overlord
-			INS = {
-				hidden_effect = {
-					country_event = { id = mtg_netherlands.22 }
-				}
-			}
-			INS = {
-				every_unit_leader = {
-					set_nationality = HOL
-				}
-			}
-			annex_country = {
-			    target = INS
-			    transfer_troops = yes
-			}
-			every_state = {
-				limit = {
-					is_core_of = INS
-				}
-				add_compliance = 70
-			}
-			set_capital = { state = 335 }
-			hidden_effect = { news_event = { id = mtg_news.46 days = 1 } }
-		}
-	}
 }
 

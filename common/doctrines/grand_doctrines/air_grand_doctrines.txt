@@ -12,7 +12,11 @@ new_strategic_destruction = {
     xp_type = air
 
     ai_will_do = { 
-        base = 1
+        base = 0
+        modifier = {
+            add = 10
+            tag = USA 
+        }
     }
 
     tracks = {
@@ -63,12 +67,15 @@ new_battlefield_support = {
     xp_cost = 100
     xp_type = air
 
-    ai_will_do = {
-        base = 1
-
+    ai_will_do = { 
+        base = 0
         modifier = {
-            factor = 10
-            is_major = no
+            add = 10
+            tag = GER  
+        }
+        modifier = {
+            add = 10
+            tag = ITA  
         }
     }
 
@@ -120,8 +127,16 @@ new_operational_integrity = {
     xp_cost = 100
     xp_type = air
 
-    ai_will_do = {
-        base = 1
+    ai_will_do = { 
+        base = 0
+        modifier = {
+            add = 10
+            tag = ENG   
+        }
+        modifier = {
+            add = 10
+            tag = JAP   
+        }
     }
 
     tracks = {

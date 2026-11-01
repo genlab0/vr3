@@ -162,12 +162,56 @@ RAJ_try_to_hold_africa = {
 		tag = ITA
 		tag = GER
 		area = africa						# Target a specific ai area. Can specify multiple.
-		ratio = 10					# The strategy is enabled only if ratio of the front covered by this strategy's targets is greater than this ratio.
+		ratio = 1					# The strategy is enabled only if ratio of the front covered by this strategy's targets is greater than this ratio.
 		priority = 100						# Default 0, higher prio strats will override lower.
 		ordertype = front					# `front` or `invasion`. If set this strategy will only apply to that specific order type.
 		execution_type = careful
 		execute_order = no					# `yes` or `no`. If set will override execute or not decision of front.
-		manual_attack = yes					# Default `yes`. If `no` AI will not do manual pokes at enemy (only for front orders).
+		manual_attack = no					# Default `yes`. If `no` AI will not do manual pokes at enemy (only for front orders).
+	}
+}
+
+RAJ_setup_japan = {
+	allowed = {
+		original_tag = RAJ
+	}
+	enable = {
+		AND = {
+			date>1940.10.1
+			JAP = { controls_state = 282 }
+			JAP = { has_war = no }
+		}
+	}
+	abort_when_not_enabled = yes 
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.8
+		states = {
+			439
+		}
+		subtract_fronts_from_need = no
+	}
+}
+
+RAJ_japan = {
+	allowed = {
+		original_tag = RAJ
+	}
+	enable = {
+		has_war_with = JAP 
+	}
+	abort_when_not_enabled = yes 
+
+	ai_strategy = {
+		type = front_control
+		tag = JAP						# Target a specific ai area. Can specify multiple.
+		ratio = 1					# The strategy is enabled only if ratio of the front covered by this strategy's targets is greater than this ratio.
+		priority = 100						# Default 0, higher prio strats will override lower.
+		ordertype = front					# `front` or `invasion`. If set this strategy will only apply to that specific order type.
+		execution_type = careful
+		execute_order = no					# `yes` or `no`. If set will override execute or not decision of front.
+		manual_attack = no					# Default `yes`. If `no` AI will not do manual pokes at enemy (only for front orders).
 	}
 }
 

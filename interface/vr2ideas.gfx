@@ -1,6 +1,9 @@
 spriteTypes = {	
 
-
+	SpriteType = {
+		name = "GFX_idea_abdacon_dynamic_modifier"
+		texturefile = "gfx/interface/ideas/idea_abdacon_dynamic_modifier.png"
+	}
 
 	SpriteType = {
 		name = "GFX_idea_traits_strip"

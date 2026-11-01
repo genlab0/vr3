@@ -4,7 +4,7 @@ ideas = {
 			picture = generic_navy
 			allowed = { original_tag = USA }
 			removal_cost = -1
-			modifier = { naval_speed_factor = 0.05 }
+			modifier = { navy_max_range_factor = 0.10 }
 		}
 	}
 }

@@ -107,6 +107,28 @@ spr_minors_normandy_buffer = {
 	}
 
 	ai_strategy = {
+		type = send_volunteers_desire
+		id = "ITA"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "GER"
+		value = 100
+	}
+
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = "ITA"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = "GER"
+		value = 100
+	}
+
+	ai_strategy = {
 		type = template_prio
 		id = paratrooper
 		value = -1000

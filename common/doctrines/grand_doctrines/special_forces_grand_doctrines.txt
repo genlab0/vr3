@@ -16,8 +16,8 @@ special_forces_quantity = {
     xp_cost = 60
     xp_type = army
 
-    ai_will_do = {
-        base = 1
+    ai_will_do = { 
+        base = 10
     }
 
     tracks = {
@@ -87,7 +87,7 @@ special_forces_quality = {
     xp_type = army
 
     ai_will_do = {
-        base = 1
+        base = 0
     }
 
     tracks = {

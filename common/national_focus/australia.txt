@@ -18,7 +18,7 @@
 	}
 	
 	default = no
-	
+	shared_focus = ABDA_abdacom
 	continuous_focus_position = { x = 50 y = 1000 }
 
 #	focus = {

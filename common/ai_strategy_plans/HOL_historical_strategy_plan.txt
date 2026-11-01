@@ -17,7 +17,6 @@ HOL_historical_plan = {
 
 		HOL_form_new_government
 		HOL_gateway_to_europe
-		HOL_maintain_trade_neutrality
 		HOL_unity_through_democracy
 
 		HOL_abandon_the_gold_standard
@@ -31,7 +30,6 @@ HOL_historical_plan = {
 		HOL_finish_the_noordoostpolder
 		HOL_the_maastunnel
 		HOL_expand_the_artillerieinrichtingen
-		HOL_continental_shipbuilding
 		HOL_philips_focus
 		HOL_expand_RD_facilities
 		HOL_de_vaarplicht

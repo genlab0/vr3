@@ -27,7 +27,7 @@ ABDA_command_category = {
 					set_variable = { ABDA_supply_consumption_factor = PREV.ABDA_supply_consumption_factor }
 					set_variable = { ABDA_army_org_factor = PREV.ABDA_army_org_factor }
 					set_variable = { ABDA_air_mission_efficiency = PREV.ABDA_air_mission_efficiency }
-					set_variable = { ABDA_amphibious_invasion = PREV.ABDA_amphibious_invasion }
+					set_variable = { ABDA_amphibious_invasion_defence = PREV.ABDA_amphibious_invasion_defence }
 					set_country_flag = abdacom_member
 					clr_country_flag = abdacom_declined
 					add_dynamic_modifier = { modifier = ABDA_supreme_command }

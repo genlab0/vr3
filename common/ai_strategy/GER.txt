@@ -68,7 +68,7 @@ GER_unit_production = {
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = artillery
-		value = 4
+		value = 1
 	}
 
 	ai_strategy = { #added to railway gun define (set to 0 by default, increased in default strategies)
@@ -86,13 +86,25 @@ GER_stockpile_less_early_game = {
 	enable = {
 		date<1938.6.1
 	}
-	abort_when_not_enabled = yes
+	abort_when_not_enabled = yes	
 
 	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = 120
-	}	
+		type = build_army
+		id = garrison 
+		value =  120
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = infantry 
+		value =  0
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = anti_armor 
+		value =  0
+	}
 }
 
 #Increase Rearmament ig?
@@ -101,45 +113,64 @@ war_with_poland = {
 		original_tag = GER
 	}
 	enable = {
-		date>1938.6.1
+		AND = {
+			date>1938.6.1
+			date<1940.1.1
+		}
 	}
 	abort = {
-		ITA = { has_war = yes }
+		date>1940.1.1
 	}
 	ai_strategy = {
 		type = role_ratio
-		id = armor
+		id = light_armor
 		value = 5 #because doctrine this = 3
 	}
 
 	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = 30
-	}
-}
-
-#Increase Rearmament ig?
-prepare_for_barb = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		ITA = { has_war = yes }
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = 60 #because doctrine this = 3
+		type = build_army
+		id = light_armor 
+		value =  9
 	}
 
 	ai_strategy = {
-		type = role_ratio
+		type = build_army
+		id = garrison 
+		value =  120
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = infantry 
+		value =  0
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = anti_armor 
+		value =  0
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = light_tank_chassis 
+		value = 12
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = mechanized 
+		value = 12
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
 		id = infantry
-		value = 300
+		value = -30
 	}
 }
+
+
 
 danzig_of_war_preparation = {
 	allowed = {
@@ -150,10 +181,7 @@ danzig_of_war_preparation = {
 	}
 
 	abort = {
-		AND = {
-			has_completed_focus = GER_danzig_or_war
-			GER = { has_war_with = POL }
-		}
+		GER = { has_war_with = POL }
 	}
 
 	ai_strategy = {
@@ -162,7 +190,201 @@ danzig_of_war_preparation = {
 		value = 100
 	}
 }
+#Where to put units
+GER_area_priority = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
 
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = 110 #more focus here
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = scandinavia
+		value = 80
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = -200
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = -200
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = -200
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = 10050
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = north_africa
+		value = 10050
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = -120 #less focus here
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = -100
+	}
+}
+
+
+
+
+
+
+
+#ECO:
+GER_industry_we_are_the_baddies_but_not_yet = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		date < 1936.8.1
+	}
+	abort={
+		date > 1937.8.1
+	}
+
+	ai_strategy = {
+		type = air_factory_balance
+		value = 110
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 3
+	}
+}
+GER_wants_civ = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		has_government = fascism
+		date < 1937.5.1
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 65
+	}
+}
+GER_wants_synth = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		has_government = fascism
+		date > 1938.11.1
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 15
+	}
+}
+#Mills after April 1937
+GER_industry_we_are_the_baddies = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		date > 1937.5.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 5000
+	}
+	ai_strategy = {
+		type = air_factory_balance
+		value = 100
+	}
+}
+
+
+
+
+GER_always_do_this = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		ITA = { has_government = fascism }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = ITA
+		value = 50
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = train
+		value = 2  # Always have some production of trains
+	}
+}
+
+
+
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
+#################################################################################################################
 #Naval Production
 GER_naval_role_ratios_historical = {
 	allowed = {
@@ -259,233 +481,6 @@ GER_naval_role_ratios_historical = {
 	}
 }
 
-#Where to put units
-GER_area_priority = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		always = yes
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = area_priority
-		id = europe
-		value = 110 #more focus here
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = scandinavia
-		value = 80
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = north_america
-		value = -200
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = south_america
-		value = -200
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = asia
-		value = -200
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = middle_east
-		value = 10050
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = africa
-		value = -10000
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = north_africa
-		value = 10050
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = pacific
-		value = -120 #less focus here
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = oceania
-		value = -100
-	}
-}
-
-#Mills after April 1937
-GER_industry_we_are_the_baddies = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		date > 1937.5.1
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = added_military_to_civilian_factory_ratio
-		value = 5000
-	}
-	ai_strategy = {
-		type = air_factory_balance
-		value = 100
-	}
-}
-
-GER_industry_we_are_the_baddies_but_not_yet = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		date < 1936.8.1
-	}
-	abort={
-		date > 1937.8.1
-	}
-
-	ai_strategy = {
-		type = air_factory_balance
-		value = 110
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = -50 #because doctrine this = 3
-	}
-}
-
-Axis_care_less_about_making_friends = {
-
-	enable = {
-		has_government = fascism
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = pp_spend_priority
-		id = relation
-		value = -9999
-	}
-}
-
-GER_wants_civ = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		has_government = fascism
-		date < 1937.5.1
-		has_war = no
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = building_target
-		id = industrial_complex
-		value = 65
-	}
-}
-GER_wants_synth = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		has_government = fascism
-		date > 1938.11.1
-		has_war = no
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = building_target
-		id = synthetic_refinery
-		value = 15
-	}
-}
-
-GER_trade_with_italy = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		ITA = { has_government = fascism }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_market_trade_desire
-		id = ITA
-		value = 50
-	}
-}
-
-GER_have_some_train_production = {
-	allowed = {
-		original_tag = GER
-	}
-
-	enable = {
-		date < 1945.1.1
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = train
-		value = 2  # Always have some production of trains
-	}
-}
-
-GER_xp_upgrade_spending_land = {
-	allowed = {
-		original_tag = GER
-	}
-
-	enable = {
-		date < 1941.6.1
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = land_xp_spend_priority
-		id = upgrade_xp_cutoff
-		value = 100
-	}
-}
-
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
-#################################################################################################################
 
 #Naval Production
 GER_naval_larping_early = {
@@ -1029,13 +1024,17 @@ africa_early = {
 		original_tag = GER
 	}
 	enable = {
-		ITA = { has_war_with = ENG }
-		NOT = { ITA = { controls_state = 907 } }
-		NOT = { GER = { controls_state = 907 } }
+		AND = {
+			ITA = { has_war_with = ENG }
+			AND = {
+				NOT = { ITA = { controls_state = 907 } }
+				NOT = { GER = { controls_state = 907 } }
+			}
+		}
 	}
 	abort = {
 		OR = {
-			has_war_with = SOV
+			date>1941.5.5
 			ITA = { controls_state = 551 }
 			GER = { controls_state = 551 }
 		}
@@ -1132,158 +1131,31 @@ africa_during_barb = {
 		original_tag = GER
 	}
 	enable = {
-		OR = {
-			has_war_with = SOV
-			ITA = { controls_state = 551 }
-			GER = { controls_state = 551 }
+		AND = {
+			OR = {
+				date>1941.5.5
+				ITA = { controls_state = 551 }
+				GER = { controls_state = 551 }
+			}
+			NOT = { has_global_flag = ENG_victory_in_africa }
 		}
-		NOT = { has_global_flag = ENG_victory_in_africa }
 	}
 	abort = {
 		has_global_flag = ENG_victory_in_africa
 	}
-	ai_strategy = {
-		type = area_priority
-		id = middle_east
-		value = 25
-	}
-	ai_strategy = {
-		type = area_priority
-		id = suez
-		value = 30
-	}
-	#Send units (hopefully tanks!)
-	ai_strategy = {
-		type = front_control
-		strategic_region = 289
-		strategic_region = 225
-		strategic_region = 128
-		strategic_region = 216
-		state = 453
-		state = 551
-		state = 883
-		priority = 1
-		ratio = 0.01
-		ordertype = front
-		execute_order = no
-		execution_type = careful		
-	}
-	ai_strategy = {
-		type = front_armor_score
-		id = ENG
-		value = 200
-	}
 	#Ignore this shite
 	ai_strategy = {
 		type = area_priority
-		id = horn_of_africa
+		id = africa
 		value = -200
 	}
+
 	ai_strategy = {
-		type = front_unit_request
-		area = horn_of_africa
-		value = -100
-	}
-	ai_strategy = {
-		type = area_priority
-		id = belgian_congo
-		value = -200
-	}
-	ai_strategy = {
-		type = invasion_unit_request
-		area = belgian_congo
-		value = -150
+		type = dont_defend_ally_borders
+		id = ITA
+		value = 100  # This strategy is binary, any value > 0 activates it, while <= 0 deactivates it.
 	}
 }
-
-
-
-
-
-
-#Italy is dying strategy (check whether barb is secure for now, then move air and some troops)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #################################################################################################################
@@ -1429,12 +1301,12 @@ GER_put_armor_into_russia = {
 	}
 }
 
-GER_anti_armor = {
+GER_1940_unit_prod = {
 	allowed = {
 		original_tag = GER
 	}
 	enable = {
-		ai_wants_divisions > 5 #Decreasing the amount of motorized the AI wants
+		date>1940.1.1
 	}
 	abort = {
 		ai_wants_divisions < 6 #Decreasing the amount of motorized the AI wants
@@ -1445,26 +1317,47 @@ GER_anti_armor = {
 		id = anti_armor
 		value = 15
 	}
-}
-GER_assault_armor_ostfront = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		OR = { 
-			has_war = yes
-			AND = {
-				ai_wants_divisions > 6 
-				has_war_with = SOV
-			}
-		}
-	}
-	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = role_ratio
-		id = mobile
-		value = 5
+		type = build_army
+		id = anti_armor
+		value = 48
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = light_armor 
+		value =  8
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = medium_armor 
+		value = 16
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 96
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = medium_tank_chassis 
+		value = 40
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = mechanized 
+		value = 30
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = 48
 	}
 }
 

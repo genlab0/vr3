@@ -442,7 +442,7 @@ technologies = {
 				tag = GER
 			}
 			modifier = {
-				add = 100
+				add = 200
 				tag = HOL 
 			}
 		}
@@ -917,7 +917,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1938
+		start_year = 1936
 		folder = {
 			name = infantry_folder
 			position = { x = 4 y = @1924 }
@@ -932,6 +932,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
+			modifier = {
+				factor = 100
+				tag = HOL 
+			}
 		}
 	}
 

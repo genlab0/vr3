@@ -415,6 +415,12 @@ unplanned_offensive = {
 	breakthrough_factor = 0.5
 }
 
+abda_offensive = { # on Province
+    icon = GFX_unplanned_offensive
+	max_dig_in = -2
+	naval_invasion_penalty = -0.15
+}
+
 no_construction = { 
 	icon = GFX_no_construction_idea
 	state_production_speed_buildings_factor = -3.00

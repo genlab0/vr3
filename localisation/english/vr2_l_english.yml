@@ -1860,6 +1860,7 @@
  news.417.d:0"Reports have come in of Wehrmacht forces crossing the demarcation line at Vichy. French forces have been ordered to not resist the invasion force. \n The limited autonomy the Vichy regime had been granted was taken by Nazi Germany."
  news.417.a:0"What a time to be alive :("
  ##Ideas: 
+ abda_offensive:0"ABDACOM Offensive Plans"
  standard_oil_california_improved:0"Standard Oil of California"
  standard_oil_california_improved_desc:0""
  USA_willow_run_idea:0"Willow Run Plant"
@@ -2189,6 +2190,7 @@
  RAJ_clamp_down_on_corruption_tt:0"Consumer Goods Factor:§Y -25%"
  RAJ_land_clearance_tt:0"Construction Speed:§G +10.00%§! \nConsumer Goods Factor:§Y -15%"
  RAJ_workforce_integration_tt:0"Factory Output:§G +10.00%§!"
+ modify_abdacom_spirit_tt:0"Modify §YABDACOM/ Pacific Command§! by:" 
 
 
  ##Siemens:

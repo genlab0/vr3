@@ -10,15 +10,26 @@ HOL_base_unit_production = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = role_ratio
-		id = paratroopers
-		value = 100
+		type = build_army
+		id = infantry
+		value =  -12
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = special_equipment
+		value = 3 
 	}
 
 	ai_strategy = {
 		type = build_army
-		id = paratroopers
-		value =  1000
+		id = armor
+		value =  -10
+	}
+
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 100
 	}
 
 	ai_strategy = {
@@ -48,6 +59,32 @@ HOL_base_unit_production = {
 			7
 			35
 		}
+	}
+}
+
+HOL_build_paras_now = {
+
+	# HOL is not excluded from the default strats, this just adds on top
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		date>1938.1.1
+	}
+	abort = {
+		has_capitulated = yes
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 100
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value =  24
 	}
 }
 
@@ -86,7 +123,6 @@ HOL_base_airplane_production = {
 	}
 }
 
-#genlab build
 HOL_dockyard_gamer = {
 	allowed = {
 		original_tag = HOL
@@ -98,8 +134,14 @@ HOL_dockyard_gamer = {
 
 	ai_strategy = {
 		type = building_target
-		id = dockyard 
-		value = 100		#YEAH
+		id = arms_factory 
+		value = 50		#YEAH
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = dockyard  
+		value = 50		#YEAH
 	}
 
 	ai_strategy = {
@@ -306,12 +348,7 @@ HOL_naval_zones_later = {
 		id = 84
 		value = 100
 	}
-
-	ai_strategy = {
-		type = strike_force_home_base
-		id = 158
-		value = 50
-	}
+	
 	ai_strategy = {
 		type = convoy_raiding_target
 		id = GER

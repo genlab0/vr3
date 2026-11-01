@@ -7,36 +7,6 @@
 	x = 0
 	y = 0
 
-	offset = {
-		x = -17
-		y = 0
-		trigger = {
-			tag = ENG
-			has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
-			}
-			has_completed_focus = ENG_steady_as_she_goes
-		}
-	}
-
-	### UK OFFSET END ###
-
-	### USA OFFSET START ###
-
-	offset = {
-		x = -3
-		y = 0
-		trigger = {
-			tag = USA
-			has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
-			}
-			has_completed_focus = USA_neutrality_act
-		}
-	}
-
 	### USA OFFSET END ###
 
 	### AUSTRALIA OFFSET START ###
@@ -47,14 +17,14 @@
 	}
 
 	offset = {
-		x = 79
-		y = 0
+		x = 30
+		y = 8
 		trigger = { tag = ENG }
 	}
 
 	offset = {
-		x = 78
-		y = 0
+		x = 15
+		y = 9
 		trigger = { tag = USA }
 	}
 
@@ -71,7 +41,6 @@
 	ai_will_do = { base = 2 }
 
 	allow_branch = {
-		has_dlc = "Thunder at Our Gates"
 		OR = {
 			original_tag = AST
 			original_tag = ENG
@@ -105,23 +74,22 @@
 			set_variable = { ABDA_supply_consumption_factor = 0 }
 			set_variable = { ABDA_army_org_factor = 0 }
 			set_variable = { ABDA_air_mission_efficiency = 0 }
-			set_variable = { ABDA_amphibious_invasion = 0 }
+			set_variable = { ABDA_amphibious_invasion_defence = 0 }
 		}
+	}
 
-		custom_effect_tooltip = ABDA_faction_membership_requirement_tt
-
-		every_country = {
-			limit = {
-				OR = {
-					original_tag = AST
-					original_tag = ENG
-					original_tag = USA
-					original_tag = HOL
-				}
-				NOT = { tag = ROOT }
-				is_in_faction_with = ROOT
-			}
-			country_event = { id = ABDA_events.1 }
+	completion_reward_joint_member = {
+		ENG = {
+			set_country_flag = abdacom_member
+			add_dynamic_modifier = { modifier = ABDA_supreme_command }
+		}
+		AST = {
+			set_country_flag = abdacom_member
+			add_dynamic_modifier = { modifier = ABDA_supreme_command }
+		}
+		HOL = {
+			set_country_flag = abdacom_member
+			add_dynamic_modifier = { modifier = ABDA_supreme_command }
 		}
 	}
 
@@ -142,10 +110,7 @@ joint_focus = {
 	cost = 5
 
 	available = {
-		OR = {
-			has_country_flag = abdacom_member
-			has_completed_focus = ABDA_abdacom
-		}
+		
 		tag = ENG
 		336 = {
 			is_owned_by = ENG
@@ -182,10 +147,7 @@ joint_focus = {
 	cost = 5
 
 	available = {
-		OR = {
-			has_country_flag = abdacom_member
-			has_completed_focus = ABDA_abdacom
-		}
+		
 		tag = AST
 
 	}
@@ -194,7 +156,9 @@ joint_focus = {
 
 	ai_will_do = { factor = 10 }
 
-	completion_reward_joint_originator = { army_experience = 20 add_command_power = 15 }
+	completion_reward_joint_originator = {
+
+	}
 
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -213,10 +177,7 @@ joint_focus = {
 	cost = 5
 
 	available = {
-		OR = {
-			has_country_flag = abdacom_member
-			has_completed_focus = ABDA_abdacom
-		}
+		
 		tag = HOL
 
 	}
@@ -244,9 +205,9 @@ joint_focus = {
 	cost = 5
 
 	available = {
-		OR = {
-			has_country_flag = abdacom_member
-			has_completed_focus = ABDA_abdacom
+		AND = {
+			672 = { controller = { has_country_flag = abdacom_member } }
+			335 = { controller = { has_country_flag = abdacom_member } }
 		}
 	}
 
@@ -261,7 +222,6 @@ joint_focus = {
 	}
 
 	completion_reward_joint_originator = {
-		if = { limit = { 672 = { controller = { has_country_flag = abdacom_member } } }
 			672 = {
 				add_building_construction = {
 					type = coastal_bunker
@@ -287,9 +247,6 @@ joint_focus = {
 					instant_build = yes
 				}
 			}
-
-		}
-		if = { limit = { 335 = { controller = { has_country_flag = abdacom_member } } }
 			335 = {
 				add_building_construction = {
 					type = coastal_bunker
@@ -315,7 +272,6 @@ joint_focus = {
 					instant_build = yes
 				}
 			}
-		}
 
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -335,10 +291,7 @@ joint_focus = {
 	cost = 5
 
 	available = {
-		OR = {
-			has_country_flag = abdacom_member
-			has_completed_focus = ABDA_abdacom
-		}
+		
 		tag = USA
 	}
 
@@ -369,13 +322,9 @@ joint_focus = {
 	cost = 5
 
 	available = {
-		OR = {
-			has_country_flag = abdacom_member
-			has_completed_focus = ABDA_abdacom
-		}
+		336 = { controller = { has_country_flag = abdacom_member } }		
 	}
 
-	bypass = { 336 = { controller = { NOT = { has_country_flag = abdacom_member } } } }
 	available_if_capitulated = no
 
 	ai_will_do = {
@@ -443,19 +392,8 @@ joint_focus = {
 	cost = 5
 
 	available = {
-		OR = {
-			has_country_flag = abdacom_member
-			has_completed_focus = ABDA_abdacom
-		}
-		OR = {
-			AST = {
-				has_capitulated = no
-				has_country_flag = abdacom_member
-			}
-			HOL = {
-				has_capitulated = no
-				has_country_flag = abdacom_member
-			}
+		AST = {
+			controls_state = 520
 		}
 	}
 
@@ -470,67 +408,12 @@ joint_focus = {
 	}
 
 	completion_reward_joint_originator = {
-		if = {
-			limit = {
-				OR = {
-					AST = { has_country_flag = abdacom_member }
-					HOL = { has_country_flag = abdacom_member }
-				}
-			}
-			if = {
-				limit = { AST = { has_country_flag = abdacom_member } }
-				custom_effect_tooltip = ABDA_develop_naval_infrastructure_ast_tt
-			}
-			if = {
-				limit = { HOL = { has_country_flag = abdacom_member } }
-				custom_effect_tooltip = ABDA_develop_naval_infrastructure_HOL_tt
-			}
-		}
-		else = {
-			custom_effect_tooltip = ABDA_develop_naval_infrastructure_generic_tt
-		}
-		hidden_effect = {
-			if = {
-				limit = { AST = { has_country_flag = abdacom_member } }
-				AST = {
-					random_owned_state = {
-						limit = {
-							is_controlled_by = AST
-							is_core_of = AST
-							free_building_slots = {
-								building = dockyard
-								size > 1
-								include_locked = yes
-							}
-						}
-						add_building_construction = {
-							type = dockyard
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-			}
-			if = {
-				limit = { HOL = { has_country_flag = abdacom_member } }
-				HOL = {
-					random_owned_state = {
-						limit = {
-							is_controlled_by = HOL
-							is_core_of = HOL
-							free_building_slots = {
-								building = dockyard
-								size > 1
-								include_locked = yes
-							}
-						}
-						add_building_construction = {
-							type = dockyard
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
+		520 = {
+			set_building_level = {
+				type = naval_base 
+				level = 10
+				province = 7669
+				instant_build = yes 
 			}
 		}
 	}
@@ -555,10 +438,7 @@ joint_focus = {
 		add_war_support = 0.05 add_command_power = 20
 	}
 	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			add_war_support = 0.05 add_command_power = 20
-		}
+		add_war_support = 0.05 add_command_power = 20
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -573,17 +453,14 @@ joint_focus = {
 	x = 0
 	y = 1
 	cost = 5
-	available = { has_country_flag = abdacom_member has_war_with = JAP }
+	available = { has_war_with = JAP }
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		add_to_variable = { ABDA_supply_consumption_factor = -0.04 } add_command_power = 20
+		add_to_variable = { ABDA_supply_consumption_factor = -0.04 } 
 	}
 	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			add_to_variable = { ABDA_supply_consumption_factor = -0.04 } add_command_power = 20
-		}
+		add_to_variable = { ABDA_supply_consumption_factor = -0.04 } 
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -596,18 +473,20 @@ joint_focus = {
 	x = 0
 	y = 2
 	cost = 5
-	available = { has_country_flag = abdacom_member USA = { has_country_flag = abdacom_member has_capitulated = no has_war_with = JAP } original_tag = USA }
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		USA = { add_political_power = 25 }
-		add_to_variable = { ABDA_convoy_escort_efficiency = 0.05 } add_to_variable = { ABDA_repair_speed_factor = 0.05 }
+		custom_effect_tooltip = modify_abdacom_spirit_tt
+		add_to_variable = { ABDA_convoy_escort_efficiency = 0.05 tooltip = convoy_escort_efficiency_tt } add_to_variable = { ABDA_repair_speed_factor = 0.05 tooltip = repair_speed_factor_tt }
 	}
 	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			add_to_variable = { ABDA_convoy_escort_efficiency = 0.05 } add_to_variable = { ABDA_repair_speed_factor = 0.05 }
-		}
+		custom_effect_tooltip = modify_abdacom_spirit_tt
+			add_to_variable = { 
+				ABDA_convoy_escort_efficiency = 0.05 tooltip = convoy_escort_efficiency_tt 
+			} 
+			add_to_variable = { 
+				ABDA_repair_speed_factor = 0.05 tooltip = repair_speed_factor_tt
+			}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -620,17 +499,10 @@ joint_focus = {
 	x = -3
 	y = 2
 	cost = 5
-	available = { has_country_flag = abdacom_member HOL = { has_country_flag = abdacom_member } }
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		add_to_variable = { ABDA_planning_speed = 0.05 } army_experience = 15
-	}
-	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			add_to_variable = { ABDA_planning_speed = 0.05 } army_experience = 15
-		}
+		
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -643,16 +515,27 @@ joint_focus = {
 	x = 3
 	y = 2
 	cost = 5
-	available = { has_country_flag = abdacom_member ENG = { has_country_flag = abdacom_member } }
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		add_to_variable = { ABDA_screen_defence_factor = 0.05 } navy_experience = 15
-	}
-	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			add_to_variable = { ABDA_screen_defence_factor = 0.05 } navy_experience = 15
+		422 = {
+			set_building_level = {
+				type = naval_base
+				level = 10
+				province = 7260
+				instant_build = yes  
+			}
+			set_building_level = {
+				type = anti_air_building
+				level = 10
+				instant_build = yes  
+			}
+			add_building_construction = {
+				type = naval_headquarters
+				level = 1 
+				province = 7260
+				instant_build = yes  
+			}
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -668,18 +551,24 @@ joint_focus = {
 	x = 0
 	y = 3
 	cost = 5
-	available = { has_country_flag = abdacom_member USA = { has_country_flag = abdacom_member has_capitulated = no has_war_with = JAP } original_tag = USA }
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		USA = { add_political_power = 25 }
-		set_country_flag = ABDA_pacom_member add_to_variable = { ABDA_planning_speed = 0.05 } add_to_variable = { ABDA_army_org_factor = 0.02 }
+		hidden_effect = {
+			every_country = {
+				limit = { has_dynamic_modifier = ABDA_supreme_command }
+				remove_dynamic_modifier = { modifier = ABDA_supreme_command }
+				add_dynamic_modifier = { modifier = PACOM_supreme_command }
+			}
+		}
+		custom_effect_tooltip = modify_abdacom_spirit_tt
+		set_country_flag = ABDA_pacom_member add_to_variable = { ABDA_planning_speed = 0.05 tooltip = planning_speed_factor_tt} add_to_variable = { ABDA_army_org_factor = 0.02 tooltip = army_org_factor_tt }
 	}
 	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			set_country_flag = ABDA_pacom_member add_to_variable = { ABDA_planning_speed = 0.05 } add_to_variable = { ABDA_army_org_factor = 0.02 }
-		}
+		custom_effect_tooltip = modify_abdacom_spirit_tt
+		set_country_flag = ABDA_pacom_member 
+		add_to_variable = { ABDA_planning_speed = 0.025 tooltip = planning_speed_factor_tt } 
+		add_to_variable = { ABDA_army_org_factor = 0.01 tooltip = army_org_factor_tt }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -692,17 +581,13 @@ joint_focus = {
 	x = -2
 	y = 4
 	cost = 5
-	available = { has_country_flag = abdacom_member  }
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		add_to_variable = { ABDA_amphibious_invasion = 0.10 } army_experience = 20
+		add_to_variable = { ABDA_amphibious_invasion_defence = 0.10 } 
 	}
 	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			add_to_variable = { ABDA_amphibious_invasion = 0.10 } army_experience = 20
-		}
+		add_to_variable = { ABDA_amphibious_invasion_defence = 0.10 } 
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -717,16 +602,28 @@ joint_focus = {
 	x = 0
 	y = 4
 	cost = 5
-	available = { has_country_flag = abdacom_member  }
+	available = {
+		AND = {
+			520 = { controller = { has_country_flag = abdacom_member } }
+			422 = { controller = { has_country_flag = abdacom_member } }
+		}
+	}
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		add_to_variable = { ABDA_screening_efficiency = 0.05 } add_to_variable = { ABDA_convoy_escort_efficiency = 0.10 } air_experience = 50
-	}
-	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			add_to_variable = { ABDA_screening_efficiency = 0.05 } add_to_variable = { ABDA_convoy_escort_efficiency = 0.10 } air_experience = 50
+		520 = {
+			set_building_level = {
+				type = radar_station 
+				level = 5 
+				instant_build = yes 
+			}
+		}
+		422 = {
+			set_building_level = {
+				type = radar_station 
+				level = 5 
+				instant_build = yes 
+			}
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -740,17 +637,15 @@ joint_focus = {
 	x = 2
 	y = 4
 	cost = 5
-	available = { has_country_flag = abdacom_member  }
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		add_to_variable = { ABDA_repair_speed_factor = 0.10 }
+		custom_effect_tooltip = modify_abdacom_spirit_tt
+		add_to_variable = { ABDA_repair_speed_factor = 0.10 tooltip = repair_speed_factor_tt }
 	}
 	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			add_to_variable = { ABDA_repair_speed_factor = 0.10 }
-		}
+		custom_effect_tooltip = modify_abdacom_spirit_tt
+		add_to_variable = { ABDA_repair_speed_factor = 0.05 tooltip = repair_speed_factor_tt }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -766,18 +661,15 @@ joint_focus = {
 	x = 0
 	y = 5
 	cost = 5
-	available = { has_country_flag = abdacom_member has_war_with = JAP original_tag = USA }
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		USA = { add_political_power = 25 }
-		add_command_power = 25 add_to_variable = { ABDA_planning_speed = 0.05 }
+		custom_effect_tooltip = modify_abdacom_spirit_tt
+		add_to_variable = { ABDA_planning_speed = 0.05 tooltip = planning_speed_factor_tt }
 	}
 	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			add_command_power = 25 add_to_variable = { ABDA_planning_speed = 0.05 }
-		}
+		custom_effect_tooltip = modify_abdacom_spirit_tt
+		add_to_variable = { ABDA_planning_speed = 0.025 tooltip = planning_speed_factor_tt}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -790,16 +682,28 @@ joint_focus = {
 	x = -3
 	y = 6
 	cost = 5
-	available = { has_country_flag = abdacom_member  }
+	available = {
+		AND = {
+			523 = { controller = { has_country_flag = abdacom_member } }
+			669 = { controller = { has_country_flag = abdacom_member } }
+		}
+	}
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		add_to_variable = { ABDA_supply_consumption_factor = -0.03 } army_experience = 15
-	}
-	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			add_to_variable = { ABDA_supply_consumption_factor = -0.03 } army_experience = 15
+		669 = {
+			set_building_level = {
+				type = air_base 
+				level = 5 
+				instant_build = yes 
+			}
+		}
+		523 = {
+			set_building_level = {
+				type = air_base 
+				level = 5 
+				instant_build = yes 
+			}
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -813,16 +717,24 @@ joint_focus = {
 	x = -1
 	y = 6
 	cost = 5
-	available = { has_country_flag = abdacom_member  }
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		add_to_variable = { ABDA_amphibious_invasion = 0.05 } air_experience = 15
-	}
-	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			add_to_variable = { ABDA_amphibious_invasion = 0.05 } air_experience = 15
+		every_state = {
+			limit = {
+				OR = {
+					state = 623
+					state = 327
+					state = 624
+					state = 626
+					state = 628
+					state = 625
+					state = 627
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = abda_offensive
+			}
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -836,16 +748,26 @@ joint_focus = {
 	x = 1
 	y = 6
 	cost = 5
-	available = { has_country_flag = abdacom_member  }
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		add_to_variable = { ABDA_repair_speed_factor = 0.05 } navy_experience = 15
-	}
-	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			add_to_variable = { ABDA_repair_speed_factor = 0.05 } navy_experience = 15
+		every_state = {
+			limit = {
+				OR = {
+					state = 335
+					state = 672
+					state = 334
+					state = 333
+					state = 673
+					state = 667
+					state = 668
+					state = 738
+					state = 669
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = abda_offensive
+			}
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -859,17 +781,21 @@ joint_focus = {
 	x = 3
 	y = 6
 	cost = 5
-	available = { has_country_flag = abdacom_member  }
+	available = {
+		AND = {
+			336 = { controller = { has_country_flag = abdacom_member } }
+			672 = { controller = { has_country_flag = abdacom_member } }
+		}
+	}
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		add_to_variable = { ABDA_convoy_escort_efficiency = 0.05 } navy_experience = 15
+		add_stability = 0.10 
+		add_war_support = 0.10
 	}
 	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			add_to_variable = { ABDA_convoy_escort_efficiency = 0.05 } navy_experience = 15
-		}
+		add_stability = 0.05 
+		add_war_support = 0.05
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -886,18 +812,15 @@ joint_focus = {
 	x = 0
 	y = 7
 	cost = 7
-	available = { has_country_flag = abdacom_member USA = { has_country_flag = abdacom_member has_capitulated = no } original_tag = USA }
+	available = {
+		original_tag = USA 
+	}
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		USA = { add_political_power = 25 }
-		add_to_variable = { ABDA_experience_gain_navy_unit_factor = 0.05 } add_stability = 0.03
-	}
-	completion_reward_joint_member = {
-		if = {
-			limit = { has_country_flag = abdacom_member }
-			add_to_variable = { ABDA_experience_gain_navy_unit_factor = 0.05 } add_stability = 0.03
-		}
+		add_political_power = 200
+		add_war_support = 0.15
+		add_stability = 0.15
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }

@@ -23,6 +23,7 @@ focus_tree = {
 			original_tag = USA
 		}
 	}
+	shared_focus = ABDA_abdacom
 	continuous_focus_position = { x = 50 y = 1600 }
 	default = no
 #	focus = {
@@ -64,7 +65,7 @@ focus_tree = {
 	focus = {
 		id = USA_continue_the_new_deal
 		icon = GFX_focus_continue_new_deal
-		x = 30
+		x = 27
 		y = 0
 		offset = {
 			x = -12
@@ -1569,7 +1570,7 @@ focus_tree = {
 	focus = {
 		id = USA_war_department
 		icon = GFX_goal_generic_army_doctrines
-		x = 60
+		x = 52
 		y = 0
 		offset = {
 			x = -26

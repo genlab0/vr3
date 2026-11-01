@@ -1,5 +1,7 @@
 ABDA_supreme_command = {
+	enable = { always = yes }
 	icon = GFX_idea_JAP_pan_asian_union
+	
 	repair_speed_factor = ABDA_repair_speed_factor
 	convoy_escort_efficiency = ABDA_convoy_escort_efficiency
 	submarine_attack_factor = ABDA_submarine_attack_factor
@@ -11,6 +13,24 @@ ABDA_supreme_command = {
 	supply_consumption_factor = ABDA_supply_consumption_factor
 	army_org_factor = ABDA_army_org_factor
 	air_mission_efficiency = ABDA_air_mission_efficiency
-	amphibious_invasion = ABDA_amphibious_invasion
+	amphibious_invasion_defence = ABDA_amphibious_invasion_defence
+}
+
+PACOM_supreme_command = {
+	enable = { always = yes }
+	icon = GFX_idea_abdacon_dynamic_modifier
+	
+	repair_speed_factor = ABDA_repair_speed_factor
+	convoy_escort_efficiency = ABDA_convoy_escort_efficiency
+	submarine_attack_factor = ABDA_submarine_attack_factor
+	submarine_defence_factor = ABDA_submarine_defence_factor
+	screening_efficiency = ABDA_screening_efficiency
+	screen_defence_factor = ABDA_screen_defence_factor
+	experience_gain_navy_unit_factor = ABDA_experience_gain_navy_unit_factor
+	planning_speed = ABDA_planning_speed
+	supply_consumption_factor = ABDA_supply_consumption_factor
+	army_org_factor = ABDA_army_org_factor
+	air_mission_efficiency = ABDA_air_mission_efficiency
+	amphibious_invasion_defence = ABDA_amphibious_invasion_defence
 }
 

@@ -12,12 +12,12 @@ generic_light_tanks = {
 	}
 
 	priority = {
-		factor = 1000
+		factor = 100
 	}
 
 	basic_light_tank_default = {
 		priority = {
-			factor = 100
+			factor = 10
 			modifier = { 
 				has_tech = improved_light_tank_chassis 
 				factor = 0 #let's not waste XP here
@@ -25,7 +25,7 @@ generic_light_tanks = {
 		}
 
 		target_variant = {
-			match_value = 2000
+			match_value = 80
 			type = light_tank_chassis_1
 			modules = {
 				main_armament_slot = { 
@@ -65,15 +65,10 @@ generic_light_tanks = {
 		}
 
 		target_variant = {
-			match_value = 3000
+			match_value = 100
 			type = light_tank_chassis_2
 			modules = {
-				main_armament_slot = { 
-					any_of = { 
-						tank_auto_cannon_2
-						tank_small_cannon_2
-					} 
-				}
+				main_armament_slot = tank_auto_cannon_2
 				turret_type_slot = tank_light_two_man_tank_turret
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = light_tank_welded_armor

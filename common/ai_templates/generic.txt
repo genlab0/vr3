@@ -1,7 +1,11 @@
 armor_generic = {
 
 	role = armor
-	
+
+	blocked_for = {
+		GER
+	}
+
 	upgrade_prio = {
 		factor = 4
 
@@ -407,6 +411,45 @@ rangers_generic = {
 			
 			regiments = {
 				rangers = 18
+				artillery_brigade = 1
+				anti_tank_brigade = 1
+			}
+		}
+
+	}
+}
+
+paratroopers_generic = {
+
+	role = paratroopers
+	
+	upgrade_prio = {
+		factor = 2
+	}
+	
+
+	paratroopers_default = {
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 1
+			}
+		}
+
+		target_template = {
+			
+			support = {
+				recon = 1
+				logistics_company = 1
+				anti_air = 1
+				anti_tank = 1
+				artillery = 1
+			}
+			
+			regiments = {
+				paratrooper = 18
 				artillery_brigade = 1
 				anti_tank_brigade = 1
 			}

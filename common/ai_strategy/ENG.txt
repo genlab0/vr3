@@ -122,11 +122,23 @@ ENG_unit_production_early = {
 		value = 75
 	}
 
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = 60
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 12
+	}
+
 	#Please don't do tanks ty
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = -10000
+		value = -10
 	}
 }
 
@@ -144,17 +156,23 @@ ENG_unit_production_mid = {
 		date>1941.1.1
 	}
 
-	ai_strategy = {
-		type = build_army
-		id = infantry
-		value = 15
-	}
-
 	#Please don't do tanks ty
 	ai_strategy = {
 		type = build_army
 		id = armor
-		value = -10000
+		value = -10
+	}
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = 60
+	}
+
+
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 12
 	}
 }
 
@@ -163,28 +181,26 @@ ENG_unit_production_late = {
 		original_tag = ENG
 	}
 	enable = {
-		date>1941.1.1
+		AND = {
+			date>1941.1.1
+			NOT = { has_global_flag = ENG_victory_in_africa }
+		}
 	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = build_army
-		id = infantry
-		value = 180
+	abort = {
+		has_global_flag = ENG_victory_in_africa
 	}
 
 	ai_strategy = {
 		type = build_army
 		id = mountaineers
-		value = 16
+		value = 40
 	}
 
 	ai_strategy = {
 		type = build_army
-		id = marines
-		value = 10
-	}	
-
+		id = garrison
+		value = 120
+	}
 
 	#Please don't do tanks ty
 	ai_strategy = {
@@ -291,12 +307,12 @@ ENG_africa = {
 	ai_strategy = {
 		type = strategic_air_importance
 		id = 128  # Strategic Region ID - Southern England
-		value = 5000  # Value of stocked main front in active combat is usually around 35,000
+		value = 50000  # Value of stocked main front in active combat is usually around 35,000
 	}
 	ai_strategy = {
 		type = strategic_air_importance
 		id = 289  # Strategic Region ID - Southern England
-		value = 5000  # Value of stocked main front in active combat is usually around 35,000
+		value = 50000  # Value of stocked main front in active combat is usually around 35,000
 	}
 	ai_strategy = {
 		type = strategic_air_importance
@@ -315,7 +331,7 @@ ENG_to_tobruk = {
 		OR = {
 			original_tag = ENG 
 			original_tag = SAF 
-			original_tag = RAJ
+			original_tag = CAN
 		}
 	}
 	enable = {
@@ -339,7 +355,7 @@ ENG_to_tobruk = {
 		tag = ITA
 		tag = GER
 
-		ratio = 0.8
+		ratio = 0.6
 
 		priority = 100
 		ordertype = front
@@ -374,6 +390,47 @@ ENG_to_tobruk = {
 		type = invade
 		id = "ITA"
 		value = 550 #counterbalances...
+	}
+}
+
+ENG_torch = {
+	allowed = { 
+		OR = {
+			original_tag = ENG 
+			original_tag = SAF 
+			original_tag = CAN
+			original_tag = FRA 
+			original_tag = USA 
+		}
+	}
+	enable = {
+		AND = {
+			NOT = { has_global_flag = ENG_victory_in_africa }
+			ENG = { has_completed_focus = ENG_operation_torch }
+			NOT = { SOV = { surrender_progress > 0.7 } }
+		} 
+	}
+
+	abort = {
+		OR = {
+			has_global_flag = ENG_victory_in_africa
+			SOV = { surrender_progress > 0.7 }
+		}
+	}
+
+	ai_strategy = {
+		type = front_control
+
+		strategic_region = 126
+		strategic_region = 182
+		strategic_region = 225
+
+		ratio = 0.2
+
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
 	}
 }
 
@@ -441,7 +498,10 @@ ENG_dont_help_france_early = {
 
 ENG_post_africa = {
 	allowed = {
-		original_tag = ENG 
+		OR = {
+			original_tag = ENG 
+			original_tag = USA 
+		}
 	}
 	enable = {
 		OR = {
@@ -502,6 +562,21 @@ ENG_post_africa = {
 		id = LUX
 		value = 10000
 	}
+	ai_strategy = {
+		type = build_army
+		id = marines
+		value = 72
+	}	
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 24
+	}	
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 96
+	}	
 }
 
 eng_bba_air_prod_0 = {
@@ -587,7 +662,7 @@ eng_bba_air_prod_1 = {
 
 	ai_strategy = {
 		type = air_factory_balance
-		value = 180
+		value = 250
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
@@ -609,7 +684,7 @@ eng_bba_air_prod_1 = {
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = fighter
-		value = 10  # Germany needs a minimum production of fighters
+		value = 50  # Germany needs a minimum production of fighters
 	}
 
 	ai_strategy = {
