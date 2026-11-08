@@ -777,7 +777,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = RAJ_lessons_of_the_great_war
 				cost_reduction = 0.5
-				uses = 3
+				uses = 5
 				category = land_doctrine
 			}
 		}
@@ -1324,8 +1324,8 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = RAJ_modernizing_army
 				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
+				uses = 2
+				category = special_forces_doctrine
 			}
 		}
 	}

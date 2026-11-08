@@ -1075,7 +1075,23 @@ defined_text = { # Country
 	}
 }
 
-
+defined_text = { # Country
+	name = ABDA_supreme_command
+	text = {
+		trigger = {
+			NOT = {
+				USA = { has_country_flag = ABDA_pacom_member }
+			}
+		}
+		localization_key = ABDA_supreme_command_abdacom
+	}
+	text = {
+		trigger = {
+			USA = { has_country_flag = ABDA_pacom_member }
+		}
+		localization_key = ABDA_supreme_command_pacom
+	}
+}
 
 
 

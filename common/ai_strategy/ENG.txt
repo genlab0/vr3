@@ -287,7 +287,10 @@ ENG_africa = {
 		GER = { has_completed_focus = GER_danzig_or_war }
 	}
 	abort = {
-		has_global_flag = ENG_victory_in_africa
+		OR = { 
+			has_global_flag = ENG_victory_in_africa
+			date > 1941.6.6
+		}
 	}
 	ai_strategy = {
 		type = front_control
@@ -382,6 +385,9 @@ ENG_to_tobruk = {
 		strategic_region = 126
 		strategic_region = 182
 		strategic_region = 225
+		strategic_region = 216
+		strategic_region = 128
+		strategic_region = 289
 
 		value = 200
 	}
@@ -390,6 +396,32 @@ ENG_to_tobruk = {
 		type = invade
 		id = "ITA"
 		value = 550 #counterbalances...
+	}
+
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 69  # Strategic Region ID - Southern England
+		value = 1000  # Value of stocked main front in active combat is usually around 35,000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 128  # Strategic Region ID - Southern England
+		value = 50000  # Value of stocked main front in active combat is usually around 35,000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 289  # Strategic Region ID - Southern England
+		value = 50000  # Value of stocked main front in active combat is usually around 35,000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 216  # Strategic Region ID - Southern England
+		value = 5000  # Value of stocked main front in active combat is usually around 35,000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = 100
 	}
 }
 

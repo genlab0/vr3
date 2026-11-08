@@ -36,13 +36,12 @@ news_event = {
 				original_tag = JAP
 			}
 		}
-	}
-	
+	}	
 }
 
 # An Attack on Pearl Harbor - event for USA 
 country_event = {
-	id = SEA_japan_foreign_policy.136
+	id = SEA_japan_foreign_policy.236
 	title = SEA_japan_foreign_policy.136.t
 	desc = SEA_japan_foreign_policy.136.desc
 	picture = GFX_report_event_usa_pearl_harbor_airphoto
@@ -77,7 +76,6 @@ country_event = {
 	option = {
 		name = SEA_japan_foreign_policy.237.a        
 	}
-
 }
 
 # An Attack on Pearl Harbor - event for everyone else
@@ -91,9 +89,7 @@ country_event = {
 
 	fire_only_once = yes 
 
-	# Brilliant LADS
 	option = {
 		name = SEA_japan_foreign_policy.238.a        
 	}
-
 }

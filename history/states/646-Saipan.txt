@@ -4,10 +4,10 @@ state=
 	name="STATE_646"
 	state_category = small_island
 	manpower=21657
-	history=
-{ 
+	history = { 
 		owner = JAP
 		add_core_of = JAP
+		set_state_flag = JAP_controls
 
 		buildings = {
 			infrastructure = 2

@@ -1,4 +1,7 @@
 GER	= "countries/Germany.txt"
+AFG = "countries/Afghanistan.txt"
+SIA = "countries/Siam.txt"
+INS = "countries/Indonesia.txt"
 ENG = "countries/United Kingdom.txt"
 SOV = "countries/Soviet Union.txt"
 SWE	= "countries/Sweden.txt"

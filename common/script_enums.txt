@@ -109,7 +109,6 @@ script_enum_production_stat = {
 }
 
 script_enum_equipment_category = {
-	special_equipment
 	convoy
 	train
 	floating_harbor
@@ -138,7 +137,6 @@ script_enum_equipment_category = {
 	maritime_patrol_plane
 	air_transport
 	carrier
-	special_equipment
 	support_ship
 	missile_launcher
 	support

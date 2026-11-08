@@ -10,7 +10,9 @@ history={
 		buildings = {
 			infrastructure = 1
 		}
-
+		1936.1.2 = {
+			owner = WST
+		}
 
 	}
 

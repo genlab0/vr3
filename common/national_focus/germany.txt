@@ -1192,12 +1192,6 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				bonus = 1
-				ahead_reduction = 1
-				uses = 1
-				technology = mechanised_infantry
-			}
-			add_tech_bonus = {
-				bonus = 1
 				uses = 2
 				category = cat_light_armor
 			}
@@ -1207,6 +1201,15 @@ focus_tree = {
 				uses = 4
 				category = land_doctrine
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				technology = mechanised_infantry
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = walther_von_brauchitsch			
 		}
@@ -1420,8 +1423,8 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = air_sup_bonus
 				cost_reduction = 0.25
-				uses = 2
-				category = battlefield_support_tree
+				uses = 4
+				category = air_doctrine
 			}
 			custom_effect_tooltip = available_chief_of_airforce
 			show_ideas_tooltip = ritter_von_greim
@@ -1443,12 +1446,6 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = op_dest_bonus
-				cost_reduction = 0.25
-				uses = 2
-				category = battlefield_support_tree
-			}
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 1.0
@@ -1479,12 +1476,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			# Balance research bonus for 2 techs in battlefield_support_tree
-			add_doctrine_cost_reduction = {
-				name = strat_dest_bonus
-				cost_reduction = 0.25
-				uses = 2
-				category = battlefield_support_tree
-			}
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 1.0

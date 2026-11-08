@@ -1366,7 +1366,8 @@ ideas = {
 			}
 
 			modifier = {
-				experience_gain_army = 0.25
+				experience_gain_army = 1
+				experience_gain_air = 1
 				consumer_goods_factor = -0.15		
 			}
 		}
@@ -7613,34 +7614,8 @@ ideas = {
 
 			traits = { industrial_concern }
 
-			modifier = {
-				custom_modifier_tooltip = SOV_industrial_concern_upgrade_tt
-			}
 		}
 
-		stalingrad_tractor_factory_improved = { #NSB
-			name = stalingrad_tractor_factory
-
-			picture = stalingrad_tractor_factory
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				has_completed_focus = SOV_national_specialists
-			}
-
-			research_bonus = {
-				industry = 0.2
-			}
-
-			traits = { industrial_concern }
-
-			modifier = {
-				consumer_goods_factor = -0.02
-			}
-		}
 
 
  #                                                                       ######
@@ -7663,39 +7638,13 @@ ideas = {
 			}
 
 			research_bonus = {
-				electronics = 0.1
+				electronics = 0.15
 			}
 
 			traits = { electronics_concern }
 
-			modifier = {
-				custom_modifier_tooltip = SOV_industrial_concern_upgrade_tt
-			}
 		}
 
-		leningrad_polytechnical_institute_improved = {
-			name = leningrad_polytechnical_institute
-
-			picture = leningrad_polytechnical_institute
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				has_completed_focus = SOV_national_specialists
-			}
-
-			research_bonus = {
-				electronics = 0.2
-			}
-
-			traits = { electronics_concern }
-
-			modifier = {
-				supply_consumption_factor = -0.02
-			}
-		}
 
 
   #####                                         ######
@@ -7723,7 +7672,7 @@ ideas = {
 				has_completed_focus = SOV_improve_railway_network
 			}
 
-			cost = 75
+			cost = 50
 
 			research_bonus = {
 				train_tech = 0.1

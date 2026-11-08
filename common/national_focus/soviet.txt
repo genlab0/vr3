@@ -333,8 +333,7 @@ focus_tree = {
 					NOT = { has_idea = tot_economic_mobilisation }
 				}
 				add_ideas = war_economy
-			}
-			
+			}	
 		}
 	}
 
@@ -462,7 +461,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_ideas = SOV_soviet_railways
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = SOV_soviet_railways
 
 			652 = {
 				set_building_level = {
@@ -547,9 +547,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-		add_to_variable = { SOV_FYP_production_speed_infrastructure_factor = 0.1 }
-		custom_effect_tooltip = SOV_infrastructure_effort_nsb_tt
-
+			custom_effect_tooltip = SOV_modify_5_year_plan_tt
+			add_to_variable = { SOV_FYP_production_speed_infrastructure_factor = 0.1 tooltip = production_speed_infrastructure_factor_tt }
 		}
 	}
 
@@ -574,9 +573,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-		add_to_variable = { SOV_fyp_production_speed_industrial_complex_factor = 0.1 }
-		custom_effect_tooltip = SOV_heavy_industry_tt
-
+			custom_effect_tooltip = SOV_modify_5_year_plan_tt
+			add_to_variable = { SOV_fyp_production_speed_industrial_complex_factor = 0.1 tooltip = production_speed_industrial_complex_factor_tt }
 		}
 	}
 
@@ -600,35 +598,35 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-		add_to_variable = { SOV_fyp_consumer_goods_factor = -0.15 }
-		add_to_variable = { SOV_fyp_production_factory_efficiency_gain_factor = 0.15 }
-		custom_effect_tooltip = SOV_finish_the_five_year_plan_tt
+			custom_effect_tooltip = SOV_modify_5_year_plan_tt
+			add_to_variable = { SOV_fyp_consumer_goods_factor = -0.15 tooltip = consumer_goods_factor_tt}
+			add_to_variable = { SOV_fyp_production_factory_efficiency_gain_factor = 0.15 tooltip = production_factory_efficiency_gain_factor_tt }
 
-		582 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
+			582 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
 				}
-			}
-		573 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
+			573 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
 				}
-			}
-		581 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
+			581 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
 				}
-			}
-		825 = {
+			825 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -658,10 +656,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_to_variable = { SOV_fyp_production_speed_arms_factory_factor = 0.3 }
-			add_to_variable = { SOV_FYP_conversion_cost_civ_to_mil_factor = -0.2 }
-			add_to_variable = { SOV_fyp_production_factory_max_efficiency_factor = -0.05 }
-			custom_effect_tooltip = SOV_shift_to_armaments_production_tt
+			custom_effect_tooltip = SOV_modify_5_year_plan_tt
+			add_to_variable = { SOV_fyp_production_speed_arms_factory_factor = 0.3 tooltip = production_speed_arms_factory_factor_tt}
+			add_to_variable = { SOV_FYP_conversion_cost_civ_to_mil_factor = -0.2 tooltip = conversion_cost_civ_to_mil_factor_tt }
+			add_to_variable = { SOV_fyp_production_factory_max_efficiency_factor = -0.05 tooltip = production_factory_max_efficiency_factor_tt}
 			add_tech_bonus = {
 				name = SOV_shift_to_armaments_production
 				bonus = 1.0
@@ -682,17 +680,14 @@ focus_tree = {
 		cost = 5
 
 		mutually_exclusive = { focus = SOV_shift_to_armaments_production }
-
-		available = {
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_to_variable = { SOV_fyp_production_speed_industrial_complex_factor = 0.1 }
-			add_to_variable = { SOV_FYP_conversion_cost_mil_to_civ_factor = -0.2 }
-			add_to_variable = { SOV_FYP_line_change_production_efficiency_factor = -0.1 }
-			custom_effect_tooltip = SOV_reorganize_the_pc_of_heavy_industry_tt
+			custom_effect_tooltip = SOV_modify_5_year_plan_tt
+			add_to_variable = { SOV_fyp_production_speed_industrial_complex_factor = 0.1 tooltip = production_speed_industrial_complex_factor_tt}
+			add_to_variable = { SOV_FYP_conversion_cost_mil_to_civ_factor = -0.2 tooltip = conversion_cost_civ_to_mil_factor_tt}
+			add_to_variable = { SOV_FYP_line_change_production_efficiency_factor = -0.1 tooltip = line_change_production_efficiency_factor_tt }
 				add_tech_bonus = {
 					name = SOV_reorganize_the_pc_of_heavy_industry_name_alt
 					bonus = 2
@@ -722,6 +717,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+			custom_effect_tooltip = SOV_modify_5_year_plan_tt
 			add_to_variable = { SOV_fyp_production_speed_buildings_factor = 0.1 }
 			add_to_variable = { SOV_FYP_global_building_slots_factor = 0.25 }
 			custom_effect_tooltip = SOV_third_five_year_plan_tt			
@@ -868,6 +864,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+			custom_effect_tooltip = SOV_modify_5_year_plan_tt
 			add_to_variable = { SOV_fyp_production_factory_efficiency_gain_factor = 0.25 }
 			add_to_variable = { SOV_fyp_production_speed_arms_factory_factor = 0.1 }
 			add_to_variable = { SOV_fyp_production_factory_max_efficiency_factor = 0.1 }
@@ -903,6 +900,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+			custom_effect_tooltip = SOV_modify_5_year_plan_tt
 			add_to_variable = { SOV_fyp_production_factory_start_efficiency_factor = 0.30 } #Add efficiency start
 			add_to_variable = { SOV_fyp_industrial_capacity_factory = 0.2 } #Add small output bonus
 			add_to_variable = { SOV_FYP_line_change_production_efficiency_factor = 0.20 }
@@ -1083,6 +1081,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			custom_effect_tooltip = SOV_modify_5_year_plan_tt
 			set_variable = { SOV_fyp_local_resources_factor = 0.1 }
 			custom_effect_tooltip = SOV_increase_state_reserves_ns_tt
 			582 = {
@@ -1125,7 +1124,7 @@ focus_tree = {
 		id = SOV_found_the_pcdi
 
 		icon = GFX_goal_generic_defence
-		x = 33
+		x = 28
 		y = 0
 		cost = 5
 
@@ -1140,8 +1139,19 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+
+			army_experience = 50
+			air_experience = 50
+			navy_experience = 50
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = SOV_modify_5_year_plan_tt
 			add_to_variable = {SOV_FYP_conversion_cost_civ_to_mil_factor = -0.2  }
 			custom_effect_tooltip = SOV_found_the_pcdi_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			add_ideas = partial_economic_mobilisation
 		}
 	}
@@ -1152,7 +1162,7 @@ focus_tree = {
 
 		icon = GFX_goal_generic_air_fighter2
 		prerequisite = { focus = SOV_found_the_pcdi }
-		x = -12
+		x = 8
 		y = 1
 		relative_position_id = SOV_found_the_pcdi
 		cost = 2
@@ -1277,6 +1287,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
+			add_mastery = {
+				amount = 100
+				# FILTERS:
+				folder = air
+			}
 			217 = {
 					set_building_level = {
 						type = air_base
@@ -1507,7 +1522,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-
+				
 				add_tech_bonus = {
 					name = SOV_pc_of_mechanical_engineering_name_default
 					bonus = 1
@@ -1850,10 +1865,10 @@ focus_tree = {
 		id = SOV_military_engineering_university
 		icon = GFX_focus_generic_military_academy
 		prerequisite = { focus = SOV_found_the_pcdi }
-		x = 7
+		x = -3
 		y = 1
 		relative_position_id = SOV_found_the_pcdi
-		cost = 2
+		cost = 10
 
 		available = {
 
@@ -1899,139 +1914,7 @@ focus_tree = {
 			custom_effect_tooltip = SOV_road_of_life_tt
 		}
 	}
-
-
-	focus = {
-		id = SOV_the_defense_of_moscow
-		icon = GFX_focus_SOV_the_defense_of_moscow
-		prerequisite = { focus = SOV_military_engineering_university  }
-		x = -2
-		y = 1
-		relative_position_id = SOV_military_engineering_university
-		cost = 2
-
-		available = {
-		}
-		
-		search_filters = {FOCUS_FILTER_ARMY_XP}
-
-		completion_reward = {
-		219 = {
-		set_building_level = {
-							type = bunker
-							level = 3
-							province = 6380
-							instant_build = yes
-						}
-					}
-		219 = {						
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 11280
-							instant_build = yes
-						}
-		}
-		219 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 9302
-							instant_build = yes
-						}
-		}
-		219 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 366
-							instant_build = yes
-						}
-		}
-		219 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 301
-							instant_build = yes
-						}
-		}
-		219 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 3290
-							instant_build = yes
-						}
-		}
-		219 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 11330
-							instant_build = yes
-						}
-		}
-		219 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 11326
-							instant_build = yes
-						}
-		}
-		219 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 11349
-							instant_build = yes
-						}
-		}
-		219 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 11282
-							instant_build = yes
-						}
-		}
-		219 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 11250
-							instant_build = yes
-						}
-		}
-		219 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 6245
-							instant_build = yes
-						}
-		}
-		219 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 344
-							instant_build = yes
-						}
-		}
-		219 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 11236
-							instant_build = yes
-						}
-		}
-														
-					}				
-				}
-		
+	
 	
 	focus = {
 		id = SOV_restore_cossack_units
@@ -2091,7 +1974,11 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			army_experience = 50
+			army_experience = 150 
+			add_mastery = {
+				amount = 150
+				folder = land
+			}
 			add_to_variable = { SOV_the_red_army_training_time_factor = -0.15 }
 			add_to_variable = { SOV_the_red_army_mobilization_laws_cost_factor = -0.25 }
 			custom_effect_tooltip = SOV_rehabilitated_military_tt
@@ -2547,6 +2434,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			custom_effect_tooltip = SOV_modify_5_year_plan_tt
 			add_to_variable = { SOV_fyp_industrial_capacity_factory = 0.03 }
 			custom_effect_tooltip = SOV_revive_the_stakhanovite_movement_tt		
 			}
@@ -2682,6 +2570,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+			custom_effect_tooltip = SOV_modify_5_year_plan_tt
 			add_to_variable = { SOV_fyp_production_factory_efficiency_gain_factor = 0.05 }
 			custom_effect_tooltip = SOV_socialist_emulation_tt
 		}
@@ -2703,6 +2592,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
+			custom_effect_tooltip = SOV_modify_5_year_plan_tt
 			add_to_variable = { SOV_fyp_production_speed_buildings_factor = 0.05 } 
 			add_to_variable = { SOV_fyp_consumer_goods_factor = -0.05 } 
 			custom_effect_tooltip = SOV_socialist_realism_tt
@@ -3055,6 +2945,7 @@ focus = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+			custom_effect_tooltip = SOV_modify_5_year_plan_tt
 		add_to_variable = { SOV_fyp_consumer_goods_factor = -0.2 }
 		custom_effect_tooltip = SOV_collective_farms_tt
 
@@ -3114,7 +3005,7 @@ focus = {
 			}
 		}
 	}
-focus = {
+	focus = {
 		id = SOV_winter_41
 
 		icon = GFX_focus_sov_offensive
@@ -3129,10 +3020,11 @@ focus = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-
+			custom_effect_tooltip = SOV_winter_41_tt
 		}
 	}
-focus = {
+
+	focus = {
 		id = SOV_lend_lease_1
 
 		icon = GFX_focus_chi_mission_to_the_us
@@ -3187,21 +3079,23 @@ focus = {
 						ROM = { NOT = { controls_state = 291 } } 
 						ITA = { NOT = { controls_state = 291 } } 
 						HUN = { NOT = { controls_state = 291 } } 
+						BUL = { NOT = { controls_state = 291 } } 
+						VIC = { NOT = { controls_state = 291 } }
 					}
 				}
-				add_to_variable = { var = SOV.time_to_lend_lease value = -15}
-				add_to_variable = { var = SOV.time_to_lend_lease_temp value = -15}
+				add_to_variable = { var = SOV.time_to_lend_lease value = -5}
+				add_to_variable = { var = SOV.time_to_lend_lease_temp value = -5}
 				set_global_flag = persia_taken_flag
 			}
 			if = {
 				limit = { 
-					OR = {
-						ENG = { controls_state = 110 } 
-						CAN = { controls_state = 110 }
-						FRA = { controls_state = 110 }
-						SAF = { controls_state = 110 }
-						NOR = { controls_state = 110 }
-						RAJ = { controls_state = 110 }
+					AND = {
+						GER = { NOT = { controls_state = 110 } } 
+						ROM = { NOT = { controls_state = 110 } } 
+						ITA = { NOT = { controls_state = 110 } } 
+						HUN = { NOT = { controls_state = 110 } } 
+						BUL = { NOT = { controls_state = 110 } } 
+						VIC = { NOT = { controls_state = 110 } }
 					}
 				} 
 				add_to_variable = { var = SOV.time_to_lend_lease value = -5}
@@ -3246,453 +3140,28 @@ focus = {
 			activate_mission = SOV_lend_lease_arrives
 		}
 	}
-focus = {
-		id = SOV_leningrad_defence
-
-		icon = GFX_focus_leningrad_defense
-		prerequisite = { focus = SOV_military_engineering_university }
-		x = -4
-		y = 1
-		relative_position_id = SOV_military_engineering_university
-		cost = 2
-
-		available = {		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-		195 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 3155
-							instant_build = yes
-						}
-		}
-		195 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 149
-							instant_build = yes
-						}
-		}
-		195 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 71
-							instant_build = yes
-						}
-		}
-		195 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 6035
-							instant_build = yes
-						}
-		}
-		195 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 6095
-							instant_build = yes
-						}
-		}
-		195 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 70
-							instant_build = yes
-						}
-		}
-		}
-	}
-focus = {
-		id = SOV_stalingrad_defence
-
-		icon = GFX_focus_stalingrad_defense
-		prerequisite = { focus = SOV_military_engineering_university }
-		x = -3
-		y = 2
-		relative_position_id = SOV_military_engineering_university
-		cost = 2
-
-		available = {		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-		217 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 3151
-							instant_build = yes
-						}
-		}
-		217 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 9474
-							instant_build = yes
-						}
-		}
-		217 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 6527
-							instant_build = yes
-						}
-		}
-		217 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 9504
-							instant_build = yes
-						}
-		}
-		217 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 3582
-							instant_build = yes
-						}
-		}
-		217 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 9436
-							instant_build = yes
-						}
-		}
-	
-		217 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 11474
-							instant_build = yes
-						}
-		}
-		}
-	}
-focus = {
-		id = SOV_kiev_defence
-
-		icon = GFX_focus_kiev_defense
-		prerequisite = { focus = SOV_military_engineering_university }
-		x = 0
-		y = 1
-		relative_position_id = SOV_military_engineering_university
-		cost = 2
-
-		available = {		}
-		mutually_exclusive = {focus = SOV_kursk_defence}
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-		202 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 525
-							instant_build = yes
-						}
-		}
-		202 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 3494
-							instant_build = yes
-						}
-		}
-		202 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 11454
-							instant_build = yes
-						}
-		}
-		202 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 11530
-							instant_build = yes
-						}
-		}
-		202 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 9491
-							instant_build = yes
-						}
-		}
-		202 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 6532
-							instant_build = yes
-						}
-		}
-		202 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 3480
-							instant_build = yes
-						}
-		}
-		}
-	}
-focus = {
-		id = SOV_kursk_defence
-
-		icon = GFX_focus_kursk_defense
-		prerequisite = { focus = SOV_military_engineering_university }
-		x = 2
-		y = 1
-		relative_position_id = SOV_military_engineering_university
-		cost = 2
-		mutually_exclusive = {focus = SOV_kiev_defence}
-		available = {		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-		220 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 418
-							instant_build = yes
-						}
-		}
-		220 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 3580
-							instant_build = yes
-						}
-		}
-		220 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 3335
-							instant_build = yes
-						}
-		}
-		220 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 3306
-							instant_build = yes
-						}
-		}
-		220 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 6330
-							instant_build = yes
-						}
-		}
-		220 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 6254
-							instant_build = yes
-						}
-		}
-		220 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 9542
-							instant_build = yes
-						}
-		}
-		220 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 3520
-							instant_build = yes
-						}
-		}
-		220 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 6543
-							instant_build = yes
-						}
-		}
-		}
-	}
-focus = {
-		id = SOV_riga_defence
-
-		icon = GFX_focus_riga_defense
-		prerequisite = { focus = SOV_kiev_defence focus = SOV_kursk_defence}
-		x = 0
-		y = 1
-		relative_position_id = SOV_kiev_defence
-		cost = 2
-		mutually_exclusive = {focus = SOV_forest_defence}
-		available = {		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-		808 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 9340
-							instant_build = yes
-						}
-		}
-		808 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 10323
-							instant_build = yes
-						}
-		}
-		808 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 7482
-							instant_build = yes
-						}
-		}
-		808 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 310
-							instant_build = yes
-						}
-		}
-		808 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 6459
-							instant_build = yes
-						}
-		}
-		}
-	}
-focus = {
+	focus = {
 		id = SOV_forest_defence
-
 		icon = GFX_focus_forest_defense
-		prerequisite = { focus = SOV_kiev_defence focus = SOV_kursk_defence}
+		prerequisite = { focus = SOV_military_engineering_university }
 		x = 0
 		y = 1
-		relative_position_id = SOV_kursk_defence
-		cost = 2
-		mutually_exclusive = {focus = SOV_riga_defence}
-		available = {		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-		808 = {add_dynamic_modifier = {modifier = forest_defence}}
-		810 = {add_dynamic_modifier = {modifier = forest_defence}}
-		12 = {add_dynamic_modifier = {modifier = forest_defence}}
-		13 = {add_dynamic_modifier = {modifier = forest_defence}}
-		191 = {add_dynamic_modifier = {modifier = forest_defence}}
-		813 = {add_dynamic_modifier = {modifier = forest_defence}}
-		812 = {add_dynamic_modifier = {modifier = forest_defence}}
-		210 = {add_dynamic_modifier = {modifier = forest_defence}}
-		209 = {add_dynamic_modifier = {modifier = forest_defence}}
-		208 = {add_dynamic_modifier = {modifier = forest_defence}}
-
-		}
-	}
-focus = {
-		id = SOV_vitebsk_defence
-
-		icon = GFX_focus_vitebsk_defense
-		prerequisite = { focus = SOV_military_engineering_university }
-		x = 4
-		y = 1
 		relative_position_id = SOV_military_engineering_university
-		cost = 2
-		available = {		}
+
+		cost = 5
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
-
 		completion_reward = {
-		207 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 11241
-							instant_build = yes
-						}
-		}
-		207 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 306
-							instant_build = yes
-						}
-		}
-		207 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 3247
-							instant_build = yes
-						}
-		}
-		207 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 3313
-							instant_build = yes
-						}
-		}
-		207 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 3210
-							instant_build = yes
-						}
-		}
-		207 = {
-		set_building_level = {
-							type = bunker
-							level = 2
-							province = 11336
-							instant_build = yes
-						}
-		}
+			808 = {add_dynamic_modifier = {modifier = forest_defence}}
+			810 = {add_dynamic_modifier = {modifier = forest_defence}}
+			12 = {add_dynamic_modifier = {modifier = forest_defence}}
+			13 = {add_dynamic_modifier = {modifier = forest_defence}}
+			191 = {add_dynamic_modifier = {modifier = forest_defence}}
+			813 = {add_dynamic_modifier = {modifier = forest_defence}}
+			812 = {add_dynamic_modifier = {modifier = forest_defence}}
+			210 = {add_dynamic_modifier = {modifier = forest_defence}}
+			209 = {add_dynamic_modifier = {modifier = forest_defence}}
+			208 = {add_dynamic_modifier = {modifier = forest_defence}}
 		}
 	}
+}

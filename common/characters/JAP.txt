@@ -1385,63 +1385,6 @@ characters = {
 
 	}
 
-	# Jinzaburō Masaki
-	JAP_jinzaburo_masaki = {
-		name = JAP_jinzaburo_masaki
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_JAP_jinzaburo_masaki
-				small = GFX_portrait_JAP_jinzaburo_masaki_civilian_small
-			}
-			army = {
-				small = GFX_portrait_JAP_jinzaburo_masaki_military_small
-			}
-		}
-
-		#country_leader = {
-		#	ideology = japan_militarism_ideology
-		#	traits = { JAP_military_prime_minister }
-		#	expire = "1952.1.1.1"
-		#	id = -1
-		#}
-
-		corps_commander = {
-			traits = { organizer infantry_leader trait_JAP_kodoha_sympathizer }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
-			legacy_id = -1
-			visible = {
-				has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-			}
-		}
-
-		advisor = {
-			slot = army_chief
-			idea_token = JAP_jinzaburo_masaki
-			allowed = {
-				original_tag = JAP
-			}
-			visible = {
-				has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-			}
-			available = {
-				has_completed_focus = JAP_grand_army_purge
-			}
-			traits = {
-				army_chief_organizational_1
-			}
-			cost = 100
-			ai_will_do = {
-				base = 2
-			}
-		}
-
-	}
-
 	### NEW KODOHA COMMANDERS END ###
 
 	# Keisuke Fujie
@@ -3282,49 +3225,6 @@ characters = {
   #####    ####   #  ######  #    #    #    #   ####     #     ####  
 
 
-	#JAP_isoroku_yamamoto up there
-
-	# Yoshio Nishina
-	JAP_yoshio_nishina = {
-		name = JAP_yoshio_nishina
-		portraits = {
-			army = {
-				large = GFX_portrait_JAP_yoshio_nishina
-				small = GFX_idea_yoshio_nishina
-			}
-		}
-
-		scientist = {
-			traits = { scientist_trait_nuclear_specialist }
-			skills = {
-				specialization_nuclear = 2
-			}
-			visible = {
-				owner = {
-					has_completed_focus = JAP_fund_the_riken_institute
-				}
-			}
-		}
-
-
-		#advisor = {
-		#	cost = 100
-		#	slot = theorist
-		#	idea_token = yoshio_nishina
-		#	ledger = army
-		#	allowed = {
-		#		original_tag = JAP
-		#	}
-		#	research_bonus = {
-		#		nuclear = 0.150
-		#	}
-		#	traits = {
-		#		nuclear_scientist
-		#	}
-		#}
-
-	}
-
 	# Hideo Itokawa
 	JAP_hideo_itokawa = {
 		name = JAP_hideo_itokawa
@@ -3393,33 +3293,6 @@ characters = {
 			traits = { scientist_trait_surface_ship_specialist }
 			skills = {
 				specialization_naval = 2
-			}
-		}
-
-	}
-
-	# Jiro Horikoshi
-	JAP_jiro_horikoshi = {
-		name = JAP_jiro_horikoshi
-
-		portraits = {
-			army = {
-				large = GFX_portrait_JAP_jiro_horikoshi
-			}
-		}
-
-		scientist = {
-
-			traits = { scientist_trait_aircraft_specialist }
-
-			skills = {
-				specialization_air = 3
-			}
-
-			visible = {
-				owner = {
-					has_completed_focus = JAP_7075_aluminium_alloy
-				}
 			}
 		}
 

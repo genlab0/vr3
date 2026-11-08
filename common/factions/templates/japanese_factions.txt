@@ -5,16 +5,6 @@ faction_template_sakoku_ron_faction = {
 
 	goals = {
 
-		# Short Term 
-		faction_goal_war_on_communism
-
-		# Medium Term 
-		faction_goal_industrial_expansion
-
-		# Long Term 
-		faction_goal_resource_control
-		faction_goal_defeat_of_communism
-
 	}
 
 	default_rules = {
@@ -34,15 +24,11 @@ faction_template_new_order_in_east_asia_faction = {
 
 		# Short Term 
 		#faction_goal_ensure_military_r_d
-		#faction_goal_war_on_communism # Would be autocompleted if done when at war with the PRC 
 
 		# Medium Term 
-		faction_goal_control_the_chinese_capitals
 
 		# Long Term 
-		faction_goal_align_china
 		
-		#faction_goal_war_on_communism_in_asia
 	}
 
 	default_rules = {
@@ -67,7 +53,6 @@ faction_template_geacps_faction = {
 		faction_goal_secure_the_oil_supply
 
 		# Long Term 
-		faction_goal_align_china
 	}
 
 	default_rules = {

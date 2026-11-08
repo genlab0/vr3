@@ -5,14 +5,14 @@ on_actions = {
 			if = {
                 limit = {   # Execute if Allies capture Baghdad
 					NOT = { has_global_flag = persia_taken_flag }
-                    OR = { tag = ENG tag = RAJ tag = CAN tag = SAF tag = FRA }
-                    FROM = { OR = { tag = GER tag = ITA tag = ROM tag = HUN }}
+                    OR = { is_in_faction_with = ENG tag = ENG } 
+                    FROM = { is_in_faction_with = GER }
                     FROM.FROM = {
                         state = 291
                     }
                 }
                 SOV = {
-					add_to_variable = { SOV.time_to_lend_lease = -15 }
+					add_to_variable = { SOV.time_to_lend_lease = -5 }
 				}
 				set_global_flag = persia_taken_flag
            }
@@ -20,8 +20,8 @@ on_actions = {
 			if = {
                 limit = {   # Execute if Allies capture Norway
 					NOT = { has_global_flag = norway_taken_flag }
-                    OR = { tag = ENG tag = RAJ tag = CAN tag = SAF tag = FRA tag = NOR}
-                    FROM = { OR = { tag = GER tag = ITA tag = ROM tag = HUN}}
+                    OR = { is_in_faction_with = ENG tag = ENG } 
+                    FROM = { is_in_faction_with = GER }
                     FROM.FROM = {
                         state = 110
                     }
@@ -35,14 +35,14 @@ on_actions = {
 			if = {
                 limit = {   # Execute if Axis recapture Baghdad
 					has_global_flag = persia_taken_flag
-                    OR = { tag = GER tag = ITA tag = ROM tag = HUN}
-                    FROM = { OR = { tag = ENG tag = RAJ tag = CAN tag = SAF tag = FRA } }
+                    OR = { is_in_faction_with = GER tag = GER }
+                    FROM = { is_in_faction_with = ENG tag = ENG }
                     FROM.FROM = {
                         state = 291
                     }
                 }
                 SOV = {
-					add_to_variable = { SOV.time_to_lend_lease = -15 }
+					add_to_variable = { SOV.time_to_lend_lease = 5 }
 				}
 				clr_global_flag = persia_taken_flag
             }
@@ -50,8 +50,8 @@ on_actions = {
 			if = {
                 limit = {   # Execute if Axis recapture Norway
 					has_global_flag = norway_taken_flag 
-                    OR = { tag = GER tag = ITA tag = ROM tag = HUN}
-                    FROM = { OR = { tag = ENG tag = RAJ tag = CAN tag = SAF tag = FRA tag = NOR }}
+                    OR = { is_in_faction_with = GER tag = GER }
+                    FROM = { is_in_faction_with = ENG tag = ENG }
                     FROM.FROM = {
                         state = 110
                     }
@@ -63,8 +63,8 @@ on_actions = {
             }
 			if = {
                 limit = {   # Execute if Allies capture Sicily!
-                    OR = { tag = ENG tag = RAJ tag = CAN tag = SAF tag = FRA }
-                    FROM = { tag = ITA }
+                    OR = { is_in_faction_with = ENG tag = ENG } 
+                    FROM = { is_in_faction_with = GER }
                     FROM.FROM = {
                         state = 115
                     }
@@ -81,8 +81,8 @@ on_actions = {
 			if = {
                 limit = {   # Execute if Allies D-Day
 					date>1941.1.1
-                    OR = { tag = ENG tag = RAJ tag = CAN tag = SAF tag = FRA }
-                    FROM = { tag = GER }
+                    OR = { is_in_faction_with = ENG tag = ENG } 
+                    FROM = { is_in_faction_with = GER }
                     FROM.FROM = {
 						OR = {
 							state = 19
@@ -113,8 +113,8 @@ on_actions = {
 			}
             if = {
                 limit = {   # Execute if Allies capture Cairo
-                    tag = ENG
-                    FROM = { OR = { tag = ITA tag = ROM tag = HUN tag = SPR tag = GER } }
+                    OR = { is_in_faction_with = ENG tag = ENG } 
+                    FROM = { is_in_faction_with = GER }
                     FROM.FROM = {
                         state = 907
                     }
@@ -123,8 +123,8 @@ on_actions = {
             }
 			if = {
                 limit = {   # Execute if Allies capture Tripolis
-                    tag = ENG
-                    FROM = { tag = ITA }
+                    OR = { is_in_faction_with = ENG tag = ENG } 
+                    FROM = { is_in_faction_with = GER }
                     FROM.FROM = {
                         state = 448
                     }
@@ -133,8 +133,8 @@ on_actions = {
             }
 			if = {
                 limit = {   # Execute if Allies capture Sicily
-                    tag = ENG
-                    FROM = { tag = ITA }
+                    OR = { is_in_faction_with = ENG tag = ENG } 
+                    FROM = { is_in_faction_with = GER }
                     FROM.FROM = {
                         state = 115
                     }
@@ -143,8 +143,8 @@ on_actions = {
             }
 			if = {
                 limit = {   # Execute if Axis capture Cairo
-                    OR = { tag = ITA tag = ROM tag = HUN tag = SPR tag = GER } 
-                    FROM = { tag = ENG }
+                    OR = { is_in_faction_with = GER tag = GER }
+                    FROM = { is_in_faction_with = ENG tag = ENG }
                     FROM.FROM = {
                         state = 907
                     }
@@ -153,8 +153,8 @@ on_actions = {
             }
 			if = {
                 limit = {   # Execute if Axis capture Tripolis
-                    OR = { tag = ITA tag = ROM tag = HUN tag = SPR tag = GER } 
-                    FROM = { tag = ENG }
+                    OR = { is_in_faction_with = GER tag = GER }
+                    FROM = { is_in_faction_with = ENG tag = ENG }
                     FROM.FROM = {
                         state = 448
                     }
@@ -163,11 +163,12 @@ on_actions = {
             }
 			if = {
                 limit = {   # Execute if Axis capture Sicily
-                    OR = { tag = ITA tag = ROM tag = HUN tag = SPR tag = GER } 
-                    FROM = { tag = ENG }
+					OR = { is_in_faction_with = GER tag = GER }
+                    FROM = { is_in_faction_with = ENG tag = ENG }
                     FROM.FROM = {
                         state = 115
                     }
+					
                 }
                 dday_wall_higher = yes
             }
@@ -859,7 +860,6 @@ on_actions = {
 					}
 				}
 			}
-			# Greece dockyards
 			###################
 			#####################EUROPE NATIONS FACTORIES
 			768 = {
@@ -1044,14 +1044,14 @@ on_actions = {
 					id = britain.22
 					days = 513
 				}
-			add_equipment_to_stockpile = {
-				type = train_equipment_1
-				amount = 150
-			}
-			country_event = {
-				id = DOD_yugoslavia.20
-				days = 912
-			}
+				add_equipment_to_stockpile = {
+					type = train_equipment_1
+					amount = 150
+				}
+				country_event = {
+					id = DOD_yugoslavia.20
+					days = 912
+				}
 			}
 			GER = {
 				add_equipment_to_stockpile = {
@@ -1224,34 +1224,6 @@ on_actions = {
 					type = train_equipment
 					amount = 100
 				}
-			}
-		}
-	}
-
-	on_daily = {
-		effect = {
-			if = {
-				limit = {
-					AND = {
-						SOV = { has_idea = "Volunteers in China" }
-						OR = {
-							SPD = {
-								has_volunteers_amount_from = {
-									tag = SOV
-									count > 0
-								}
-							}
-							SPR = {
-								has_volunteers_amount_from = {
-									tag = SOV
-									count > 0
-								}
-							}
-						}
-					}
-				}
-				SOV = { recall_volunteers_from = SPD }
-				SOV = { recall_volunteers_from = SPR }
 			}
 		}
 	}

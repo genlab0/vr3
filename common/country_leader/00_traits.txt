@@ -4816,10 +4816,8 @@ leader_traits = {
 	stalin_father_of_nations = {
 		random = no
 		stability_weekly = 0.005
-		compliance_gain = 0.1
 		conscription = 0.05
 		war_support_weekly = 0.005
-		political_power_factor = 0.25
 	}
 
 	stalin_authority_undermined = {

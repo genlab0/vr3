@@ -701,12 +701,6 @@ defined_text = {
 defined_text = {
 	name = GetLighweightFightersDesc
 	text = {
-		trigger = {
-			has_completed_focus = JAP_7075_aluminium_alloy
-		}
-		localization_key = JAP_7075_aluminium_alloy_tt
-	}
-	text = {
 		
 		localization_key = generic_null
 	}

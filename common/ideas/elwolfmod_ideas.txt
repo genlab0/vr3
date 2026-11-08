@@ -339,7 +339,7 @@ ideas = {
 		}
 
 		sov_lend_lease_counter = {
-			picture = HUN_treaty_of_triannon
+			picture = CHI_lend_lease_american
 			allowed = {
 			}
 			allowed_civil_war = {

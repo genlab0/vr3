@@ -4832,7 +4832,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_abdacom_four_allies"
+		name = "GFX_focus_abdacom_four_allies_shine"
 		texturefile = "gfx/interface/goals/abdacom_four_allies.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4863,7 +4863,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_abdacom_netherlands"
+		name = "GFX_focus_abdacom_netherlands_shine"
 		texturefile = "gfx/interface/goals/abdacom_netherlands.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -4894,11 +4894,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_abdacom_netherlands"
-		texturefile = "gfx/interface/goals/abdacom_netherlands.png"
+		name = "GFX_focus_abdacom_australia_shine"
+		texturefile = "gfx/interface/goals/abdacom_australia.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/abdacom_netherlands.png"
+			animationmaskfile = "gfx/interface/goals/abdacom_australia.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4910,7 +4910,7 @@ spriteTypes = {
 			animationtexturescale = { x = 2.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/abdacom_netherlands.png"
+			animationmaskfile = "gfx/interface/goals/abdacom_australia.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no

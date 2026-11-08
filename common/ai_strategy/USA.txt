@@ -333,7 +333,7 @@ USA_naval_role_ratios_historical_post_iowa = {
 	ai_strategy = {
 		type = unit_ratio
 		id = capital_ship
-		value = 80
+		value = 40
 	}
 	ai_strategy = {
 		type = unit_ratio
@@ -348,12 +348,12 @@ USA_naval_role_ratios_historical_post_iowa = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_capital_bb
-		value = 60
+		value = 30
 	}
 	ai_strategy = {
 		type = role_ratio
 		id = naval_screen
-		value = 60
+		value = 40
 	}
 }
 

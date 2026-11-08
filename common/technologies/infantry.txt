@@ -2213,4 +2213,20 @@ technologies = {
 			}
 		}
 	}
+
+	JAP_supremacy_of_will_hp = {
+
+        research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		#If you change these
+		#Change the custom tooltip too: JAP_supremacy_of_will_tt
+		infantry = {
+			max_strength = -3
+		}
+    }
 }

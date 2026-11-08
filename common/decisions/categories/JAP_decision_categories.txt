@@ -168,21 +168,6 @@ JAP_ashigaru_category = {
 	}
 }
 
-JAP_boeitai_category = {
-
-	icon = GFX_decision_category_NOR_fascist_deploy_prep
-	priority = 50
-	#picture = GFX_decision_cat_picture_generic_border_conflicts
-	visible_when_empty = no	
-	allowed = {
-		original_tag = JAP
-	}
-
-	visible = {
-		has_completed_focus = JAP_found_the_boeitai
-	}
-}
-
 
 ########################################################
 ####### IMPERIAL INFLUENCE DECISIONS and MISSION #######

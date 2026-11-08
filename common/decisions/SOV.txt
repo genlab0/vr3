@@ -53,7 +53,627 @@ debug_decisions = { #TODO_Manu: Comment these out
 	}
 }
 
+SOV_military_engineering_university_cat = {
+    SOV_fortify_moscow = { 
+		priority = 10
 
+		icon = GFX_decision_generic_fortification
+
+		ai_will_do = {
+            base = 10
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		fire_only_once = yes
+
+
+		available = {
+			has_completed_focus = SOV_military_engineering_university
+		}
+
+		visible = {
+			has_completed_focus = SOV_military_engineering_university
+		}
+
+		cost = 0
+
+
+		days_remove = 30
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			219 = {
+                set_building_level = {
+                    type = bunker
+                    level = 3
+                    province = 6380
+                    instant_build = yes
+                }
+            }
+            219 = {						
+                set_building_level = {
+                    type = bunker
+                    level = 2
+                    province = 11280
+                    instant_build = yes
+                }
+            }
+            219 = {
+                set_building_level = {
+                    type = bunker
+                    level = 2
+                    province = 9302
+                    instant_build = yes
+                }
+            }
+            219 = {
+                set_building_level = {
+                    type = bunker
+                    level = 2
+                    province = 366
+                    instant_build = yes
+                }
+            }
+            219 = {
+                set_building_level = {
+                    type = bunker
+                    level = 2
+                    province = 301
+                    instant_build = yes
+                }
+            }
+            219 = {
+                set_building_level = {
+                    type = bunker
+                    level = 2
+                    province = 3290
+                    instant_build = yes
+                }
+            }
+            219 = {
+                set_building_level = {
+                    type = bunker
+                    level = 2
+                    province = 11330
+                    instant_build = yes
+                }
+            }
+            219 = {
+                set_building_level = {
+                    type = bunker
+                    level = 2
+                    province = 11326
+                    instant_build = yes
+                }
+            }
+            219 = {
+                set_building_level = {
+                    type = bunker
+                    level = 2
+                    province = 11349
+                    instant_build = yes
+                }
+            }
+            219 = {
+                set_building_level = {
+                    type = bunker
+                    level = 2
+                    province = 11282
+                    instant_build = yes
+                }
+            }
+            219 = {
+                set_building_level = {
+                    type = bunker
+                    level = 2
+                    province = 11250
+                    instant_build = yes
+                }
+            }
+            219 = {
+                set_building_level = {
+                    type = bunker
+                    level = 2
+                    province = 6245
+                    instant_build = yes
+                }
+            }
+            219 = {
+                set_building_level = {
+                    type = bunker
+                    level = 2
+                    province = 344
+                    instant_build = yes
+                }
+            }
+            219 = {
+	            set_building_level = {
+					type = bunker
+					level = 2
+					province = 11236
+					instant_build = yes
+				}
+		    }
+		}
+	}
+    SOV_fortify_leningrad= { 
+		priority = 9
+
+		icon = GFX_decision_generic_fortification
+
+		ai_will_do = {
+            base = 10
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		fire_only_once = yes
+
+
+		available = {
+			has_completed_focus = SOV_military_engineering_university
+		}
+
+		visible = {
+			has_completed_focus = SOV_military_engineering_university
+		}
+
+		cost = 0
+
+
+		days_remove = 30
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			195 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 3155
+							instant_build = yes
+						}
+		}
+		195 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 149
+							instant_build = yes
+						}
+		}
+		195 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 71
+							instant_build = yes
+						}
+		}
+		195 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 6035
+							instant_build = yes
+						}
+		}
+		195 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 6095
+							instant_build = yes
+						}
+		}
+		195 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 70
+							instant_build = yes
+						}
+		}
+        }
+	}
+    SOV_fortify_stalingrad= { 
+		priority = 8
+
+		icon = GFX_decision_generic_fortification
+
+		ai_will_do = {
+            base = 10
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		fire_only_once = yes
+
+
+		available = {
+			has_completed_focus = SOV_military_engineering_university
+		}
+
+		visible = {
+			has_completed_focus = SOV_military_engineering_university
+		}
+
+		cost = 0
+
+
+		days_remove = 30
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			217 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 3151
+							instant_build = yes
+						}
+		}
+		217 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 9474
+							instant_build = yes
+						}
+		}
+		217 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 6527
+							instant_build = yes
+						}
+		}
+		217 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 9504
+							instant_build = yes
+						}
+		}
+		217 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 3582
+							instant_build = yes
+						}
+		}
+		217 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 9436
+							instant_build = yes
+						}
+		}
+	
+		217 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 11474
+							instant_build = yes
+						}
+		}
+		}
+	}
+    SOV_fortify_kyiv = { 
+		priority = 10
+
+		icon = GFX_decision_generic_fortification
+
+		ai_will_do = {
+            base = 10
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		fire_only_once = yes
+
+
+		available = {
+			has_completed_focus = SOV_military_engineering_university
+		}
+
+		visible = {
+			has_completed_focus = SOV_military_engineering_university
+		}
+
+		cost = 0
+
+
+		days_remove = 30
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			202 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 525
+							instant_build = yes
+						}
+		}
+		202 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 3494
+							instant_build = yes
+						}
+		}
+		202 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 11454
+							instant_build = yes
+						}
+		}
+		202 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 11530
+							instant_build = yes
+						}
+		}
+		202 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 9491
+							instant_build = yes
+						}
+		}
+		202 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 6532
+							instant_build = yes
+						}
+		}
+		202 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 3480
+							instant_build = yes
+						}
+		}
+		}
+	}
+    SOV_fortify_kursk= { 
+		priority = 10
+
+		icon = GFX_decision_generic_fortification
+
+		ai_will_do = {
+            base = 10
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		fire_only_once = yes
+
+
+		available = {
+			has_completed_focus = SOV_military_engineering_university
+		}
+
+		visible = {
+			has_completed_focus = SOV_military_engineering_university
+		}
+
+		cost = 0
+
+
+		days_remove = 30
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			220 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 418
+							instant_build = yes
+						}
+		}
+		220 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 3580
+							instant_build = yes
+						}
+		}
+		220 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 3335
+							instant_build = yes
+						}
+		}
+		220 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 3306
+							instant_build = yes
+						}
+		}
+		220 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 6330
+							instant_build = yes
+						}
+		}
+		220 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 6254
+							instant_build = yes
+						}
+		}
+		220 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 9542
+							instant_build = yes
+						}
+		}
+		220 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 3520
+							instant_build = yes
+						}
+		}
+		220 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 6543
+							instant_build = yes
+						}
+		}
+		}
+	}
+    SOV_fortify_riga = { 
+		priority = 10
+
+		icon = GFX_decision_generic_fortification
+
+		ai_will_do = {
+            base = 10
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		fire_only_once = yes
+
+
+		available = {
+			has_completed_focus = SOV_military_engineering_university
+		}
+
+		visible = {
+			has_completed_focus = SOV_military_engineering_university
+		}
+
+		cost = 0
+
+
+		days_remove = 30
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			808 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 9340
+							instant_build = yes
+						}
+		}
+		808 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 10323
+							instant_build = yes
+						}
+		}
+		808 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 7482
+							instant_build = yes
+						}
+		}
+		808 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 310
+							instant_build = yes
+						}
+		}
+		808 = {
+		set_building_level = {
+							type = bunker
+							level = 2
+							province = 6459
+							instant_build = yes
+						}
+		}
+		}
+	}
+}
 
 ########     ###    ########     ###    ##    ##  #######  ####    ###
 ##     ##   ## ##   ##     ##   ## ##   ###   ## ##     ##  ##    ## ##

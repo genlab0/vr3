@@ -20,7 +20,11 @@ history={
 		victory_points = {
 			4608 3 
 		}
-
+		1936.1.2 = {
+			remove_core_of = USA 
+			add_core_of = WST
+			owner = ENG
+		}
 		buildings = {
 			infrastructure = 3 #was: 5
 			dockyard = 1

@@ -11,8 +11,8 @@
 
 	### AUSTRALIA OFFSET START ###
 	offset = {
-		x = 132
-		y = 0
+		x = 15
+		y = 6
 		trigger = { tag = AST }
 	}
 
@@ -29,8 +29,8 @@
 	}
 
 	offset = {
-		x = 73
-		y = 0
+		x = 17
+		y = 8
 		trigger = { tag = HOL }
 	}
 
@@ -50,6 +50,7 @@
 	}
 
 	available = {
+		USA = { controls_state = 361 }
 		OR = {
 			original_tag = AST
 			original_tag = ENG
@@ -61,7 +62,7 @@
 
 	completion_reward_joint_originator = {
 		set_country_flag = abdacom_member
-		add_dynamic_modifier = { modifier = ABDA_supreme_command }
+		add_dynamic_modifier = { modifier = ABDA_supreme_commandVR}
 		hidden_effect = {
 			set_variable = { ABDA_repair_speed_factor = 0 }
 			set_variable = { ABDA_convoy_escort_efficiency = 0 }
@@ -75,21 +76,22 @@
 			set_variable = { ABDA_army_org_factor = 0 }
 			set_variable = { ABDA_air_mission_efficiency = 0 }
 			set_variable = { ABDA_amphibious_invasion_defence = 0 }
+			set_variable = { ABDA_intel_from_combat_factor = 0 }
 		}
 	}
 
 	completion_reward_joint_member = {
 		ENG = {
 			set_country_flag = abdacom_member
-			add_dynamic_modifier = { modifier = ABDA_supreme_command }
+			add_dynamic_modifier = { modifier = ABDA_supreme_commandVR}
 		}
 		AST = {
 			set_country_flag = abdacom_member
-			add_dynamic_modifier = { modifier = ABDA_supreme_command }
+			add_dynamic_modifier = { modifier = ABDA_supreme_commandVR}
 		}
 		HOL = {
 			set_country_flag = abdacom_member
-			add_dynamic_modifier = { modifier = ABDA_supreme_command }
+			add_dynamic_modifier = { modifier = ABDA_supreme_commandVR}
 		}
 	}
 
@@ -100,12 +102,12 @@ joint_focus = {
 	id = ABDA_fortress_singapore
 	icon = GFX_focus_chi_british_cooperation
 	prerequisite = { focus = ABDA_abdacom }
-	relative_position_id = ABDA_emergency_conference
+	relative_position_id = ABDA_abdacom
 
 	text_icon = ENG_focus_style
 
-	x = -3
-	y = 0
+	x = -2
+	y = 1
 
 	cost = 5
 
@@ -134,72 +136,14 @@ joint_focus = {
 }
 
 joint_focus = {
-	id = ABDA_abdacom_australia_focus
-	icon = GFX_focus_abdacom_australia
-	prerequisite = { focus = ABDA_abdacom }
-	relative_position_id = ABDA_emergency_conference
-
-	text_icon = ABDACOM_focus_style
-
-	x = 5
-	y = 0
-
-	cost = 5
-
-	available = {
-		
-		tag = AST
-
-	}
-
-	available_if_capitulated = no
-
-	ai_will_do = { factor = 10 }
-
-	completion_reward_joint_originator = {
-
-	}
-
-	search_filters = { FOCUS_FILTER_POLITICAL }
-}
-
-joint_focus = {
-	id = ABDA_abdacom_netherlands_focus
+	id = ABDA_rubber_islands_defense
 	icon = GFX_focus_abdacom_netherlands
 	prerequisite = { focus = ABDA_abdacom }
-	relative_position_id = ABDA_emergency_conference
+	relative_position_id = ABDA_abdacom
 
 	text_icon = ABDACOM_focus_style
 
-	x = -5
-	y = 0
-
-	cost = 5
-
-	available = {
-		
-		tag = HOL
-
-	}
-
-	available_if_capitulated = no
-
-	ai_will_do = { factor = 10 }
-
-	completion_reward_joint_originator = { navy_experience = 20 add_command_power = 15 }
-
-	search_filters = { FOCUS_FILTER_POLITICAL }
-}
-
-joint_focus = {
-	id = ABDA_rubber_islands_defense
-	icon = GFX_focus_INS_east_indies_investments
-	prerequisite = { focus = ABDA_abdacom_netherlands_focus }
-	relative_position_id = ABDA_abdacom_netherlands_focus
-
-	text_icon = ABDACOM_focus_style
-
-	x = 0
+	x = -4
 	y = 1
 
 	cost = 5
@@ -278,37 +222,6 @@ joint_focus = {
 }
 
 joint_focus = {
-	id = ABDA_maintain_strategic_flexibility
-	icon = GFX_focus_generic_befriend_usa
-	prerequisite = { focus = ABDA_abdacom }
-	relative_position_id = ABDA_emergency_conference
-
-	text_icon = USA_focus_style
-
-	x = 3
-	y = 0
-
-	cost = 5
-
-	available = {
-		
-		tag = USA
-	}
-
-	available_if_capitulated = no
-
-	ai_will_do = { factor = 10 }
-
-	completion_reward_joint_originator = {
-		USA ={
-			add_ideas = ABDA_maintain_strategic_flexibility_spirit
-		}
-	}
-
-	search_filters = { FOCUS_FILTER_POLITICAL }
-}
-
-joint_focus = {
 	id = ABDA_the_malay_barrier
 	icon = GFX_goal_fortify_the_westwall
 	prerequisite = { focus = ABDA_fortress_singapore }
@@ -381,12 +294,12 @@ joint_focus = {
 joint_focus = {
 	id = ABDA_develop_naval_infrastructure
 	icon = GFX_SOV_rebuild_the_far_eastern_fleet_ccp_2d_sov_compatibility
-	prerequisite = { focus = ABDA_maintain_strategic_flexibility focus = ABDA_abdacom_australia_focus}
-	relative_position_id = ABDA_abdacom_australia_focus
+	prerequisite = { focus = ABDA_abdacom }
+	relative_position_id = ABDA_abdacom
 
 	text_icon = ABDACOM_focus_style
 
-	x = -1
+	x = 3
 	y = 1
 
 	cost = 5
@@ -430,7 +343,7 @@ joint_focus = {
 	relative_position_id = ABDA_abdacom
 	x = 0
 	y = 1
-	cost = 3
+	cost = 5
 	available = { has_war_with = JAP }
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
@@ -470,39 +383,19 @@ joint_focus = {
 	text_icon = ABDACOM_focus_style
 	prerequisite = { focus = ABDA_consolidate_the_theatre }
 	relative_position_id = ABDA_emergency_conference
-	x = 0
+	x = -1
 	y = 2
 	cost = 5
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
-	completion_reward_joint_originator = {
+	completion_reward = {
 		custom_effect_tooltip = modify_abdacom_spirit_tt
-		add_to_variable = { ABDA_convoy_escort_efficiency = 0.05 tooltip = convoy_escort_efficiency_tt } add_to_variable = { ABDA_repair_speed_factor = 0.05 tooltip = repair_speed_factor_tt }
-	}
-	completion_reward_joint_member = {
-		custom_effect_tooltip = modify_abdacom_spirit_tt
-			add_to_variable = { 
-				ABDA_convoy_escort_efficiency = 0.05 tooltip = convoy_escort_efficiency_tt 
-			} 
-			add_to_variable = { 
-				ABDA_repair_speed_factor = 0.05 tooltip = repair_speed_factor_tt
-			}
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL }
-}
-joint_focus = {
-	id = ABDA_dutch_local_networks
-	icon = GFX_focus_INS_expand_resistance_membership
-	text_icon = ABDACOM_focus_style
-	prerequisite = { focus = ABDA_consolidate_the_theatre }
-	relative_position_id = ABDA_emergency_conference
-	x = -3
-	y = 2
-	cost = 5
-	available_if_capitulated = yes
-	ai_will_do = { base = 5 }
-	completion_reward_joint_originator = {
-		
+		add_to_variable = { 
+			ABDA_convoy_escort_efficiency = 0.05 tooltip = convoy_escort_efficiency_tt 
+		} 
+		add_to_variable = { 
+			ABDA_repair_speed_factor = 0.05 tooltip = repair_speed_factor_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -512,12 +405,12 @@ joint_focus = {
 	text_icon = ABDACOM_focus_style
 	prerequisite = { focus = ABDA_consolidate_the_theatre }
 	relative_position_id = ABDA_emergency_conference
-	x = 3
+	x = 1
 	y = 2
 	cost = 5
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
-	completion_reward_joint_originator = {
+	completion_reward = {
 		422 = {
 			set_building_level = {
 				type = naval_base
@@ -545,24 +438,18 @@ joint_focus = {
 	icon = GFX_focus_PHI_united_states_army_forces_in_the_far_east
 	text_icon = ABDACOM_focus_style
 	prerequisite = { focus = ABDA_american_logistical_backbone }
-	prerequisite = { focus = ABDA_dutch_local_networks }
 	prerequisite = { focus = ABDA_british_eastern_fleet }
 	relative_position_id = ABDA_emergency_conference
 	x = 0
 	y = 3
-	cost = 5
+	cost = 10
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		hidden_effect = {
-			every_country = {
-				limit = { has_dynamic_modifier = ABDA_supreme_command }
-				remove_dynamic_modifier = { modifier = ABDA_supreme_command }
-				add_dynamic_modifier = { modifier = PACOM_supreme_command }
-			}
-		}
 		custom_effect_tooltip = modify_abdacom_spirit_tt
-		set_country_flag = ABDA_pacom_member add_to_variable = { ABDA_planning_speed = 0.05 tooltip = planning_speed_factor_tt} add_to_variable = { ABDA_army_org_factor = 0.02 tooltip = army_org_factor_tt }
+		set_country_flag = ABDA_pacom_member 
+		add_to_variable = { ABDA_planning_speed = 0.05 tooltip = planning_speed_factor_tt} 
+		add_to_variable = { ABDA_army_org_factor = 0.02 tooltip = army_org_factor_tt }
 	}
 	completion_reward_joint_member = {
 		custom_effect_tooltip = modify_abdacom_spirit_tt
@@ -584,10 +471,31 @@ joint_focus = {
 	available_if_capitulated = yes
 	ai_will_do = { base = 5 }
 	completion_reward_joint_originator = {
-		add_to_variable = { ABDA_amphibious_invasion_defence = 0.10 } 
-	}
-	completion_reward_joint_member = {
-		add_to_variable = { ABDA_amphibious_invasion_defence = 0.10 } 
+
+		USA = {
+			add_trait = {
+				character = USA_maurice_rose
+				trait = naval_invader
+			}
+		}
+		AST = {
+			add_trait = {
+				character = AST_leslie_morshead
+				trait = naval_invader
+			}
+		}
+		HOL = {
+			add_trait = {
+				character = HOL_petrus_wilhelmus_best
+				trait = naval_invader
+			}
+		}
+		ENG = {
+			add_trait = {
+				character = ENG_william_slim
+				trait = naval_invader
+			}
+		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -625,6 +533,12 @@ joint_focus = {
 				instant_build = yes 
 			}
 		}
+		custom_effect_tooltip = modify_abdacom_spirit_tt
+		add_to_variable = { ABDA_intel_from_combat_factor = 0.15 tooltip = intel_from_combat_factor_tt }
+	}
+	completion_reward_joint_member = {
+		custom_effect_tooltip = modify_abdacom_spirit_tt
+		add_to_variable = { ABDA_intel_from_combat_factor = 0.15 tooltip = intel_from_combat_factor_tt }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }

@@ -23,6 +23,7 @@ NDefines.NGame.LAG_DAYS_FOR_PAUSE = 30
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 13 							    -- WAS 48 | drastically cuts down on save file sizes after WW2 starts and well into barbarossa
 NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 14					     	    -- WAS 60 | less messages lying around at the top of your screen
 
+NDefines.NGame.ENERGY_RESOURCE = "oil"						-- resource that will give country energy 
 NDefines.NProduction.BASE_ENERGY_COST = 0
 NDefines.NProduction.BASE_COUNTRY_ENERGY_PRODUCTION = 100000
 NDefines.NAI.MINIMUM_EQUIPMENT_TO_ASK_LEND_LEASE = -100000

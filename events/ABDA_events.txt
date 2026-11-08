@@ -27,7 +27,7 @@ country_event = {
 			}
 		}
 		set_country_flag = abdacom_member
-		add_dynamic_modifier = { modifier = ABDA_supreme_command }
+		add_dynamic_modifier = { modifier = ABDA_supreme_commandVR}
 		hidden_effect = {
 			set_variable = { ABDA_repair_speed_factor = 0 }
 			set_variable = { ABDA_convoy_escort_efficiency = 0 }
@@ -85,7 +85,7 @@ country_event = {
 		name = ABDA_events.5.a
 		ai_chance = { base = 75 }
 		set_country_flag = abdacom_member
-		add_dynamic_modifier = { modifier = ABDA_supreme_command }
+		add_dynamic_modifier = { modifier = ABDA_supreme_commandVR}
 		hidden_effect = {
 			set_variable = { ABDA_repair_speed_factor = global.ABDA_repair_speed_factor_snapshot }
 			set_variable = { ABDA_convoy_escort_efficiency = global.ABDA_convoy_escort_efficiency_snapshot }

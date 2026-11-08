@@ -27,17 +27,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		if = {
-			limit = { ROOT = { tag = HOL }
-			}
-			FROM = { puppet = INS }
-		}
-
-		if = {
-			limit = { ROOT = { tag = ENG }
-			}
-			FROM = { puppet = MAL }
-		}
 
 		if = {
 			limit = { ROOT = { tag = FRA } }

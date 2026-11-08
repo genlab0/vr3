@@ -31,7 +31,6 @@ usa_historical = {
 		#300 days now
 		USA_ssa_funding_government
 		USA_unemployment_insurance
-		USA_old_age_insurance
 		USA_war_department
 		USA_us_air_force
 		USA_fighter_program
@@ -84,16 +83,7 @@ usa_historical = {
 		USA_two_ocean_navy_act
 		USA_build_the_pentagon
 		USA_war_plans_division
-		USA_defense_of_the_pacific
-
-
-
-
-
-
-
-
-		
+		USA_defense_of_the_pacific	
 	}
 
 	traits = {

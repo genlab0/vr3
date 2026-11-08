@@ -3122,33 +3122,6 @@ SOV_trigger_great_purge_airforce_chiefs_effect = {
 
 
 
-####
-#### INDUSTRIAL STUFF ####
-####
-
-SOV_replace_industrial_designer = {
-	custom_effect_tooltip = SOV_upgrade_industrial_designer_tt
-	if = {
-		limit = {
-			has_idea = stalingrad_tractor_factory
-		}
-		swap_ideas = {
-			remove_idea = stalingrad_tractor_factory
-			add_idea = stalingrad_tractor_factory_improved
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = leningrad_polytechnical_institute
-		}
-		swap_ideas = {
-			remove_idea = leningrad_polytechnical_institute
-			add_idea = leningrad_polytechnical_institute_improved
-		}
-	}
-}
-
-
 
 ####
 #### FOREIGN POLITICS ####

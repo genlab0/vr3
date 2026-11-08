@@ -39,8 +39,7 @@ focus_tree = {
 			has_full_control_of_state = 695
 			has_full_control_of_state = 309
 		}
-		bypass = {
-		}
+
 		
 		icon = GFX_goal_generic_consumer_goods
 		x = 3
@@ -931,7 +930,11 @@ focus_tree = {
 		y = 0
 		relative_position_id = HOL_obtain_foreign_colonial_investments
 		cost = 10
-
+		available = {
+			USA = {
+				controls_state = 361
+			}
+		}
 		available_if_capitulated = yes
 		completion_reward = {
 			HOL_de_crisisjaren_level_down = yes
@@ -1844,7 +1847,7 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 5
-		y = 2
+		y = 1
 		relative_position_id = HOL_overturn_military_budget_cuts
 		cost = 5
 
@@ -1898,31 +1901,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HOL_rely_on_submarines
-		prerequisite = { focus = HOL_cornerstone_of_colonial_defense }
-		mutually_exclusive = { focus = HOL_modernize_the_cruiser_fleet }
-		icon = GFX_goal_generic_navy_submarine
-		x = -1
-		y = 1
-		relative_position_id = HOL_cornerstone_of_colonial_defense
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_tech_bonus = {
-				name = HOL_rely_on_submarines
-				bonus = 0.5
-				uses = 2
-				category = ss_tech
-			}
-		}
-	}
-
-	focus = {
 		id = HOL_modernize_the_cruiser_fleet
 		prerequisite = { focus = HOL_cornerstone_of_colonial_defense }
-		mutually_exclusive = { focus = HOL_rely_on_submarines }
 		icon = GFX_focus_generic_cruiser2
 		x = 1
 		y = 1
@@ -1944,11 +1924,11 @@ focus_tree = {
 
 	focus = {
 		id = HOL_the_battlecruiser_plan
-		prerequisite = { focus = HOL_rely_on_submarines focus = HOL_modernize_the_cruiser_fleet }
+		prerequisite = { focus = HOL_cornerstone_of_colonial_defense }
 		icon = GFX_goal_generic_navy_battleship
-		x = 1
+		x = -1
 		y = 1
-		relative_position_id = HOL_rely_on_submarines
+		relative_position_id = HOL_cornerstone_of_colonial_defense
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1967,7 +1947,7 @@ focus_tree = {
 		id = HOL_air_cover_for_the_new_fleet
 		prerequisite = { focus = HOL_the_battlecruiser_plan }
 		icon = GFX_goal_generic_navy_carrier
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = HOL_the_battlecruiser_plan
 		cost = 5
@@ -1987,11 +1967,11 @@ focus_tree = {
 
 	focus = {
 		id = HOL_escorts_for_the_new_fleet
-		prerequisite = { focus = HOL_the_battlecruiser_plan }
+		prerequisite = { focus = HOL_modernize_the_cruiser_fleet }
 		icon = GFX_focus_generic_destroyer
-		x = 1
+		x = 0
 		y = 1
-		relative_position_id = HOL_the_battlecruiser_plan
+		relative_position_id = HOL_modernize_the_cruiser_fleet
 		cost = 10
 
 		available_if_capitulated = yes
@@ -2000,7 +1980,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = HOL_escorts_for_the_new_fleet
-				bonus = 0.75
+				bonus = 0.5
 				ahead_reduction = 2
 				uses = 1
 				category = dd_tech
@@ -2033,9 +2013,6 @@ focus_tree = {
 
 	focus = {
 		id = HOL_form_new_government
-		bypass = {
-			has_capitulated = yes
-		}
 		icon = GFX_goal_generic_improve_relations
 		x = 17
 		y = 0
@@ -2043,7 +2020,11 @@ focus_tree = {
 		cost = 10
 
 		available_if_capitulated = yes
-
+		available = {
+			USA = {
+				controls_state = 361
+			}
+		}
 		completion_reward = {
 			country_event = { id = mtg_netherlands.10 hours = 6 }
 			effect_tooltip = {

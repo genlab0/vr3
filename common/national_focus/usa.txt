@@ -173,33 +173,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_old_age_insurance
-		icon = GFX_focus_pension
-		prerequisite = { focus = USA_ssa_funding_wagetax focus = USA_ssa_funding_government }
-		relative_position_id = USA_ssa_funding_government
-		x = -1
-		y = 1
-		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			custom_effect_tooltip = USA_modify_us_economy_tt
-			custom_effect_tooltip = USA_old_age_insurance_tt
-			add_to_variable = { USA_stability_weekly = 0.001 }
-		}
-	}
-	focus = {
 		id = USA_unemployment_insurance
 		icon = GFX_focus_social
 		prerequisite = { focus = USA_ssa_funding_wagetax focus = USA_ssa_funding_government }
 		relative_position_id = USA_ssa_funding_government
 		x = 1
 		y = 1
-		cost = 5
+		cost = 10
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -209,7 +189,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = USA_modify_us_economy_tt
 			custom_effect_tooltip = USA_unemployment_insurance_tt
-			add_to_variable = { USA_stability_weekly = 0.003}
+			add_to_variable = { USA_stability_weekly = 0.005}
 		}
 	}
 	focus = {
@@ -217,8 +197,8 @@ focus_tree = {
 		icon = GFX_focus_usa_guarantee_the_american_dream
 		prerequisite = { focus = USA_ssa_funding_wagetax focus = USA_ssa_funding_government }
 		relative_position_id = USA_ssa_funding_government
-		x = 3
-		y = 4
+		x = -1
+		y = 2
 		cost = 5
 		#ai_will_do = {
 		#	factor = 1
@@ -1606,7 +1586,7 @@ focus_tree = {
 	focus = {
 		id = USA_army_focus
 		icon = GFX_focus_generic_military_mission
-		x = 18
+		x = 14
 		y = 1
 		prerequisite = { focus = USA_war_department }
 		relative_position_id = USA_war_department
@@ -1636,7 +1616,7 @@ focus_tree = {
 		id = USA_first_special_service_force
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = USA_army_focus }
-		x = 12
+		x = 10
 		y = 1
 		relative_position_id = USA_army_focus
 		cost = 3
@@ -1675,6 +1655,13 @@ focus_tree = {
 				bonus = 0.6
 				uses = 1
 				category = marine_tech
+			}
+
+			add_doctrine_cost_reduction = {
+				name = RAJ_modernizing_army
+				cost_reduction = 0.5
+				uses = 2
+				category = special_forces_doctrine
 			}
 		}
 	}
@@ -1731,81 +1718,18 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			army_experience = 100
-
-		}
-	}
-	focus = {
-		id = USA_blue_army_won
-		icon = GFX_focus_winner
-		x = -1
-		y = 1
-		prerequisite = { focus = USA_louisiana_maneuvers }
-		relative_position_id = USA_louisiana_maneuvers
-		mutually_exclusive = { focus = USA_red_army_won }
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
 			add_doctrine_cost_reduction = {
-				cost_reduction = 0.99
-				uses = 1
-				category = cat_superior_firepower
+				name = RUSA_modernizing_army
+				cost_reduction = 0.5
+				uses = 3
+				category = land_doctrine
 			}
-			army_experience = 50 
-		}
-	}
-	focus = {
-		id = USA_red_army_won
-		icon = GFX_focus_winner
-		x = -3
-		y = 1
-		prerequisite = { focus = USA_louisiana_maneuvers }
-		relative_position_id = USA_louisiana_maneuvers
-		mutually_exclusive = { focus = USA_blue_army_won }
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.99
-				uses = 1
-				category = cat_grand_battle_plan
-			}
-			army_experience = 50
 		}
 	}
 	focus = {
 		id = USA_communication_devices
 		icon = GFX_focus_walkie_talkies
-		x = 1
+		x = -1
 		y = 1
 		prerequisite = { focus = USA_louisiana_maneuvers }
 		relative_position_id = USA_louisiana_maneuvers
@@ -1839,7 +1763,7 @@ focus_tree = {
 	focus = {
 		id = USA_tank_experiments
 		icon = GFX_focus_supporttanks
-		x = 3
+		x = 1
 		y = 1
 		prerequisite = { focus = USA_louisiana_maneuvers }
 		relative_position_id =USA_louisiana_maneuvers
@@ -1880,7 +1804,7 @@ focus_tree = {
 	focus = {
 		id = USA_womens_armed_service_integration_act
 		icon = GFX_focus_generic_treaty
-		x = 9
+		x = 7
 		y = 1
 		prerequisite = { focus = USA_army_focus }
 		relative_position_id = USA_army_focus
@@ -1910,7 +1834,7 @@ focus_tree = {
 	focus = {
 		id = USA_support_rock_island
 		icon = GFX_goal_generic_army_artillery
-		x = 6
+		x = 4
 		y = 1
 		relative_position_id = USA_army_focus
 		cost = 5
@@ -2093,7 +2017,7 @@ focus_tree = {
 	focus = {
 		id = USA_build_the_pentagon
 		icon = GFX_focus_usa_build_the_pentagon
-		x = -6
+		x = -4
 		y = 1
 		relative_position_id = USA_army_focus
 		prerequisite = { focus = USA_army_focus }

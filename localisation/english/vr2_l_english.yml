@@ -874,6 +874,8 @@
  juggleb_desc:0""
 
  ##Focuses
+ SOV_lend_lease_system_desc:0"\nIf Allies control Oslo or Baghdad, the mission \n§YAmerican Economic Mobilization§! is 5 days shorter for each state. The base duration is 30 days.\n"
+ SOV_winter_41_tt:0"§GAllows the Soviet Union to launch Winter Offensives§!"
  BUL_military_reforms:0"Military Reforms"
  bul_winter_training:0"Winter Training"
  bul_winter_training_desc:0""
@@ -1071,15 +1073,10 @@
  #Federal Housing Act:
  USA_federal_housing_act_tt:" Weekly Stability:§G +0.10%§!"
  
- #USA Old Age Insurance:
- USA_old_age_insurance:0"Pension Fund"
- USA_old_age_insurance_desc:0"By introducing a statutory pension fund, we can guarantee social security for elderly people"
- USA_old_age_insurance_tt:"Weekly Stability:§G +0.10%§!" 
- 
  #USA Unemployment Insurance:
  USA_unemployment_insurance:0"Unemployment Insurance"
  USA_unemployment_insurance_desc:0"By introducing a Unemployment Insurance, we can guarantee social security for people looking for a job"
- USA_unemployment_insurance_tt:"Weekly Stability:§G +0.30%§!" 
+ USA_unemployment_insurance_tt:"Weekly Stability:§G +0.50%§!" 
  
  #GI BILL:
  USA_gi_bill:0"GI Bill"
@@ -1776,6 +1773,7 @@
  JAP_modify_japanese_army_tt:0"Modify §YImperial Japanese Army§! by:"
 
  ##Events:
+ 
  SEA_japan_foreign_policy.237.t:0"Succesful Raid on Pearl Harbor"
  SEA_japan_foreign_policy.237.desc:0"Our Imperial Navy, under the command of Admiral Isoroku Yamamoto, has successfully conducted a surprise attack on the American naval base at Pearl Harbor, significantly weakening the U.S. Pacific Fleet. Now is it time to take the resources and lands we deserve."
  SEA_japan_foreign_policy.237.a:0"Banzai!"
@@ -1859,7 +1857,10 @@
  news.417.t:0"Invasion of Southern France"
  news.417.d:0"Reports have come in of Wehrmacht forces crossing the demarcation line at Vichy. French forces have been ordered to not resist the invasion force. \n The limited autonomy the Vichy regime had been granted was taken by Nazi Germany."
  news.417.a:0"What a time to be alive :("
+ 
+ 
  ##Ideas: 
+ SOV_modify_5_year_plan_tt:0"Modifies §YFive Year Plan§! by:"
  abda_offensive:0"ABDACOM Offensive Plans"
  standard_oil_california_improved:0"Standard Oil of California"
  standard_oil_california_improved_desc:0""
@@ -2338,8 +2339,7 @@
  SOV_rehabilitated_military_tt:0"Training Time:§G -15%§!\nConscription Law Cost:§G -25%§!"
  SOV_military_reorganization_tt:0"Division Organization:§G +10%§!"
  SOV_found_the_pcdi_tt:0"Civilian To Military Factory Conversion cost:§G -20%§!"
- SOV_the_centre_tt:0"Daily Communism Support:§G +0.05§!"
- SOV_infrastructure_effort_nsb_tt:0"§YInfrastructure§! construction speed §G+10%§!"
+ SOV_the_centre_tt:0"$SOV_modify_the_politburo_ns_intro$ \nDaily Communism Support:§G +0.05§!"
  SOV_heavy_industry_tt:0"§YCivilian Factory§! construction speed §G+10%§!"
  SOV_finish_the_five_year_plan_tt:0"Consumer Goods Factories Factor:§Y -15%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$:§G +15.00%§!"
  SOV_reorganize_the_pc_of_heavy_industry_tt:0"Civilian Factory Construction Speed §G+10.00%§! \nMilitary To Civilian Factory Conversion cost: §G-20%§!\n$MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR$:§R -10.00%§!"
@@ -2590,6 +2590,20 @@
 
 
  #Decisions:
+ SOV_fortify_moscow:0"Fortify Moscow"
+ SOV_fortify_moscow_desc:0""
+ SOV_fortify_leningrad:0"Fortify Leningrad"
+ SOV_fortify_leningrad_tt:0""
+ SOV_fortify_stalingrad:0"Fortify Stalingrad"
+ SOV_fortify_stalingrad_desc:0""
+ SOV_fortify_kyiv:0"Fortify Kyiv"
+ SOV_fortify_kyiv_desc:0""
+ SOV_fortify_kursk:0"Fortify Kursk"
+ SOV_fortify_kursk_desc:0""
+ SOV_fortify_riga:0"Fortify Riga"
+ SOV_fortify_riga_desc:0""
+ SOV_military_engineering_university_cat:0"Fortification Engineering"
+ SOV_military_engineering_university_cat_desc:0"Stalin has ordered the construction of a military engineering university to train officers in the art of fortification. This will allow us to build stronger and more effective fortifications, which will be crucial in defending our territory against enemy attacks."
  USA_improve_electrical_grid_texas:0"Improve Electrical Grid in Texas"
  USA_improve_electrical_grid_tennessee:0"Improve Electrical Grid in Tennessee"
  USA_improve_electrical_grid_washington:0"Improve Electrical Grid in Washington"

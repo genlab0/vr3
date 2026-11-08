@@ -6,7 +6,7 @@
 SOV_lend_lease_system = {
 
 	priority = 101
-
+	picture = GFX_decision_cat_picture_generic_shipbuilding
 	icon = usa_congress
 
 	allowed = {
@@ -92,7 +92,20 @@ SOV_great_patriotic_war = {
 	}	
 }
 
+SOV_military_engineering_university_cat = {
 
+	priority = 40
+	picture = GFX_decision_cat_picture_CZE_border_fortification
+	icon = GFX_decision_category_generic_fortification
+
+	allowed = {
+		original_tag = SOV
+	}
+
+	visible = { original_tag = SOV }  
+
+	visible_when_empty = no
+}
 
 SOV_national_academy_of_sciences_dec_cat = {
 	priority = 30

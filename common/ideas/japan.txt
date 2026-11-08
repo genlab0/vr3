@@ -3113,36 +3113,6 @@ ideas = {
 			}
 		}
 
-		JAP_restructing_the_industrial_conglomerates = {
-
-			picture = jap_zaibatsu_control
-
-			allowed = {
-				original_tag = JAP
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_factor = 0.15
-				stability_factor = -0.05
-			}
-
-			cancel = {
-			}
-
-			on_remove = {
-				JAP_add_or_modify_early_industrialization = yes
-				add_to_variable = { JAP_industry_consumer_goods_factor = -0.1 tooltip = consumer_goods_factor_tt }
-				add_to_variable = { JAP_industry_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
-			}
-
-		}
-
 		JAP_POL_anti_soviet_pact = {
 
 			picture = SPR_subvert_soviet_control
@@ -3988,32 +3958,6 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.075
 				consumer_goods_factor = -0.15
 			}
-		}
-
-		JAP_reorganization_of_society_idea = {
-
-			allowed = {
-				original_tag = JAP
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-
-			removal_cost = -1
-			picture = FIN_socialist_welfare 
-			modifier = {
-				stability_factor = -0.1
-				political_power_factor = -0.15
-			}
-
-			on_remove = {
-				JAP_add_or_modify_early_industrialization = yes
-				add_to_variable = { JAP_industry_consumer_goods_factor = -0.1 tooltip = consumer_goods_factor_tt }
-				JAP_add_or_modify_imperial_army = yes
-				add_to_variable = { JAP_army_conscription_factor = 0.1 tooltip = conscription_factor_tt }
-			}
-
 		}
 
 		JAP_learn_from_the_nkvd_lar = {
@@ -4958,6 +4902,54 @@ ideas = {
 				tag = RAJ    # this can also take a variable that stores a scope
 				attack_bonus_against = 0
 				defense_bonus_against = 0
+			}
+		}
+		JAP_island_hopping14 = {
+			allowed = {
+				always = no
+			}
+			picture = JAP_pan_asian_union
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.15
+			}
+		}
+		JAP_island_hopping15 = {
+			allowed = {
+				always = no
+			}
+			picture = JAP_pan_asian_union
+			removal_cost = -1
+
+			modifier = {		
+				stability_factor = 0.175
+			}
+		}
+		JAP_island_hopping16 = {
+			allowed = {
+				always = no
+			}
+			picture = JAP_pan_asian_union
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.40
+				army_core_attack_factor = 0.4			
+				stability_factor = 0.2
+			}
+		}
+		JAP_island_hopping17 = {
+			allowed = {
+				always = no
+			}
+			picture = JAP_pan_asian_union
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.40
+				army_core_attack_factor = 0.4		
+				stability_factor = 0.225
 			}
 		}
 
@@ -6582,7 +6574,7 @@ ideas = {
 			}
 
 			available = {
-				has_completed_focus = JAP_expand_hiratsuka_navy_arsenal #JAP_supremacy_of_the_battlefleet
+				has_completed_focus = JAP_the_ultimate_battleship
 			}
 
 			cost = 75
@@ -6701,23 +6693,6 @@ ideas = {
 			modifier = {
 
 			}
-		}
-
-		aichi = {
-			
-			allowed = {
-				original_tag = JAP
-			}
-
-			available = {
-				has_completed_focus = JAP_sea_long_operational_range
-			}
-						
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			traits = { fuel_efficient_aircraft_manufacturer }
 		}
 		
 		nakajima = {

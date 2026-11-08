@@ -55,7 +55,6 @@ HOL_historical_plan = {
 		HOL_ship_a_day_sinking_quotas
 		HOL_request_allied_favors
 		HOL_cornerstone_of_colonial_defense
-		HOL_rely_on_submarines
 		HOL_the_battlecruiser_plan
 		HOL_escorts_for_the_new_fleet
 		HOL_naval_heritage

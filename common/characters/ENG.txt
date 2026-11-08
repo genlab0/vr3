@@ -246,7 +246,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ war_hero trickster }
+			traits={ war_hero trickster infantry_leader}
 			skill=5
 			attack_skill=3
 			defense_skill=3

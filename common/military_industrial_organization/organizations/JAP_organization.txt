@@ -149,8 +149,7 @@ JAP_kure_naval_arsenal_organization = {
 
 	available = {
 		FROM = {
-			#has_completed_focus = JAP_supremacy_of_the_battlefleet
-			has_completed_focus = JAP_expand_hiratsuka_navy_arsenal
+			has_completed_focus = JAP_supremacy_of_the_battlefleet
 		}
 	}
 
@@ -736,7 +735,7 @@ JAP_yokosuka_organization = {
 
 		available = {
 			FROM = {
-				has_completed_focus = JAP_improve_the_type_91_aerial_torpedo
+				has_completed_focus = JAP_naval_air_focus
 			}
 		}
 

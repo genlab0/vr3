@@ -78,10 +78,10 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { inflexible_strategist infantry_leader infantry_expert urban_assault_specialist jungle_rat adaptable trait_engineer }
+			traits = { infantry_leader urban_assault_specialist jungle_rat trait_engineer }
 			skill=4
 			attack_skill=4
-			defense_skill=2
+			defense_skill=3
 			planning_skill=5
 			logistics_skill=2
 			legacy_id=-1
@@ -97,7 +97,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { infantry_leader urban_assault_specialist desert_fox adaptable trait_engineer }
+			traits = { infantry_leader urban_assault_specialist desert_fox trait_engineer }
 			skill=4
 			attack_skill=4
 			defense_skill=3
@@ -116,11 +116,12 @@ characters={
 			}
 		}
 		corps_commander={
+			traits = { trait_mountaineer }
 			skill=4
 			attack_skill=3
 			defense_skill=4
-			planning_skill=3
-			logistics_skill=3
+			planning_skill=5
+			logistics_skill=4
 			legacy_id=-1
 		}
 	}

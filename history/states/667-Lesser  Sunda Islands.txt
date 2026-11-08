@@ -24,7 +24,11 @@ history={
 			}
 
 		}
-
+		1936.1.2 = {
+			remove_core_of = USA 
+			add_core_of = WST
+			owner = ENG
+		}
 	}
 
 	provinces={
